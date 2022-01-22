@@ -1,18 +1,21 @@
-import { useContext, useState, useReducer } from "react";
+import { useContext, useState } from "react";
 import { Context } from "../App";
 import { Select, Text, Box, Button } from "@chakra-ui/react";
 
 const CustomSelect = ({ state }) => {
   const { dispatch } = useContext(Context);
-  const [selectAnswer, setSelectAnswer] = useState(false);
-
-  console.log(state, "si");
+  const [selectAnswer, setSelectAnswer] = useState({});
 
   const dispatchAnswer = () => {
+    //retrieve the object answer from the id
+    const answer = state.answers.find((answ) => {
+      return answ.id === selectAnswer;
+    });
+
     // dispatch the answer action to the choice reducer
     dispatch({
-      type: "ANSWER_QUESTION",
-      answer: selectAnswer,
+      type: "ANSWER_QUESTION_SELECT",
+      answer: answer,
       state: state,
     });
   };
@@ -32,9 +35,9 @@ const CustomSelect = ({ state }) => {
         bg="white"
         marginBottom="12"
       >
-        {state.answers.map((el, index) => (
+        {state.answers.map((el) => (
           <option value={el.id} key={el.id}>
-            {el.label}
+            {el.id}
           </option>
         ))}
       </Select>

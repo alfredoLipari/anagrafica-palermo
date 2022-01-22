@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useContext } from "react";
 import CustomInput from "./customInput";
 import {
   FormControl,
@@ -13,10 +13,11 @@ import {
   Box,
 } from "@chakra-ui/react";
 import { Formik, Field, Form } from "formik";
-import { IconButton } from "@chakra-ui/button";
+import { Context } from "../App";
 
 const NewProductForm = ({ state }) => {
   const questions = {};
+  const { dispatch } = useContext(Context);
 
   //contenuto props with initial status
   const [content] = useState(
@@ -32,8 +33,13 @@ const NewProductForm = ({ state }) => {
     return error;
   };
 
-  const submitForm = async (values) => {
-    console.log(values, "in values");
+  // handler when the form is submitted, call the dispatcher
+  const submitForm = (values) => {
+    dispatch({
+      type: "ANSWER_QUESTION_FORM",
+      answer: values,
+      state: state,
+    });
   };
 
   return (
@@ -65,7 +71,7 @@ const NewProductForm = ({ state }) => {
           </Text>
 
           <Box
-            width="40%"
+            width={{ base: "40%", md: "35%", lg: "30%" }}
             alignItems="center"
             display="flex"
             alignSelf="center"

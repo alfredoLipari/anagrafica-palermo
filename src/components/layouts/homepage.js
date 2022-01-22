@@ -1,6 +1,5 @@
 import { Box, Container } from "@chakra-ui/react";
 import Navbar from "../navbar.js";
-import { Text } from "@chakra-ui/react";
 import Footer from "../footer.js";
 import Main from "./main.js";
 

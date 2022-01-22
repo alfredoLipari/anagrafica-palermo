@@ -2,8 +2,6 @@
     starting point for the complex tree choice
 */
 
-import { Input } from "@chakra-ui/react";
-
 const choiceTree = {
   questions: [
     {
@@ -13,16 +11,16 @@ const choiceTree = {
       id: 1,
       answers: [
         {
-          id: 9,
-          label: "I am a non-EU citizen",
+          id: "I am a non-EU citizen",
+          nextQuestion: 9,
         },
         {
-          id: 3,
-          label: "I am an Italian Citizen",
+          id: "I am an Italian Citizen",
+          nextQuestion: 2,
         },
         {
-          id: 4,
-          label: "I am a EU citizen",
+          id: "I am a EU citizen",
+          nextQuestion: 3,
         },
       ],
     },
@@ -35,24 +33,24 @@ const choiceTree = {
 
       answers: [
         {
-          id: 4,
-          label: "EU Citizen Relative",
+          id: "EU Citizen Relative",
+          nextQuestion: 2,
         },
         {
-          id: 5,
-          label: "I have the Residence permit",
+          id: "I have the Residence permit",
+          nextQuestion: 9,
         },
         {
-          id: 6,
-          label: "I am renewing my Residence permit",
+          id: "I am renewing my Residence permit",
+          nextQuestion: 2,
         },
         {
-          id: 7,
-          label: "I am Waiting for a work permit",
+          id: "I am Waiting for a work permit",
+          nextQuestion: 2,
         },
         {
-          id: 8,
-          label: "Awaiting family reunification",
+          id: "Awaiting family reunification",
+          nextQuestion: 2,
         },
       ],
 
@@ -61,23 +59,64 @@ const choiceTree = {
     },
 
     {
+      type: "select",
+      title: "ok?",
+      label: "Select your Status",
+      id: 3,
+
+      answers: [
+        {
+          id: "EU Citizen Relative",
+          nextQuestion: 2,
+        },
+        {
+          id: "I have the Residence permit",
+          nextQuestion: 2,
+        },
+        {
+          id: "I am renewing my Residence permit",
+          nextQuestion: 2,
+        },
+      ],
+
+      parentId: 9,
+      choiceParentId: 3,
+    },
+
+    {
       type: "form",
       title: "What Country and what city?",
       id: 9,
       parentId: 4,
+      nextQuestion: 10,
       answers: [
         {
-          id: 10,
+          id: "country",
           label: "write your Country",
           type: "text",
           helperText: "Ex. Ghane, France, Russia",
           // add input validate
         },
         {
-          id: 11,
+          id: "city",
           label: "Write yout city",
           type: "text",
           helperText: "Ex. Turin, Milan, Pavia",
+        },
+      ],
+    },
+    {
+      type: "checkbox",
+      title: "Do you have a job?",
+      id: 10,
+      answers: [
+        {
+          id: "yes",
+          nextQuestion: 11,
+        },
+        {
+          id: "no",
+          nextQuestion: 12,
         },
       ],
     },

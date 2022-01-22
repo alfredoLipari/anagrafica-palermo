@@ -1,14 +1,13 @@
 import choiceTree from "../../lib/choice";
-import { Text } from "@chakra-ui/react";
 import { Context } from "../../App";
 import { useContext, useEffect, useState } from "react";
 import CustomSelect from "../customSelect";
 import CustomForm from "../customForm";
+import CustomCheckbox from "../customCheckbox";
 
 const TreeHelper = () => {
   // import the dispatch object from the entry point
-  const { state, dispatch } = useContext(Context);
-  const [currentAnswer, setCurrentAnswer] = useState();
+  const { state } = useContext(Context);
   const [currentQuestion, setCurrentQuestion] = useState({});
   const [type, setType] = useState();
 
@@ -18,7 +17,6 @@ const TreeHelper = () => {
       (el) => el.id === state.currentQuestion
     );
 
-    console.log(currentQuestion, "currentQuestion");
     setType(currentQuestion.type);
     setCurrentQuestion(currentQuestion);
   };
@@ -42,6 +40,8 @@ const TreeHelper = () => {
             return <CustomSelect state={currentQuestion} />;
           case "form":
             return <CustomForm state={currentQuestion} />;
+          case "checkbox":
+            return <CustomCheckbox state={currentQuestion} />;
           default:
             return null;
         }
