@@ -3,18 +3,22 @@ import { Text } from "@chakra-ui/react";
 import { Context } from "../../App";
 import { useContext, useEffect, useState } from "react";
 import CustomSelect from "../customSelect";
+import CustomForm from "../customForm";
 
 const TreeHelper = () => {
   // import the dispatch object from the entry point
-  const { state } = useContext(Context);
+  const { state, dispatch } = useContext(Context);
   const [currentAnswer, setCurrentAnswer] = useState();
   const [currentQuestion, setCurrentQuestion] = useState({});
   const [type, setType] = useState();
 
   // function that dispatch an action to decide the next question
   const changeCurrentQuestion = () => {
-    const currentQuestion = choiceTree.questions.find((el) => (el.id = state));
-    console.log(currentQuestion, "here");
+    const currentQuestion = choiceTree.questions.find(
+      (el) => el.id === state.currentQuestion
+    );
+
+    console.log(currentQuestion, "currentQuestion");
     setType(currentQuestion.type);
     setCurrentQuestion(currentQuestion);
   };
@@ -26,7 +30,7 @@ const TreeHelper = () => {
     return () => {
       console.log("unmounting");
     };
-  }, []);
+  }, [state]);
 
   // it exist three type of input
 
@@ -36,7 +40,8 @@ const TreeHelper = () => {
         switch (type) {
           case "select":
             return <CustomSelect state={currentQuestion} />;
-
+          case "form":
+            return <CustomForm state={currentQuestion} />;
           default:
             return null;
         }

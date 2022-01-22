@@ -47,6 +47,9 @@ const colors = {
   brown: {
     300: "#6A4E12",
   },
+  gray: {
+    300: "#5C6F82",
+  },
 };
 
 const config = {
