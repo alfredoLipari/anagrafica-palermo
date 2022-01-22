@@ -30,12 +30,8 @@ const Main = () => {
             onClick={() => setIsFormStarted(true)}
           >
             Let's Start
-          </Button>
-          <Box
-            backgroundImage="url('src/components/asset/homepageimg.svg')"
-            backgroundPosition="center"
-            backgroundRepeat="no-repeat"
-          />
+          </Button>   
+          <Box w="auto" h="auto" backgroundImage="url('../asset/people.png')" zIndex={10}/>
         </Box>
       ) : (
         <TreeHelper />

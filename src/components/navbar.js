@@ -1,5 +1,6 @@
 import { Box, Link } from "@chakra-ui/react";
 import { Text } from "@chakra-ui/react";
+import { Image } from '@chakra-ui/react'
 const Navbar = (props) => {
   return (
     <Box as="nav" w="100%">
@@ -23,7 +24,9 @@ const Navbar = (props) => {
           alignItems="center"
           padding="8px 40px"
         >
-          <Box w="70px" h="70px" bgImage="url('src/components/asset/logoComuneDiPalermo.svg')" ></Box>
+          <Box boxSize='sm' zIndex={1000}>
+            <Image src='./asset/logoComuneDiPalermo.svg' alt='Dan Abramov' />
+          </Box>
           <Box h="70px" marginLeft="20px">
             <Text fontWeight="bold" fontSize="xl">
               Comune di Palermo
