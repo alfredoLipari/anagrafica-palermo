@@ -31,6 +31,11 @@ const Main = () => {
           >
             Let's Start
           </Button>
+          <Box
+            backgroundImage="url('src/components/asset/homepageimg.svg')"
+            backgroundPosition="center"
+            backgroundRepeat="no-repeat"
+          />
         </Box>
       ) : (
         <TreeHelper />
