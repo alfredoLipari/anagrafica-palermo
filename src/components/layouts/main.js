@@ -1,13 +1,15 @@
-import { Box, Button } from "@chakra-ui/react";
+import { Box, Button, Center, Flex } from "@chakra-ui/react";
 import { Text } from "@chakra-ui/react";
 import { useState } from "react";
 import TreeHelper from "./treeHelper";
+import { Image } from '@chakra-ui/react'
+import People from '../asset/homepageimg.svg'
 
 const Main = () => {
   const [isFormStarted, setIsFormStarted] = useState(false);
 
   return (
-    <Box bg="white" h="80vh" textAlign="center">
+    <Box bg="white" h="75vh" textAlign="center">
       {!isFormStarted ? (
         <Box marginTop="20">
           <Text fontSize="2xl" fontWeight="extrabold" color="#000">
@@ -31,12 +33,11 @@ const Main = () => {
           >
             Let's Start
           </Button>
-          <Box
-            w="auto"
-            h="auto"
-            backgroundImage="url('../asset/people.png')"
-            zIndex={10}
-          />
+          <Flex justifyContent={"center"}>   
+            <Box h="215px" w='825px' marginTop={18}>
+              <Image  src={People} alt='logo comune' />
+            </Box>
+          </Flex>
         </Box>
       ) : (
         <TreeHelper />

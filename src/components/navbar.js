@@ -1,32 +1,51 @@
 import { Box, Link } from "@chakra-ui/react";
 import { Text } from "@chakra-ui/react";
-import { Image } from '@chakra-ui/react'
+import { Image, Menu,
+  MenuButton,
+  MenuList,
+  MenuItem,
+  MenuItemOption,
+  MenuGroup,
+  MenuOptionGroup,
+  MenuDivider,
+  Button } from '@chakra-ui/react'
+import Logo from './asset/logoComuneDiPalermo.svg'
+import { ChevronDownIcon } from '@chakra-ui/icons'
+
 const Navbar = (props) => {
   return (
     <Box as="nav" w="100%">
       <Box
-        bg="yellow.800"
+        bg="#E4AA2C"
         display="flex"
         alignItems="center"
         justifyContent="space-between"
         padding="8px 40px"
         height="48px"
       >
-        <Text fontWeight="bold">Comune di Palermo</Text>
-
-        <Text fontWeight="bold">Eng</Text>
+      <Text fontWeight="bold" textColor={"black"}>Comune di Palermo</Text>
+        <Menu>
+          <MenuButton textColor={"black"} bg={"transparent"} as={Button} rightIcon={<ChevronDownIcon />}>
+            ENG
+          </MenuButton>
+          <MenuList>
+            <MenuItem>ENG</MenuItem>
+            <MenuItem>ITA</MenuItem>
+            <MenuItem>SPN</MenuItem>
+          </MenuList>
+      </Menu>
       </Box>
       <Link href="/" color="#000" style={{ textDecoration: "none" }}>
         <Box
-          bg="yellow.600"
+          bg="#FEBB2C"
           height="104px"
           display="flex"
           alignItems="center"
           padding="8px 40px"
         >
-          <Box boxSize='sm' zIndex={1000}>
-            <Image src='./asset/logoComuneDiPalermo.svg' alt='Dan Abramov' />
-          </Box>
+        <Box h="70px" w='70px'>
+          <Image src={Logo} alt='logo comune' />
+        </Box>
           <Box h="70px" marginLeft="20px">
             <Text fontWeight="bold" fontSize="xl">
               Comune di Palermo
