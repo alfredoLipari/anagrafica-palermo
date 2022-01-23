@@ -13,7 +13,7 @@ const CustomInput = (props) => {
       <FormLabel>{props.label}</FormLabel>
       <Input
         {...props}
-        type={props.type}
+        type={props.state.type}
         border="none"
         borderBottom="1px"
         borderRadius="0px"
@@ -23,8 +23,7 @@ const CustomInput = (props) => {
         borderBottomColor="gray.300"
         focusBorderColor="white"
       />
-
-      {props.children}
+      <FormHelperText>{props.state.helperText}</FormHelperText>
     </FormControl>
   );
 };

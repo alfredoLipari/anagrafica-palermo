@@ -9,9 +9,11 @@ export function reducer(state, action) {
         ...state.answers,
         {
           answer: action.answer.id,
-          idQuestion: parseInt(action.state.id),
+          idQuestion: action.answer.label,
         },
       ];
+
+      console.log(action.answer, "ok");
 
       return {
         ...state,
@@ -27,7 +29,7 @@ export function reducer(state, action) {
         ...state.answers,
         {
           answers: action.answer,
-          idQuestion: parseInt(action.state.id),
+          idQuestion: action.answer.id,
         },
       ];
 
@@ -37,22 +39,13 @@ export function reducer(state, action) {
         currentQuestion: parseInt(action.state.nextQuestion),
       };
     case "ANSWER_QUESTION_CHECKBOX":
-      // push the answer as Id in the object answer
-      // retrive the id of the question and the id parent
-      console.log(action.answer);
+      // checbox is for controll, it means we are not pushing any new answer, just switching question
 
-      const newAnswersCheckbox = [
-        ...state.answers,
-        {
-          answer: action.answer,
-          idQuestion: parseInt(action.state.id),
-        },
-      ];
+      console.log(action.nextQuestion, "question");
 
       return {
         ...state,
-        answers: newAnswersCheckbox,
-        currentQuestion: parseInt(action.answer.nextQuestion),
+        currentQuestion: parseInt(action.nextQuestion),
       };
 
     case "RETRIEVE_ANSWERS":

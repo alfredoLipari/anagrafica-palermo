@@ -7,10 +7,13 @@ const CustomCheckbox = ({ state }) => {
   const { dispatch } = useContext(Context);
 
   const submitAnswer = () => {
+    const nextQuestion = answer
+      ? state.answers[0].nextQuestion
+      : state.answers[1].nextQuestion;
+
     dispatch({
       type: "ANSWER_QUESTION_CHECKBOX",
-      answer: answer,
-      state: state,
+      nextQuestion: nextQuestion,
     });
   };
 

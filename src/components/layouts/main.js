@@ -7,7 +7,7 @@ const Main = () => {
   const [isFormStarted, setIsFormStarted] = useState(false);
 
   return (
-    <Box bg="white" h="70vh" textAlign="center">
+    <Box bg="white" h="80vh" textAlign="center">
       {!isFormStarted ? (
         <Box marginTop="20">
           <Text fontSize="2xl" fontWeight="extrabold" color="#000">
@@ -30,8 +30,13 @@ const Main = () => {
             onClick={() => setIsFormStarted(true)}
           >
             Let's Start
-          </Button>   
-          <Box w="auto" h="auto" backgroundImage="url('../asset/people.png')" zIndex={10}/>
+          </Button>
+          <Box
+            w="auto"
+            h="auto"
+            backgroundImage="url('../asset/people.png')"
+            zIndex={10}
+          />
         </Box>
       ) : (
         <TreeHelper />

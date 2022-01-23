@@ -15,7 +15,7 @@ import {
 import { Formik, Field, Form } from "formik";
 import { Context } from "../App";
 
-const NewProductForm = ({ state }) => {
+const CustomForm = ({ state }) => {
   const questions = {};
   const { dispatch } = useContext(Context);
 
@@ -107,4 +107,4 @@ const NewProductForm = ({ state }) => {
   );
 };
 
-export default NewProductForm;
+export default CustomForm;

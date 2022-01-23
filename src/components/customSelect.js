@@ -37,7 +37,7 @@ const CustomSelect = ({ state }) => {
       >
         {state.answers.map((el) => (
           <option value={el.id} key={el.id}>
-            {el.id}
+            {el.label}
           </option>
         ))}
       </Select>
