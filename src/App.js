@@ -12,6 +12,7 @@ const Website = () => {
   const initialState = {
     currentQuestion: 1,
     answers: [],
+    componentTree: [],
   };
 
   const [state, dispatch] = useReducer(reducer, initialState);

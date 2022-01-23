@@ -1,6 +1,6 @@
 import React, { useState, useContext } from "react";
 import { Box, Text, Button } from "@chakra-ui/react";
-import { Context } from "../App";
+import { Context } from "../../App";
 
 const CustomCheckbox = ({ state }) => {
   const [answer, setAnswer] = useState(false);
@@ -65,6 +65,7 @@ const CustomCheckbox = ({ state }) => {
         paddingY="6"
         marginTop="4em"
         onClick={() => submitAnswer()}
+        colorScheme="linkedin"
       >
         Continue
       </Button>
