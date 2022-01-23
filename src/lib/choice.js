@@ -11,11 +11,12 @@ const choiceTree = {
       title: "What citizenship do you have?",
       label: "Select your Citizenship",
       id: 1,
+      controller: true,
       answers: [
         {
           id: "I am a non-EU citizen",
           label: "I'm a non-EU Citizen",
-          nextQuestion: 9,
+          nextQuestion: 2,
         },
         {
           id: "controller",
@@ -37,7 +38,7 @@ const choiceTree = {
       title: "What is your status?",
       label: "Select your Status",
       id: 2,
-
+      controller: true,
       answers: [
         {
           id: "EU Citizen Relative",
@@ -77,6 +78,7 @@ const choiceTree = {
       title: "What is your status?",
       label: "Select your Status",
       id: 3,
+      controller: true,
 
       answers: [
         {
@@ -124,28 +126,28 @@ const choiceTree = {
 
       answers: [
         {
-          id: "Foreign Country",
+          id: "C1_1_2",
           label: "Foreign Country",
           nextQuestion: 7,
           documents: "",
         },
         {
-          id: "Italian",
+          id: "C1_1_3",
           label: "Italian AIRE",
           nextQuestion: 5,
         },
         {
-          id: "Same city",
+          id: "C1_1_4",
           label: "Same city",
           nextQuestion: 8,
         },
         {
-          id: "sanjals",
+          id: "C1_1_1",
           label: "Different city",
           nextQuestion: 6,
         },
         {
-          id: "sanjansjla",
+          id: "C_1_5",
           label: "First Request",
           nextQuestion: 8,
         },
@@ -184,7 +186,7 @@ const choiceTree = {
       nextQuestion: 8,
       answers: [
         {
-          id: "city",
+          id: "Indicare il comune di provenienza",
           label: "Write yout city",
           type: "text",
           helperText: "Ex. Turin, Milan, Pavia",
@@ -199,7 +201,7 @@ const choiceTree = {
       nextQuestion: 8,
       answers: [
         {
-          id: "country",
+          id: "Indicare lo Stato estero di provenienza",
           label: "write your Country",
           type: "text",
           helperText: "Ex. Ghane, France, Russia",
@@ -302,31 +304,31 @@ const choiceTree = {
       answers: [
         {
           selected: false,
-          id: "1Casilinga",
+          id: "c1_2_6",
           label: "Housewife",
           nextQuestion: 13,
         },
         {
           selected: false,
-          id: "undefined_2",
+          id: "c1_2_7",
           label: "Student",
           nextQuestion: 13,
         },
         {
           selected: false,
-          id: "1Casilinga",
+          id: "c1_2_8",
           label: "Unemployed",
           nextQuestion: 13,
         },
         {
           selected: false,
-          id: "1Casilinga",
+          id: "c1_2_9",
           label: "Retired",
           nextQuestion: 13,
         },
         {
           selected: false,
-          id: "1Casilinga",
+          id: "c1_2_10",
           label: "Other",
           nextQuestion: 13,
         },
@@ -346,31 +348,31 @@ const choiceTree = {
       answers: [
         {
           selected: false,
-          id: "1Casilinga",
+          id: "C1_2_4",
           label: "Worker",
           nextQuestion: 13,
         },
         {
           selected: false,
-          id: "undefined_2",
+          id: "C1_2_5",
           label: "Family Worker",
           nextQuestion: 13,
         },
         {
           selected: false,
-          id: "1Casilinga",
+          id: "C1_2_3",
           label: "Freelance / Entrepreneur",
           nextQuestion: 13,
         },
         {
           selected: false,
-          id: "1Casilinga",
+          id: "C1_2_1",
           label: "Self-Employed",
           nextQuestion: 13,
         },
         {
           selected: false,
-          id: "1Casilinga",
+          id: "C1_2_2",
           label: "Executive / Employee",
           nextQuestion: 13,
         },
@@ -390,37 +392,37 @@ const choiceTree = {
       answers: [
         {
           selected: false,
-          id: "1Casilinga",
+          id: "C1_2_11",
           label: "Primary School",
           nextQuestion: 14,
         },
         {
           selected: false,
-          id: "undefined_2",
+          id: "C1_2_12",
           label: "Secondary School Certificate",
           nextQuestion: 14,
         },
         {
           selected: false,
-          id: "1Casilinga",
+          id: "C1_2_13",
           label: "Diploma",
           nextQuestion: 14,
         },
         {
           selected: false,
-          id: "1Casilinga",
+          id: "C1_2_14",
           label: "Bachelor",
           nextQuestion: 14,
         },
         {
           selected: false,
-          id: "1Casilinga",
+          id: "C1_2_5",
           label: "Master Degree",
           nextQuestion: 14,
         },
         {
           selected: false,
-          id: "1Casilinga",
+          id: "C1_2_6",
           label: "Phd",
           nextQuestion: 14,
         },
@@ -555,88 +557,19 @@ const choiceTree = {
       answers: [
         {
           id: "yes",
-          nextQuestion: 18,
+          nextQuestion: 19,
         },
         {
           id: "no",
-          nextQuestion: 19,
+          nextQuestion: 18,
         },
       ],
     },
     {
       type: "number",
-      title: "How many members will reside in the new apartment?",
+      title: "How many people beside you?",
       id: 18,
-      nextQuestion: 13,
-    },
-    {
-      type: "longform",
-      title: "Component",
-      id: 9,
-      parentId: 4,
-      nextQuestion: 19,
-      answers: [
-        {
-          id: "Nome",
-          label: "What's your name?",
-          type: "text",
-          helperText: "Ex. Moussa",
-          // add input validate
-        },
-        {
-          id: "Cognome",
-          label: "What's your surname",
-          type: "text",
-          helperText: "Ex. Semprini",
-        },
-        {
-          id: "Data di nascita",
-          label: "Date of birth",
-          type: "date",
-          helperText: "DD/MM/YYYY",
-          // add input validate
-        },
-        {
-          id: "Luogo di nascita",
-          label: "Where were you born?",
-          type: "text",
-          helperText: "Indicate your city of birth",
-        },
-        {
-          id: "Sesso",
-          label: "Gender",
-          type: "select",
-          helperText: "Ex. Ghane, France, Russia",
-          // add input validate
-        },
-        {
-          id: "Stato Civile",
-          label: "Are you married?",
-          type: "checkbox",
-          helperText: "",
-        },
-        {
-          id: "Cittadinanza",
-          label: "Citizenship",
-          type: "text",
-          helperText: "Ex. Ghanian, Francaise, Russian...",
-          // add input validate
-        },
-        {
-          id: "Codice Fiscale",
-          label: "Codice Fiscale",
-          type: "text",
-          helperText: "Ex. R5MRI88L73G273E",
-          // add input validate
-        },
-        {
-          id: "Rapporto di parentela con il richiedente",
-          label: "Relation to the applicant",
-          type: "text",
-          helperText: "Ex. Wife, Son",
-          // add input validate
-        },
-      ],
+      nextQuestion: 30,
     },
 
     //  CHE NELL'ABITAZIONE SITA AL NUOVO INDIRZZO SONO GIA' ISCRITTE LE SEGUENTI PERSONE
@@ -648,11 +581,11 @@ const choiceTree = {
       answers: [
         {
           id: "yes",
-          nextQuestion: 20,
+          nextQuestion: 21,
         },
         {
           id: "no",
-          nextQuestion: 21,
+          nextQuestion: 22,
         },
       ],
     },
@@ -662,7 +595,7 @@ const choiceTree = {
       title: "Tell us who (just one component)",
       id: 21,
       parentId: 4,
-      nextQuestion: 10,
+      nextQuestion: 22,
       answers: [
         {
           id: "Nome_6",
@@ -702,32 +635,32 @@ const choiceTree = {
     {
       type: "form",
       title: "Your contact",
-      id: 21,
+      id: 22,
       parentId: 4,
-      nextQuestion: 10,
+      nextQuestion: 1,
       answers: [
         {
-          id: "Nome_6",
+          id: "Telefono",
           label: "Phone number",
           type: "number",
           helperText: "091665442",
           // add input validate
         },
         {
-          id: "Cognome_6",
+          id: "Cellulare",
           label: "Mobile number",
           type: "tel",
           helperText: "3332423421",
         },
         {
-          id: "Email",
-          label: "Email",
+          id: "emailPec",
+          label: "Email/Pec",
           type: "email",
           helperText: "test@email.com",
           // add input validate
         },
         {
-          id: "Luogo di nascita",
+          id: "Fax",
           label: "Fax",
           type: "text",
           helperText: "091666555",
@@ -737,3 +670,72 @@ const choiceTree = {
   ],
 };
 export default choiceTree;
+
+/*
+
+
+{
+'Sussiste il seguente vincolo rispetto al su indicato componente della famiglia già residente': '',
+'Si allegano i seguenti documenti 1': '',
+'Si allegano i seguenti documenti 2': '',
+'Si allegano i seguenti documenti 3': '',
+'Si allegano i seguenti documenti 4': '',
+'Cellulare': '',
+'emailPec': '',
+'Data_2': '',
+'C4_1_1': '',
+'C4_1_2': '',
+
+'Sezione': '',
+'foglio': '',
+'particella o mappale': '',
+
+
+'Cognome_6': '',
+'Nome_6': '',
+'Luogo': '',
+'Data di nascita_6': '',
+
+'subalterno': '',
+'undefined_33': '',
+'in data': '',
+'al n': '',
+'C9_1_1': '',
+'C9_1_2': '',
+'C9_1_3': '',
+'C9_1_4': '',
+'C9_1_5': '',
+'C9_1_6': '',
+'C9_1_7': '',
+
+'Entrate di': '',
+'in data_2': '',
+'al n_2': '',
+
+'dati utili 7': '',
+'dati utili 6': '',
+'dati utili 5': '',
+'dati utili 4': '',
+'dati utili 1': '',
+'dati utili 2': '',
+'dati utili 3': '',
+
+'giorno': '',
+'il sottoscritto': '',
+'mese': '',
+'cf': '',
+'anno': '',
+'telefono': '',
+'Cell': '',
+'email': '',
+'che il precedente immobile rimane nella propria disponibilità': '',
+'Illa sottoscrittoa': '',
+'nato a': None,
+'il': '',
+'Data_3': ''}
+
+
+
+
+
+*/

@@ -1,5 +1,5 @@
 import { useContext, useState } from "react";
-import { Context } from "../App";
+import { Context } from "../../App";
 import { Select, Text, Box, Button } from "@chakra-ui/react";
 
 const CustomSelect = ({ state }) => {

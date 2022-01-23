@@ -9,6 +9,7 @@
     "@testing-library/jest-dom": "^5.16.1",
     "@testing-library/react": "^12.1.2",
     "@testing-library/user-event": "^13.5.0",
+    "axios": "^0.25.0",
     "formik": "^2.2.9",
     "framer-motion": "^5.6.0",
     "pdf-lib": "^1.17.1",

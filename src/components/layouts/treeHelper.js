@@ -1,10 +1,11 @@
 import choiceTree from "../../lib/choice";
 import { Context } from "../../App";
 import { useContext, useEffect, useState } from "react";
-import CustomSelect from "../customSelect";
-import CustomForm from "../customForm";
-import CustomCheckbox from "../customCheckbox";
-import CustomLongForm from "../customLongForm";
+import CustomSelect from "../custom/customSelect";
+import CustomForm from "../custom/customForm";
+import CustomCheckbox from "../custom/customCheckbox";
+import CustomLongForm from "../custom/customLongForm";
+import CustomInputNumber from "../custom/customInputNumber";
 
 const TreeHelper = () => {
   // import the dispatch object from the entry point
@@ -16,9 +17,20 @@ const TreeHelper = () => {
   const changeCurrentQuestion = () => {
     console.log(state.currentQuestion);
 
-    const currentQuestion = choiceTree.questions.find(
-      (el) => el.id === state.currentQuestion
-    );
+    let currentQuestion = [];
+
+    console.log(state.componentTree, "ok");
+
+    // see if we are inside the tree components
+    if (state.componentTree.length) {
+      currentQuestion = state.componentTree.find(
+        (el) => el.id === state.currentQuestion
+      );
+    } else {
+      currentQuestion = choiceTree.questions.find(
+        (el) => el.id === state.currentQuestion
+      );
+    }
 
     console.log(currentQuestion, "current question");
 
@@ -26,7 +38,7 @@ const TreeHelper = () => {
     setCurrentQuestion(currentQuestion);
   };
 
-  // retrieve the first question
+  // retrieve the next question
   useEffect(() => {
     changeCurrentQuestion();
 
@@ -44,11 +56,13 @@ const TreeHelper = () => {
           case "select":
             return <CustomSelect state={currentQuestion} />;
           case "form":
-            return <CustomForm state={currentQuestion} />;
+            return <CustomForm stateTemp={currentQuestion} />;
           case "checkbox":
             return <CustomCheckbox state={currentQuestion} />;
           case "longform":
             return <CustomLongForm state={currentQuestion} />;
+          case "number":
+            return <CustomInputNumber state={currentQuestion} />;
           default:
             return null;
         }

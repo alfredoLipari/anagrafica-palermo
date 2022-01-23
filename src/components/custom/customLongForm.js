@@ -6,18 +6,15 @@ import React, { useState, useContext, useEffect } from "react";
 import CustomInput from "./customInput";
 import {
   FormControl,
-  FormLabel,
   FormErrorMessage,
-  FormHelperText,
   Button,
-  Flex,
   Text,
-  Select,
   Divider,
   Box,
+  useEditable,
 } from "@chakra-ui/react";
 import { Formik, Field, Form } from "formik";
-import { Context } from "../App";
+import { Context } from "../../App";
 
 const CustomLongForm = ({ state }) => {
   const questions = {};
@@ -29,9 +26,7 @@ const CustomLongForm = ({ state }) => {
   );
 
   //build the interface for long forms conditionally
-  const [formSize, setFormSize] = useState(state.answers.length);
-
-  console.log(formSize);
+  const [formSize] = useState(state.answers.length);
 
   // logic for the long form
   const [firstColumnForm, setzeroLongForm] = useState([]);
@@ -70,11 +65,20 @@ const CustomLongForm = ({ state }) => {
 
   // handler when the form is submitted, call the dispatcher
   const submitForm = (values) => {
-    dispatch({
-      type: "ANSWER_QUESTION_FORM",
-      answer: values,
-      state: state,
-    });
+    //if we are in component tree, dispatch a different thing
+    if (state.id >= 30) {
+      dispatch({
+        type: "ANSWER_QUESTION_COMPONENT_FORM",
+        answer: values,
+        state: state,
+      });
+    } else {
+      dispatch({
+        type: "ANSWER_QUESTION_FORM",
+        answer: values,
+        state: state,
+      });
+    }
   };
 
   return (
