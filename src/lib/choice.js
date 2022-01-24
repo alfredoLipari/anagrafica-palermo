@@ -16,7 +16,7 @@ const choiceTree = {
         {
           id: "I am a non-EU citizen",
           label: "I'm a non-EU Citizen",
-          nextQuestion: 22,
+          nextQuestion: 2,
         },
         {
           id: "controller",

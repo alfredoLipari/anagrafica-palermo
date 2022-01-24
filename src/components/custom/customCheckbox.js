@@ -3,7 +3,7 @@ import { Box, Text, Button } from "@chakra-ui/react";
 import { Context } from "../../App";
 
 const CustomCheckbox = ({ state }) => {
-  const [answer, setAnswer] = useState(false);
+  const [answer, setAnswer] = useState(true);
   const { dispatch } = useContext(Context);
 
   const submitAnswer = () => {
@@ -13,6 +13,7 @@ const CustomCheckbox = ({ state }) => {
 
     dispatch({
       type: "ANSWER_QUESTION_CHECKBOX",
+      answer: answer,
       nextQuestion: nextQuestion,
     });
   };
@@ -22,7 +23,7 @@ const CustomCheckbox = ({ state }) => {
       <Text
         as="h2"
         color="#000"
-        fontSize="xl"
+        fontSize="2xl"
         marginBottom="5"
         marginTop={{ sm: "3em", lg: "5em" }}
       >

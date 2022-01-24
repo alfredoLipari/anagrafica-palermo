@@ -65,21 +65,20 @@ const CustomLongForm = ({ state }) => {
   const submitForm = (values) => {
     questions = {};
 
-    setTimeout(() => {
-      if (state.id >= 30) {
-        dispatch({
-          type: "ANSWER_QUESTION_COMPONENT_FORM",
-          answer: values,
-          state: state,
-        });
-      } else {
-        dispatch({
-          type: "ANSWER_QUESTION_FORM",
-          answer: values,
-          state: state,
-        });
-      }
-    }, 500);
+    if (state.id >= 30) {
+      dispatch({
+        type: "ANSWER_QUESTION_COMPONENT_FORM",
+        answer: values,
+        state: state,
+      });
+    } else {
+      dispatch({
+        type: "ANSWER_QUESTION_FORM",
+        answer: values,
+        state: state,
+      });
+    }
+
     //if we are in component tree, dispatch a different thing
   };
 
@@ -116,9 +115,7 @@ const CustomLongForm = ({ state }) => {
                 ? { base: "40%", md: "35%", lg: "30%" }
                 : { base: "40%", md: "35%", lg: "50%" }
             }
-            alignItems="center"
             display="flex"
-            alignSelf="center"
             justifyContent="space-between"
             flexDir={formSize > 4 ? "row" : "column"}
           >
@@ -137,6 +134,21 @@ const CustomLongForm = ({ state }) => {
                     )}
                   </Field>
                 ))}
+                {formSize > 8 && (
+                  <Button
+                    type="submit"
+                    color="white"
+                    bg="#0073E6"
+                    marginTop="5"
+                    w="65%"
+                    borderRadius="4"
+                    paddingY="6"
+                    disabled={!props.isValid}
+                    colorScheme={"facebook"}
+                  >
+                    Continue
+                  </Button>
+                )}
               </Box>
               <Box>
                 {secondColumnForm.map((answ) => (
@@ -155,19 +167,21 @@ const CustomLongForm = ({ state }) => {
               </Box>
             </>
           </Box>
-          <Button
-            type="submit"
-            color="white"
-            bg="#0073E6"
-            marginTop="5"
-            w="15%"
-            borderRadius="4"
-            paddingY="6"
-            disabled={!props.isValid}
-            colorScheme={"facebook"}
-          >
-            Continue
-          </Button>
+          {formSize < 8 && (
+            <Button
+              type="submit"
+              color="white"
+              bg="#0073E6"
+              marginTop="5"
+              w="15%"
+              borderRadius="4"
+              paddingY="6"
+              disabled={!props.isValid}
+              colorScheme={"facebook"}
+            >
+              Continue
+            </Button>
+          )}
         </Form>
       )}
     </Formik>

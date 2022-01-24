@@ -29,7 +29,7 @@ const CustomInputNumber = ({ state }) => {
       <NumberInput
         defaultValue={1}
         min={1}
-        max={5}
+        max={4}
         w="20%"
         marginTop="2em"
         onChange={(val) => setAnswer(val)}

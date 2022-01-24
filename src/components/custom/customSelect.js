@@ -9,10 +9,8 @@ const CustomSelect = ({ state }) => {
   const dispatchAnswer = () => {
     if (Object.keys(selectAnswer).length === 0) {
       //the user didnt select anything
-      console.log("oki");
       return;
     }
-    console.log(selectAnswer, "lol");
     //retrieve the object answer from the id
     const answer = state.answers.find((answ) => {
       return answ.id === selectAnswer;
