@@ -27,15 +27,6 @@ const HomePage = ({ children, router }) => {
       justifyContent="space-between"
       bg="yellow.600"
     >
-      <Link
-        to="https://8408-78-40-163-30.ngrok.io/pdf"
-        download
-        target="_blank"
-        replace
-      >
-        ..
-      </Link>
-
       <Navbar />
       <Main />
       <Footer />

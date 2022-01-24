@@ -2,7 +2,7 @@
  *   when a form is bigger than 4 field
  */
 
-import React, { useState, useContext, useEffect } from "react";
+import React, { useState, useContext, useEffect, useCallback } from "react";
 import CustomInput from "./customInput";
 import {
   FormControl,
@@ -17,7 +17,7 @@ import { Formik, Field, Form } from "formik";
 import { Context } from "../../App";
 
 const CustomLongForm = ({ state }) => {
-  const questions = {};
+  let questions = {};
   const { dispatch } = useContext(Context);
 
   //contenuto props with initial status
@@ -32,8 +32,7 @@ const CustomLongForm = ({ state }) => {
   const [firstColumnForm, setzeroLongForm] = useState([]);
   const [secondColumnForm, setfirstLongForm] = useState([]);
 
-  const populateLongForm = () => {
-    console.log("Lol");
+  const populateLongForm = useCallback(() => {
     const firstColumnForm = [];
     const secondColumnForm = [];
 
@@ -47,12 +46,11 @@ const CustomLongForm = ({ state }) => {
 
     setzeroLongForm(firstColumnForm);
     setfirstLongForm(secondColumnForm);
-    console.log(firstColumnForm);
-  };
+  }, [state]);
 
   useEffect(() => {
     populateLongForm();
-  }, [state, formSize]);
+  }, [state, formSize, populateLongForm]);
 
   // write validators
   const validateText = (value) => {
@@ -65,20 +63,24 @@ const CustomLongForm = ({ state }) => {
 
   // handler when the form is submitted, call the dispatcher
   const submitForm = (values) => {
+    questions = {};
+
+    setTimeout(() => {
+      if (state.id >= 30) {
+        dispatch({
+          type: "ANSWER_QUESTION_COMPONENT_FORM",
+          answer: values,
+          state: state,
+        });
+      } else {
+        dispatch({
+          type: "ANSWER_QUESTION_FORM",
+          answer: values,
+          state: state,
+        });
+      }
+    }, 500);
     //if we are in component tree, dispatch a different thing
-    if (state.id >= 30) {
-      dispatch({
-        type: "ANSWER_QUESTION_COMPONENT_FORM",
-        answer: values,
-        state: state,
-      });
-    } else {
-      dispatch({
-        type: "ANSWER_QUESTION_FORM",
-        answer: values,
-        state: state,
-      });
-    }
   };
 
   return (

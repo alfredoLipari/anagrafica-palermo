@@ -16,7 +16,7 @@ const choiceTree = {
         {
           id: "I am a non-EU citizen",
           label: "I'm a non-EU Citizen",
-          nextQuestion: 2,
+          nextQuestion: 22,
         },
         {
           id: "controller",
@@ -284,11 +284,11 @@ const choiceTree = {
       answers: [
         {
           id: "yes",
-          nextQuestion: 11,
+          nextQuestion: 12,
         },
         {
           id: "no",
-          nextQuestion: 12,
+          nextQuestion: 11,
         },
       ],
     },
@@ -382,55 +382,6 @@ const choiceTree = {
     },
 
     //        Titolo di studio:
-
-    {
-      type: "select",
-      title: "What's your educational level?",
-      label: "Select your Degree",
-      id: 13,
-
-      answers: [
-        {
-          selected: false,
-          id: "C1_2_11",
-          label: "Primary School",
-          nextQuestion: 14,
-        },
-        {
-          selected: false,
-          id: "C1_2_12",
-          label: "Secondary School Certificate",
-          nextQuestion: 14,
-        },
-        {
-          selected: false,
-          id: "C1_2_13",
-          label: "Diploma",
-          nextQuestion: 14,
-        },
-        {
-          selected: false,
-          id: "C1_2_14",
-          label: "Bachelor",
-          nextQuestion: 14,
-        },
-        {
-          selected: false,
-          id: "C1_2_5",
-          label: "Master Degree",
-          nextQuestion: 14,
-        },
-        {
-          selected: false,
-          id: "C1_2_6",
-          label: "Phd",
-          nextQuestion: 14,
-        },
-      ],
-
-      parentId: 9,
-    },
-
     //    PATENTE
 
     {
@@ -444,7 +395,7 @@ const choiceTree = {
         },
         {
           id: "no",
-          nextQuestion: 16,
+          nextQuestion: 13,
         },
       ],
     },
@@ -454,7 +405,7 @@ const choiceTree = {
       title: "Driving License Details",
       id: 15,
       parentId: 4,
-      nextQuestion: 10,
+      nextQuestion: 13,
       answers: [
         {
           id: "Numero",
@@ -473,7 +424,7 @@ const choiceTree = {
           id: "Data di rilascio",
           label: "Release Date",
           type: "Date",
-          helperText: "DD/MM/YYYY",
+          helperText: "Release Date",
           // add input validate
         },
         {
@@ -490,6 +441,54 @@ const choiceTree = {
           // add input validate
         },
       ],
+    },
+
+    {
+      type: "select",
+      title: "What's your educational level?",
+      label: "Select your Degree",
+      id: 13,
+
+      answers: [
+        {
+          selected: false,
+          id: "C1_2_11",
+          label: "Primary School",
+          nextQuestion: 16,
+        },
+        {
+          selected: false,
+          id: "C1_2_12",
+          label: "Secondary School Certificate",
+          nextQuestion: 16,
+        },
+        {
+          selected: false,
+          id: "C1_2_13",
+          label: "Diploma",
+          nextQuestion: 16,
+        },
+        {
+          selected: false,
+          id: "C1_2_14",
+          label: "Bachelor",
+          nextQuestion: 16,
+        },
+        {
+          selected: false,
+          id: "C1_2_5",
+          label: "Master Degree",
+          nextQuestion: 16,
+        },
+        {
+          selected: false,
+          id: "C1_2_6",
+          label: "Phd",
+          nextQuestion: 16,
+        },
+      ],
+
+      parentId: 9,
     },
 
     //////////////////////////////////////////////////////////////////77
@@ -523,9 +522,9 @@ const choiceTree = {
         },
         {
           id: "Numero civico",
-          label: "Ex 36",
+          label: "Civic number",
           type: "text",
-          helperText: "Indicate your city of birth",
+          helperText: "Ex. 36",
         },
         {
           id: "Scala",
@@ -569,7 +568,7 @@ const choiceTree = {
       type: "number",
       title: "How many people beside you?",
       id: 18,
-      nextQuestion: 30,
+      nextQuestion: 31,
     },
 
     //  CHE NELL'ABITAZIONE SITA AL NUOVO INDIRZZO SONO GIA' ISCRITTE LE SEGUENTI PERSONE

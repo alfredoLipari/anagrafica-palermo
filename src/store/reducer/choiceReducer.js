@@ -37,6 +37,10 @@ export function reducer(state, action) {
       // push the answer as Id in the object answer
       // retrive the id of the question and the id parent
 
+      if (action.state.id === 22) {
+        action.state.nextQuestion = 22;
+      }
+
       const newAnswersForm = [
         ...state.answers,
         {
@@ -60,7 +64,7 @@ export function reducer(state, action) {
       // create the tree object for every components
       let componentsTree = [];
 
-      for (let i = 1; i <= action.answer; i++) {
+      for (let i = 2; i <= action.answer + 1; i++) {
         componentsTree.push({
           type: "longform",
           title: "Component",
@@ -122,7 +126,7 @@ export function reducer(state, action) {
               // add input validate
             },
             {
-              id: "Rapporto di parentela con il richiedente_".concat("", i - 1),
+              id: "Rapporto di parentela con il richiedente_".concat("", i - 2),
               label: "Relation to the applicant",
               type: "text",
               helperText: "Ex. Wife, Son",

@@ -5,6 +5,7 @@ import Fonts from "./components/fonts";
 import theme from "./lib/theme";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { reducer } from "./store/reducer/choiceReducer";
+import DownloadResult from "./components/layouts/donwloadResult";
 
 export const Context = createContext();
 
@@ -17,8 +18,6 @@ const Website = () => {
 
   const [state, dispatch] = useReducer(reducer, initialState);
 
-  console.log(state.answers, "le risposte");
-
   return (
     <Context.Provider value={{ state, dispatch }}>
       <BrowserRouter>
@@ -26,6 +25,7 @@ const Website = () => {
           <Fonts />
           <Routes>
             <Route path="/" element={<HomePage />} />
+            <Route path="/download-pdf" element={<DownloadResult />} />
           </Routes>
         </ChakraProvider>
       </BrowserRouter>
