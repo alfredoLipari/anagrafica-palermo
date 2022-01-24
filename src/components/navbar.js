@@ -28,7 +28,7 @@ const Navbar = (props) => {
           <MenuButton textColor={"black"} bg={"transparent"} as={Button} rightIcon={<ChevronDownIcon />}>
             ENG
           </MenuButton>
-          <MenuList>
+          <MenuList bg={"#0073E6"}>
             <MenuItem>ENG</MenuItem>
             <MenuItem>ITA</MenuItem>
             <MenuItem>SPN</MenuItem>

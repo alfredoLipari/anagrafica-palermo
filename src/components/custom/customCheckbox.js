@@ -65,7 +65,7 @@ const CustomCheckbox = ({ state }) => {
         paddingY="6"
         marginTop="4em"
         onClick={() => submitAnswer()}
-        colorScheme="linkedin"
+        colorScheme={"facebook"}
       >
         Continue
       </Button>

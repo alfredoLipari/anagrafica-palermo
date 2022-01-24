@@ -164,6 +164,7 @@ const CustomLongForm = ({ state }) => {
             borderRadius="4"
             paddingY="6"
             disabled={!props.isValid}
+            colorScheme={"facebook"}
           >
             Continue
           </Button>
