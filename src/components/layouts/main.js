@@ -29,6 +29,7 @@ const Main = () => {
             w="15%"
             borderRadius="4"
             paddingY="6"
+            colorScheme={"facebook"}
             onClick={() => setIsFormStarted(true)}
           >
             Let's Start

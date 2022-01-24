@@ -50,6 +50,7 @@ const CustomSelect = ({ state }) => {
         paddingY="6"
         onClick={() => dispatchAnswer()}
         disabled={!selectAnswer}
+        colorScheme={"facebook"}
       >
         Continue
       </Button>
