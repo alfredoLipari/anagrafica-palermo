@@ -15,11 +15,7 @@ const TreeHelper = () => {
 
   // function that dispatch an action to decide the next question
   const changeCurrentQuestion = () => {
-    console.log(state.currentQuestion);
-
     let currentQuestion = [];
-
-    console.log(state.componentTree, "ok");
 
     // see if we are inside the tree components
     if (state.componentTree.length) {
@@ -31,8 +27,6 @@ const TreeHelper = () => {
         (el) => el.id === state.currentQuestion
       );
     }
-
-    console.log(currentQuestion, "current question");
 
     setType(currentQuestion.type);
     setCurrentQuestion(currentQuestion);

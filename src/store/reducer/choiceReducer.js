@@ -31,15 +31,16 @@ export function reducer(state, action) {
       state.componentTree.shift();
 
       // control for the components tree
-      if (action.state.label === "Select your Status") {
+      if (action.state.label === "Select her/his Status") {
         state.componentTree.shift();
       }
 
       // control for the components tree
       if (
         state.componentTree.length === 0 &&
-        action.state.label === "Select your Degree"
+        action.state.label === "Select her/his Degree"
       ) {
+        console.log("finish");
         nextQuestion = 19;
       }
 
@@ -196,31 +197,31 @@ export function reducer(state, action) {
           answers: [
             {
               selected: false,
-              id: "c" + page + "_" + moduls + "_6",
+              id: "C" + page + "_" + moduls + "_6",
               label: "Housewife",
               nextQuestion: 33 + i,
             },
             {
               selected: false,
-              id: "c" + page + "_" + moduls + "_7",
+              id: "C" + page + "_" + moduls + "_7",
               label: "Student",
               nextQuestion: 33 + i,
             },
             {
               selected: false,
-              id: "c" + page + "_" + moduls + "_8",
+              id: "C" + page + "_" + moduls + "_8",
               label: "Unemployed",
               nextQuestion: 33 + i,
             },
             {
               selected: false,
-              id: "c" + page + "_" + moduls + "_9",
+              id: "C" + page + "_" + moduls + "_9",
               label: "Retired",
               nextQuestion: 33 + i,
             },
             {
               selected: false,
-              id: "c" + page + "_" + moduls + "_10",
+              id: "C" + page + "_" + moduls + "_10",
               label: "Other",
               nextQuestion: 33 + i,
             },
@@ -230,7 +231,7 @@ export function reducer(state, action) {
         componentsTree.push({
           type: "select",
           title: "What's his/her professional status?",
-          label: "Select his/her Status",
+          label: "Select her/his Status",
           id: 32 + i,
 
           answers: [

@@ -167,7 +167,7 @@ const CustomLongForm = ({ state }) => {
               </Box>
             </>
           </Box>
-          {formSize < 8 && (
+          {formSize <= 8 && (
             <Button
               type="submit"
               color="white"

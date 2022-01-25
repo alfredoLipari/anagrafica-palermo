@@ -304,31 +304,31 @@ const choiceTree = {
       answers: [
         {
           selected: false,
-          id: "c1_2_6",
+          id: "C1_2_6",
           label: "Housewife",
           nextQuestion: 13,
         },
         {
           selected: false,
-          id: "c1_2_7",
+          id: "C1_2_7",
           label: "Student",
           nextQuestion: 13,
         },
         {
           selected: false,
-          id: "c1_2_8",
+          id: "C1_2_8",
           label: "Unemployed",
           nextQuestion: 13,
         },
         {
           selected: false,
-          id: "c1_2_9",
+          id: "C1_2_9",
           label: "Retired",
           nextQuestion: 13,
         },
         {
           selected: false,
-          id: "c1_2_10",
+          id: "C1_2_10",
           label: "Other",
           nextQuestion: 13,
         },
