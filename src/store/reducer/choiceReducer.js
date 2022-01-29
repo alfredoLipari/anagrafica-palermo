@@ -75,9 +75,13 @@ export function reducer(state, action) {
       };
     case "ANSWER_QUESTION_CHECKBOX":
       // checbox is for controll, it means we are not pushing any new answer, just switching question
+      // the next question is calculated by adding 8 to the first one
       if (
         !action.answer &&
-        (action.nextQuestion === 37 || action.nextQuestion === 38)
+        (action.nextQuestion === 37 ||
+          action.nextQuestion === 45 ||
+          action.nextQuestion === 53 ||
+          action.nextQuestion === 61)
       ) {
         state.componentTree.shift();
       }
@@ -92,11 +96,11 @@ export function reducer(state, action) {
     case "ANSWER_QUESTION_COMPONENT_NUMBER":
       // create the tree object for every components
       let componentsTree = [];
-      let indexFirstQuestion = 0;
 
       // controller for the checkbox
       let page = 2;
       let moduls = 1;
+      let currentIndex = 0;
 
       for (let i = 2; i <= parseInt(action.answer) + 1; i++) {
         if (page === 3) {
@@ -106,15 +110,17 @@ export function reducer(state, action) {
         componentsTree.push({
           type: "longform",
           title: "Component N." + (i - 1),
-          id: 29 + i + indexFirstQuestion,
+          id: 29 + i + currentIndex,
           parentId: 4,
-          nextQuestion: 30 + i,
+          nextQuestion: 30 + i + currentIndex,
           answers: [
             {
               id: "Nome_" + i,
               label: "Name",
               type: "text",
               helperText: "Ex. Moussa",
+              validate: "RequiredField",
+              isRequired: true,
               // add input validate
             },
             {
@@ -122,12 +128,16 @@ export function reducer(state, action) {
               label: "Surname",
               type: "text",
               helperText: "Ex. Semprini",
+              validate: "RequiredField",
+              isRequired: true,
             },
             {
               id: "Data di nascita_" + i,
               label: "Date of birth",
               type: "date",
               helperText: "Date of birth",
+              validate: "RequiredField",
+              isRequired: true,
               // add input validate
             },
             {
@@ -135,12 +145,16 @@ export function reducer(state, action) {
               label: "Where were you born?",
               type: "text",
               helperText: "Indicate your city of birth",
+              validate: "RequiredField",
+              isRequired: true,
             },
             {
               id: "Sesso_" + i,
               label: "Gender",
               type: "select",
               helperText: "Ex. Ghane, France, Russia",
+              validate: "gender",
+              isRequired: true,
               // add input validate
             },
             {
@@ -148,12 +162,16 @@ export function reducer(state, action) {
               label: "Are you married?",
               type: "text",
               helperText: "",
+              validate: "RequiredField",
+              isRequired: true,
             },
             {
               id: "Cittadinanza_" + i,
               label: "Citizenship",
               type: "text",
               helperText: "Ex. Ghanian, Francaise, Russian...",
+              validate: "RequiredField",
+              isRequired: true,
               // add input validate
             },
             {
@@ -161,6 +179,8 @@ export function reducer(state, action) {
               label: "Codice Fiscale",
               type: "text",
               helperText: "Ex. R5MRI88L73G273E",
+              validate: "RequiredField",
+              isRequired: true,
               // add input validate
             },
             {
@@ -168,6 +188,8 @@ export function reducer(state, action) {
               label: "Relation to the applicant",
               type: "text",
               helperText: "Ex. Wife, Son",
+              validate: "RequiredField",
+              isRequired: true,
               // add input validate
             },
           ],
@@ -176,15 +198,15 @@ export function reducer(state, action) {
         componentsTree.push({
           type: "checkbox",
           title: "Does she/he has a job?",
-          id: 30 + i,
+          id: 30 + i + currentIndex,
           answers: [
             {
               id: "yes",
-              nextQuestion: 32 + i,
+              nextQuestion: 32 + i + currentIndex,
             },
             {
               id: "no",
-              nextQuestion: 31 + i,
+              nextQuestion: 31 + i + currentIndex,
             },
           ],
         });
@@ -193,37 +215,37 @@ export function reducer(state, action) {
           type: "select",
           title: "What's her/his Non-professional status?",
           label: "Select her/his Status",
-          id: 31 + i,
+          id: 31 + i + currentIndex,
           answers: [
             {
               selected: false,
               id: "C" + page + "_" + moduls + "_6",
               label: "Housewife",
-              nextQuestion: 33 + i,
+              nextQuestion: 33 + i + currentIndex,
             },
             {
               selected: false,
               id: "C" + page + "_" + moduls + "_7",
               label: "Student",
-              nextQuestion: 33 + i,
+              nextQuestion: 33 + i + currentIndex,
             },
             {
               selected: false,
               id: "C" + page + "_" + moduls + "_8",
               label: "Unemployed",
-              nextQuestion: 33 + i,
+              nextQuestion: 33 + i + currentIndex,
             },
             {
               selected: false,
               id: "C" + page + "_" + moduls + "_9",
               label: "Retired",
-              nextQuestion: 33 + i,
+              nextQuestion: 33 + i + currentIndex,
             },
             {
               selected: false,
               id: "C" + page + "_" + moduls + "_10",
               label: "Other",
-              nextQuestion: 33 + i,
+              nextQuestion: 33 + i + currentIndex,
             },
           ],
         });
@@ -232,38 +254,38 @@ export function reducer(state, action) {
           type: "select",
           title: "What's his/her professional status?",
           label: "Select her/his Status",
-          id: 32 + i,
+          id: 32 + i + currentIndex,
 
           answers: [
             {
               selected: false,
               id: "C" + page + "_" + moduls + "_4",
               label: "Worker",
-              nextQuestion: 33 + i,
+              nextQuestion: 33 + i + currentIndex,
             },
             {
               selected: false,
               id: "C" + page + "_" + moduls + "_5",
               label: "Family Worker",
-              nextQuestion: 33 + i,
+              nextQuestion: 33 + i + currentIndex,
             },
             {
               selected: false,
               id: "C" + page + "_" + moduls + "_3",
               label: "Freelance / Entrepreneur",
-              nextQuestion: 33 + i,
+              nextQuestion: 33 + i + currentIndex,
             },
             {
               selected: false,
               id: "C" + page + "_" + moduls + "_1",
               label: "Self-Employed",
-              nextQuestion: 33 + i,
+              nextQuestion: 33 + i + currentIndex,
             },
             {
               selected: false,
               id: "C" + page + "_" + moduls + "_2",
               label: "Executive / Employee",
-              nextQuestion: 33 + i,
+              nextQuestion: 33 + i + currentIndex,
             },
           ],
 
@@ -274,57 +296,65 @@ export function reducer(state, action) {
           {
             type: "checkbox",
             title: "Does she/he has an Italian Driving License?",
-            id: 33 + i,
+            id: 33 + i + currentIndex,
             answers: [
               {
                 id: "yes",
-                nextQuestion: 34 + i,
+                nextQuestion: 34 + i + currentIndex,
               },
               {
                 id: "no",
-                nextQuestion: 35 + i,
+                nextQuestion: 35 + i + currentIndex,
               },
             ],
           },
 
           {
             type: "longform",
-            title: "Driving License Details",
-            id: 34 + i,
+            title: "Driving License Details, this details are not mandatory",
+            id: 34 + i + currentIndex,
             parentId: 4,
-            nextQuestion: 35 + i,
+            nextQuestion: 35 + i + currentIndex,
             answers: [
               {
                 id: "Numero",
                 label: "Number",
                 type: "text",
                 helperText: "Ex. 91828930",
-                // add input validate
+                validate: "RequiredField",
+                isRequired: false,
               },
               {
                 id: "Patente tipo",
                 label: "License Type",
                 type: "text",
                 helperText: "Ex. A,B,C",
+                validate: "RequiredField",
+                isRequired: false,
+                // add input validate
               },
               {
                 id: "Data di rilascio",
                 label: "Release Date",
                 type: "Date",
                 helperText: "Release Date",
-                // add input validate
+                validate: "RequiredField",
+                isRequired: false,
               },
               {
                 id: "Organo di rilascio",
                 label: "Issuing body",
                 type: "text",
                 helperText: "Motorizzazione",
+                // validate: "RequiredField", // change validation
+                isRequired: false,
               },
               {
                 id: "Provincia di",
                 label: "Province",
                 type: "text",
                 helperText: "Palermo",
+                isRequired: false,
                 // add input validate
               },
             ],
@@ -335,44 +365,44 @@ export function reducer(state, action) {
           type: "select",
           title: "What's her/his educational level?",
           label: "Select her/his Degree",
-          id: 35 + i,
+          id: 35 + i + currentIndex,
 
           answers: [
             {
               selected: false,
               id: "C" + page + "_" + moduls + "_11",
               label: "Primary School",
-              nextQuestion: 37 + i,
+              nextQuestion: 37 + i + currentIndex,
             },
             {
               selected: false,
               id: "C" + page + "_" + moduls + "_12",
               label: "Secondary School Certificate",
-              nextQuestion: 37 + i,
+              nextQuestion: 37 + i + currentIndex,
             },
             {
               selected: false,
               id: "C" + page + "_" + moduls + "_13",
               label: "Diploma",
-              nextQuestion: 37 + i,
+              nextQuestion: 37 + i + currentIndex,
             },
             {
               selected: false,
               id: "C" + page + "_" + moduls + "_14",
               label: "Bachelor",
-              nextQuestion: 37 + i,
+              nextQuestion: 37 + i + currentIndex,
             },
             {
               selected: false,
-              id: "C" + page + "_" + moduls + "_5",
+              id: "C" + page + "_" + moduls + "_15",
               label: "Master Degree",
-              nextQuestion: 37 + i,
+              nextQuestion: 37 + i + currentIndex,
             },
             {
               selected: false,
-              id: "C" + page + "_" + moduls + "_6",
+              id: "C" + page + "_" + moduls + "_16",
               label: "Phd",
-              nextQuestion: 37 + i,
+              nextQuestion: 37 + i + currentIndex,
             },
           ],
 
@@ -384,7 +414,7 @@ export function reducer(state, action) {
           page++;
         }
         moduls++;
-        indexFirstQuestion += 7;
+        currentIndex += 7;
       }
 
       return {

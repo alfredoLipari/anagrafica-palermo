@@ -3,6 +3,7 @@ import Navbar from "../navbar.js";
 import Footer from "../footer.js";
 import Main from "./main.js";
 import { Link } from "react-router-dom";
+import CustomAutosuggest from "../custom/customAutosuggest.js";
 
 const HomePage = ({ children, router }) => {
   const fetchpdf = async () => {

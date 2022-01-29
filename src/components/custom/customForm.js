@@ -1,52 +1,137 @@
-import React, { useState, useContext } from "react";
+import React, {
+  useState,
+  useContext,
+  useEffect,
+  useCallback,
+  useRef,
+} from "react";
 import CustomInput from "./customInput";
-import {
-  FormControl,
-  FormErrorMessage,
-  Button,
-  Text,
-  Divider,
-  Box,
-} from "@chakra-ui/react";
+import { FormControl, Button, Text, Divider, Box } from "@chakra-ui/react";
 import { Formik, Field, Form } from "formik";
 import { Context } from "../../App";
 import { useNavigate } from "react-router-dom";
+import CustomAutosuggest from "./customAutosuggest";
+import { validateText, validateCountry } from "../../lib/validation";
 
 const CustomForm = ({ stateTemp }) => {
-  const questions = {};
+  let questions = {};
+  let country = useRef("");
   const { state, dispatch } = useContext(Context);
   const navigate = useNavigate();
 
-  //contenuto props with initial status
+  // initial values of the form, without the autosuggest input
   const [content] = useState(
-    stateTemp.answers.map((question) => (questions[question.id] = ""))
+    stateTemp.answers
+      .filter(function (question) {
+        return question.autocomplete !== true;
+      })
+      .map((quest) => (questions[quest.id] = ""))
   );
 
-  // write validators
-  const validateText = (value) => {
-    let error;
-    if (value === "") {
-      error = "please insert something";
+  // adding autosuggest logic
+  const [answers, setAnswers] = useState({});
+  const [isValid, setIsValid] = useState(false);
+  const [showError, setShowError] = useState(false);
+
+  const renderAutoSuggest = useCallback(() => {
+    // logic to decide the cities to show
+    if (state.answers.length > 0) {
+      // retrieve the country
+      country.current = state.answers.find((answ) =>
+        answ.answer.hasOwnProperty("Indicare lo Stato estero di provenienza")
+      );
+
+      // if the user press "different city" we should render the autosuggest with only italian cities
+      const isOnlyItalianCity = state.answers.find((answ) =>
+        answ.answer.hasOwnProperty("C1_1_1")
+      );
+
+      if (isOnlyItalianCity) {
+        country.current = {
+          answer: {
+            "Indicare lo Stato estero di provenienza": "Italy",
+          },
+        };
+      }
+      console.log(country.current, "ok");
     }
-    return error;
+  }, [state]);
+
+  useEffect(() => {
+    renderAutoSuggest();
+    return () => {
+      console.log();
+    };
+  }, [renderAutoSuggest]);
+
+  const autosuggestHandler = (value, tag) => {
+    if (!tag) {
+      return;
+    }
+    if (value === "") {
+      setIsValid(false);
+    } else {
+      setIsValid(true);
+    }
+    console.log(tag, value);
+    setAnswers({
+      ...answers,
+      [tag]: value,
+    });
+  };
+
+  // decide the validation conditionally
+  const validateInput = (value) => {
+    switch (value) {
+      case "requiredField":
+        return validateText;
+      case "other":
+        break;
+
+      default:
+        return null;
+    }
   };
 
   // handler when the form is submitted, call the dispatcher
   const submitForm = (values) => {
+    let newValues = values;
+
+    if (Object.keys(answers).length > 0 && !country.current) {
+      newValues = validateCountry(values, answers);
+    } else if (Object.keys(answers).length > 0 && country.current) {
+      newValues["Indicare il comune di provenienza"] =
+        answers["Indicare il comune di provenienza"];
+    }
+    // if the return type is invalid return the errore message
+
+    if (!isValid || !Object.keys(newValues).length > 0) {
+      if (!Object.keys(newValues).length > 0) {
+        setShowError(true);
+        return;
+      }
+    } else {
+      setShowError(false);
+    }
+
     dispatch({
       type: "ANSWER_QUESTION_FORM",
-      answer: values,
+      answer: newValues,
       state: stateTemp,
     });
 
     if (stateTemp.id === 22) {
       navigate("/download-pdf");
     }
+    setAnswers({});
+    questions = {};
   };
 
   return (
     <Formik
       initialValues={questions}
+      validateOnChange={false}
+      validateOnBlur={false}
       onSubmit={(values, actions) => {
         submitForm(values);
       }}
@@ -79,17 +164,31 @@ const CustomForm = ({ stateTemp }) => {
             alignSelf="center"
             flexDir="column"
           >
-            {stateTemp.answers.map((answ) => (
-              <Field name={answ.id} validate={validateText} key={answ.id}>
-                {({ field, form }) => (
-                  <FormControl mb="10">
-                    <CustomInput {...field} m="1" state={answ} />
-
-                    <FormErrorMessage>{form.errors[answ.id]}</FormErrorMessage>
-                  </FormControl>
-                )}
-              </Field>
-            ))}
+            {stateTemp.answers.map((answ) =>
+              answ.autocomplete === undefined || answ.autocomplete !== true ? (
+                <Field
+                  name={answ.id}
+                  validate={validateInput(answ.validate)}
+                  key={answ.id}
+                >
+                  {({ field, form }) => (
+                    <FormControl>
+                      <CustomInput {...field} state={answ} />
+                    </FormControl>
+                  )}
+                </Field>
+              ) : (
+                <Box key={answ.id}>
+                  <CustomAutosuggest
+                    value={answers}
+                    autosuggestHandler={autosuggestHandler}
+                    tag={answ}
+                    country={country.current}
+                    error={showError}
+                  />
+                </Box>
+              )
+            )}
           </Box>
 
           <Button

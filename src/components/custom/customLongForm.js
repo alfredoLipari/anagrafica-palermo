@@ -4,25 +4,36 @@
 
 import React, { useState, useContext, useEffect, useCallback } from "react";
 import CustomInput from "./customInput";
-import {
-  FormControl,
-  FormErrorMessage,
-  Button,
-  Text,
-  Divider,
-  Box,
-  useEditable,
-} from "@chakra-ui/react";
-import { Formik, Field, Form } from "formik";
+import { FormControl, Button, Text, Divider, Box } from "@chakra-ui/react";
+import { Formik, FastField, Form } from "formik";
 import { Context } from "../../App";
+import CustomAutosuggest from "./customAutosuggest";
+import {
+  validateText,
+  validateGender,
+  validateFiscalCode,
+} from "../../lib/validation";
 
 const CustomLongForm = ({ state }) => {
   let questions = {};
   const { dispatch } = useContext(Context);
+  let country = {
+    answer: {
+      "Indicare lo Stato estero di provenienza": "Italy",
+    },
+  };
 
-  //contenuto props with initial status
+  // adding autosuggest logic
+  const [answers, setAnswers] = useState({ "Luogo di nascita": "" });
+  const [error, setError] = useState(false);
+
+  // initial values of the form, without the autosuggest input
   const [content] = useState(
-    state.answers.map((question) => (questions[question.id] = ""))
+    state.answers
+      .filter(function (question) {
+        return question.autocomplete !== true;
+      })
+      .map((quest) => (questions[quest.id] = ""))
   );
 
   //build the interface for long forms conditionally
@@ -32,6 +43,7 @@ const CustomLongForm = ({ state }) => {
   const [firstColumnForm, setzeroLongForm] = useState([]);
   const [secondColumnForm, setfirstLongForm] = useState([]);
 
+  // handler to render the form
   const populateLongForm = useCallback(() => {
     const firstColumnForm = [];
     const secondColumnForm = [];
@@ -48,38 +60,74 @@ const CustomLongForm = ({ state }) => {
     setfirstLongForm(secondColumnForm);
   }, [state]);
 
+  const autosuggestHandler = (value, tag) => {
+    if (!tag) {
+      return;
+    }
+    setAnswers({
+      [tag]: value,
+    });
+  };
+
   useEffect(() => {
     populateLongForm();
   }, [state, formSize, populateLongForm]);
 
-  // write validators
-  const validateText = (value) => {
-    let error;
-    if (value === "") {
-      error = "please insert something";
-    }
-    return error;
-  };
-
   // handler when the form is submitted, call the dispatcher
   const submitForm = (values) => {
-    questions = {};
+    let newAnswers = {};
+
+    const isAutosuggestPresent = state.answers.some(
+      (question) => question.autocomplete === true
+    );
+    if (isAutosuggestPresent) {
+      // check if answers is not empty
+      if (answers["Luogo di nascita"] === "") {
+        setError(true);
+        return;
+      }
+      newAnswers = {
+        ...values,
+        "Luogo di nascita": answers["Luogo di nascita"],
+      };
+    } else {
+      newAnswers = { ...values };
+    }
+
+    console.log(newAnswers);
 
     if (state.id >= 30) {
       dispatch({
         type: "ANSWER_QUESTION_COMPONENT_FORM",
-        answer: values,
+        answer: newAnswers,
         state: state,
       });
     } else {
       dispatch({
         type: "ANSWER_QUESTION_FORM",
-        answer: values,
+        answer: newAnswers,
         state: state,
       });
     }
 
+    setAnswers([]);
+    setError(false);
+
     //if we are in component tree, dispatch a different thing
+  };
+
+  // decide the validation conditionally
+  const validateInput = (value) => {
+    switch (value) {
+      case "gender":
+        return validateGender;
+      case "RequiredField":
+        return validateText;
+      case "fiscalCodeField":
+        return validateFiscalCode;
+      default:
+        return undefined;
+    }
   };
 
   return (
@@ -88,6 +136,8 @@ const CustomLongForm = ({ state }) => {
       onSubmit={(values, actions) => {
         submitForm(values);
       }}
+      validateOnChange={false}
+      validateOnBlur={false}
     >
       {(props) => (
         <Form
@@ -121,19 +171,40 @@ const CustomLongForm = ({ state }) => {
           >
             <>
               <Box>
-                {firstColumnForm.map((answ) => (
-                  <Field name={answ.id} validate={validateText} key={answ.id}>
-                    {({ field, form }) => (
-                      <FormControl mb="10">
-                        <CustomInput {...field} m="1" state={answ} />
-
-                        <FormErrorMessage>
-                          {form.errors[answ.id]}
-                        </FormErrorMessage>
-                      </FormControl>
-                    )}
-                  </Field>
-                ))}
+                {firstColumnForm.map((answ) =>
+                  answ.autocomplete === undefined ? (
+                    <Box key={answ.id}>
+                      <FastField
+                        name={answ.id}
+                        validate={validateInput(answ.validate)}
+                      >
+                        {({ field, form }) => (
+                          <FormControl mb="10">
+                            <CustomInput
+                              {...field}
+                              m="1"
+                              state={answ}
+                              error={
+                                props.errors[answ.id] &&
+                                props.touched[answ.id] &&
+                                props.errors[answ.id]
+                              }
+                            />
+                          </FormControl>
+                        )}
+                      </FastField>
+                    </Box>
+                  ) : (
+                    <CustomAutosuggest
+                      key={answ.id}
+                      value={answers}
+                      autosuggestHandler={autosuggestHandler}
+                      tag={answ}
+                      country={country}
+                      error={error}
+                    />
+                  )
+                )}
                 {formSize > 8 && (
                   <Button
                     type="submit"
@@ -143,7 +214,6 @@ const CustomLongForm = ({ state }) => {
                     w="65%"
                     borderRadius="4"
                     paddingY="6"
-                    disabled={!props.isValid}
                     colorScheme={"facebook"}
                   >
                     Continue
@@ -152,17 +222,27 @@ const CustomLongForm = ({ state }) => {
               </Box>
               <Box>
                 {secondColumnForm.map((answ) => (
-                  <Field name={answ.id} validate={validateText} key={answ.id}>
-                    {({ field, form }) => (
-                      <FormControl mb="10">
-                        <CustomInput {...field} m="1" state={answ} />
-
-                        <FormErrorMessage>
-                          {form.errors[answ.id]}
-                        </FormErrorMessage>
-                      </FormControl>
-                    )}
-                  </Field>
+                  <Box key={answ.id}>
+                    <FastField
+                      name={answ.id}
+                      validate={validateInput(answ.validate)}
+                    >
+                      {({ field, form }) => (
+                        <FormControl mb="10">
+                          <CustomInput
+                            {...field}
+                            m="1"
+                            state={answ}
+                            error={
+                              props.errors[answ.id] &&
+                              props.touched[answ.id] &&
+                              props.errors[answ.id]
+                            }
+                          />
+                        </FormControl>
+                      )}
+                    </FastField>
+                  </Box>
                 ))}
               </Box>
             </>
@@ -176,8 +256,8 @@ const CustomLongForm = ({ state }) => {
               w="15%"
               borderRadius="4"
               paddingY="6"
-              disabled={!props.isValid}
               colorScheme={"facebook"}
+              disabled={false}
             >
               Continue
             </Button>
