@@ -200,6 +200,7 @@ const CustomForm = ({ stateTemp }) => {
             borderRadius="4"
             paddingY="6"
             disabled={!props.isValid}
+            marginBottom={"10"}
           >
             {stateTemp.id !== 22 ? "Continue" : "Generate pdf"}
           </Button>

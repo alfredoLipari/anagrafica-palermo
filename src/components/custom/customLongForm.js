@@ -153,7 +153,8 @@ const CustomLongForm = ({ state }) => {
             as="h2"
             color="#000"
             fontSize="xl"
-            marginTop="2em"
+            fontWeight={"bold"}
+            marginTop="1em"
             marginBottom="5"
           >
             {state.title}
@@ -215,6 +216,7 @@ const CustomLongForm = ({ state }) => {
                     borderRadius="4"
                     paddingY="6"
                     colorScheme={"facebook"}
+                    marginBottom={"10"}
                   >
                     Continue
                   </Button>
@@ -258,6 +260,7 @@ const CustomLongForm = ({ state }) => {
               paddingY="6"
               colorScheme={"facebook"}
               disabled={false}
+              marginBottom={"10"}
             >
               Continue
             </Button>
