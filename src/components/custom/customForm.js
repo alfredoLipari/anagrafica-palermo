@@ -9,7 +9,6 @@ import CustomInput from "./customInput";
 import { FormControl, Button, Text, Divider, Box } from "@chakra-ui/react";
 import { Formik, Field, Form } from "formik";
 import { Context } from "../../App";
-import { useNavigate } from "react-router-dom";
 import CustomAutosuggest from "./customAutosuggest";
 import { validateText, validateCountry } from "../../lib/validation";
 
@@ -17,7 +16,6 @@ const CustomForm = ({ stateTemp }) => {
   let questions = {};
   let country = useRef("");
   const { state, dispatch } = useContext(Context);
-  const navigate = useNavigate();
 
   // initial values of the form, without the autosuggest input
   const [content] = useState(
@@ -197,6 +195,7 @@ const CustomForm = ({ stateTemp }) => {
             borderRadius="4"
             paddingY="6"
             disabled={!props.isValid}
+            marginBottom={"10"}
           >
             {stateTemp.id !== 33 ? "Continue" : "Generate pdf"}
           </Button>

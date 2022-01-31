@@ -4,7 +4,8 @@ import Logo from "./asset/logoComuneDiPalermo.svg";
 
 const Footer = () => {
   return (
-    <Box h="20%" bg="#FEBB2C" w="100%">
+    <Box 
+    h="20%" bg="#FEBB2C" w="100%">
       <Box
         display="flex"
         alignItems="center"

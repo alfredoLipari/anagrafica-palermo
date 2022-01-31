@@ -82,8 +82,8 @@ const DownloadResult = () => {
             <Text fontSize="xl">
               <Text as="ins" onClick={() => retryDownload()}>
                 Click here
-              </Text>{" "}
-              if the download didn't occur
+              </Text>
+              &nbsp;if the download didn't occur
             </Text>
             <Button
               color="white"

@@ -67,6 +67,7 @@ const CustomCheckbox = ({ state }) => {
         marginTop="4em"
         onClick={() => submitAnswer()}
         colorScheme={"facebook"}
+        marginBottom={"10"}
       >
         Continue
       </Button>

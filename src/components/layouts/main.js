@@ -9,7 +9,7 @@ const Main = () => {
   const [isFormStarted, setIsFormStarted] = useState(false);
 
   return (
-    <Box bg="white" h="75vh" textAlign="center">
+    <Box bg="white" h="80vh" textAlign="center">
       {!isFormStarted ? (
         <Box marginTop="20">
           <Text fontSize="2xl" fontWeight="extrabold" color="#000">
@@ -34,7 +34,9 @@ const Main = () => {
           >
             Let's Start
           </Button>
-          <Flex justifyContent={"center"}>   
+          <Flex 
+          marginTop={10}
+          justifyContent={"center"}>   
             <Box h="215px" w='825px' marginTop={18}>
               <Image  src={People} alt='logo comune' />
             </Box>

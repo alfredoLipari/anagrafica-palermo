@@ -1,6 +1,6 @@
 import { useContext, useState } from "react";
 import { Context } from "../../App";
-import { Select, Text, Box, Button } from "@chakra-ui/react";
+import { Select, Text, Box, Button, } from "@chakra-ui/react";
 
 const CustomSelect = ({ state }) => {
   const { dispatch } = useContext(Context);
@@ -31,9 +31,11 @@ const CustomSelect = ({ state }) => {
         {state.title}
       </Text>
       <Select
+        iconColor="#0E78E2"
+        iconSize="50"
         color="#000"
         placeholder={state.label}
-        width="30%"
+        width="25%"
         fontSize="xl"
         marginTop="10"
         onClick={(something) => setSelectAnswer(something.target.value)}
@@ -56,6 +58,7 @@ const CustomSelect = ({ state }) => {
         onClick={() => dispatchAnswer()}
         disabled={!selectAnswer}
         colorScheme={"facebook"}
+        marginBottom={"10"}
       >
         Continue
       </Button>

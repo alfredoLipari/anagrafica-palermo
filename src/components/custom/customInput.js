@@ -9,10 +9,11 @@ import {
 const CustomInput = (props) => {
   return (
     <FormControl id={props.id}>
-      <FormLabel>{props.label}</FormLabel>
+      <FormLabel color={"#404B57"}>{props.label}</FormLabel>
       <Input
         {...props}
         type={props.state.type}
+        textColor={"#404B57"}
         border="none"
         borderBottom="1px"
         borderRadius="0px"

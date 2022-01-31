@@ -49,6 +49,7 @@ const CustomInputNumber = ({ state }) => {
         marginTop="4em"
         onClick={() => submitAnswer()}
         colorScheme="linkedin"
+        marginBottom={"10"}
       >
         Continue
       </Button>
