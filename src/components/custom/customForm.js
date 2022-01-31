@@ -120,9 +120,6 @@ const CustomForm = ({ stateTemp }) => {
       state: stateTemp,
     });
 
-    if (stateTemp.id === 22) {
-      navigate("/download-pdf");
-    }
     setAnswers({});
     questions = {};
   };
@@ -201,7 +198,7 @@ const CustomForm = ({ stateTemp }) => {
             paddingY="6"
             disabled={!props.isValid}
           >
-            {stateTemp.id !== 22 ? "Continue" : "Generate pdf"}
+            {stateTemp.id !== 33 ? "Continue" : "Generate pdf"}
           </Button>
         </Form>
       )}

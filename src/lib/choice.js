@@ -39,16 +39,19 @@ const choiceTree = {
           id: "I am a non-EU citizen",
           label: "I'm a non-EU Citizen",
           nextQuestion: 2,
+          documentazione: [],
         },
         {
           id: "controller",
           label: "I'm an Italian Citizen",
           nextQuestion: 4,
+          documentazione: [],
         },
         {
           id: "I am a EU citizen",
           label: "I'm a EU Citizen",
           nextQuestion: 3,
+          documentazione: [],
         },
       ],
     },
@@ -66,27 +69,54 @@ const choiceTree = {
           id: "EU Citizen Relative",
           label: "EU Citizen Relative",
           nextQuestion: 4,
-          documentazione: "ok", // mettere la documentazione utile
+          documentazione: [
+            "copia del passaporto.*",
+            "carta di soggiorno di familiare di cittadino dell'Unione, oppure ricevuta ella richiesta di rilascio di carta di soggiorno.*",
+          ],
         },
         {
           id: "I have the Residence permit",
           label: "I've the Residence permit",
           nextQuestion: 4,
+          documentazione: [
+            "copia del passaporto o documento equipollente in corso di validità.* ",
+            "copia del titolo di soggiorno in corso di validità.*",
+            "copia degli atti originali, tradotti e legalizzati, comprovanti lo stato civile e la composizione della famiglia.**",
+          ],
         },
         {
           id: "I am renewing my Residence permit",
           label: "I'm renewing my Residence permi",
           nextQuestion: 4,
+          documentazione: [
+            "copia del passaporto o documento equipollente in corso di validità.* ",
+            "copia del titolo di soggiorno scaduto.*",
+            "ricevuta della richiesta di rinnovo del titolo di soggiorno.*",
+            "copia degli atti originali, tradotti e legalizzati, comprovanti lo stato civile e la composizione della famiglia.**",
+          ],
         },
         {
           id: "I am Waiting for a work permit",
-          label: "I am waiting for a work permit",
+          label: "I am waiting for a residence permit",
           nextQuestion: 4,
+          documentazione: [
+            "copia del passaporto o documento equipollente in corso di validità.* ",
+            "copia del contratto di soggiorno presso lo Sportello Unico per l immigrazione ;*",
+            "ricevuta rilasciata dall ufficio postale attestante l avvenuta presentazione della richiesta dipermesso di soggiorno;*",
+            "domanda di rilascio del permesso di soggiorno per lavoro subordinato presentata allo Sportello Unico*",
+            "copia degli atti originali, tradotti e legalizzati, comprovanti lo stato civile e la composizione della famiglia.**",
+          ],
         },
         {
           id: "Awaiting family reunification",
           label: "Awaiting family reunification",
           nextQuestion: 4,
+          documentazione: [
+            "copia del passaporto o documento equipollente in corso di validità.* ",
+            "fotocopia non autenticata del nulla osta rilasciato dallo Sportello unico;*",
+            "ricevuta rilasciata dall ufficio postale attestante l avvenuta presentazione della richiesta dipermesso*;",
+            "copia degli atti originali, tradotti e legalizzati, comprovanti lo stato civile e la composizione della famiglia.**",
+          ],
         },
       ],
 
@@ -104,34 +134,44 @@ const choiceTree = {
 
       answers: [
         {
-          id: "EU Citizen Relative",
+          id: "worker",
           label: "worker",
           nextQuestion: 4,
-          documents: "",
+          documentazione: [
+            "documento di identità.*",
+            " documentazione comprovante la qualità di lavoratore.*",
+            " copia degli atti originali, tradotti e legalizzati, comprovanti lo stato civile e la composizione della famiglia.**",
+          ],
         },
         {
-          id: "mh",
-          label: "Financially independent",
+          id: "f.i",
+          label: "Financially independent (no worker)",
           nextQuestion: 4,
+          documentazione: [
+            "copia di un documento di identità valido.*",
+            "autodichiarazione del possesso di risorse economiche.*",
+            " copia di un'assicurazione sanitaria.*",
+            "copia degli atti originali, tradotti e legalizzati, comprovanti lo stato civile e la composizione della famiglia.**",
+          ],
         },
         {
-          id: "mhhh",
-          label: "F. independent (Temporary Residence)",
-          nextQuestion: 4,
-        },
-        {
-          id: "St",
+          id: "student",
           label: "Student",
+          documentazione: [
+            "copia di un documento di identità valido.*",
+            ") documentazione attestante l'iscrizione presso un istituto scolastico o di formazione professionale.*",
+            "autodichiarazione del possesso di risorse economiche.*",
+            " copertura dei rischi sanitari:*",
+          ],
           nextQuestion: 4,
         },
         {
-          id: "STO",
-          label: "Student (Temporary Residence)",
-          nextQuestion: 4,
-        },
-        {
-          id: "OKOKO",
+          id: "relative",
           label: "Relative of (woker, student ecc..)",
+          documentazione: [
+            "copia di un documento di identità valido.*",
+            "copia degli atti originali di soggiorno.*",
+          ],
           nextQuestion: 4,
         },
       ],
@@ -443,7 +483,7 @@ const choiceTree = {
         {
           id: "Numero",
           label: "Number",
-          type: "text",
+          type: "number",
           helperText: "Ex. 91828930",
           validate: "RequiredField",
           isRequired: false,
@@ -580,7 +620,7 @@ const choiceTree = {
         {
           id: "Scala",
           label: "Stairs",
-          type: "text",
+          type: "number",
           helperText: "Ex. 1st",
           isRequired: true,
           validate: "RequiredField",
@@ -589,7 +629,7 @@ const choiceTree = {
         {
           id: "Piano",
           label: "Floor",
-          type: "text",
+          type: "number",
           helperText: "Ex. 2",
           isRequired: true,
           validate: "RequiredField",
@@ -597,7 +637,7 @@ const choiceTree = {
         {
           id: "Interno",
           label: "Unit",
-          type: "text",
+          type: "number",
           helperText: "Ex. A",
           isRequired: true,
           validate: "RequiredField",
@@ -625,7 +665,7 @@ const choiceTree = {
       type: "number",
       title: "How many people beside you?",
       id: 18,
-      nextQuestion: 31,
+      nextQuestion: 51,
     },
 
     //  CHE NELL'ABITAZIONE SITA AL NUOVO INDIRZZO SONO GIA' ISCRITTE LE SEGUENTI PERSONE
@@ -655,35 +695,46 @@ const choiceTree = {
       answers: [
         {
           id: "Nome_6",
-          label: "What's your name?",
+          label: "What's his/her name?",
           type: "text",
           helperText: "Ex. Moussa",
+          isRequired: true,
+          validate: "RequiredField",
           // add input validate
         },
         {
           id: "Cognome_6",
-          label: "What's your surname",
+          label: "What's his/her surname",
           type: "text",
           helperText: "Ex. Semprini",
+          isRequired: true,
+          validate: "RequiredField",
         },
         {
           id: "Luogo",
           label: "Date of birth",
           type: "date",
           helperText: "DD/MM/YYYY",
+          isRequired: true,
+          validate: "RequiredField",
           // add input validate
         },
         {
-          id: "Luogo di nascita",
+          id: "Luogo di nascita_6",
           label: "Place of Birth",
           type: "text",
           helperText: "Indicate your city of birth",
+          isRequired: true,
+          validate: "RequiredField",
         },
         {
-          id: "Relative",
-          label: "Is your realtive?",
-          type: "checkbox",
-          helperText: "",
+          id: "Sussiste il seguente vincolo rispetto al su indicato  componente della famiglia già residente",
+          label: "Specify the family relationship",
+          type: "text",
+          helperText:
+            "If there is any family relationship leave this field empty",
+          isRequired: true,
+          validate: "RequiredField",
         },
       ],
     },
@@ -693,7 +744,7 @@ const choiceTree = {
       title: "Your contact",
       id: 22,
       parentId: 4,
-      nextQuestion: 1,
+      nextQuestion: 23,
       answers: [
         {
           id: "Telefono",
@@ -731,6 +782,320 @@ const choiceTree = {
           isRequired: false,
         },
       ],
+    },
+    {
+      type: "select",
+      title: "To which category your home belongs?",
+      label: "Select your Status",
+      id: 23,
+
+      answers: [
+        {
+          selected: false,
+          id: "C9_1_5",
+          label: "Free usage",
+          nextQuestion: 25,
+        },
+        {
+          selected: false,
+          id: "C9_1_2",
+          label: "Owned house",
+          nextQuestion: 24,
+        },
+        {
+          selected: false,
+          id: "C9_1_3",
+          label: "Rent",
+          nextQuestion: 26,
+        },
+        {
+          selected: false,
+          id: "C9_1_4",
+          label: "Public house",
+          nextQuestion: 30,
+        },
+        {
+          selected: false,
+          id: "C9_1_6",
+          label: "Usufructuary",
+          nextQuestion: 27,
+        },
+      ],
+
+      parentId: 9,
+    },
+
+    {
+      type: "form",
+      title: "Contract details",
+      id: 24,
+      parentId: 4,
+      nextQuestion: 30,
+      answers: [
+        {
+          id: "Sezione",
+          label: "Section",
+          type: "text",
+          validate: "requiredField",
+          isRequired: true,
+          autocomplete: false,
+          // add input validate
+        },
+        {
+          id: "foglio",
+          label: "Sheet",
+          type: "tel",
+          helperText: "3332423421",
+          validate: "",
+          isRequired: false,
+        },
+        {
+          id: "particella o mappale",
+          label: "Partial or mappale",
+          type: "text",
+          validate: "requiredField",
+          // add input validate
+          isRequired: true,
+        },
+        {
+          id: "subalterno",
+          label: "Subaltern",
+          type: "text",
+          validate: "requiredField",
+          isRequired: true,
+        },
+      ],
+    },
+
+    {
+      type: "form",
+      title: "Contract details",
+      id: 26,
+      parentId: 4,
+      nextQuestion: 30,
+      answers: [
+        {
+          id: "undefined_33",
+          label: "Revenue Agency of",
+          type: "text",
+          helperText: "Ex. Palermo",
+          validate: "requiredField",
+          isRequired: true,
+          autocomplete: false,
+          // add input validate
+        },
+        {
+          id: "in data",
+          label: "Date",
+          type: "date",
+          helperText: "DD/MM/YYYY",
+          isRequired: true,
+        },
+        {
+          id: "al n",
+          label: "Number",
+          type: "number",
+          validate: "requiredField",
+          // add input validate
+          isRequired: true,
+        },
+      ],
+    },
+
+    {
+      type: "form",
+      title: "Contract details",
+      id: 25,
+      parentId: 4,
+      nextQuestion: 30,
+      answers: [
+        {
+          id: "Entrate di",
+          label: "Revenue Agency of",
+          type: "text",
+          helperText: "Ex. Palermo",
+          validate: "requiredField",
+          isRequired: true,
+          autocomplete: false,
+          // add input validate
+        },
+        {
+          id: "in data_2",
+          label: "Date",
+          type: "date",
+          helperText: "DD/MM/YYYY",
+          isRequired: true,
+        },
+        {
+          id: "al n_2",
+          label: "Number",
+          type: "number",
+          validate: "requiredField",
+          // add input validate
+          isRequired: true,
+        },
+      ],
+    },
+
+    {
+      type: "form",
+      title: "Contract details",
+      id: 26,
+      parentId: 4,
+      nextQuestion: 30,
+      answers: [
+        {
+          id: "dati utili 1",
+          label: "Write details",
+          type: "text",
+          validate: "requiredField",
+          isRequired: true,
+          autocomplete: false,
+          // add input validate
+        },
+      ],
+    },
+    // TARI
+    {
+      type: "checkbox",
+      title: "Does someone already pay the TARI?",
+      id: 30,
+      answers: [
+        {
+          id: "yes",
+          nextQuestion: 31,
+        },
+        {
+          id: "no",
+          nextQuestion: 31,
+        },
+      ],
+    },
+
+    {
+      type: "form",
+      title: "Contract details",
+      id: 31,
+      parentId: 4,
+      nextQuestion: 32,
+      answers: [
+        {
+          id: "che la tassa per il nuovo",
+          label: "Nome e cognome",
+          type: "text",
+          validate: "requiredField",
+          isRequired: true,
+          autocomplete: false,
+          // add input validate
+        },
+        {
+          id: "F",
+          label: "Codice Fiscale",
+          type: "date",
+          isRequired: true,
+          validate: "FiscalCode",
+        },
+        {
+          id: "Relazione_di_parentela",
+          label: "Relative",
+          type: "select",
+          validate: "requiredField",
+          // add input validate
+          isRequired: true,
+        },
+      ],
+    },
+    // OVVERO CHIEDE LE SEGUENTI ISCRIZIONI TARI
+    {
+      type: "longform",
+      title: "TARI subscription",
+      id: 32,
+      parentId: 4,
+      nextQuestion: 17,
+      answers: [
+        {
+          id: "foglio11",
+          label: "Sheet (Foglio)",
+          type: "text",
+          isRequired: true,
+          validate: "RequiredField",
+          // add input validate
+        },
+        {
+          id: "particella11",
+          label: "particella",
+          type: "text",
+          helperText: "Ex. 36",
+          isRequired: true,
+          validate: "RequiredField",
+        },
+        {
+          id: "sub11",
+          label: "subalterno",
+          type: "text",
+          helperText: "Ex. 1st",
+          isRequired: true,
+          validate: "RequiredField",
+          // add input validate
+        },
+        {
+          id: "data",
+          label: "Data fine occupazione",
+          type: "date",
+          isRequired: true,
+          validate: "RequiredField",
+        },
+        {
+          id: "superficie in mq",
+          label: "surface in sq. m",
+          type: "number",
+          isRequired: true,
+          validate: "RequiredField",
+          // add input validate
+        },
+      ],
+    },
+
+    {
+      type: "select",
+      title: "Title of occupation",
+      label: "Thanks for the patience",
+      id: 33,
+
+      answers: [
+        {
+          selected: false,
+          id: "10_1_1",
+          label: "Propriety",
+          nextQuestion: 25,
+        },
+        {
+          selected: false,
+          id: "10_1_2",
+          label: "Location",
+          nextQuestion: 24,
+        },
+        {
+          selected: false,
+          id: "10_1_3",
+          label: "loan for use",
+          nextQuestion: 26,
+        },
+        {
+          selected: false,
+          id: "10_1_4",
+          label: "usufruct",
+          nextQuestion: 30,
+        },
+        {
+          selected: false,
+          id: "C9_1_6",
+          label: "Housing assignment of a public body",
+          nextQuestion: 27,
+        },
+      ],
+
+      parentId: 9,
     },
   ],
 };

@@ -1,7 +1,7 @@
 /*
  *   entry point for the download component
  */
-import React, { useState, useEffect, useContext } from "react";
+import React, { useState, useEffect, useContext, useCallback } from "react";
 import { Box, Button, Spinner, Text } from "@chakra-ui/react";
 import axios from "../../axios";
 import { Context } from "../../App";
@@ -13,7 +13,7 @@ const DownloadResult = () => {
   const { state } = useContext(Context);
   const [isLoading, setIsLoading] = useState(true);
 
-  const startDownload = async () => {
+  const startDownload = useCallback(async () => {
     try {
       const headers = {
         headers: { "Access-Control-Allow-Origin": "*" },
@@ -27,6 +27,8 @@ const DownloadResult = () => {
 
       const resData = await data.data;
 
+      console.log(resData, "body");
+
       if (resData) {
         setResult(resData);
         window.open(
@@ -38,7 +40,7 @@ const DownloadResult = () => {
     } catch (e) {
       console.log(e);
     }
-  };
+  }, []);
 
   const retryDownload = () => {
     window.open(
@@ -49,7 +51,7 @@ const DownloadResult = () => {
 
   useEffect(() => {
     startDownload();
-  }, []);
+  }, [startDownload]);
 
   return (
     <Box
@@ -80,7 +82,7 @@ const DownloadResult = () => {
             <Text fontSize="xl">
               <Text as="ins" onClick={() => retryDownload()}>
                 Click here
-              </Text>
+              </Text>{" "}
               if the download didn't occur
             </Text>
             <Button

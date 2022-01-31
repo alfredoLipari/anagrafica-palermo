@@ -4,6 +4,7 @@ export function reducer(state, action) {
     case "ANSWER_QUESTION_SELECT":
       // push the answer as Id in the object answer
       // retrive the id of the question and the id parent
+      let documents = [...state.documents];
 
       let newAnswersSelect = [...state.answers];
 
@@ -25,6 +26,20 @@ export function reducer(state, action) {
         ];
       } else {
         // retrieve only the documentation
+        if (action.answer?.documentazione.length > 0) {
+          let newObject = {};
+          action.answer?.documentazione.forEach((doc, index) => {
+            newObject["Si allegano i seguenti documenti " + (index + 1)] = doc;
+          });
+
+          documents.push(action.answer?.documentazione);
+          newAnswersSelect = [
+            ...state.answers,
+            {
+              answer: newObject,
+            },
+          ];
+        }
       }
 
       // delete the first item fromt the componentTree
@@ -48,20 +63,52 @@ export function reducer(state, action) {
         ...state,
         answers: newAnswersSelect,
         currentQuestion: parseInt(nextQuestion),
+        documents: documents,
       };
 
     case "ANSWER_QUESTION_FORM":
       // push the answer as Id in the object answer
       // retrive the id of the question and the id parent
+      let answers = action.answer;
 
       if (action.state.id === 22) {
-        action.state.nextQuestion = 22;
+        answers = {
+          ...action.answer,
+          telefono: action.answer["Telefono"],
+          Cell: action.answer["Cellulare"],
+          email: action.answer["emailPec"],
+        };
+      }
+
+      if (action.state.id === 8) {
+        let date = new Date(action.answer["Data di nascita"]);
+        // add the duplicate id in the answer
+        answers = {
+          ...action.answer,
+          "il sottoscritto":
+            action.answer["Nome"] + " " + action.answer["Cognome"],
+          cf: action.answer["Codice Fiscale"],
+          giorno: date.getDate(),
+          mese: date.getUTCMonth(),
+          anno: date.getFullYear(),
+        };
+      }
+
+      if (action.state.id === 16) {
+        answers = {
+          ...action.answer,
+          Via: action.answer["ViaPiazza"],
+          scala11: action.answer["Scala"],
+          n11: action.answer["Numero civico"],
+          piano11: action.answer["Piano"],
+          interno11: action.answer["Interno"],
+        };
       }
 
       const newAnswersForm = [
         ...state.answers,
         {
-          answer: action.answer,
+          answer: answers,
         },
       ];
 
@@ -76,12 +123,13 @@ export function reducer(state, action) {
     case "ANSWER_QUESTION_CHECKBOX":
       // checbox is for controll, it means we are not pushing any new answer, just switching question
       // the next question is calculated by adding 8 to the first one
+
       if (
         !action.answer &&
-        (action.nextQuestion === 37 ||
-          action.nextQuestion === 45 ||
-          action.nextQuestion === 53 ||
-          action.nextQuestion === 61)
+        (action.nextQuestion === 47 ||
+          action.nextQuestion === 55 ||
+          action.nextQuestion === 63 ||
+          action.nextQuestion === 71)
       ) {
         state.componentTree.shift();
       }
@@ -110,9 +158,9 @@ export function reducer(state, action) {
         componentsTree.push({
           type: "longform",
           title: "Component N." + (i - 1),
-          id: 29 + i + currentIndex,
+          id: 49 + i + currentIndex,
           parentId: 4,
-          nextQuestion: 30 + i + currentIndex,
+          nextQuestion: 40 + i + currentIndex,
           answers: [
             {
               id: "Nome_" + i,
@@ -198,15 +246,15 @@ export function reducer(state, action) {
         componentsTree.push({
           type: "checkbox",
           title: "Does she/he has a job?",
-          id: 30 + i + currentIndex,
+          id: 40 + i + currentIndex,
           answers: [
             {
               id: "yes",
-              nextQuestion: 32 + i + currentIndex,
+              nextQuestion: 42 + i + currentIndex,
             },
             {
               id: "no",
-              nextQuestion: 31 + i + currentIndex,
+              nextQuestion: 41 + i + currentIndex,
             },
           ],
         });
@@ -215,37 +263,37 @@ export function reducer(state, action) {
           type: "select",
           title: "What's her/his Non-professional status?",
           label: "Select her/his Status",
-          id: 31 + i + currentIndex,
+          id: 41 + i + currentIndex,
           answers: [
             {
               selected: false,
               id: "C" + page + "_" + moduls + "_6",
               label: "Housewife",
-              nextQuestion: 33 + i + currentIndex,
+              nextQuestion: 43 + i + currentIndex,
             },
             {
               selected: false,
               id: "C" + page + "_" + moduls + "_7",
               label: "Student",
-              nextQuestion: 33 + i + currentIndex,
+              nextQuestion: 43 + i + currentIndex,
             },
             {
               selected: false,
               id: "C" + page + "_" + moduls + "_8",
               label: "Unemployed",
-              nextQuestion: 33 + i + currentIndex,
+              nextQuestion: 43 + i + currentIndex,
             },
             {
               selected: false,
               id: "C" + page + "_" + moduls + "_9",
               label: "Retired",
-              nextQuestion: 33 + i + currentIndex,
+              nextQuestion: 43 + i + currentIndex,
             },
             {
               selected: false,
               id: "C" + page + "_" + moduls + "_10",
               label: "Other",
-              nextQuestion: 33 + i + currentIndex,
+              nextQuestion: 43 + i + currentIndex,
             },
           ],
         });
@@ -254,38 +302,38 @@ export function reducer(state, action) {
           type: "select",
           title: "What's his/her professional status?",
           label: "Select her/his Status",
-          id: 32 + i + currentIndex,
+          id: 42 + i + currentIndex,
 
           answers: [
             {
               selected: false,
               id: "C" + page + "_" + moduls + "_4",
               label: "Worker",
-              nextQuestion: 33 + i + currentIndex,
+              nextQuestion: 43 + i + currentIndex,
             },
             {
               selected: false,
               id: "C" + page + "_" + moduls + "_5",
               label: "Family Worker",
-              nextQuestion: 33 + i + currentIndex,
+              nextQuestion: 43 + i + currentIndex,
             },
             {
               selected: false,
               id: "C" + page + "_" + moduls + "_3",
               label: "Freelance / Entrepreneur",
-              nextQuestion: 33 + i + currentIndex,
+              nextQuestion: 43 + i + currentIndex,
             },
             {
               selected: false,
               id: "C" + page + "_" + moduls + "_1",
               label: "Self-Employed",
-              nextQuestion: 33 + i + currentIndex,
+              nextQuestion: 43 + i + currentIndex,
             },
             {
               selected: false,
               id: "C" + page + "_" + moduls + "_2",
               label: "Executive / Employee",
-              nextQuestion: 33 + i + currentIndex,
+              nextQuestion: 43 + i + currentIndex,
             },
           ],
 
@@ -296,15 +344,15 @@ export function reducer(state, action) {
           {
             type: "checkbox",
             title: "Does she/he has an Italian Driving License?",
-            id: 33 + i + currentIndex,
+            id: 43 + i + currentIndex,
             answers: [
               {
                 id: "yes",
-                nextQuestion: 34 + i + currentIndex,
+                nextQuestion: 44 + i + currentIndex,
               },
               {
                 id: "no",
-                nextQuestion: 35 + i + currentIndex,
+                nextQuestion: 45 + i + currentIndex,
               },
             ],
           },
@@ -312,9 +360,9 @@ export function reducer(state, action) {
           {
             type: "longform",
             title: "Driving License Details, this details are not mandatory",
-            id: 34 + i + currentIndex,
+            id: 44 + i + currentIndex,
             parentId: 4,
-            nextQuestion: 35 + i + currentIndex,
+            nextQuestion: 45 + i + currentIndex,
             answers: [
               {
                 id: "Numero",
@@ -365,44 +413,44 @@ export function reducer(state, action) {
           type: "select",
           title: "What's her/his educational level?",
           label: "Select her/his Degree",
-          id: 35 + i + currentIndex,
+          id: 45 + i + currentIndex,
 
           answers: [
             {
               selected: false,
               id: "C" + page + "_" + moduls + "_11",
               label: "Primary School",
-              nextQuestion: 37 + i + currentIndex,
+              nextQuestion: 47 + i + currentIndex,
             },
             {
               selected: false,
               id: "C" + page + "_" + moduls + "_12",
               label: "Secondary School Certificate",
-              nextQuestion: 37 + i + currentIndex,
+              nextQuestion: 47 + i + currentIndex,
             },
             {
               selected: false,
               id: "C" + page + "_" + moduls + "_13",
               label: "Diploma",
-              nextQuestion: 37 + i + currentIndex,
+              nextQuestion: 47 + i + currentIndex,
             },
             {
               selected: false,
               id: "C" + page + "_" + moduls + "_14",
               label: "Bachelor",
-              nextQuestion: 37 + i + currentIndex,
+              nextQuestion: 47 + i + currentIndex,
             },
             {
               selected: false,
               id: "C" + page + "_" + moduls + "_15",
               label: "Master Degree",
-              nextQuestion: 37 + i + currentIndex,
+              nextQuestion: 47 + i + currentIndex,
             },
             {
               selected: false,
               id: "C" + page + "_" + moduls + "_16",
               label: "Phd",
-              nextQuestion: 37 + i + currentIndex,
+              nextQuestion: 47 + i + currentIndex,
             },
           ],
 

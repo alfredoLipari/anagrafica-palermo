@@ -13,6 +13,7 @@ import {
   validateGender,
   validateFiscalCode,
 } from "../../lib/validation";
+import { useNavigate } from "react-router-dom";
 
 const CustomLongForm = ({ state }) => {
   let questions = {};
@@ -22,6 +23,8 @@ const CustomLongForm = ({ state }) => {
       "Indicare lo Stato estero di provenienza": "Italy",
     },
   };
+
+  const navigate = useNavigate();
 
   // adding autosuggest logic
   const [answers, setAnswers] = useState({ "Luogo di nascita": "" });
@@ -96,7 +99,7 @@ const CustomLongForm = ({ state }) => {
 
     console.log(newAnswers);
 
-    if (state.id >= 30) {
+    if (state.id >= 40) {
       dispatch({
         type: "ANSWER_QUESTION_COMPONENT_FORM",
         answer: newAnswers,
@@ -108,6 +111,9 @@ const CustomLongForm = ({ state }) => {
         answer: newAnswers,
         state: state,
       });
+    }
+    if (state.id === 32) {
+      navigate("/download-pdf");
     }
 
     setAnswers([]);
