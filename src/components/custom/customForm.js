@@ -11,6 +11,7 @@ import { Formik, Field, Form } from "formik";
 import { Context } from "../../App";
 import CustomAutosuggest from "./customAutosuggest";
 import { validateText, validateCountry } from "../../lib/validation";
+import "./customDatePicker.css";
 
 const CustomForm = ({ stateTemp }) => {
   let questions = {};

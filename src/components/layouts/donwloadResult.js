@@ -40,7 +40,7 @@ const DownloadResult = () => {
     } catch (e) {
       console.log(e);
     }
-  }, []);
+  }, [state.answers]);
 
   const retryDownload = () => {
     window.open(

@@ -42,7 +42,7 @@ const choiceTree = {
           documentazione: [],
         },
         {
-          id: "controller",
+          id: "I'm an Italian Citizen",
           label: "I'm an Italian Citizen",
           nextQuestion: 4,
           documentazione: [],
@@ -229,7 +229,7 @@ const choiceTree = {
           id: "Indicare lo Stato estero di provenienza",
           label: "write your Country",
           type: "text",
-          helperText: "Ex. Ghane, France, Russia",
+          helperText: "Ex. Ghana, France, Russia",
           autocomplete: true,
           // add input validate
         },
@@ -246,7 +246,7 @@ const choiceTree = {
           id: "Indicare lo Stato estero di provenienza",
           label: "Please write you country first",
           type: "text",
-          helperText: "Ex. Ghane, France, Russia",
+          helperText: "Ex. Ghana, France, Russia",
           autocomplete: true,
           // add input validate
         },
@@ -316,18 +316,20 @@ const choiceTree = {
         {
           id: "Sesso",
           label: "Gender",
-          type: "text",
-          helperText: "Write M or F",
-          validate: "gender",
+          type: "select",
+          options: ["male", "female"],
+          validate: "RequiredField",
           isRequired: true,
+          helperText: "select your gender",
           // add input validate
         },
         {
           id: "Stato Civile",
-          label: "Are you married?",
-          type: "text",
-          helperText: "write yes or no",
-          validate: "statoCivile",
+          label: "your marital status?",
+          type: "select",
+          options: ["unmarried", "married", "divorced", "widower"],
+          helperText: "select your status",
+          validate: "RequiredField",
         },
         {
           id: "Cittadinanza",
@@ -967,7 +969,7 @@ const choiceTree = {
         },
         {
           id: "no",
-          nextQuestion: 31,
+          nextQuestion: 32,
         },
       ],
     },
@@ -991,7 +993,7 @@ const choiceTree = {
         {
           id: "F",
           label: "Codice Fiscale",
-          type: "date",
+          type: "text",
           isRequired: true,
           validate: "FiscalCode",
         },
@@ -1014,7 +1016,7 @@ const choiceTree = {
       nextQuestion: 17,
       answers: [
         {
-          id: "foglio11",
+          id: "foglio10",
           label: "Sheet (Foglio)",
           type: "text",
           isRequired: true,
@@ -1022,7 +1024,7 @@ const choiceTree = {
           // add input validate
         },
         {
-          id: "particella11",
+          id: "particella10",
           label: "particella",
           type: "text",
           helperText: "Ex. 36",
@@ -1030,7 +1032,7 @@ const choiceTree = {
           validate: "RequiredField",
         },
         {
-          id: "sub11",
+          id: "sub10",
           label: "subalterno",
           type: "text",
           helperText: "Ex. 1st",
@@ -1044,6 +1046,7 @@ const choiceTree = {
           type: "date",
           isRequired: true,
           validate: "RequiredField",
+          helperText: "Data fine occupazione",
         },
         {
           id: "superficie in mq",

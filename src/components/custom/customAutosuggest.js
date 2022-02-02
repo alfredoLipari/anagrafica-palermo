@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import Autosuggest from "react-autosuggest";
 import CountryAndCity from "../../lib/CountryAndCity.json";
-import { Text, FormHelperText, Box, FormControl } from "@chakra-ui/react";
+import { Text, FormHelperText, FormControl } from "@chakra-ui/react";
 import "./customAutosuggest.css";
 
 const CustomAutosuggest = ({ autosuggestHandler, tag, country, error }) => {
@@ -77,9 +77,7 @@ const CustomAutosuggest = ({ autosuggestHandler, tag, country, error }) => {
 
   // Finally, render it!
   return (
-    <FormControl 
-    color={"#404B57"}
-    >
+    <FormControl color={"#404B57"}>
       <Autosuggest
         suggestions={suggestions}
         onSuggestionsFetchRequested={onSuggestionsFetchRequested}
@@ -93,7 +91,7 @@ const CustomAutosuggest = ({ autosuggestHandler, tag, country, error }) => {
         marginBottom="10"
         color={error !== false ? "#D2072A" : "#718096"}
       >
-        {error !== false ? "this field is required" : tag.helperText}
+        {error !== false ? "this place does not exist" : tag.helperText}
       </FormHelperText>
     </FormControl>
   );

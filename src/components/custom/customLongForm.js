@@ -4,8 +4,16 @@
 
 import React, { useState, useContext, useEffect, useCallback } from "react";
 import CustomInput from "./customInput";
-import { FormControl, Button, Text, Divider, Box } from "@chakra-ui/react";
-import { Formik, FastField, Form } from "formik";
+import {
+  FormControl,
+  Button,
+  Text,
+  Divider,
+  Box,
+  Select,
+  FormHelperText,
+} from "@chakra-ui/react";
+import { Formik, FastField, Form, Field } from "formik";
 import { Context } from "../../App";
 import CustomAutosuggest from "./customAutosuggest";
 import {
@@ -14,6 +22,7 @@ import {
   validateFiscalCode,
 } from "../../lib/validation";
 import { useNavigate } from "react-router-dom";
+import "./customDatePicker.css";
 
 const CustomLongForm = ({ state }) => {
   let questions = {};
@@ -181,25 +190,37 @@ const CustomLongForm = ({ state }) => {
                 {firstColumnForm.map((answ) =>
                   answ.autocomplete === undefined ? (
                     <Box key={answ.id}>
-                      <FastField
-                        name={answ.id}
-                        validate={validateInput(answ.validate)}
-                      >
-                        {({ field, form }) => (
-                          <FormControl mb="10">
-                            <CustomInput
-                              {...field}
-                              m="1"
-                              state={answ}
-                              error={
-                                props.errors[answ.id] &&
-                                props.touched[answ.id] &&
-                                props.errors[answ.id]
-                              }
-                            />
-                          </FormControl>
-                        )}
-                      </FastField>
+                      {answ.type !== "select" ? (
+                        <FastField
+                          name={answ.id}
+                          validate={validateInput(answ.validate)}
+                        >
+                          {({ field, form }) => (
+                            <FormControl mb="10">
+                              <CustomInput
+                                {...field}
+                                m="1"
+                                state={answ}
+                                error={
+                                  props.errors[answ.id] &&
+                                  props.touched[answ.id] &&
+                                  props.errors[answ.id]
+                                }
+                              />
+                            </FormControl>
+                          )}
+                        </FastField>
+                      ) : (
+                        <FastField as="select" id={answ.id} name={answ.id}>
+                          {answ.options.map((option) => {
+                            return (
+                              <option key={option} value={option}>
+                                {option}
+                              </option>
+                            );
+                          })}
+                        </FastField>
+                      )}
                     </Box>
                   ) : (
                     <CustomAutosuggest
@@ -231,25 +252,84 @@ const CustomLongForm = ({ state }) => {
               <Box>
                 {secondColumnForm.map((answ) => (
                   <Box key={answ.id}>
-                    <FastField
-                      name={answ.id}
-                      validate={validateInput(answ.validate)}
-                    >
-                      {({ field, form }) => (
-                        <FormControl mb="10">
-                          <CustomInput
-                            {...field}
-                            m="1"
-                            state={answ}
-                            error={
-                              props.errors[answ.id] &&
-                              props.touched[answ.id] &&
-                              props.errors[answ.id]
-                            }
-                          />
-                        </FormControl>
-                      )}
-                    </FastField>
+                    {answ.type !== "select" ? (
+                      <FastField
+                        name={answ.id}
+                        validate={validateInput(answ.validate)}
+                      >
+                        {({ field, form }) => (
+                          <FormControl mb="10">
+                            <CustomInput
+                              {...field}
+                              m="1"
+                              state={answ}
+                              error={
+                                props.errors[answ.id] &&
+                                props.touched[answ.id] &&
+                                props.errors[answ.id]
+                              }
+                            />
+                          </FormControl>
+                        )}
+                      </FastField>
+                    ) : (
+                      <Field
+                        id={answ.id}
+                        name={answ.id}
+                        validate={validateInput(answ.validate)}
+                      >
+                        {({ field, form }) => (
+                          <FormControl>
+                            <Select
+                              {...field}
+                              border="none"
+                              borderBottom="1px"
+                              borderBottomColor={
+                                props.errors[answ.id] &&
+                                props.touched[answ.id] &&
+                                props.errors[answ.id] !== undefined
+                                  ? "#D2072A"
+                                  : "gray.300"
+                              }
+                              borderRadius="0px"
+                              as="select"
+                              padding="4px"
+                              iconColor="#0E78E2"
+                              iconSize="50"
+                              color="#404B57"
+                              placeholder={answ.label}
+                              fontSize="md"
+                              bg="white"
+                              margin="2"
+                              id={answ.id}
+                              name={answ.id}
+                            >
+                              {answ.options.map((option) => {
+                                return (
+                                  <option key={option} value={option}>
+                                    {option}
+                                  </option>
+                                );
+                              })}
+                            </Select>
+                            <FormHelperText
+                              marginBottom="10"
+                              color={
+                                props.errors[answ.id] &&
+                                props.touched[answ.id] &&
+                                props.errors[answ.id] !== undefined
+                                  ? "#D2072A"
+                                  : "#718096"
+                              }
+                            >
+                              {field.error !== undefined
+                                ? field.error
+                                : answ.helperText}
+                            </FormHelperText>
+                          </FormControl>
+                        )}
+                      </Field>
+                    )}
                   </Box>
                 ))}
               </Box>

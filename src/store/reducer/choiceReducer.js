@@ -80,6 +80,18 @@ export function reducer(state, action) {
         };
       }
 
+      if (action.state.id === 32) {
+        let date = new Date(action.answer["data"]);
+        // add the duplicate id in the answer
+        answers = {
+          ...action.answer,
+
+          "data decorrenza giorno": date.getDate(),
+          "data decorrenza mese": date.getUTCMonth(),
+          "data decorrenza anno": date.getFullYear(),
+        };
+      }
+
       if (action.state.id === 8) {
         let date = new Date(action.answer["Data di nascita"]);
         // add the duplicate id in the answer
@@ -97,11 +109,11 @@ export function reducer(state, action) {
       if (action.state.id === 16) {
         answers = {
           ...action.answer,
-          Via: action.answer["ViaPiazza"],
-          scala11: action.answer["Scala"],
-          n11: action.answer["Numero civico"],
-          piano11: action.answer["Piano"],
-          interno11: action.answer["Interno"],
+          Via10: action.answer["ViaPiazza"],
+          scala: action.answer["Scala"],
+          n10: action.answer["Numero civico"],
+          Piano10: action.answer["Piano"],
+          interno10: action.answer["Interno"],
         };
       }
 
