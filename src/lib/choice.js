@@ -38,7 +38,7 @@ const choiceTree = {
         {
           id: "I am a non-EU citizen",
           label: "I'm a non-EU Citizen",
-          nextQuestion: 18,
+          nextQuestion: 2,
           documentazione: [],
         },
         {
@@ -335,7 +335,7 @@ const choiceTree = {
           id: "Cittadinanza",
           label: "Citizenship",
           type: "text",
-          helperText: "Ex. Ghanian, Francaise, Russian...",
+          helperText: "Ex. French",
           validate: "RequiredField",
           isRequired: true,
           // add input validate

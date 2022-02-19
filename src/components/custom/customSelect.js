@@ -38,7 +38,7 @@ const CustomSelect = ({ state }) => {
         width="25%"
         fontSize="xl"
         marginTop="10"
-        onClick={(something) => setSelectAnswer(something.target.value)}
+        onChange={(something) => setSelectAnswer(something.target.value)}
         bg="white"
         marginBottom="12"
       >

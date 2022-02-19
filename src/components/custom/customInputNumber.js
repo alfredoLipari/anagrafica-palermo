@@ -24,20 +24,37 @@ const CustomInputNumber = ({ state }) => {
   };
 
   return (
-    <Box display="flex" alignItems="center" alignSelf="center" flexDir="column">
-      <Text marginTop="3em">{state.title}</Text>
+    <Box
+      display="flex"
+      alignItems="center"
+      alignSelf="center"
+      flexDir="column"
+      marginBottom={"32"}
+    >
+      <Text as="h2" color="#000" fontSize="xl" marginTop="2em" margin="14">
+        {state.title}
+      </Text>
       <NumberInput
         defaultValue={1}
         min={1}
         max={4}
         w="20%"
-        marginTop="2em"
         onChange={(val) => setAnswer(val)}
+        textColor={"#404B57"}
+        border="1px solid trasparent"
       >
         <NumberInputField />
         <NumberInputStepper>
-          <NumberIncrementStepper />
-          <NumberDecrementStepper />
+          <NumberIncrementStepper
+            bg="white"
+            _active={{ bg: "green.300" }}
+            color={"#404B57"}
+          />
+          <NumberDecrementStepper
+            bg="white"
+            _active={{ bg: "pink.300" }}
+            color={"#404B57"}
+          />
         </NumberInputStepper>
       </NumberInput>
       <Button

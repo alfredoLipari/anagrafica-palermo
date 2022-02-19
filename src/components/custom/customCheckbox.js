@@ -19,17 +19,23 @@ const CustomCheckbox = ({ state }) => {
   };
 
   return (
-    <Box alignItems="center" display="flex" flexDir="column">
+    <Box
+      alignItems="center"
+      display="flex"
+      flexDir="column"
+      marginBottom={"24"}
+    >
       <Text
         as="h2"
         color="#000"
         fontSize="2xl"
-        marginBottom="5"
+        margin="10"
         marginTop={{ sm: "3em", lg: "5em" }}
       >
         {state.title}
       </Text>
       <Box
+        marginTop={"8"}
         bg="blue.400"
         width={{ sm: "40%", md: "15%" }}
         padding="1"

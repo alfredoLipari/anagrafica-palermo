@@ -1,15 +1,19 @@
 import { Box, Button, Center, Flex } from "@chakra-ui/react";
-import { Text } from "@chakra-ui/react";
+import { Text, useMediaQuery } from "@chakra-ui/react";
 import { useState } from "react";
 import TreeHelper from "./treeHelper";
-import { Image } from '@chakra-ui/react'
-import People from '../asset/homepageimg.svg'
+import { Image } from "@chakra-ui/react";
+import People from "../asset/homepageimg.svg";
 
 const Main = () => {
   const [isFormStarted, setIsFormStarted] = useState(false);
 
+  const [isSmallHeight] = useMediaQuery("(min-height: 500px)");
+
+  console.log("qusadjuasdhi", isSmallHeight);
+
   return (
-    <Box bg="white" h="80vh" textAlign="center">
+    <Box bg="white" textAlign="center">
       {!isFormStarted ? (
         <Box marginTop="20">
           <Text fontSize="2xl" fontWeight="extrabold" color="#000">
@@ -34,11 +38,9 @@ const Main = () => {
           >
             Let's Start
           </Button>
-          <Flex 
-          marginTop={10}
-          justifyContent={"center"}>   
-            <Box h="215px" w='825px' marginTop={18}>
-              <Image  src={People} alt='logo comune' />
+          <Flex marginTop={10} justifyContent={"center"}>
+            <Box w="825px" margin={18}>
+              <Image src={People} alt="logo comune" />
             </Box>
           </Flex>
         </Box>

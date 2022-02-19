@@ -172,7 +172,7 @@ const CustomLongForm = ({ state }) => {
             fontSize="xl"
             fontWeight={"bold"}
             marginTop="1em"
-            marginBottom="5"
+            margin="8"
           >
             {state.title}
           </Text>
