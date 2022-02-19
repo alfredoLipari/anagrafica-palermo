@@ -35,6 +35,8 @@ const CustomLongForm = ({ state }) => {
 
   const navigate = useNavigate();
 
+  console.log("qui ", state);
+
   // adding autosuggest logic
   const [answers, setAnswers] = useState({ "Luogo di nascita": "" });
   const [error, setError] = useState(false);

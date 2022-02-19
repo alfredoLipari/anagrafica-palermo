@@ -1,6 +1,6 @@
 import { useContext, useState } from "react";
 import { Context } from "../../App";
-import { Select, Text, Box, Button, } from "@chakra-ui/react";
+import { Select, Text, Box, Button } from "@chakra-ui/react";
 
 const CustomSelect = ({ state }) => {
   const { dispatch } = useContext(Context);
@@ -56,7 +56,6 @@ const CustomSelect = ({ state }) => {
         borderRadius="4"
         paddingY="6"
         onClick={() => dispatchAnswer()}
-        disabled={!selectAnswer}
         colorScheme={"facebook"}
         marginBottom={"10"}
       >

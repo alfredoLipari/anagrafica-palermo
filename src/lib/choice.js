@@ -38,7 +38,7 @@ const choiceTree = {
         {
           id: "I am a non-EU citizen",
           label: "I'm a non-EU Citizen",
-          nextQuestion: 2,
+          nextQuestion: 18,
           documentazione: [],
         },
         {
