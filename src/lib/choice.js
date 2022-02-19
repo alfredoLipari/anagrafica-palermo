@@ -995,7 +995,7 @@ const choiceTree = {
           label: "Codice Fiscale",
           type: "text",
           isRequired: true,
-          validate: "FiscalCode",
+          validate: "fiscalCodeField",
         },
         {
           id: "Relazione_di_parentela",
