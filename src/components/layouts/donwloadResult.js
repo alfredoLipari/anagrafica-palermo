@@ -7,6 +7,7 @@ import axios from "../../axios";
 import { Context } from "../../App";
 import Footer from "../footer";
 import Navbar from "../navbar";
+import CustomModal from "../custom/customModal";
 
 const DownloadResult = () => {
   const [result, setResult] = useState("");

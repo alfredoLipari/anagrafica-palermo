@@ -38,7 +38,7 @@ const choiceTree = {
         {
           id: "I am a non-EU citizen",
           label: "I'm a non-EU Citizen",
-          nextQuestion: 2,
+          nextQuestion: 18,
           documentazione: [],
         },
         {
@@ -667,7 +667,7 @@ const choiceTree = {
       type: "number",
       title: "How many people beside you?",
       id: 18,
-      nextQuestion: 51,
+      nextQuestion: 41,
     },
 
     //  CHE NELL'ABITAZIONE SITA AL NUOVO INDIRZZO SONO GIA' ISCRITTE LE SEGUENTI PERSONE

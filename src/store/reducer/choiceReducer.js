@@ -170,7 +170,7 @@ export function reducer(state, action) {
         componentsTree.push({
           type: "longform",
           title: "Component N." + (i - 1),
-          id: 49 + i + currentIndex,
+          id: 39 + i + currentIndex,
           parentId: 4,
           nextQuestion: 40 + i + currentIndex,
           answers: [
@@ -477,6 +477,8 @@ export function reducer(state, action) {
         moduls++;
         currentIndex += 7;
       }
+
+      console.log(componentsTree);
 
       return {
         ...state,
