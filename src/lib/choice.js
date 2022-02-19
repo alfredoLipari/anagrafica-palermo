@@ -38,7 +38,7 @@ const choiceTree = {
         {
           id: "I am a non-EU citizen",
           label: "I'm a non-EU Citizen",
-          nextQuestion: 18,
+          nextQuestion: 2,
           documentazione: [],
         },
         {
@@ -301,7 +301,7 @@ const choiceTree = {
           label: "Date of birth",
           type: "date",
           helperText: "DD/MM/YYYY",
-          validate: "RequiredField",
+          validate: "datebirthday",
           isRequired: true,
           // add input validate
         },

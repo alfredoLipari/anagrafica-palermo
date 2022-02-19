@@ -20,6 +20,7 @@ import {
   validateText,
   validateGender,
   validateFiscalCode,
+  validateDateOfBirthday,
 } from "../../lib/validation";
 import { useNavigate } from "react-router-dom";
 import "./customDatePicker.css";
@@ -142,6 +143,8 @@ const CustomLongForm = ({ state }) => {
         return validateText;
       case "fiscalCodeField":
         return validateFiscalCode;
+      case"datebirthday":
+        return validateDateOfBirthday
       default:
         return undefined;
     }

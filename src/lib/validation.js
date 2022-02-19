@@ -50,10 +50,24 @@ export const validateEmail = (value) => {
   let error;
   var emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
   if (!emailRegex.test(value)) {
-    error = "this fiscal code is not valid";
+    error = "this e-mail is not valid";
   }
   return error;
-};
+}
+
+export const validateDateOfBirthday = (value) => {
+  debugger;
+  let error;
+  const currentdate = new Date;
+  const date = new Date(value)
+  //se la data è maggiore di quella di oggi ritorna l'errore
+  if(date >= currentdate){
+    console.log('sono all interno del if')
+    error = 'Birthday date it is greater than today'
+  }
+  return error;
+}
+
 
 // function that validate country for autosuggest component
 export const validateCountry = (values, autosuggestAnsw) => {
