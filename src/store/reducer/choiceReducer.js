@@ -30,9 +30,9 @@ export function reducer(state, action) {
           let newObject = {};
           action.answer?.documentazione.forEach((doc, index) => {
             newObject["Si allegano i seguenti documenti " + (index + 1)] = doc;
+            documents.push(doc);
           });
 
-          documents.push(action.answer?.documentazione);
           newAnswersSelect = [
             ...state.answers,
             {

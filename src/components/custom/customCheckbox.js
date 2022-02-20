@@ -29,7 +29,7 @@ const CustomCheckbox = ({ state }) => {
         as="h2"
         color="#000"
         fontSize="2xl"
-        margin="10"
+        marginBottom="5"
         marginTop={{ sm: "3em", lg: "5em" }}
       >
         {state.title}

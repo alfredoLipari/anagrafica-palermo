@@ -38,7 +38,7 @@ const choiceTree = {
         {
           id: "I am a non-EU citizen",
           label: "I'm a non-EU Citizen",
-          nextQuestion: 18,
+          nextQuestion: 2,
           documentazione: [],
         },
         {
@@ -1013,7 +1013,7 @@ const choiceTree = {
       title: "TARI subscription",
       id: 32,
       parentId: 4,
-      nextQuestion: 17,
+      nextQuestion: 33,
       answers: [
         {
           id: "foglio10",
@@ -1070,31 +1070,31 @@ const choiceTree = {
           selected: false,
           id: "10_1_1",
           label: "Propriety",
-          nextQuestion: 25,
+          nextQuestion: 17,
         },
         {
           selected: false,
           id: "10_1_2",
           label: "Location",
-          nextQuestion: 24,
+          nextQuestion: 17,
         },
         {
           selected: false,
           id: "10_1_3",
           label: "loan for use",
-          nextQuestion: 26,
+          nextQuestion: 17,
         },
         {
           selected: false,
           id: "10_1_4",
           label: "usufruct",
-          nextQuestion: 30,
+          nextQuestion: 17,
         },
         {
           selected: false,
           id: "C9_1_6",
           label: "Housing assignment of a public body",
-          nextQuestion: 27,
+          nextQuestion: 17,
         },
       ],
 

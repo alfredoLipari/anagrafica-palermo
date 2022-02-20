@@ -1,10 +1,12 @@
 import { useContext, useState } from "react";
 import { Context } from "../../App";
 import { Select, Text, Box, Button } from "@chakra-ui/react";
+import { useNavigate } from "react-router-dom";
 
 const CustomSelect = ({ state }) => {
   const { dispatch } = useContext(Context);
   const [selectAnswer, setSelectAnswer] = useState({});
+  const navigate = useNavigate();
 
   const dispatchAnswer = () => {
     if (Object.keys(selectAnswer).length === 0) {
@@ -23,6 +25,9 @@ const CustomSelect = ({ state }) => {
       state: state,
     });
     setSelectAnswer({});
+    if (state.id === 33) {
+      navigate("/download-pdf");
+    }
   };
 
   return (

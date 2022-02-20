@@ -21,7 +21,6 @@ import {
   validateGender,
   validateFiscalCode,
 } from "../../lib/validation";
-import { useNavigate } from "react-router-dom";
 import "./customDatePicker.css";
 
 const CustomLongForm = ({ state }) => {
@@ -32,8 +31,6 @@ const CustomLongForm = ({ state }) => {
       "Indicare lo Stato estero di provenienza": "Italy",
     },
   };
-
-  const navigate = useNavigate();
 
   console.log("qui ", state);
 
@@ -122,9 +119,6 @@ const CustomLongForm = ({ state }) => {
         answer: newAnswers,
         state: state,
       });
-    }
-    if (state.id === 32) {
-      navigate("/download-pdf");
     }
 
     setAnswers([]);

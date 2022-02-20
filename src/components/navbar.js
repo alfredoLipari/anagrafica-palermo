@@ -1,6 +1,8 @@
 import { Box, Link } from "@chakra-ui/react";
 import { Text } from "@chakra-ui/react";
-import { Image, Menu,
+import {
+  Image,
+  Menu,
   MenuButton,
   MenuList,
   MenuItem,
@@ -8,9 +10,10 @@ import { Image, Menu,
   MenuGroup,
   MenuOptionGroup,
   MenuDivider,
-  Button } from '@chakra-ui/react'
-import Logo from './asset/logoComuneDiPalermo.svg'
-import { ChevronDownIcon } from '@chakra-ui/icons'
+  Button,
+} from "@chakra-ui/react";
+import Logo from "./asset/logoComuneDiPalermo.svg";
+import { ChevronDownIcon } from "@chakra-ui/icons";
 
 const Navbar = (props) => {
   return (
@@ -23,9 +26,16 @@ const Navbar = (props) => {
         padding="8px 40px"
         height="48px"
       >
-      <Text fontWeight="bold" textColor={"black"}>Comune di Palermo</Text>
+        <Text fontWeight="bold" textColor={"black"}>
+          Comune di Palermo
+        </Text>
         <Menu>
-          <MenuButton textColor={"black"} bg={"transparent"} as={Button} rightIcon={<ChevronDownIcon />}>
+          <MenuButton
+            textColor={"black"}
+            bg={"transparent"}
+            as={Button}
+            rightIcon={<ChevronDownIcon />}
+          >
             ENG
           </MenuButton>
           <MenuList bg={"#0073E6"}>
@@ -33,7 +43,7 @@ const Navbar = (props) => {
             <MenuItem>ITA</MenuItem>
             <MenuItem>SPN</MenuItem>
           </MenuList>
-      </Menu>
+        </Menu>
       </Box>
       <Link href="/" color="#000" style={{ textDecoration: "none" }}>
         <Box
@@ -43,9 +53,9 @@ const Navbar = (props) => {
           alignItems="center"
           padding="8px 40px"
         >
-        <Box h="70px" w='70px'>
-          <Image src={Logo} alt='logo comune' />
-        </Box>
+          <Box h="70px" w="70px">
+            <Image src={Logo} alt="logo comune" />
+          </Box>
           <Box h="70px" marginLeft="20px">
             <Text fontWeight="bold" fontSize="xl">
               Comune di Palermo
