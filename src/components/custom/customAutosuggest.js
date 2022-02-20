@@ -77,7 +77,7 @@ const CustomAutosuggest = ({ autosuggestHandler, tag, country, error }) => {
 
   // Finally, render it!
   return (
-    <FormControl color={"#404B57"}>
+    <FormControl color={"#404B57"} marginBottom={10}>
       <Autosuggest
         suggestions={suggestions}
         onSuggestionsFetchRequested={onSuggestionsFetchRequested}

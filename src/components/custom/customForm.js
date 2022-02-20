@@ -10,7 +10,7 @@ import { FormControl, Button, Text, Divider, Box } from "@chakra-ui/react";
 import { Formik, Field, Form } from "formik";
 import { Context } from "../../App";
 import CustomAutosuggest from "./customAutosuggest";
-import { validateText, validateCountry } from "../../lib/validation";
+import { validateText, validateCountry, validateDateOfBirthday } from "../../lib/validation";
 import "./customDatePicker.css";
 
 const CustomForm = ({ stateTemp }) => {
@@ -84,6 +84,8 @@ const CustomForm = ({ stateTemp }) => {
     switch (value) {
       case "requiredField":
         return validateText;
+      case"datebirthday":
+        return validateDateOfBirthday
       case "other":
         break;
 

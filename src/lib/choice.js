@@ -301,7 +301,7 @@ const choiceTree = {
           label: "Date of birth",
           type: "date",
           helperText: "DD/MM/YYYY",
-          validate: "RequiredField",
+          validate: "datebirthday",
           isRequired: true,
           // add input validate
         },

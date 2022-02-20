@@ -20,6 +20,7 @@ import {
   validateText,
   validateGender,
   validateFiscalCode,
+  validateDateOfBirthday,
 } from "../../lib/validation";
 import "./customDatePicker.css";
 
@@ -136,6 +137,8 @@ const CustomLongForm = ({ state }) => {
         return validateText;
       case "fiscalCodeField":
         return validateFiscalCode;
+      case"datebirthday":
+        return validateDateOfBirthday
       default:
         return undefined;
     }
