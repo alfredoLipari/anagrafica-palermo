@@ -196,7 +196,7 @@ export function reducer(state, action) {
               label: "Date of birth",
               type: "date",
               helperText: "Date of birth",
-              validate: "RequiredField",
+              validate: "dateValidation",
               isRequired: true,
               // add input validate
             },
@@ -400,7 +400,7 @@ export function reducer(state, action) {
                 label: "Release Date",
                 type: "Date",
                 helperText: "Release Date",
-                validate: "RequiredField",
+                validate: "dateValidation",
                 isRequired: false,
               },
               {
