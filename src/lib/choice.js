@@ -301,7 +301,7 @@ const choiceTree = {
           label: "Date of birth",
           type: "date",
           helperText: "DD/MM/YYYY",
-          validate: "datebirthday",
+          validate: "dateValidation",
           isRequired: true,
           // add input validate
         },
@@ -504,7 +504,7 @@ const choiceTree = {
           label: "Release Date",
           type: "Date",
           helperText: "Release Date",
-          validate: "RequiredField",
+          validate: "dateValidation",
           isRequired: false,
           // add input validate
         },
@@ -614,7 +614,7 @@ const choiceTree = {
         {
           id: "Numero civico",
           label: "Civic number",
-          type: "text",
+          type: "number",
           helperText: "Ex. 36",
           isRequired: true,
           validate: "RequiredField",
@@ -778,7 +778,7 @@ const choiceTree = {
         {
           id: "Fax",
           label: "Fax",
-          type: "text",
+          type: "number",
           helperText: "091666555",
           validate: "",
           isRequired: false,
@@ -892,6 +892,7 @@ const choiceTree = {
           type: "date",
           helperText: "DD/MM/YYYY",
           isRequired: true,
+          validate: "dateValidation",
         },
         {
           id: "al n",
@@ -927,6 +928,7 @@ const choiceTree = {
           type: "date",
           helperText: "DD/MM/YYYY",
           isRequired: true,
+          validate: "dateValidation"
         },
         {
           id: "al n_2",
@@ -1001,6 +1003,7 @@ const choiceTree = {
           id: "Relazione_di_parentela",
           label: "Relative",
           type: "select",
+          options: ["mother", "father", "son", "daughter", "brother", "sister", "grandfather", "grandmother", "uncle", "aunt", "cousin"],
           validate: "requiredField",
           // add input validate
           isRequired: true,
@@ -1045,7 +1048,7 @@ const choiceTree = {
           label: "Data fine occupazione",
           type: "date",
           isRequired: true,
-          validate: "RequiredField",
+          validate: "requiredField",
           helperText: "Data fine occupazione",
         },
         {

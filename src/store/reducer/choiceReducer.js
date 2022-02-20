@@ -247,7 +247,8 @@ export function reducer(state, action) {
             {
               id: "Rapporto di parentela con il richiedente_".concat("", i - 2),
               label: "Relation to the applicant",
-              type: "text",
+              type: "select",
+              options: ["mother", "father", "son", "daughter", "brother", "sister", "grandfather", "grandmother", "uncle", "aunt", "cousin"],
               helperText: "Ex. Wife, Son",
               validate: "RequiredField",
               isRequired: true,
