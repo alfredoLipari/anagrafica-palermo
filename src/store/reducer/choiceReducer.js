@@ -201,7 +201,7 @@ export function reducer(state, action) {
               label: "Date of birth",
               type: "date",
               helperText: "Date of birth",
-              validate: "RequiredField",
+              validate: "dateValidation",
               isRequired: true,
               // add input validate
             },
@@ -252,7 +252,8 @@ export function reducer(state, action) {
             {
               id: "Rapporto di parentela con il richiedente_".concat("", i - 2),
               label: "Relation to the applicant",
-              type: "text",
+              type: "select",
+              options: ["mother", "father", "son", "daughter", "brother", "sister", "grandfather", "grandmother", "uncle", "aunt", "cousin"],
               helperText: "Ex. Wife, Son",
               validate: "RequiredField",
               isRequired: true,
@@ -404,7 +405,7 @@ export function reducer(state, action) {
                 label: "Release Date",
                 type: "Date",
                 helperText: "Release Date",
-                validate: "RequiredField",
+                validate: "dateValidation",
                 isRequired: false,
               },
               {

@@ -44,15 +44,20 @@ export const validateEmail = (value) => {
   return error;
 };
 
-export const validateDateOfBirthday = (value) => {
+export const validateDate = (value) => {
   debugger;
   let error;
   const currentdate = new Date();
   const date = new Date(value);
   //se la data è maggiore di quella di oggi ritorna l'errore
+<<<<<<< HEAD
   if (date >= currentdate) {
     console.log("sono all interno del if");
     error = "Birthday date it is greater than today";
+=======
+  if(date >= currentdate){
+    error = 'You cannot enter a date greater than today'
+>>>>>>> ba2e6dd7ee3d2298674fe45e0ae01ca14534a425
   }
   return error;
 };
