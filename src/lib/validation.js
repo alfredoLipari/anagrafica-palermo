@@ -15,17 +15,6 @@ export const validateText = (value) => {
   return error;
 };
 
-export const validateGender = (value) => {
-  let error;
-  if (value.toUpperCase() !== "M" && value.toUpperCase() !== "F") {
-    error = "insert the correct value (M or F)";
-  }
-  if (value.length > 50) {
-    error = "Can you read? ";
-  }
-  return error;
-};
-
 export const validateFiscalCode = (value) => {
   let error;
   var fiscalCodeRegex =
@@ -41,7 +30,7 @@ export const validatePhoneNumber = (value) => {
   var phoneNumberRegex =
     /^[(]{0,1}[0-9]{3}[)]{0,1}[-\s\.]{0,1}[0-9]{3}[-\s\.]{0,1}[0-9]{4}$/;
   if (!phoneNumberRegex.test(value)) {
-    error = "this fiscal code is not valid";
+    error = "this phone number is not valid";
   }
   return error;
 };
@@ -53,21 +42,20 @@ export const validateEmail = (value) => {
     error = "this e-mail is not valid";
   }
   return error;
-}
+};
 
 export const validateDateOfBirthday = (value) => {
   debugger;
   let error;
-  const currentdate = new Date;
-  const date = new Date(value)
+  const currentdate = new Date();
+  const date = new Date(value);
   //se la data è maggiore di quella di oggi ritorna l'errore
-  if(date >= currentdate){
-    console.log('sono all interno del if')
-    error = 'Birthday date it is greater than today'
+  if (date >= currentdate) {
+    console.log("sono all interno del if");
+    error = "Birthday date it is greater than today";
   }
   return error;
-}
-
+};
 
 // function that validate country for autosuggest component
 export const validateCountry = (values, autosuggestAnsw) => {

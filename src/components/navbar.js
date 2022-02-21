@@ -1,3 +1,4 @@
+import { useState, useContext } from "react";
 import { Box, Link } from "@chakra-ui/react";
 import { Text } from "@chakra-ui/react";
 import {
@@ -6,16 +7,24 @@ import {
   MenuButton,
   MenuList,
   MenuItem,
-  MenuItemOption,
-  MenuGroup,
-  MenuOptionGroup,
-  MenuDivider,
   Button,
 } from "@chakra-ui/react";
 import Logo from "./asset/logoComuneDiPalermo.svg";
 import { ChevronDownIcon } from "@chakra-ui/icons";
+import { Context } from "../App";
 
 const Navbar = (props) => {
+  const [language, setLanguage] = useState("ENG");
+  const { dispatch } = useContext(Context);
+
+  const changeLanguage = (item) => {
+    dispatch({
+      type: "CHANGE_LANGUAGE",
+      language: item.target.value,
+    });
+    setLanguage(item.target.value);
+  };
+
   return (
     <Box as="nav" w="100%">
       <Box
@@ -36,12 +45,18 @@ const Navbar = (props) => {
             as={Button}
             rightIcon={<ChevronDownIcon />}
           >
-            ENG
+            {language}
           </MenuButton>
           <MenuList bg={"#0073E6"}>
-            <MenuItem>ENG</MenuItem>
-            <MenuItem>ITA</MenuItem>
-            <MenuItem>SPN</MenuItem>
+            <MenuItem value="ENG" onClick={(item) => changeLanguage(item)}>
+              ENG
+            </MenuItem>
+            <MenuItem value="ITA" onClick={(item) => changeLanguage(item)}>
+              🇮🇹 ITA
+            </MenuItem>
+            <MenuItem value="SPN" onClick={(item) => changeLanguage(item)}>
+              SPN
+            </MenuItem>
           </MenuList>
         </Menu>
       </Box>

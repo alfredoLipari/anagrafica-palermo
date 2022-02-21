@@ -18,7 +18,6 @@ import { Context } from "../../App";
 import CustomAutosuggest from "./customAutosuggest";
 import {
   validateText,
-  validateGender,
   validateFiscalCode,
   validateDateOfBirthday,
 } from "../../lib/validation";
@@ -32,8 +31,6 @@ const CustomLongForm = ({ state }) => {
       "Indicare lo Stato estero di provenienza": "Italy",
     },
   };
-
-  console.log("qui ", state);
 
   // adding autosuggest logic
   const [answers, setAnswers] = useState({ "Luogo di nascita": "" });
@@ -106,8 +103,6 @@ const CustomLongForm = ({ state }) => {
       newAnswers = { ...values };
     }
 
-    console.log(newAnswers);
-
     if (state.id >= 40) {
       dispatch({
         type: "ANSWER_QUESTION_COMPONENT_FORM",
@@ -131,14 +126,12 @@ const CustomLongForm = ({ state }) => {
   // decide the validation conditionally
   const validateInput = (value) => {
     switch (value) {
-      case "gender":
-        return validateGender;
       case "RequiredField":
         return validateText;
       case "fiscalCodeField":
         return validateFiscalCode;
-      case"datebirthday":
-        return validateDateOfBirthday
+      case "datebirthday":
+        return validateDateOfBirthday;
       default:
         return undefined;
     }
@@ -195,18 +188,15 @@ const CustomLongForm = ({ state }) => {
                           validate={validateInput(answ.validate)}
                         >
                           {({ field, form }) => (
-                            <FormControl mb="10">
-                              <CustomInput
-                                {...field}
-                                m="1"
-                                state={answ}
-                                error={
-                                  props.errors[answ.id] &&
-                                  props.touched[answ.id] &&
-                                  props.errors[answ.id]
-                                }
-                              />
-                            </FormControl>
+                            <CustomInput
+                              {...field}
+                              state={answ}
+                              error={
+                                props.errors[answ.id] &&
+                                props.touched[answ.id] &&
+                                props.errors[answ.id]
+                              }
+                            />
                           )}
                         </FastField>
                       ) : (
@@ -260,7 +250,6 @@ const CustomLongForm = ({ state }) => {
                           <FormControl mb="10">
                             <CustomInput
                               {...field}
-                              m="1"
                               state={answ}
                               error={
                                 props.errors[answ.id] &&
@@ -299,7 +288,6 @@ const CustomLongForm = ({ state }) => {
                               placeholder={answ.label}
                               fontSize="md"
                               bg="white"
-                              margin="2"
                               id={answ.id}
                               name={answ.id}
                             >

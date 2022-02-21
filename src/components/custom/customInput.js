@@ -7,6 +7,7 @@ import {
 } from "@chakra-ui/react";
 
 const CustomInput = (props) => {
+  console.log("lol" + props.state);
   return (
     <FormControl id={props.id}>
       <FormLabel color={"#404B57"}>{props.label}</FormLabel>

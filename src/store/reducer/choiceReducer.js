@@ -1,6 +1,12 @@
 // create reducer
 export function reducer(state, action) {
   switch (action.type) {
+    case "CHANGE_LANGUAGE":
+      return {
+        ...state,
+        language: action.language,
+      };
+
     case "ANSWER_QUESTION_SELECT":
       // push the answer as Id in the object answer
       // retrive the id of the question and the id parent
@@ -55,7 +61,6 @@ export function reducer(state, action) {
         state.componentTree.length === 0 &&
         action.state.label === "Select her/his Degree"
       ) {
-        console.log("finish");
         nextQuestion = 19;
       }
 
