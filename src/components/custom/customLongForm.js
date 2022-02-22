@@ -17,10 +17,7 @@ import "./customDatePicker.css";
 import CustomInputSelect from "./customInput/customInputSelect";
 import CustomButton from "./customInput/customButton";
 
-console.log("test");
-
 const CustomLongForm = ({ stateQuestions }) => {
-  console.log(stateQuestions);
   let questions = {};
   const { dispatch, state } = useContext(Context);
   let country = {
@@ -197,7 +194,7 @@ const CustomLongForm = ({ stateQuestions }) => {
 
     // now return every key return a column
     const result = Object.values(formContainer).map((container, index) => (
-      <Box key={index} marginY="5" marginX="12">
+      <Box key={index} marginY="5" marginX="20">
         {container.map((item) => item)}
       </Box>
     ));

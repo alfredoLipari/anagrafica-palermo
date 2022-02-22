@@ -23,7 +23,7 @@ const Navbar = (props) => {
     });
     setLanguage(item.target.value);
   };
-  console.log('lan', language)
+  console.log("lan", language);
   return (
     <Box as="nav" w="100%">
       <Box
@@ -47,13 +47,13 @@ const Navbar = (props) => {
             {language}
           </MenuButton>
           <MenuList
-            background= "rgba(8, 100, 186, 0.3)"
-            borderRadius= "6px"
+            background="rgba(8, 100, 186, 0.3)"
+            borderRadius="6px"
             boxShadow="0 4px 30px rgba(0, 0, 0, 0.1)"
             backdropFilter="blur(5px)"
-            border= "none"
+            border="none"
             minWidth="106px"
-            >
+          >
             <MenuItem value="English" onClick={(item) => changeLanguage(item)}>
               English
             </MenuItem>

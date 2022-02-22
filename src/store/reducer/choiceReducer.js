@@ -498,8 +498,6 @@ export function reducer(state, action) {
         currentIndex += 7;
       }
 
-      console.log(componentsTree);
-
       return {
         ...state,
         componentTree: componentsTree,

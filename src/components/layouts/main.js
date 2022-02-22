@@ -57,7 +57,7 @@ const Main = () => {
   };
 
   return (
-    <Box bg="white" textAlign="center">
+    <Box bg="white" textAlign="center" minH="85vh">
       {!isFormStarted ? (
         <Box marginTop="20">
           <Text fontSize="2xl" fontWeight="extrabold" color="#000">

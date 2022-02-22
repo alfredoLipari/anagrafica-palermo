@@ -49,7 +49,7 @@ const CustomCheckbox = ({ stateQuestion }) => {
       <Box
         marginTop={"8"}
         bg="blue.400"
-        width={{ sm: "40%", md: "15%" }}
+        width={{ base: "50%", md: "15%" }}
         padding="1"
         display="flex"
         justifyContent="space-between"
