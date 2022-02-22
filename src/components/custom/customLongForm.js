@@ -17,6 +17,8 @@ import "./customDatePicker.css";
 import CustomInputSelect from "./customInput/customInputSelect";
 import CustomButton from "./customInput/customButton";
 
+console.log("test");
+
 const CustomLongForm = ({ stateQuestions }) => {
   console.log(stateQuestions);
   let questions = {};
