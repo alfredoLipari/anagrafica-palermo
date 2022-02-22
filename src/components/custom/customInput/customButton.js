@@ -6,7 +6,7 @@ const CustomButton = (props) => {
       color="white"
       bg="#0073E6"
       marginTop="5"
-      w="15%"
+      w={{ base: "50%", md: "15%" }}
       borderRadius="4"
       paddingY="6"
       colorScheme={"facebook"}

@@ -13,7 +13,7 @@ const CustomAutosuggest = ({
 }) => {
   // Imagine you have a list of languages that you'd like to autosuggest.
   // Teach Autosuggest how to calculate suggestions for any given input value.
-  console.log(keyAuto);
+  console.log(error);
   const getSuggestions = (value) => {
     let filter = [];
 
@@ -84,25 +84,23 @@ const CustomAutosuggest = ({
 
   // Finally, render it!
   return (
-    <Box key={keyAuto}>
-      <FormControl color={"#404B57"} margin="0">
-        <Autosuggest
-          suggestions={suggestions}
-          onSuggestionsFetchRequested={onSuggestionsFetchRequested}
-          onSuggestionsClearRequested={onSuggestionsClearRequested}
-          getSuggestionValue={getSuggestionValue}
-          renderSuggestion={renderSuggestion}
-          inputProps={inputProps}
-          shouldRenderSuggestions={shouldRenderSuggestions}
-        />
-        <FormHelperText
-          marginBottom="10"
-          color={error !== false ? "#D2072A" : "#718096"}
-        >
-          {error !== false ? "this place does not exist" : tag.helperText}
-        </FormHelperText>
-      </FormControl>
-    </Box>
+    <FormControl color={"#404B57"} margin="0" key={keyAuto}>
+      <Autosuggest
+        suggestions={suggestions}
+        onSuggestionsFetchRequested={onSuggestionsFetchRequested}
+        onSuggestionsClearRequested={onSuggestionsClearRequested}
+        getSuggestionValue={getSuggestionValue}
+        renderSuggestion={renderSuggestion}
+        inputProps={inputProps}
+        shouldRenderSuggestions={shouldRenderSuggestions}
+      />
+      <FormHelperText
+        marginBottom="10"
+        color={error !== false ? "#D2072A" : "#718096"}
+      >
+        {error !== false ? "this place does not exist" : tag.helperText}
+      </FormHelperText>
+    </FormControl>
   );
 };
 

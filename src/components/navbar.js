@@ -52,7 +52,7 @@ const Navbar = (props) => {
               ENG
             </MenuItem>
             <MenuItem value="ITA" onClick={(item) => changeLanguage(item)}>
-              🇮🇹 ITA
+              🇮ITA
             </MenuItem>
             <MenuItem value="ESP" onClick={(item) => changeLanguage(item)}>
               SPN

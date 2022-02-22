@@ -12,11 +12,11 @@ const CustomSelect = ({ stateQuestion }) => {
   const translateButton = () => {
     switch (state.language) {
       case "ITA":
-        return "Iniziamo";
+        return "Continua";
       case "ESP":
-        return "comencemos";
+        return "continuar";
       default:
-        return "Let's start";
+        return "Continue";
     }
   };
 
@@ -51,8 +51,8 @@ const CustomSelect = ({ stateQuestion }) => {
         iconColor="#0E78E2"
         iconSize="50"
         color="#000"
-        placeholder={state.label}
-        width="25%"
+        placeholder={stateQuestion.label}
+        width={{ base: "50%", md: "25%" }}
         fontSize="xl"
         marginTop="10"
         onChange={(something) => setSelectAnswer(something.target.value)}

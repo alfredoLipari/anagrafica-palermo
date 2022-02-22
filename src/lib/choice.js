@@ -2987,7 +2987,7 @@ const choiceTree = {
           title: "Suscripci\u00f3n a TARI",
           id: 32,
           parentId: 4,
-          nextQuestion: 17,
+          nextQuestion: 33,
           answers: [
             {
               id: "foglio10",

@@ -72,9 +72,15 @@ const CustomLongForm = ({ stateQuestions }) => {
     );
     if (isAutosuggestPresent) {
       // check if answers is not empty
-      if (answers["Luogo di nascita"] === "") {
+      if (
+        answers["Luogo di nascita"] === "" &&
+        values["Luogo di nascita"] === ""
+      ) {
         setError(true);
         return;
+      }
+      if (answers["Luogo di nascita"] === "") {
+        answers["Luogo di nascita"] = values["Luogo di nascita"];
       }
       newAnswers = {
         ...values,
