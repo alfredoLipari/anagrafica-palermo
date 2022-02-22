@@ -6,12 +6,16 @@ import CountryAndCity from "./CountryAndCity.json";
 
 // write validators
 export const validateText = (value) => {
+  console.log(value);
   let error;
-  if (value === "") {
+  if (value === "" || value === undefined) {
     error = "please insert something";
-  } else if (value.length > 50) {
-    error = "I dont think you need all that space";
+  } else if (value !== undefined) {
+    if (value.length > 50) {
+      error = "I dont think you need all that space";
+    }
   }
+  console.log(error);
   return error;
 };
 
@@ -45,19 +49,12 @@ export const validateEmail = (value) => {
 };
 
 export const validateDate = (value) => {
-  debugger;
   let error;
   const currentdate = new Date();
   const date = new Date(value);
   //se la data è maggiore di quella di oggi ritorna l'errore
-<<<<<<< HEAD
   if (date >= currentdate) {
-    console.log("sono all interno del if");
-    error = "Birthday date it is greater than today";
-=======
-  if(date >= currentdate){
-    error = 'You cannot enter a date greater than today'
->>>>>>> ba2e6dd7ee3d2298674fe45e0ae01ca14534a425
+    error = "You cannot enter a date greater than today";
   }
   return error;
 };

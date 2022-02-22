@@ -1,11 +1,11 @@
 import choiceTree from "../../lib/choice";
 import { Context } from "../../App";
 import { useContext, useEffect, useState } from "react";
-import CustomSelect from "../custom/customSelect";
-import CustomForm from "../custom/customForm";
-import CustomCheckbox from "../custom/customCheckbox";
+import CustomSelect from "../custom/customInput/customSelect";
+import CustomCheckbox from "../custom/customInput/customCheckbox";
 import CustomLongForm from "../custom/customLongForm";
-import CustomInputNumber from "../custom/customInputNumber";
+import CustomInputNumber from "../custom/customInput/customInputNumber";
+import CustomFormTest from "../custom/customFormTest";
 
 const TreeHelper = () => {
   // import the dispatch object from the entry point
@@ -32,6 +32,8 @@ const TreeHelper = () => {
     setCurrentQuestion(currentQuestion);
   };
 
+  console.log(currentQuestion);
+
   // retrieve the next question
   useEffect(() => {
     changeCurrentQuestion();
@@ -50,7 +52,7 @@ const TreeHelper = () => {
           case "select":
             return <CustomSelect state={currentQuestion} />;
           case "form":
-            return <CustomForm stateTemp={currentQuestion} />;
+            return <CustomFormTest stateTemp={currentQuestion} />;
           case "checkbox":
             return <CustomCheckbox state={currentQuestion} />;
           case "longform":

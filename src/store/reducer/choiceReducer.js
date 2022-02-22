@@ -64,6 +64,8 @@ export function reducer(state, action) {
         nextQuestion = 19;
       }
 
+      console.log(documents);
+
       return {
         ...state,
         answers: newAnswersSelect,
@@ -253,7 +255,19 @@ export function reducer(state, action) {
               id: "Rapporto di parentela con il richiedente_".concat("", i - 2),
               label: "Relation to the applicant",
               type: "select",
-              options: ["mother", "father", "son", "daughter", "brother", "sister", "grandfather", "grandmother", "uncle", "aunt", "cousin"],
+              options: [
+                "mother",
+                "father",
+                "son",
+                "daughter",
+                "brother",
+                "sister",
+                "grandfather",
+                "grandmother",
+                "uncle",
+                "aunt",
+                "cousin",
+              ],
               helperText: "Ex. Wife, Son",
               validate: "RequiredField",
               isRequired: true,

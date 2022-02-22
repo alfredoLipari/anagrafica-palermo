@@ -9,7 +9,7 @@ import {
   NumberIncrementStepper,
   NumberDecrementStepper,
 } from "@chakra-ui/react";
-import { Context } from "../../App";
+import { Context } from "../../../App";
 
 const CustomInputNumber = ({ state }) => {
   const [answer, setAnswer] = useState(1);

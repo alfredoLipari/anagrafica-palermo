@@ -3,7 +3,7 @@
     decalration of the properties:
     {
       id: Int, the id of the question, reachable by nextQuesiton prop
-      type: String("select", "number", "form", "longform");
+      type: String("select", "number", "form");
       title: String, the title of the question;
       label: String, if type select, the placeholder of the question;
       controller: Boolean, if true this question is not necessary to compile the form, only to decide which is the next question
@@ -230,7 +230,7 @@ const choiceTree = {
             {
               id: "Indicare lo Stato estero di provenienza",
               label: "write your Country",
-              type: "text",
+              type: "autocomplete",
               helperText: "Ex. Ghana, France, Russia",
               autocomplete: true,
               // add input validate
@@ -247,7 +247,7 @@ const choiceTree = {
             {
               id: "Indicare lo Stato estero di provenienza",
               label: "Please write you country first",
-              type: "text",
+              type: "autocomplete",
               helperText: "Ex. Ghana, France, Russia",
               autocomplete: true,
               // add input validate
@@ -264,7 +264,7 @@ const choiceTree = {
             {
               id: "Indicare il comune di provenienza",
               label: "Write yout city",
-              type: "text",
+              type: "autocomplete",
               helperText: "Ex. Turin, Milan, Pavia",
               autocomplete: true,
             },
@@ -276,7 +276,7 @@ const choiceTree = {
         //          IL SOTTOSCRITTO:
 
         {
-          type: "longform",
+          type: "form",
           title: "Let's talk about you",
           id: 8,
           nextQuestion: 9,
@@ -478,7 +478,7 @@ const choiceTree = {
         },
 
         {
-          type: "longform",
+          type: "",
           title: "Driving License Details",
           id: 15,
           parentId: 4,
@@ -581,7 +581,7 @@ const choiceTree = {
         //////////////////////////////////////////////////////////////////77
         //            Dichiara
         {
-          type: "longform",
+          type: "form",
           title: "Your new residence",
           id: 16,
           parentId: 4,
@@ -691,7 +691,7 @@ const choiceTree = {
         },
 
         {
-          type: "longform",
+          type: "form",
           title: "Tell us who (just one component)",
           id: 21,
           parentId: 4,
@@ -1011,7 +1011,7 @@ const choiceTree = {
         },
         // OVVERO CHIEDE LE SEGUENTI ISCRIZIONI TARI
         {
-          type: "longform",
+          type: "form",
           title: "TARI subscription",
           id: 32,
           parentId: 4,
@@ -1328,7 +1328,7 @@ const choiceTree = {
           ],
         },
         {
-          type: "longform",
+          type: "form",
           title: "Parliamo di te",
           id: 8,
           nextQuestion: 9,
@@ -1509,7 +1509,7 @@ const choiceTree = {
           ],
         },
         {
-          type: "longform",
+          type: "form",
           title: "Dettagli della patente di guida",
           id: 15,
           parentId: 4,
@@ -1602,7 +1602,7 @@ const choiceTree = {
           parentId: 9,
         },
         {
-          type: "longform",
+          type: "form",
           title: "La tua nuova residenza",
           id: 16,
           parentId: 4,
@@ -1703,7 +1703,7 @@ const choiceTree = {
           ],
         },
         {
-          type: "longform",
+          type: "form",
           title: "Dicci chi (solo un componente)",
           id: 21,
           parentId: 4,
@@ -2000,7 +2000,7 @@ const choiceTree = {
           ],
         },
         {
-          type: "longform",
+          type: "form",
           title: "Abbonamento TARI",
           id: 32,
           parentId: 4,

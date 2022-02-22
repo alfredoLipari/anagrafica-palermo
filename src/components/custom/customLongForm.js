@@ -3,7 +3,7 @@
  */
 
 import React, { useState, useContext, useEffect, useCallback } from "react";
-import CustomInput from "./customInput";
+import CustomInput from "./customInput/customInput";
 import {
   FormControl,
   Button,
@@ -15,11 +15,10 @@ import {
 } from "@chakra-ui/react";
 import { Formik, FastField, Form, Field } from "formik";
 import { Context } from "../../App";
-import CustomAutosuggest from "./customAutosuggest";
+import CustomAutosuggest from "./customInput/customAutosuggest";
 import {
   validateText,
   validateFiscalCode,
-  validateDateOfBirthday,
   validateDate,
 } from "../../lib/validation";
 import "./customDatePicker.css";
@@ -131,13 +130,8 @@ const CustomLongForm = ({ state }) => {
         return validateText;
       case "fiscalCodeField":
         return validateFiscalCode;
-<<<<<<< HEAD
-      case "datebirthday":
-        return validateDateOfBirthday;
-=======
-      case"dateValidation":
+      case "dateValidation":
         return validateDate;
->>>>>>> ba2e6dd7ee3d2298674fe45e0ae01ca14534a425
       default:
         return undefined;
     }
