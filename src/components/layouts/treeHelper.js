@@ -5,7 +5,7 @@ import CustomSelect from "../custom/customInput/customSelect";
 import CustomCheckbox from "../custom/customInput/customCheckbox";
 import CustomLongForm from "../custom/customLongForm";
 import CustomInputNumber from "../custom/customInput/customInputNumber";
-import CustomFormTest from "../custom/customFormTest";
+import CustomForm from "../custom/customForm";
 
 const TreeHelper = () => {
   // import the dispatch object from the entry point
@@ -52,7 +52,7 @@ const TreeHelper = () => {
           case "select":
             return <CustomSelect state={currentQuestion} />;
           case "form":
-            return <CustomFormTest stateTemp={currentQuestion} />;
+            return <CustomForm stateTemp={currentQuestion} />;
           case "checkbox":
             return <CustomCheckbox state={currentQuestion} />;
           case "longform":

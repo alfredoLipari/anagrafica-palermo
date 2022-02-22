@@ -59,8 +59,17 @@ const CustomFormTest = ({ stateTemp }) => {
           },
         };
       }
+      if (country.current === undefined) {
+        country.current = {
+          answer: {
+            "Indicare lo Stato estero di provenienza": "Italy",
+          },
+        };
+      }
     }
   }, [state]);
+
+  console.log("mh", country.current);
 
   const renderQuestions = useCallback(() => {
     let questions = {};
@@ -130,16 +139,6 @@ const CustomFormTest = ({ stateTemp }) => {
       newValues["Indicare il comune di provenienza"] =
         answers["Indicare il comune di provenienza"];
     }
-    // if the return type is invalid return the errore message
-
-    if (!isValid || !Object.keys(newValues).length > 0) {
-      if (!Object.keys(newValues).length > 0) {
-        setShowError(true);
-        return;
-      }
-    } else {
-      setShowError(false);
-    }
 
     if (state.id >= 40) {
       dispatch({
@@ -162,6 +161,7 @@ const CustomFormTest = ({ stateTemp }) => {
     });
 
     setAnswers({});
+    setError();
   };
 
   // function to build the ui form

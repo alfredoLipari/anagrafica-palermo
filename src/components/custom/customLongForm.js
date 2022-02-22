@@ -16,11 +16,7 @@ import {
 import { Formik, FastField, Form, Field } from "formik";
 import { Context } from "../../App";
 import CustomAutosuggest from "./customInput/customAutosuggest";
-import {
-  validateText,
-  validateFiscalCode,
-  validateDate,
-} from "../../lib/validation";
+import { validateText, validateFiscalCode } from "../../lib/validation";
 import "./customDatePicker.css";
 
 const CustomLongForm = ({ state }) => {
@@ -130,8 +126,6 @@ const CustomLongForm = ({ state }) => {
         return validateText;
       case "fiscalCodeField":
         return validateFiscalCode;
-      case "dateValidation":
-        return validateDate;
       default:
         return undefined;
     }

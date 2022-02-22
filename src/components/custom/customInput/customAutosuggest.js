@@ -5,6 +5,7 @@ import { Text, FormHelperText, FormControl } from "@chakra-ui/react";
 import "./customAutosuggest.css";
 
 const CustomAutosuggest = ({ autosuggestHandler, tag, country, error }) => {
+  console.log("lololo");
   // Imagine you have a list of languages that you'd like to autosuggest.
   // Teach Autosuggest how to calculate suggestions for any given input value.
   const getSuggestions = (value) => {
@@ -30,6 +31,8 @@ const CustomAutosuggest = ({ autosuggestHandler, tag, country, error }) => {
             country.toLowerCase().slice(0, inputLength) === inputValue
         );
   };
+
+  console.log(error, country);
 
   function shouldRenderSuggestions(value, reason) {
     if (country) {
