@@ -12,6 +12,7 @@ import { Context } from "../../App";
 import CustomAutosuggest from "./customInput/customAutosuggest";
 import { validateText, validateCountry } from "../../lib/validation";
 import "./customDatePicker.css";
+import CustomButton from "./customInput/customButton";
 
 const CustomForm = ({ stateTemp }) => {
   let questions = {};
@@ -26,6 +27,17 @@ const CustomForm = ({ stateTemp }) => {
       })
       .map((quest) => (questions[quest.id] = ""))
   );
+
+  const translateButton = () => {
+    switch (state.language) {
+      case "ITA":
+        return "Continua";
+      case "ESP":
+        return "continuar";
+      default:
+        return "Continue";
+    }
+  };
 
   // adding autosuggest logic
   const [answers, setAnswers] = useState({});
@@ -187,19 +199,9 @@ const CustomForm = ({ stateTemp }) => {
             )}
           </Box>
 
-          <Button
-            type="submit"
-            color="white"
-            bg="#0073E6"
-            marginTop="5"
-            w="15%"
-            borderRadius="4"
-            paddingY="6"
-            disabled={!props.isValid}
-            marginBottom={"10"}
-          >
-            {stateTemp.id !== 33 ? "Continue" : "Generate pdf"}
-          </Button>
+          <CustomButton submit="submit" handler={() => console.log("click")}>
+            {translateButton()}
+          </CustomButton>
         </Form>
       )}
     </Formik>

@@ -1,15 +1,27 @@
 import React, { useState, useContext } from "react";
 import { Box, Text, Button } from "@chakra-ui/react";
 import { Context } from "../../../App";
+import CustomButton from "./customButton";
 
-const CustomCheckbox = ({ state }) => {
+const CustomCheckbox = ({ stateQuestion }) => {
   const [answer, setAnswer] = useState(true);
-  const { dispatch } = useContext(Context);
+  const { dispatch, state } = useContext(Context);
+
+  const translateButton = () => {
+    switch (state.language) {
+      case "ITA":
+        return "Continua";
+      case "ESP":
+        return "continuar";
+      default:
+        return "Continue";
+    }
+  };
 
   const submitAnswer = () => {
     const nextQuestion = answer
-      ? state.answers[0].nextQuestion
-      : state.answers[1].nextQuestion;
+      ? stateQuestion.answers[0].nextQuestion
+      : stateQuestion.answers[1].nextQuestion;
 
     dispatch({
       type: "ANSWER_QUESTION_CHECKBOX",
@@ -32,7 +44,7 @@ const CustomCheckbox = ({ state }) => {
         marginBottom="5"
         marginTop={{ sm: "3em", lg: "5em" }}
       >
-        {state.title}
+        {stateQuestion.title}
       </Text>
       <Box
         marginTop={"8"}
@@ -51,7 +63,7 @@ const CustomCheckbox = ({ state }) => {
           onClick={() => setAnswer(true)}
           padding={{ lg: "1" }}
         >
-          {state.answers[0].id}
+          {stateQuestion.answers[0].id}
         </Text>
         <Text
           bg={answer ? "blue.400" : "white"}
@@ -61,22 +73,12 @@ const CustomCheckbox = ({ state }) => {
           onClick={() => setAnswer(false)}
           padding={{ lg: "1" }}
         >
-          {state.answers[1].id}
+          {stateQuestion.answers[1].id}
         </Text>
       </Box>
-      <Button
-        color="white"
-        bg="#0073E6"
-        w="15%"
-        borderRadius="4"
-        paddingY="6"
-        marginTop="4em"
-        onClick={() => submitAnswer()}
-        colorScheme={"facebook"}
-        marginBottom={"10"}
-      >
-        Continue
-      </Button>
+      <CustomButton handler={() => submitAnswer()}>
+        {translateButton()}
+      </CustomButton>
     </Box>
   );
 };

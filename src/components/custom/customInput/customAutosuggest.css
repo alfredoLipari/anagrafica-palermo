@@ -4,7 +4,6 @@ body {
 
 .react-autosuggest__container {
   position: relative;
-  margin: 4px;
 }
 
 .react-autosuggest__input {
@@ -14,8 +13,8 @@ body {
   font-weight: 300;
   font-size: 16px;
   border-bottom: 1px solid #5c6f82;
-  margin: 4px;
   text-align: center;
+  margin-bottom: 8px;
 }
 
 .react-autosuggest__input--focused {

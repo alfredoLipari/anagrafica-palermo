@@ -1,43 +1,77 @@
-import { Box, Button, Center, Flex } from "@chakra-ui/react";
-import { Text, useMediaQuery } from "@chakra-ui/react";
+import { useContext } from "react";
+import { Context } from "../../App";
+import { Box, Flex } from "@chakra-ui/react";
+import { Text } from "@chakra-ui/react";
 import { useState } from "react";
 import TreeHelper from "./treeHelper";
 import { Image } from "@chakra-ui/react";
 import People from "../asset/homepageimg.svg";
+import CustomButton from "../custom/customInput/customButton";
 
 const Main = () => {
   const [isFormStarted, setIsFormStarted] = useState(false);
+  const { state } = useContext(Context);
 
-  const [isSmallHeight] = useMediaQuery("(min-height: 500px)");
+  const translateFirstHeading = () => {
+    switch (state.language) {
+      case "ITA":
+        return "Benvenuto nel comune di Palermo";
+      case "ESP":
+        return "Bienvenido al municipio de Palermo";
+      default:
+        return "Welcome to the Comune di Palermo ";
+    }
+  };
 
-  console.log("qusadjuasdhi", isSmallHeight);
+  const translateSecondHeading = () => {
+    switch (state.language) {
+      case "ITA":
+        return "Servizio di anagrafe online";
+      case "ESP":
+        return "Servicio de registro en línea";
+      default:
+        return "Registry office";
+    }
+  };
+
+  const translateText = () => {
+    switch (state.language) {
+      case "ITA":
+        return "Tramite questo servizio, potrai compilare velocemente la richiesta di cambio residenza";
+      case "ESP":
+        return "Con esta herramienta, podrá rellenar la solicitud de residencia documento";
+      default:
+        return " With this tool, you will able to fill in the residence application document";
+    }
+  };
+
+  const translateButton = () => {
+    switch (state.language) {
+      case "ITA":
+        return "Iniziamo";
+      case "ESP":
+        return "comencemos";
+      default:
+        return "Let's start";
+    }
+  };
 
   return (
     <Box bg="white" textAlign="center">
       {!isFormStarted ? (
         <Box marginTop="20">
           <Text fontSize="2xl" fontWeight="extrabold" color="#000">
-            Welcome to the Comune di Palermo
+            {translateFirstHeading()}
           </Text>
           <Text fontSize="2xl" fontWeight="bold" color="#000">
-            online registry office
+            {translateSecondHeading()}
           </Text>
           <Text marginTop="5" color="#000">
-            With this tool, you will able to fill in the residence application
-            document
+            {translateText()}
           </Text>
-          <Button
-            color="white"
-            bg="#0073E6"
-            marginTop="5"
-            w="15%"
-            borderRadius="4"
-            paddingY="6"
-            colorScheme={"facebook"}
-            onClick={() => setIsFormStarted(true)}
-          >
-            Let's Start
-          </Button>
+          <CustomButton handler={() => setIsFormStarted(true)}>
+            {translateButton()}
+          </CustomButton>
           <Flex marginTop={10} justifyContent={"center"}>
             <Box w="825px" margin={18}>
               <Image src={People} alt="logo comune" />

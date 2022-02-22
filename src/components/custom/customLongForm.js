@@ -2,26 +2,25 @@
  *   when a form is bigger than 4 field
  */
 
-import React, { useState, useContext, useEffect, useCallback } from "react";
+import React, { useState, useContext } from "react";
 import CustomInput from "./customInput/customInput";
-import {
-  FormControl,
-  Button,
-  Text,
-  Divider,
-  Box,
-  Select,
-  FormHelperText,
-} from "@chakra-ui/react";
-import { Formik, FastField, Form, Field } from "formik";
+import { FormControl, Text, Divider, Box, Flex } from "@chakra-ui/react";
+import { Formik, Form, Field } from "formik";
 import { Context } from "../../App";
 import CustomAutosuggest from "./customInput/customAutosuggest";
-import { validateText, validateFiscalCode } from "../../lib/validation";
+import {
+  validateText,
+  validateFiscalCode,
+  validateDate,
+} from "../../lib/validation";
 import "./customDatePicker.css";
+import CustomInputSelect from "./customInput/customInputSelect";
+import CustomButton from "./customInput/customButton";
 
-const CustomLongForm = ({ state }) => {
+const CustomLongForm = ({ stateQuestions }) => {
+  console.log(stateQuestions);
   let questions = {};
-  const { dispatch } = useContext(Context);
+  const { dispatch, state } = useContext(Context);
   let country = {
     answer: {
       "Indicare lo Stato estero di provenienza": "Italy",
@@ -34,36 +33,23 @@ const CustomLongForm = ({ state }) => {
 
   // initial values of the form, without the autosuggest input
   const [content] = useState(
-    state.answers
+    stateQuestions.answers
       .filter(function (question) {
         return question.autocomplete !== true;
       })
       .map((quest) => (questions[quest.id] = ""))
   );
 
-  //build the interface for long forms conditionally
-  const [formSize] = useState(state.answers.length);
-
-  // logic for the long form
-  const [firstColumnForm, setzeroLongForm] = useState([]);
-  const [secondColumnForm, setfirstLongForm] = useState([]);
-
-  // handler to render the form
-  const populateLongForm = useCallback(() => {
-    const firstColumnForm = [];
-    const secondColumnForm = [];
-
-    state.answers.forEach((answ, index) => {
-      if (index < 4) {
-        firstColumnForm.push(answ);
-      } else {
-        secondColumnForm.push(answ);
-      }
-    });
-
-    setzeroLongForm(firstColumnForm);
-    setfirstLongForm(secondColumnForm);
-  }, [state]);
+  const translateButton = () => {
+    switch (state.language) {
+      case "ITA":
+        return "Continua";
+      case "ESP":
+        return "continuar";
+      default:
+        return "Continue";
+    }
+  };
 
   const autosuggestHandler = (value, tag) => {
     if (!tag) {
@@ -74,15 +60,12 @@ const CustomLongForm = ({ state }) => {
     });
   };
 
-  useEffect(() => {
-    populateLongForm();
-  }, [state, formSize, populateLongForm]);
-
   // handler when the form is submitted, call the dispatcher
   const submitForm = (values) => {
+    console.log(values);
     let newAnswers = {};
 
-    const isAutosuggestPresent = state.answers.some(
+    const isAutosuggestPresent = stateQuestions.answers.some(
       (question) => question.autocomplete === true
     );
     if (isAutosuggestPresent) {
@@ -99,17 +82,17 @@ const CustomLongForm = ({ state }) => {
       newAnswers = { ...values };
     }
 
-    if (state.id >= 40) {
+    if (stateQuestions.id >= 40) {
       dispatch({
         type: "ANSWER_QUESTION_COMPONENT_FORM",
         answer: newAnswers,
-        state: state,
+        state: stateQuestions,
       });
     } else {
       dispatch({
         type: "ANSWER_QUESTION_FORM",
         answer: newAnswers,
-        state: state,
+        state: stateQuestions,
       });
     }
 
@@ -120,15 +103,98 @@ const CustomLongForm = ({ state }) => {
   };
 
   // decide the validation conditionally
+  // decide the validation conditionally
   const validateInput = (value) => {
     switch (value) {
       case "RequiredField":
         return validateText;
       case "fiscalCodeField":
         return validateFiscalCode;
+      case "dateValidation":
+        return validateDate;
       default:
         return undefined;
     }
+  };
+
+  // function to build the ui form
+  const renderForm = (props) => {
+    let i = 0;
+    let counter = 0;
+
+    let containerColumn = [];
+    let formContainer = {};
+
+    stateQuestions.answers.forEach((answ, index) => {
+      switch (answ.type) {
+        case "select":
+          containerColumn.push(
+            <Field
+              key={answ.id}
+              id={answ.id}
+              name={answ.id}
+              validate={validateInput(answ.validate)}
+            >
+              {({ field, form }) => (
+                <CustomInputSelect {...field} state={answ} error={props} />
+              )}
+            </Field>
+          );
+          break;
+        case "autocomplete":
+          containerColumn.push(
+            <CustomAutosuggest
+              keyAuto={answ.id}
+              value={answers}
+              autosuggestHandler={autosuggestHandler}
+              tag={answ}
+              country={country}
+              error={error}
+            />
+          );
+          break;
+        default:
+          containerColumn.push(
+            <Field
+              name={answ.id}
+              validate={validateInput(answ.validate)}
+              key={answ.id}
+            >
+              {({ field, form }) => (
+                <FormControl>
+                  <CustomInput
+                    {...field}
+                    state={answ}
+                    error={
+                      props.errors[answ.id] &&
+                      props.touched[answ.id] &&
+                      props.errors[answ.id]
+                    }
+                  />
+                </FormControl>
+              )}
+            </Field>
+          );
+      }
+      i++;
+
+      if (i === 4 || stateQuestions.answers.length - index === 1) {
+        formContainer[counter] = containerColumn;
+
+        counter++;
+        i = 0;
+        containerColumn = [];
+      }
+    });
+
+    // now return every key return a column
+    const result = Object.values(formContainer).map((container, index) => (
+      <Box key={index} marginY="5" marginX="12">
+        {container.map((item) => item)}
+      </Box>
+    ));
+
+    return result;
   };
 
   return (
@@ -158,180 +224,16 @@ const CustomLongForm = ({ state }) => {
             marginTop="1em"
             margin="8"
           >
-            {state.title}
+            {stateQuestions.title}
           </Text>
 
-          <Box
-            width={
-              formSize < 4
-                ? { base: "40%", md: "35%", lg: "30%" }
-                : { base: "40%", md: "35%", lg: "50%" }
-            }
-            display="flex"
-            justifyContent="space-between"
-            flexDir={formSize > 4 ? "row" : "column"}
-          >
-            <>
-              <Box>
-                {firstColumnForm.map((answ) =>
-                  answ.autocomplete === undefined ? (
-                    <Box key={answ.id}>
-                      {answ.type !== "select" ? (
-                        <FastField
-                          name={answ.id}
-                          validate={validateInput(answ.validate)}
-                        >
-                          {({ field, form }) => (
-                            <CustomInput
-                              {...field}
-                              state={answ}
-                              error={
-                                props.errors[answ.id] &&
-                                props.touched[answ.id] &&
-                                props.errors[answ.id]
-                              }
-                            />
-                          )}
-                        </FastField>
-                      ) : (
-                        <FastField as="select" id={answ.id} name={answ.id}>
-                          {answ.options.map((option) => {
-                            return (
-                              <option key={option} value={option}>
-                                {option}
-                              </option>
-                            );
-                          })}
-                        </FastField>
-                      )}
-                    </Box>
-                  ) : (
-                    <CustomAutosuggest
-                      key={answ.id}
-                      value={answers}
-                      autosuggestHandler={autosuggestHandler}
-                      tag={answ}
-                      country={country}
-                      error={error}
-                    />
-                  )
-                )}
-                {formSize > 8 && (
-                  <Button
-                    type="submit"
-                    color="white"
-                    bg="#0073E6"
-                    marginTop="5"
-                    w="65%"
-                    borderRadius="4"
-                    paddingY="6"
-                    colorScheme={"facebook"}
-                    marginBottom={"10"}
-                  >
-                    Continue
-                  </Button>
-                )}
-              </Box>
-              <Box>
-                {secondColumnForm.map((answ) => (
-                  <Box key={answ.id}>
-                    {answ.type !== "select" ? (
-                      <FastField
-                        name={answ.id}
-                        validate={validateInput(answ.validate)}
-                      >
-                        {({ field, form }) => (
-                          <FormControl mb="10">
-                            <CustomInput
-                              {...field}
-                              state={answ}
-                              error={
-                                props.errors[answ.id] &&
-                                props.touched[answ.id] &&
-                                props.errors[answ.id]
-                              }
-                            />
-                          </FormControl>
-                        )}
-                      </FastField>
-                    ) : (
-                      <Field
-                        id={answ.id}
-                        name={answ.id}
-                        validate={validateInput(answ.validate)}
-                      >
-                        {({ field, form }) => (
-                          <FormControl>
-                            <Select
-                              {...field}
-                              border="none"
-                              borderBottom="1px"
-                              borderBottomColor={
-                                props.errors[answ.id] &&
-                                props.touched[answ.id] &&
-                                props.errors[answ.id] !== undefined
-                                  ? "#D2072A"
-                                  : "gray.300"
-                              }
-                              borderRadius="0px"
-                              as="select"
-                              padding="4px"
-                              iconColor="#0E78E2"
-                              iconSize="50"
-                              color="#404B57"
-                              placeholder={answ.label}
-                              fontSize="md"
-                              bg="white"
-                              id={answ.id}
-                              name={answ.id}
-                            >
-                              {answ.options.map((option) => {
-                                return (
-                                  <option key={option} value={option}>
-                                    {option}
-                                  </option>
-                                );
-                              })}
-                            </Select>
-                            <FormHelperText
-                              marginBottom="10"
-                              color={
-                                props.errors[answ.id] &&
-                                props.touched[answ.id] &&
-                                props.errors[answ.id] !== undefined
-                                  ? "#D2072A"
-                                  : "#718096"
-                              }
-                            >
-                              {field.error !== undefined
-                                ? field.error
-                                : answ.helperText}
-                            </FormHelperText>
-                          </FormControl>
-                        )}
-                      </Field>
-                    )}
-                  </Box>
-                ))}
-              </Box>
-            </>
-          </Box>
-          {formSize <= 8 && (
-            <Button
-              type="submit"
-              color="white"
-              bg="#0073E6"
-              marginTop="5"
-              w="15%"
-              borderRadius="4"
-              paddingY="6"
-              colorScheme={"facebook"}
-              disabled={false}
-              marginBottom={"10"}
-            >
-              Continue
-            </Button>
-          )}
+          <Flex direction={{ base: "column", md: "row" }}>
+            {renderForm(props)}
+          </Flex>
+
+          <CustomButton submit="submit" handler={() => console.log("click")}>
+            {translateButton()}
+          </CustomButton>
         </Form>
       )}
     </Formik>

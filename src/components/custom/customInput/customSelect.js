@@ -1,12 +1,24 @@
 import { useContext, useState } from "react";
 import { Context } from "../../../App";
-import { Select, Text, Box, Button } from "@chakra-ui/react";
+import { Select, Text, Box } from "@chakra-ui/react";
 import { useNavigate } from "react-router-dom";
+import CustomButton from "./customButton";
 
-const CustomSelect = ({ state }) => {
-  const { dispatch } = useContext(Context);
+const CustomSelect = ({ stateQuestion }) => {
+  const { dispatch, state } = useContext(Context);
   const [selectAnswer, setSelectAnswer] = useState({});
   const navigate = useNavigate();
+
+  const translateButton = () => {
+    switch (state.language) {
+      case "ITA":
+        return "Iniziamo";
+      case "ESP":
+        return "comencemos";
+      default:
+        return "Let's start";
+    }
+  };
 
   const dispatchAnswer = () => {
     if (Object.keys(selectAnswer).length === 0) {
@@ -14,7 +26,7 @@ const CustomSelect = ({ state }) => {
       return;
     }
     //retrieve the object answer from the id
-    const answer = state.answers.find((answ) => {
+    const answer = stateQuestion.answers.find((answ) => {
       return answ.id === selectAnswer;
     });
 
@@ -22,10 +34,10 @@ const CustomSelect = ({ state }) => {
     dispatch({
       type: "ANSWER_QUESTION_SELECT",
       answer: answer,
-      state: state,
+      state: stateQuestion,
     });
     setSelectAnswer({});
-    if (state.id === 33) {
+    if (stateQuestion.id === 33) {
       navigate("/download-pdf");
     }
   };
@@ -33,7 +45,7 @@ const CustomSelect = ({ state }) => {
   return (
     <Box marginTop="48" display="flex" alignItems="center" flexDir="column">
       <Text fontWeight="bold" fontSize="3xl" color="#000">
-        {state.title}
+        {stateQuestion.title}
       </Text>
       <Select
         iconColor="#0E78E2"
@@ -47,25 +59,15 @@ const CustomSelect = ({ state }) => {
         bg="white"
         marginBottom="12"
       >
-        {state.answers.map((el) => (
+        {stateQuestion.answers.map((el) => (
           <option value={el.id} key={el.id}>
             {el.label}
           </option>
         ))}
       </Select>
-      <Button
-        color="white"
-        bg="#0073E6"
-        marginTop="5"
-        w="15%"
-        borderRadius="4"
-        paddingY="6"
-        onClick={() => dispatchAnswer()}
-        colorScheme={"facebook"}
-        marginBottom={"10"}
-      >
-        Continue
-      </Button>
+      <CustomButton handler={() => dispatchAnswer()}>
+        {translateButton()}
+      </CustomButton>
     </Box>
   );
 };

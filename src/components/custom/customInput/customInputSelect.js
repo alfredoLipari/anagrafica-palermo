@@ -1,7 +1,6 @@
 import { Select, FormHelperText, FormControl } from "@chakra-ui/react";
 
 const CustomInputSelect = (props) => {
-  console.log(props.error.errors[props.state.id]);
   return (
     <FormControl>
       <Select
@@ -15,7 +14,6 @@ const CustomInputSelect = (props) => {
         }
         borderRadius="0px"
         as="select"
-        padding="4px"
         iconColor="#0E78E2"
         iconSize="50"
         color="#404B57"
@@ -23,6 +21,7 @@ const CustomInputSelect = (props) => {
         fontSize="md"
         bg="white"
         id={props.state.id}
+        marginTop="8px"
         name={props.state.id}
       >
         {props.state.options.map((option) => {

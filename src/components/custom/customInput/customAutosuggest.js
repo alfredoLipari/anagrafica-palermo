@@ -1,13 +1,19 @@
 import React, { useState } from "react";
 import Autosuggest from "react-autosuggest";
 import CountryAndCity from "../../../lib/CountryAndCity.json";
-import { Text, FormHelperText, FormControl } from "@chakra-ui/react";
+import { Text, FormHelperText, FormControl, Box } from "@chakra-ui/react";
 import "./customAutosuggest.css";
 
-const CustomAutosuggest = ({ autosuggestHandler, tag, country, error }) => {
-  console.log("lololo");
+const CustomAutosuggest = ({
+  autosuggestHandler,
+  tag,
+  country,
+  error,
+  keyAuto,
+}) => {
   // Imagine you have a list of languages that you'd like to autosuggest.
   // Teach Autosuggest how to calculate suggestions for any given input value.
+  console.log(keyAuto);
   const getSuggestions = (value) => {
     let filter = [];
 
@@ -31,8 +37,6 @@ const CustomAutosuggest = ({ autosuggestHandler, tag, country, error }) => {
             country.toLowerCase().slice(0, inputLength) === inputValue
         );
   };
-
-  console.log(error, country);
 
   function shouldRenderSuggestions(value, reason) {
     if (country) {
@@ -80,23 +84,25 @@ const CustomAutosuggest = ({ autosuggestHandler, tag, country, error }) => {
 
   // Finally, render it!
   return (
-    <FormControl color={"#404B57"} marginBottom="28">
-      <Autosuggest
-        suggestions={suggestions}
-        onSuggestionsFetchRequested={onSuggestionsFetchRequested}
-        onSuggestionsClearRequested={onSuggestionsClearRequested}
-        getSuggestionValue={getSuggestionValue}
-        renderSuggestion={renderSuggestion}
-        inputProps={inputProps}
-        shouldRenderSuggestions={shouldRenderSuggestions}
-      />
-      <FormHelperText
-        marginBottom="10"
-        color={error !== false ? "#D2072A" : "#718096"}
-      >
-        {error !== false ? "this place does not exist" : tag.helperText}
-      </FormHelperText>
-    </FormControl>
+    <Box key={keyAuto}>
+      <FormControl color={"#404B57"} margin="0">
+        <Autosuggest
+          suggestions={suggestions}
+          onSuggestionsFetchRequested={onSuggestionsFetchRequested}
+          onSuggestionsClearRequested={onSuggestionsClearRequested}
+          getSuggestionValue={getSuggestionValue}
+          renderSuggestion={renderSuggestion}
+          inputProps={inputProps}
+          shouldRenderSuggestions={shouldRenderSuggestions}
+        />
+        <FormHelperText
+          marginBottom="10"
+          color={error !== false ? "#D2072A" : "#718096"}
+        >
+          {error !== false ? "this place does not exist" : tag.helperText}
+        </FormHelperText>
+      </FormControl>
+    </Box>
   );
 };
 

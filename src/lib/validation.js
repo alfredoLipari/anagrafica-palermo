@@ -6,7 +6,6 @@ import CountryAndCity from "./CountryAndCity.json";
 
 // write validators
 export const validateText = (value) => {
-  console.log(value);
   let error;
   if (value === "" || value === undefined) {
     error = "please insert something";
@@ -15,7 +14,6 @@ export const validateText = (value) => {
       error = "I dont think you need all that space";
     }
   }
-  console.log(error);
   return error;
 };
 
@@ -52,8 +50,11 @@ export const validateDate = (value) => {
   let error;
   const currentdate = new Date();
   const date = new Date(value);
+  if (isNaN(date)) {
+    error = "Invalid date";
+  }
   //se la data è maggiore di quella di oggi ritorna l'errore
-  if (date >= currentdate) {
+  else if (date >= currentdate) {
     error = "You cannot enter a date greater than today";
   }
   return error;

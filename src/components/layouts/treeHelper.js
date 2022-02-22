@@ -32,8 +32,6 @@ const TreeHelper = () => {
     setCurrentQuestion(currentQuestion);
   };
 
-  console.log(currentQuestion);
-
   // retrieve the next question
   useEffect(() => {
     changeCurrentQuestion();
@@ -50,13 +48,13 @@ const TreeHelper = () => {
       {(() => {
         switch (type) {
           case "select":
-            return <CustomSelect state={currentQuestion} />;
+            return <CustomSelect stateQuestion={currentQuestion} />;
           case "form":
             return <CustomForm stateTemp={currentQuestion} />;
           case "checkbox":
-            return <CustomCheckbox state={currentQuestion} />;
+            return <CustomCheckbox stateQuestion={currentQuestion} />;
           case "longform":
-            return <CustomLongForm state={currentQuestion} />;
+            return <CustomLongForm stateQuestions={currentQuestion} />;
           case "number":
             return <CustomInputNumber state={currentQuestion} />;
           default:
