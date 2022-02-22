@@ -23,7 +23,8 @@ const TreeHelper = () => {
         (el) => el.id === state.currentQuestion
       );
     } else {
-      console.log('ok',choiceTree.language[state.language])
+      console.log("yes", state.language);
+      console.log("ok", choiceTree.language);
       currentQuestion = choiceTree.language[state.language].questions.find(
         (el) => el.id === state.currentQuestion
       );

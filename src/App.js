@@ -15,7 +15,7 @@ const Website = () => {
     answers: [],
     componentTree: [],
     documents: [],
-    language: "ENG",
+    language: "English",
   };
 
   const [state, dispatch] = useReducer(reducer, initialState);
