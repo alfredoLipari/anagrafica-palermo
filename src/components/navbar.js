@@ -14,9 +14,8 @@ import { ChevronDownIcon } from "@chakra-ui/icons";
 import { Context } from "../App";
 
 const Navbar = (props) => {
-  const [language, setLanguage] = useState("ENG");
+  const [language, setLanguage] = useState("English");
   const { dispatch } = useContext(Context);
-
   const changeLanguage = (item) => {
     dispatch({
       type: "CHANGE_LANGUAGE",
@@ -24,7 +23,7 @@ const Navbar = (props) => {
     });
     setLanguage(item.target.value);
   };
-
+  console.log('lan', language)
   return (
     <Box as="nav" w="100%">
       <Box
@@ -47,15 +46,25 @@ const Navbar = (props) => {
           >
             {language}
           </MenuButton>
-          <MenuList bg={"#0073E6"}>
-            <MenuItem value="ENG" onClick={(item) => changeLanguage(item)}>
-              ENG
+          <MenuList
+            background= "rgba(8, 100, 186, 0.3)"
+            borderRadius= "6px"
+            boxShadow="0 4px 30px rgba(0, 0, 0, 0.1)"
+            backdropFilter="blur(5px)"
+            border= "none"
+            minWidth="106px"
+            >
+            <MenuItem value="English" onClick={(item) => changeLanguage(item)}>
+              English
             </MenuItem>
-            <MenuItem value="ITA" onClick={(item) => changeLanguage(item)}>
-              🇮ITA
+            <MenuItem value="Italian" onClick={(item) => changeLanguage(item)}>
+              Italian
             </MenuItem>
-            <MenuItem value="ESP" onClick={(item) => changeLanguage(item)}>
-              SPN
+            <MenuItem value="Spanish" onClick={(item) => changeLanguage(item)}>
+              Spanish
+            </MenuItem>
+            <MenuItem value="French" onClick={(item) => changeLanguage(item)}>
+              French
             </MenuItem>
           </MenuList>
         </Menu>

@@ -26,7 +26,7 @@
 
 const choiceTree = {
   language: {
-    ENG: {
+    English: {
       questions: [
         // DICHIARAZIONE DI RESIDENZA
 
@@ -1104,7 +1104,7 @@ const choiceTree = {
         },
       ],
     },
-    ITA: {
+    Italian: {
       questions: [
         {
           type: "select",
@@ -2087,7 +2087,7 @@ const choiceTree = {
         },
       ],
     },
-    ESP: {
+    Spanish: {
       questions: [
         {
           type: "select",

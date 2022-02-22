@@ -14,9 +14,9 @@ const Main = () => {
 
   const translateFirstHeading = () => {
     switch (state.language) {
-      case "ITA":
+      case "Italian":
         return "Benvenuto nel comune di Palermo";
-      case "ESP":
+      case "Spanish":
         return "Bienvenido al municipio de Palermo";
       default:
         return "Welcome to the Comune di Palermo ";
@@ -25,9 +25,9 @@ const Main = () => {
 
   const translateSecondHeading = () => {
     switch (state.language) {
-      case "ITA":
+      case "Italian":
         return "Servizio di anagrafe online";
-      case "ESP":
+      case "Spanish":
         return "Servicio de registro en línea";
       default:
         return "Registry office";
@@ -36,9 +36,9 @@ const Main = () => {
 
   const translateText = () => {
     switch (state.language) {
-      case "ITA":
+      case "Italian":
         return "Tramite questo servizio, potrai compilare velocemente la richiesta di cambio residenza";
-      case "ESP":
+      case "Spanish":
         return "Con esta herramienta, podrá rellenar la solicitud de residencia documento";
       default:
         return " With this tool, you will able to fill in the residence application document";
@@ -47,9 +47,9 @@ const Main = () => {
 
   const translateButton = () => {
     switch (state.language) {
-      case "ITA":
+      case "Italian":
         return "Iniziamo";
-      case "ESP":
+      case "Spanish":
         return "comencemos";
       default:
         return "Let's start";

@@ -30,9 +30,9 @@ const CustomForm = ({ stateTemp }) => {
 
   const translateButton = () => {
     switch (state.language) {
-      case "ITA":
+      case "Italian":
         return "Continua";
-      case "ESP":
+      case "Spanish":
         return "continuar";
       default:
         return "Continue";

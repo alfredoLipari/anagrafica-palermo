@@ -7,3 +7,43 @@
 .d{
   background-image: url('../src/components/asset/logoComuneDiPalermo.png');
 }
+
+.box{
+  background: rgba(8, 100, 186, 0.3) !important;
+  border-radius: 16px !important;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1) !important;
+  backdrop-filter: blur(5px) !important;
+  -webkit-backdrop-filter: blur(1px) !important;
+  border: none !important;
+  min-width: auto !important;
+  border-radius:6px !important;
+}
+.menu{
+  background-color: #0273E5 !important;
+}
+
+
+.en{
+  font-weight: bolder;
+  background: linear-gradient(to right, white 0%, white 52%,red 52%, red 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent
+}
+.it{
+  font-weight: bolder;
+  background: linear-gradient(to right, green 0%, green 40%, white 40%, white 60%, red 60%, red 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent
+}
+.es{
+  font-weight: bolder;
+  background: linear-gradient(to right, yellow 0%, yellow 48%, red 48%, red 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent
+}
+.fr{
+  font-weight: bolder;
+  background: linear-gradient(to right,blue 0%, blue 30%, white 30%, white 66%, red 66%, red 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent
+}
