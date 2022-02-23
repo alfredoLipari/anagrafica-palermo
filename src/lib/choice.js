@@ -1010,7 +1010,7 @@ const choiceTree = {
           answers: [
             {
               id: "che la tassa per il nuovo",
-              label: "Nome e cognome",
+              label: "Name and surname",
               type: "text",
               validate: "requiredField",
               isRequired: true,
@@ -1019,7 +1019,7 @@ const choiceTree = {
             },
             {
               id: "F",
-              label: "Codice Fiscale",
+              label: "Fiscal Code",
               type: "text",
               isRequired: true,
               validate: "fiscalCodeField",
@@ -1067,10 +1067,11 @@ const choiceTree = {
             },
             {
               id: "data",
-              label: "Data fine occupazione",
+              label: "Effective date of occupation",
               type: "date",
               isRequired: true,
               validate: "RequiredField",
+              helperText: "",
             },
             {
               id: "superficie in mq",
@@ -2056,11 +2057,11 @@ const choiceTree = {
             },
             {
               id: "data",
-              label: "Dati fine occupazione",
+              label: "Data decorrenza occupazione",
               type: "date",
               isRequired: true,
               validate: "RequiredField",
-              helperText: "Dati fine occupazione",
+              helperText: "Data decorrenza occupazione",
             },
             {
               id: "superficie in mq",
