@@ -22,7 +22,7 @@ const CustomInput = (props) => {
         name={props.name}
         borderBottomColor={props.error !== undefined ? "#D2072A" : "gray.300"}
         placeholder={props.state.label + (props.state.isRequired ? " *" : "")}
-        focusBorderColor="white"
+        _focus={{ borderBottomColor: "#0E78E2" }}
       />
       <FormHelperText
         marginBottom="10"

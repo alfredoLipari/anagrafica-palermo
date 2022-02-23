@@ -17,6 +17,10 @@ body {
   margin-bottom: 8px;
 }
 
+.react-autosuggest__input:focus {
+  border-bottom-color: #0e78e2 !important;
+}
+
 .react-autosuggest__input--focused {
   outline: none;
 }

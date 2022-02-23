@@ -50,43 +50,47 @@ const Footer = () => {
           </Box>
         </Stack>
       </Flex>
-
-      <Flex
-        marginTop="5"
-        alignItems={{ base: "flex-start", md: "center" }}
-        w="60%"
-        justifyContent="space-between"
-        padding="8px 40px"
-        pb={8}
-        direction={{ base: "column", md: "row" }}
-      >
-        <Text
-          textColor={"black"}
-          fontWeight="bold"
-          marginY={{ base: "2", md: 0 }}
+      <Flex justifyContent="space-between" alignItems="center">
+        <Flex
+          marginTop="5"
+          alignItems={{ base: "flex-start", md: "center" }}
+          w="60%"
+          justifyContent="space-between"
+          padding="8px 40px"
+          pb={8}
+          direction={{ base: "column", md: "row" }}
         >
-          Media Policy
-        </Text>
-        <Text
-          textColor={"black"}
-          fontWeight="bold"
-          marginY={{ base: "2", md: 0 }}
-        >
-          Note legali
-        </Text>
-        <Text
-          textColor={"black"}
-          fontWeight="bold"
-          marginY={{ base: "2", md: 0 }}
-        >
-          Privacy Policy
-        </Text>
-        <Text
-          textColor={"black"}
-          fontWeight="bold"
-          marginY={{ base: "2", md: 0 }}
-        >
-          Mappa del sito
+          <Text
+            textColor={"black"}
+            fontWeight="bold"
+            marginY={{ base: "2", md: 0 }}
+          >
+            Media Policy
+          </Text>
+          <Text
+            textColor={"black"}
+            fontWeight="bold"
+            marginY={{ base: "2", md: 0 }}
+          >
+            Note legali
+          </Text>
+          <Text
+            textColor={"black"}
+            fontWeight="bold"
+            marginY={{ base: "2", md: 0 }}
+          >
+            Privacy Policy
+          </Text>
+          <Text
+            textColor={"black"}
+            fontWeight="bold"
+            marginY={{ base: "2", md: 0 }}
+          >
+            Mappa del sito
+          </Text>
+        </Flex>
+        <Text width="10%" textColor={"black"} marginY={{ base: "2", md: 0 }}>
+          V. 1.2.1
         </Text>
       </Flex>
     </Box>

@@ -653,7 +653,7 @@ const choiceTree = {
             {
               id: "Interno",
               label: "Unit",
-              type: "number",
+              type: "text",
               helperText: "Ex. A",
               isRequired: true,
               validate: "RequiredField",
@@ -1685,7 +1685,7 @@ const choiceTree = {
             {
               id: "Interno",
               label: "Unit\u00e0",
-              type: "number",
+              type: "text",
               helperText: "Ex. A",
               isRequired: true,
               validate: "RequiredField",
@@ -2671,7 +2671,7 @@ const choiceTree = {
             {
               id: "Interno",
               label: "Unidad",
-              type: "number",
+              type: "text",
               helperText: "Ex. A",
               isRequired: true,
               validate: "RequiredField",
