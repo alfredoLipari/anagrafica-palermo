@@ -6,7 +6,7 @@ const Footer = () => {
   return (
     <Box bg="#FEBB2C" w="100%" marginTop={"28"}>
       <Flex
-        alignItems="center"
+        alignItems={{ base: "flex-start", md: "center" }}
         justifyContent="space-between"
         padding="8px 40px"
         direction={{ base: "column", md: "row" }}
@@ -89,7 +89,11 @@ const Footer = () => {
             Mappa del sito
           </Text>
         </Flex>
-        <Text width="10%" textColor={"black"} marginY={{ base: "2", md: 0 }}>
+        <Text
+          width="10%"
+          textColor={"black"}
+          display={{ base: "none", md: "block" }}
+        >
           V. 1.2.1
         </Text>
       </Flex>

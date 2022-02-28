@@ -20,9 +20,6 @@ const Website = () => {
 
   const [state, dispatch] = useReducer(reducer, initialState);
 
-  console.log(state.answers, "risposte attuali");
-  console.log(state.language);
-
   return (
     <Context.Provider value={{ state, dispatch }}>
       <BrowserRouter>
