@@ -42,18 +42,20 @@ const CustomCheckbox = ({ stateQuestion }) => {
         color="#000"
         fontSize="2xl"
         marginBottom="5"
-        marginTop={{ sm: "3em", lg: "5em" }}
+        marginTop={{ base: "3em", md: "5em" }}
+        padding={{ base: 5, md: 0 }}
       >
         {stateQuestion.title}
       </Text>
       <Box
         marginTop={"8"}
         bg="blue.400"
-        width={{ base: "50%", md: "15%" }}
-        padding="1"
+        width={{ base: "75%", md: "15%" }}
+        padding={{ base: 2, md: 1 }}
         display="flex"
         justifyContent="space-between"
         borderRadius="4"
+        marginBottom={{ base: 10, md: 2 }}
       >
         <Text
           bg={!answer ? "blue.400" : "white"}
@@ -61,7 +63,7 @@ const CustomCheckbox = ({ stateQuestion }) => {
           width="100%"
           borderRadius="4"
           onClick={() => setAnswer(true)}
-          padding={{ lg: "1" }}
+          padding={1}
         >
           {stateQuestion.answers[0].id}
         </Text>
@@ -71,7 +73,7 @@ const CustomCheckbox = ({ stateQuestion }) => {
           width="100%"
           borderRadius="4"
           onClick={() => setAnswer(false)}
-          padding={{ lg: "1" }}
+          padding={1}
         >
           {stateQuestion.answers[1].id}
         </Text>

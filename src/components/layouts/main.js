@@ -63,10 +63,15 @@ const Main = () => {
           <Text fontSize="2xl" fontWeight="extrabold" color="#000">
             {translateFirstHeading()}
           </Text>
-          <Text fontSize="2xl" fontWeight="bold" color="#000">
+          <Text
+            fontSize="2xl"
+            fontWeight="bold"
+            color="#000"
+            padding={{ base: 5, md: 0 }}
+          >
             {translateSecondHeading()}
           </Text>
-          <Text marginTop="5" color="#000">
+          <Text marginTop="5" color="#000" padding={{ base: 5, md: 0 }}>
             {translateText()}
           </Text>
           <CustomButton handler={() => setIsFormStarted(true)}>

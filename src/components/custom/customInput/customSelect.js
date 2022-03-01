@@ -44,7 +44,12 @@ const CustomSelect = ({ stateQuestion }) => {
 
   return (
     <Box marginTop="48" display="flex" alignItems="center" flexDir="column">
-      <Text fontWeight="bold" fontSize="3xl" color="#000">
+      <Text
+        fontWeight="bold"
+        fontSize="3xl"
+        color="#000"
+        padding={{ base: 5, md: 0 }}
+      >
         {stateQuestion.title}
       </Text>
       <Select
@@ -52,7 +57,7 @@ const CustomSelect = ({ stateQuestion }) => {
         iconSize="50"
         color="#000"
         placeholder={stateQuestion.label}
-        width={{ base: "50%", md: "25%" }}
+        width={{ base: "75%", md: "25%" }}
         fontSize="xl"
         marginTop="10"
         onChange={(something) => setSelectAnswer(something.target.value)}

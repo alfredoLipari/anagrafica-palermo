@@ -1379,7 +1379,7 @@ const choiceTree = {
               id: "Data di nascita",
               label: "Data di nascita",
               type: "date",
-              helperText: "GG/MM/AAAA",
+              helperText: "Data di nascita",
               validate: "RequiredField",
               isRequired: true,
             },
@@ -1711,7 +1711,7 @@ const choiceTree = {
           type: "number",
           title: "Quante persone accanto a te?",
           id: 18,
-          nextQuestion: 51,
+          nextQuestion: 41,
         },
         {
           type: "checkbox",
@@ -2030,7 +2030,7 @@ const choiceTree = {
           title: "Abbonamento TARI",
           id: 32,
           parentId: 4,
-          nextQuestion: 17,
+          nextQuestion: 33,
           answers: [
             {
               id: "foglio10",
@@ -2365,7 +2365,7 @@ const choiceTree = {
               id: "Data di nascita",
               label: "Fecha de nacimiento",
               type: "date",
-              helperText: "DD/MM/AAAA",
+              helperText: "fecha de nacimiento",
               validate: "RequiredField",
               isRequired: true,
             },
@@ -2697,7 +2697,7 @@ const choiceTree = {
           type: "number",
           title: "\u00bfCu\u00e1ntas personas hay a tu lado?",
           id: 18,
-          nextQuestion: 51,
+          nextQuestion: 41,
         },
         {
           type: "checkbox",
@@ -2904,7 +2904,7 @@ const choiceTree = {
               id: "in data",
               label: "Fecha",
               type: "date",
-              helperText: "DD/MM/AAAA",
+              helperText: "Fecha",
               isRequired: true,
             },
             {

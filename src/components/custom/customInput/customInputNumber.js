@@ -10,6 +10,7 @@ import {
   NumberDecrementStepper,
 } from "@chakra-ui/react";
 import { Context } from "../../../App";
+import CustomButton from "./customButton";
 
 const CustomInputNumber = ({ state }) => {
   const [answer, setAnswer] = useState(1);
@@ -21,6 +22,17 @@ const CustomInputNumber = ({ state }) => {
       answer: answer,
       nextQuestion: state.nextQuestion,
     });
+  };
+
+  const translateButton = () => {
+    switch (state.language) {
+      case "Italian":
+        return "Continua";
+      case "Spanish":
+        return "continuar";
+      default:
+        return "Continue";
+    }
   };
 
   return (
@@ -38,7 +50,7 @@ const CustomInputNumber = ({ state }) => {
         defaultValue={1}
         min={1}
         max={4}
-        w="20%"
+        w={{ base: "75%", md: "20%" }}
         onChange={(val) => setAnswer(val)}
         textColor={"#404B57"}
         border="1px solid trasparent"
@@ -57,19 +69,10 @@ const CustomInputNumber = ({ state }) => {
           />
         </NumberInputStepper>
       </NumberInput>
-      <Button
-        color="white"
-        bg="#0073E6"
-        w="15%"
-        borderRadius="4"
-        paddingY="6"
-        marginTop="4em"
-        onClick={() => submitAnswer()}
-        colorScheme="linkedin"
-        marginBottom={"10"}
-      >
-        Continue
-      </Button>
+
+      <CustomButton handler={() => submitAnswer()}>
+        {translateButton()}
+      </CustomButton>
     </Box>
   );
 };
