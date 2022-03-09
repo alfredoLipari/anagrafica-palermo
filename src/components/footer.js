@@ -1,101 +1,173 @@
 import { Box, Text, Divider, Link, Stack, Flex } from "@chakra-ui/react";
 import { Image } from "@chakra-ui/react";
-import Logo from "./asset/logoComuneDiPalermo.svg";
+import comuneLogo from "./asset/comune.svg";
+import EasyRightsLogo from "./asset/easyright.svg";
+import neuLogo from "./asset/neu2.svg";
+import UELogo from "./asset/UE.svg";
 
 const Footer = () => {
   return (
-    <Box bg="#FEBB2C" w="100%" marginTop={"28"}>
+    <Box bg="#FEBB2C" w="100%" paddingY="3em" mt="3em">
       <Flex
         alignItems={{ base: "flex-start", md: "center" }}
-        justifyContent="space-between"
-        padding="8px 40px"
         direction={{ base: "column", md: "row" }}
+        justifyContent="space-between"
       >
-        <Box display="flex" alignItems="center" w="70%">
-          <Box display="flex" flexDir="column" alignItems="center">
-            <Text marginY="4" color="black">
-              Progetto di
-            </Text>
-            <Box w="60px" h="60px">
-              <Image src={Logo} alt="logo comune" />
-            </Box>
-          </Box>
-          <Box
-            mt={"7"}
-            display="flex"
-            flexDir="column"
-            alignItems="right"
-            marginLeft="32"
+        {/* Left part footer */}
+        <Flex
+          w={{ base: "100%", md: "50%" }}
+          flexDir="column"
+          justifyContent="space-around"
+        >
+          <Flex
+            direction={{ base: "column", md: "row" }}
+            justifyContent="space-evenly"
+            alignItems="center"
           >
-            <Text color="black">Con la collaborazione di</Text>
-            <Text textColor={"black"} fontWeight="bold">
-              {" "}
+            <Box
+              w={{ base: "130px", md: "80px", lg: "130px" }}
+              marginY={{ base: "1em", md: "0em" }}
+            >
+              <Image src={EasyRightsLogo} alt="logo comune" />
+            </Box>
+
+            <Flex
+              w={{ base: "100px", md: "80px", lg: "100px" }}
+              alignItems="center"
+              marginY={{ base: "1em", md: "0em" }}
+            >
+              <Image src={neuLogo} alt="logo comune" />
+            </Flex>
+
+            <Text
+              as="h1"
+              fontSize={{ base: "xl", md: "lg", lg: "xl" }}
+              fontWeight="bold"
+              marginY={{ base: "1em", md: "0em" }}
+            >
               Next Integration
             </Text>
-          </Box>
-        </Box>
-        <Stack direction="row" h="90px" mt={8} mr={20}>
-          <Divider
-            width={5}
-            borderColor={"black"}
-            orientation="vertical"
-            display={{ base: "none", md: "block" }}
-          />
-          <Box alignSelf="center">
-            <Link href="https://chakra-ui.com" isExternal color="black">
-              <Text textColor={"black"} fontWeight="bold" as="u">
-                Dichiarazione di Accessibilità
-              </Text>
-            </Link>
-          </Box>
-        </Stack>
-      </Flex>
-      <Flex justifyContent="space-between" alignItems="center">
-        <Flex
-          marginTop="5"
-          alignItems={{ base: "flex-start", md: "center" }}
-          w="60%"
-          justifyContent="space-between"
-          padding="8px 40px"
-          pb={8}
-          direction={{ base: "column", md: "row" }}
-        >
-          <Text
-            textColor={"black"}
-            fontWeight="bold"
-            marginY={{ base: "2", md: 0 }}
+          </Flex>
+
+          <Flex
+            alignItems={{ base: "center", md: "flex-start" }}
+            marginTop={{ base: "2em", md: "3em" }}
+            w={{ base: "100%", md: "50%" }}
+            justifyContent="space-between"
+            ml={{ base: "0em", md: "3em", xl: "15%" }}
+            direction={{ base: "column", md: "row" }}
           >
-            Media Policy
-          </Text>
-          <Text
-            textColor={"black"}
-            fontWeight="bold"
-            marginY={{ base: "2", md: 0 }}
-          >
-            Note legali
-          </Text>
-          <Text
-            textColor={"black"}
-            fontWeight="bold"
-            marginY={{ base: "2", md: 0 }}
-          >
-            Privacy Policy
-          </Text>
-          <Text
-            textColor={"black"}
-            fontWeight="bold"
-            marginY={{ base: "2", md: 0 }}
-          >
-            Mappa del sito
-          </Text>
+            <Box w={{ base: "70px", md: "170px" }}>
+              <Image src={UELogo} alt="logo comune" />
+            </Box>
+            <Text
+              fontSize={{ base: "small", md: "x-small", lg: "small" }}
+              marginLeft="1em"
+              fontWeight="black"
+              lineHeight="3"
+              mb={{ base: "2em", md: "0" }}
+              paddingX={{ base: "5em", md: 0 }}
+              mt={{ base: "0.5em", md: 0 }}
+            >
+              easyrights has received funding from the EU Horizon 2020 research
+              and innovation programme under grant agreement No 970980.
+            </Text>
+          </Flex>
         </Flex>
-        <Text
-          width="10%"
-          textColor={"black"}
+        <Divider
+          height="150px"
+          borderColor={"black"}
+          orientation="vertical"
           display={{ base: "none", md: "block" }}
+        />
+        <Flex
+          mt={{ base: "1em", md: 0 }}
+          direction={{ base: "column", md: "row" }}
+          w={{ base: "100%", md: "50%" }}
+          marginLeft={{ base: 0, md: "0" }}
+          alignItems="center"
+          paddingLeft={{ base: 0, md: "10px", lg: "50px" }}
         >
-          V. 1.2.1
-        </Text>
+          <Box w="100px">
+            <Image src={comuneLogo} alt="logo comune" />
+          </Box>
+          <Flex
+            flexDir="column"
+            alignItems="flex-start"
+            mt={{ base: "0.5em", md: 0 }}
+            ml={{ base: "0", md: "1em" }}
+          >
+            <Text fontSize="small" fontWeight="black" lineHeight="3">
+              © 2021 Comune di Palermo - Tutti i diritti riservati
+            </Text>
+            <Flex
+              marginTop="1em"
+              alignItems={{ base: "flex-start", md: "flex-start" }}
+              justifyContent="space-between"
+              direction="column"
+            >
+              <Flex>
+                <Link
+                  fontSize="small"
+                  textColor={"black"}
+                  fontWeight="bold"
+                  marginY={{ base: "2", md: 0 }}
+                  mr="1em"
+                >
+                  Credits
+                </Link>
+                <Link
+                  fontSize="small"
+                  textColor={"black"}
+                  fontWeight="bold"
+                  marginY={{ base: "2", md: 0 }}
+                  mr="1em"
+                >
+                  Note legali
+                </Link>
+                <Link
+                  fontSize="small"
+                  textColor={"black"}
+                  fontWeight="black"
+                  marginY={{ base: "2", md: 0 }}
+                  mr="1em"
+                >
+                  Cookie policy
+                </Link>
+              </Flex>
+              <Flex>
+                <Link
+                  fontSize="small"
+                  textColor={"black"}
+                  fontWeight="bold"
+                  marginY={{ base: "2", md: 0 }}
+                  mr="1em"
+                >
+                  Mappa del sito
+                </Link>
+                <Link
+                  fontSize="small"
+                  textColor={"black"}
+                  fontWeight="bold"
+                  marginY={{ base: "2", md: 0 }}
+                  mr="1em"
+                >
+                  Dichiarazione di accessibilità
+                </Link>
+                <Text
+                  fontSize="small"
+                  textColor={"black"}
+                  fontWeight="bold"
+                  marginY={{ base: "2", md: 0 }}
+                  mr="1em"
+                  display={{ base: "none", lg: "block" }}
+                >
+                  V. 1.2.2
+                </Text>
+              </Flex>
+            </Flex>
+          </Flex>
+        </Flex>
       </Flex>
     </Box>
   );

@@ -194,7 +194,7 @@ const CustomLongForm = ({ stateQuestions }) => {
 
     // now return every key return a column
     const result = Object.values(formContainer).map((container, index) => (
-      <Box key={index} marginY="5" marginX="20">
+      <Box key={index} marginY={{ base: "0", md: "5" }} marginX="20">
         {container.map((item) => item)}
       </Box>
     ));
