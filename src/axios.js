@@ -3,7 +3,7 @@
 import axios from "axios";
 
 const instance = axios.create({
-  baseURL: "https://easy-rights.herokuapp.com/",
+  baseURL: "https://easyrights-backend.comune.palermo.it/",
 });
 
 export default instance;
