@@ -30,15 +30,10 @@ const DownloadResult = () => {
 
   const startDownload = useCallback(async () => {
     try {
-      const headers = {
-        headers: { "Access-Control-Allow-Origin": "*" },
-      };
       const answ = state.answers;
 
-      console.log(answ, "body");
-
       // do the fetch
-      const data = await axios.post("create-pdf", answ, { headers });
+      const data = await axios.post("create-pdf", answ);
 
       const resData = await data.data;
 
