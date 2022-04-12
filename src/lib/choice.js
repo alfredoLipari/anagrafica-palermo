@@ -3099,6 +3099,1124 @@ const choiceTree = {
         },
       ],
     },
+    Ukranian: {
+      questions: [
+        {
+          type: "select",
+          title:
+            "\u042f\u043a\u0435 \u0443 \u0432\u0430\u0441 \u0433\u0440\u043e\u043c\u0430\u0434\u044f\u043d\u0441\u0442\u0432\u043e?",
+          label:
+            "\u0412\u0438\u0431\u0435\u0440\u0456\u0442\u044c \u0441\u0432\u043e\u0454 \u0433\u0440\u043e\u043c\u0430\u0434\u044f\u043d\u0441\u0442\u0432\u043e",
+          id: 1,
+          controller: true,
+          answers: [
+            {
+              id: "I am a non-EU citizen",
+              label:
+                "\u042f \u043d\u0435 \u0433\u0440\u043e\u043c\u0430\u0434\u044f\u043d\u0438\u043d \u0404\u0421",
+              nextQuestion: 2,
+              documentazione: [],
+            },
+            {
+              id: "I'm an Italian Citizen",
+              label:
+                "\u042f \u0433\u0440\u043e\u043c\u0430\u0434\u044f\u043d\u0438\u043d \u0406\u0442\u0430\u043b\u0456\u0457",
+              nextQuestion: 4,
+              documentazione: [
+                "identity document of the applicant and of the persons transferring residence together with the applicant",
+                "remember to sign the document",
+              ],
+            },
+            {
+              id: "I am a EU citizen",
+              label:
+                "\u042f \u0433\u0440\u043e\u043c\u0430\u0434\u044f\u043d\u0438\u043d \u0404\u0421",
+              nextQuestion: 3,
+              documentazione: [],
+            },
+          ],
+        },
+        {
+          type: "select",
+          title:
+            "\u042f\u043a\u0438\u0439 \u0442\u0432\u0456\u0439 \u0441\u0442\u0430\u0442\u0443\u0441?",
+          label:
+            "\u0412\u0438\u0431\u0435\u0440\u0456\u0442\u044c \u0441\u0432\u0456\u0439 \u0441\u0442\u0430\u0442\u0443\u0441",
+          id: 2,
+          controller: true,
+          answers: [
+            {
+              id: "EU Citizen Relative",
+              label:
+                "\u0420\u043e\u0434\u0438\u0447 \u0433\u0440\u043e\u043c\u0430\u0434\u044f\u043d\u0438\u043d\u0430 \u0404\u0421",
+              nextQuestion: 4,
+              documentazione: [
+                "copy of your passport.*",
+                "residence card of a family member of an EU citizen, or receipt of the application for the issuance of a residence card.*",
+                "remember to sign the document",
+              ],
+            },
+            {
+              id: "I have the Residence permit",
+              label:
+                "\u042f \u043c\u0430\u044e \u0434\u043e\u0437\u0432\u0456\u043b \u043d\u0430 \u043f\u0440\u043e\u0436\u0438\u0432\u0430\u043d\u043d\u044f",
+              nextQuestion: 4,
+              documentazione: [
+                "copy of a valid passport or equivalent document.* ",
+                "copy of valid residence permit.*",
+                "copy of the original documents, translated and legalized, proving the civil status and family composition.**",
+                "remember to sign the document",
+              ],
+            },
+            {
+              id: "I am renewing my Residence permit",
+              label:
+                "\u041f\u043e\u043d\u043e\u0432\u043b\u044e\u044e \u0434\u043e\u0437\u0432\u0456\u043b \u043d\u0430 \u043f\u0440\u043e\u0436\u0438\u0432\u0430\u043d\u043d\u044f",
+              nextQuestion: 4,
+              documentazione: [
+                "copy of a valid passport or equivalent document.* ",
+                "copy of expired residence permit.*",
+                "receipt of application for renewal of residence permit.*",
+                "copy of the original documents, translated and legalized, proving the civil status and family composition.**",
+                "remember to sign the document",
+              ],
+            },
+            {
+              id: "I am Waiting for a work permit",
+              label:
+                "\u0427\u0435\u043a\u0430\u044e \u043f\u043e\u0441\u0432\u0456\u0434\u043a\u0443 \u043d\u0430 \u043f\u0440\u043e\u0436\u0438\u0432\u0430\u043d\u043d\u044f",
+              nextQuestion: 4,
+              documentazione: [
+                "copy of a valid passport or equivalent document.* ",
+                "copy of the residence contract at the Sportello Unico per l'immigrazione *",
+                "receipt issued by the post office certifying the submission of the application for residence permit.*",
+                "application for the issuance of a residence permit for subordinate work submitted to the Sportello Unico.*",
+                "copy of the original documents, translated and legalized, proving the civil status and family composition.**",
+                "remember to sign the document",
+              ],
+            },
+            {
+              id: "Awaiting family reunification",
+              label:
+                "\u0412 \u043e\u0447\u0456\u043a\u0443\u0432\u0430\u043d\u043d\u0456 \u0432\u043e\u0437\u0437'\u0454\u0434\u043d\u0430\u043d\u043d\u044f \u0441\u0456\u043c'\u0457",
+              nextQuestion: 4,
+              documentazione: [
+                "copy of a valid passport or equivalent document.* ",
+                "unauthenticated photocopy of the clearance issued by the Single Desk.*",
+                "receipt issued by the post office certifying the submission of the request for permission.*",
+                "copy of the original documents, translated and legalized, proving the civil status and family composition.**",
+                "remember to sign the document",
+              ],
+            },
+          ],
+          parentId: 1,
+        },
+        {
+          type: "select",
+          title:
+            "\u042f\u043a\u0438\u0439 \u0442\u0432\u0456\u0439 \u0441\u0442\u0430\u0442\u0443\u0441?",
+          label:
+            "\u0412\u0438\u0431\u0435\u0440\u0456\u0442\u044c \u0441\u0432\u0456\u0439 \u0441\u0442\u0430\u0442\u0443\u0441",
+          id: 3,
+          controller: true,
+          answers: [
+            {
+              id: "worker",
+              label: "\u043f\u0440\u0430\u0446\u0456\u0432\u043d\u0438\u043a",
+              nextQuestion: 4,
+              documentazione: [
+                "documento di identit\u00c3\u00a0.*",
+                "documentation proving the quality of worker.*",
+                "copy of the original documents, translated and legalized, proving the civil status and family composition.**",
+                "remember to sign the document",
+              ],
+            },
+            {
+              id: "f.i",
+              label:
+                "\u0424\u0456\u043d\u0430\u043d\u0441\u043e\u0432\u043e \u043d\u0435\u0437\u0430\u043b\u0435\u0436\u043d\u0438\u0439 (\u0431\u0435\u0437 \u043f\u0440\u0430\u0446\u0456\u0432\u043d\u0438\u043a\u0430)",
+              nextQuestion: 4,
+              documentazione: [
+                "copy of a valid ID.*",
+                "autodichiarazione del possesso di risorse economiche.*",
+                " copia di un'assicurazione sanitaria.*",
+                "copy of the original documents, translated and legalized, proving the civil status and family composition.**",
+                "remember to sign the document",
+              ],
+            },
+            {
+              id: "student",
+              label: "\u0421\u0442\u0443\u0434\u0435\u043d\u0442",
+              documentazione: [
+                "copy of a valid identification document.*",
+                "documentation proving enrollment at a school or vocational training institution.*",
+                "self-declaration of possession of economic resources.*",
+                "coverage of health risks.*",
+                "remember to sign the document",
+              ],
+              nextQuestion: 4,
+            },
+            {
+              id: "relative",
+              label:
+                "\u0420\u043e\u0434\u0438\u0447 (\u043f\u0440\u0430\u0446\u0456\u0432\u043d\u0438\u043a, \u0441\u0442\u0443\u0434\u0435\u043d\u0442 \u0442\u043e\u0449\u043e)",
+              documentazione: [
+                "copy of a valid identification document.*",
+                "copy of original deeds of residence.*",
+                "remember to sign the document",
+              ],
+              nextQuestion: 4,
+            },
+          ],
+          parentId: 9,
+        },
+        {
+          type: "select",
+          title:
+            "\u0417\u0432\u0456\u0434\u043a\u0438 \u0442\u0438 \u043f\u0435\u0440\u0435\u0457\u0436\u0434\u0436\u0430\u0454\u0448?",
+          label:
+            "\u0412\u0438\u0431\u0435\u0440\u0456\u0442\u044c \u0441\u0432\u043e\u0454 \u0433\u0440\u043e\u043c\u0430\u0434\u044f\u043d\u0441\u0442\u0432\u043e",
+          id: 4,
+          answers: [
+            {
+              id: "C1_1_2",
+              label:
+                "\u0417\u0430\u0440\u0443\u0431\u0456\u0436\u043d\u0430 \u043a\u0440\u0430\u0457\u043d\u0430",
+              nextQuestion: 7,
+              documents: "",
+            },
+            {
+              id: "C1_1_3",
+              label:
+                "\u0406\u0442\u0430\u043b\u0456\u0439\u0441\u044c\u043a\u0438\u0439 AIRE",
+              nextQuestion: 62,
+            },
+            {
+              id: "C1_1_4",
+              label:
+                "\u0422\u0435 \u0441\u0430\u043c\u0435 \u043c\u0456\u0441\u0442\u043e",
+              nextQuestion: 8,
+            },
+            {
+              id: "C1_1_1",
+              label: "\u0406\u043d\u0448\u0435 \u043c\u0456\u0441\u0442\u043e",
+              nextQuestion: 63,
+            },
+            {
+              id: "C_1_5",
+              label:
+                "\u041f\u0435\u0440\u0448\u0438\u0439 \u0437\u0430\u043f\u0438\u0442",
+              nextQuestion: 8,
+            },
+          ],
+          parentId: 9,
+        },
+        {
+          type: "form",
+          title: "\u042f\u043a\u0430 \u043a\u0440\u0430\u0457\u043d\u0430?",
+          id: 7,
+          nextQuestion: 8,
+          answers: [
+            {
+              id: "Indicare lo Stato estero di provenienza",
+              label:
+                "\u043d\u0430\u043f\u0438\u0448\u0438 \u0441\u0432\u043e\u044e \u043a\u0440\u0430\u0457\u043d\u0443",
+              type: "autocomplete",
+              helperText:
+                "\u041d\u0430\u043f\u0440. \u0413\u0430\u043d\u0430, \u0424\u0440\u0430\u043d\u0446\u0456\u044f, \u0420\u043e\u0441\u0456\u044f",
+              autocomplete: true,
+            },
+          ],
+        },
+        {
+          type: "form",
+          title: "\u042f\u043a\u0430 \u043a\u0440\u0430\u0457\u043d\u0430?",
+          id: 62,
+          nextQuestion: 63,
+          answers: [
+            {
+              id: "Indicare lo Stato estero di provenienza",
+              label:
+                "\u0411\u0443\u0434\u044c \u043b\u0430\u0441\u043a\u0430, \u0441\u043f\u043e\u0447\u0430\u0442\u043a\u0443 \u043d\u0430\u043f\u0438\u0448\u0456\u0442\u044c \u0441\u0432\u043e\u044e \u043a\u0440\u0430\u0457\u043d\u0443",
+              type: "text",
+              helperText:
+                "\u041d\u0430\u043f\u0440. \u0413\u0430\u043d\u0430, \u0424\u0440\u0430\u043d\u0446\u0456\u044f, \u0420\u043e\u0441\u0456\u044f",
+              autocomplete: true,
+            },
+          ],
+        },
+        {
+          type: "form",
+          title: "\u042f\u043a\u0435 \u043c\u0456\u0441\u0442\u043e?",
+          id: 63,
+          nextQuestion: 8,
+          answers: [
+            {
+              id: "Indicare il comune di provenienza",
+              label:
+                "\u041d\u0430\u043f\u0438\u0448\u0456\u0442\u044c \u0441\u0432\u043e\u0454 \u043c\u0456\u0441\u0442\u043e",
+              type: "text",
+              helperText:
+                "\u041d\u0430\u043f\u0440. \u0422\u0443\u0440\u0438\u043d, \u041c\u0456\u043b\u0430\u043d, \u041f\u0430\u0432\u0456\u044f",
+              autocomplete: true,
+            },
+          ],
+        },
+        {
+          type: "longform",
+          title:
+            "\u0414\u0430\u0432\u0430\u0439\u0442\u0435 \u043f\u043e\u0433\u043e\u0432\u043e\u0440\u0438\u043c\u043e \u043f\u0440\u043e \u0432\u0430\u0441",
+          id: 8,
+          nextQuestion: 9,
+          answers: [
+            {
+              id: "Nome",
+              label:
+                "\u042f\u043a \u0432\u0430\u0441 \u0437\u0432\u0430\u0442\u0438?",
+              type: "text",
+              helperText: "\u041d\u0430\u043f\u0440. \u041c\u0443\u0441\u0430",
+              validate: "RequiredField",
+              isRequired: true,
+            },
+            {
+              id: "Cognome",
+              label:
+                "\u042f\u043a \u0442\u0432\u043e\u0454 \u043f\u0440\u0456\u0437\u0432\u0438\u0449\u0435",
+              type: "text",
+              helperText:
+                "\u041d\u0430\u043f\u0440. \u0421\u0435\u043c\u043f\u0440\u0456\u043d\u0456",
+              validate: "RequiredField",
+              isRequired: true,
+            },
+            {
+              id: "Data di nascita",
+              label:
+                "\u0414\u0430\u0442\u0430 \u043d\u0430\u0440\u043e\u0434\u0436\u0435\u043d\u043d\u044f",
+              type: "date",
+              helperText:
+                "\u0414\u0430\u0442\u0430 \u043d\u0430\u0440\u043e\u0434\u0436\u0435\u043d\u043d\u044f",
+              validate: "dateValidation",
+              isRequired: true,
+            },
+            {
+              id: "Luogo di nascita",
+              label:
+                "\u0414\u0435 \u0442\u0438 \u043d\u0430\u0440\u043e\u0434\u0438\u0432\u0441\u044f?",
+              type: "autocomplete",
+              helperText:
+                "\u0412\u043a\u0430\u0436\u0456\u0442\u044c \u0441\u0432\u043e\u0454 \u043c\u0456\u0441\u0442\u043e \u043d\u0430\u0440\u043e\u0434\u0436\u0435\u043d\u043d\u044f",
+              autocomplete: true,
+              isRequired: true,
+            },
+            {
+              id: "Sesso",
+              label: "\u0421\u0442\u0430\u0442\u044c",
+              type: "select",
+              options: ["male", "female"],
+              validate: "RequiredField",
+              isRequired: true,
+              helperText:
+                "\u0432\u0438\u0431\u0435\u0440\u0456\u0442\u044c \u0441\u0432\u043e\u044e \u0441\u0442\u0430\u0442\u044c",
+            },
+            {
+              id: "Stato Civile",
+              label:
+                "\u0442\u0432\u0456\u0439 \u0441\u0456\u043c\u0435\u0439\u043d\u0438\u0439 \u0441\u0442\u0430\u043d?",
+              type: "select",
+              options: ["unmarried", "married", "divorced", "widower"],
+              helperText:
+                "\u0432\u0438\u0431\u0435\u0440\u0456\u0442\u044c \u0441\u0432\u0456\u0439 \u0441\u0442\u0430\u0442\u0443\u0441",
+              validate: "RequiredField",
+            },
+            {
+              id: "Cittadinanza",
+              label:
+                "\u0413\u0440\u043e\u043c\u0430\u0434\u044f\u043d\u0441\u0442\u0432\u043e",
+              type: "text",
+              helperText:
+                "\u041d\u0430\u043f\u0440. \u0444\u0440\u0430\u043d\u0446\u0443\u0437\u044c\u043a\u0438\u0439",
+              validate: "RequiredField",
+              isRequired: true,
+            },
+            {
+              id: "Codice Fiscale",
+              label: "\u041a\u043e\u0434\u0435\u043a\u0441 Fiscale",
+              type: "text",
+              helperText: "\u041d\u0430\u043f\u0440. R5MRI88L73G273E",
+              validate: "fiscalCodeField",
+              isRequired: true,
+            },
+          ],
+        },
+        {
+          type: "checkbox",
+          title:
+            "\u0423 \u0432\u0430\u0441 \u0454 \u0440\u043e\u0431\u043e\u0442\u0430?",
+          id: 9,
+          answers: [
+            {
+              id: "yes",
+              nextQuestion: 12,
+            },
+            {
+              id: "no",
+              nextQuestion: 11,
+            },
+          ],
+        },
+        {
+          type: "select",
+          title:
+            "\u042f\u043a\u0438\u0439 \u0442\u0432\u0456\u0439 \u043d\u0435\u043f\u0440\u043e\u0444\u0435\u0441\u0456\u0439\u043d\u0438\u0439 \u0441\u0442\u0430\u0442\u0443\u0441?",
+          label:
+            "\u0412\u0438\u0431\u0435\u0440\u0456\u0442\u044c \u0441\u0432\u0456\u0439 \u0441\u0442\u0430\u0442\u0443\u0441",
+          id: 11,
+          answers: [
+            {
+              selected: false,
+              id: "C1_2_6",
+              label:
+                "\u0434\u043e\u043c\u043e\u0433\u043e\u0441\u043f\u043e\u0434\u0430\u0440\u043a\u0430",
+              nextQuestion: 13,
+            },
+            {
+              selected: false,
+              id: "C1_2_7",
+              label: "\u0421\u0442\u0443\u0434\u0435\u043d\u0442",
+              nextQuestion: 13,
+            },
+            {
+              selected: false,
+              id: "C1_2_8",
+              label:
+                "\u0411\u0435\u0437\u0440\u043e\u0431\u0456\u0442\u043d\u0438\u0439",
+              nextQuestion: 13,
+            },
+            {
+              selected: false,
+              id: "C1_2_9",
+              label: "\u043d\u0430 \u043f\u0435\u043d\u0441\u0456\u0457",
+              nextQuestion: 13,
+            },
+            {
+              selected: false,
+              id: "C1_2_10",
+              label: "\u0406\u043d\u0448\u0438\u0439",
+              nextQuestion: 13,
+            },
+          ],
+          parentId: 9,
+        },
+        {
+          type: "select",
+          title:
+            "\u042f\u043a\u0438\u0439 \u0443 \u0432\u0430\u0441 \u043f\u0440\u043e\u0444\u0435\u0441\u0456\u0439\u043d\u0438\u0439 \u0441\u0442\u0430\u0442\u0443\u0441?",
+          label:
+            "\u0412\u0438\u0431\u0435\u0440\u0456\u0442\u044c \u0441\u0432\u0456\u0439 \u0441\u0442\u0430\u0442\u0443\u0441",
+          id: 12,
+          answers: [
+            {
+              selected: false,
+              id: "C1_2_4",
+              label: "\u0420\u043e\u0431\u0456\u0442\u043d\u0438\u043a",
+              nextQuestion: 14,
+            },
+            {
+              selected: false,
+              id: "C1_2_5",
+              label:
+                "\u0421\u0456\u043c\u0435\u0439\u043d\u0438\u0439 \u043f\u0440\u0430\u0446\u0456\u0432\u043d\u0438\u043a",
+              nextQuestion: 14,
+            },
+            {
+              selected: false,
+              id: "C1_2_3",
+              label:
+                "\u0424\u0440\u0456\u043b\u0430\u043d\u0441\u0435\u0440 / \u041f\u0456\u0434\u043f\u0440\u0438\u0454\u043c\u0435\u0446\u044c",
+              nextQuestion: 14,
+            },
+            {
+              selected: false,
+              id: "C1_2_1",
+              label:
+                "\u0421\u0430\u043c\u043e\u0437\u0430\u0439\u043d\u044f\u0442\u0438\u0439",
+              nextQuestion: 14,
+            },
+            {
+              selected: false,
+              id: "C1_2_2",
+              label:
+                "\u041a\u0435\u0440\u0456\u0432\u043d\u0438\u043a / \u0421\u043f\u0456\u0432\u0440\u043e\u0431\u0456\u0442\u043d\u0438\u043a",
+              nextQuestion: 14,
+            },
+          ],
+          parentId: 9,
+        },
+        {
+          type: "checkbox",
+          title:
+            "\u0423 \u0432\u0430\u0441 \u0454 \u0456\u0442\u0430\u043b\u0456\u0439\u0441\u044c\u043a\u0456 \u0432\u043e\u0434\u0456\u0439\u0441\u044c\u043a\u0456 \u043f\u0440\u0430\u0432\u0430?",
+          id: 14,
+          answers: [
+            {
+              id: "yes",
+              nextQuestion: 15,
+            },
+            {
+              id: "no",
+              nextQuestion: 13,
+            },
+          ],
+        },
+        {
+          type: "longform",
+          title:
+            "\u0412\u0456\u0434\u043e\u043c\u043e\u0441\u0442\u0456 \u043f\u0440\u043e \u0432\u043e\u0434\u0456\u0439\u0441\u044c\u043a\u0456 \u043f\u0440\u0430\u0432\u0430",
+          id: 15,
+          parentId: 4,
+          nextQuestion: 13,
+          answers: [
+            {
+              id: "Numero",
+              label: "\u041d\u043e\u043c\u0435\u0440",
+              type: "number",
+              helperText: "\u041d\u0430\u043f\u0440. 91828930",
+              validate: "RequiredField",
+              isRequired: false,
+            },
+            {
+              id: "Patente tipo",
+              label:
+                "\u0422\u0438\u043f \u043b\u0456\u0446\u0435\u043d\u0437\u0456\u0457",
+              type: "text",
+              helperText: "\u041d\u0430\u043f\u0440. A,B,C",
+              isRequired: false,
+            },
+            {
+              id: "Data di rilascio",
+              label:
+                "\u0414\u0430\u0442\u0430 \u0432\u0438\u043f\u0443\u0441\u043a\u0443",
+              type: "Date",
+              helperText:
+                "\u0414\u0430\u0442\u0430 \u0432\u0438\u043f\u0443\u0441\u043a\u0443",
+              validate: "RequiredField",
+              isRequired: false,
+            },
+            {
+              id: "Organo di rilascio",
+              label:
+                "\u041e\u0440\u0433\u0430\u043d \u0432\u0438\u0434\u0430\u0447\u0456",
+              type: "text",
+              helperText: "Motorizzazione",
+              validate: "RequiredField",
+              isRequired: false,
+            },
+            {
+              id: "Provincia di",
+              label: "\u043f\u0440\u043e\u0432\u0456\u043d\u0446\u0456\u044f",
+              type: "text",
+              helperText: "\u041f\u0430\u043b\u0435\u0440\u043c\u043e",
+              validate: "RequiredField",
+              isRequired: false,
+            },
+          ],
+        },
+        {
+          type: "select",
+          title:
+            "\u042f\u043a\u0438\u0439 \u0443 \u0432\u0430\u0441 \u043e\u0441\u0432\u0456\u0442\u043d\u0456\u0439 \u0440\u0456\u0432\u0435\u043d\u044c?",
+          label:
+            "\u0412\u0438\u0431\u0435\u0440\u0456\u0442\u044c \u0441\u0432\u0456\u0439 \u0441\u0442\u0443\u043f\u0456\u043d\u044c",
+          id: 13,
+          answers: [
+            {
+              selected: false,
+              id: "C1_2_11",
+              label:
+                "\u041f\u043e\u0447\u0430\u0442\u043a\u043e\u0432\u0430 \u0448\u043a\u043e\u043b\u0430",
+              nextQuestion: 16,
+            },
+            {
+              selected: false,
+              id: "C1_2_12",
+              label:
+                "\u0410\u0442\u0435\u0441\u0442\u0430\u0442 \u043f\u0440\u043e \u0441\u0435\u0440\u0435\u0434\u043d\u044e \u0448\u043a\u043e\u043b\u0443",
+              nextQuestion: 16,
+            },
+            {
+              selected: false,
+              id: "C1_2_13",
+              label: "\u0434\u0438\u043f\u043b\u043e\u043c",
+              nextQuestion: 16,
+            },
+            {
+              selected: false,
+              id: "C1_2_14",
+              label: "\u0431\u0430\u043a\u0430\u043b\u0430\u0432\u0440",
+              nextQuestion: 16,
+            },
+            {
+              selected: false,
+              id: "C1_2_15",
+              label:
+                "\u0421\u0442\u0443\u043f\u0456\u043d\u044c \u043c\u0430\u0433\u0456\u0441\u0442\u0440\u0430",
+              nextQuestion: 16,
+            },
+            {
+              selected: false,
+              id: "C1_2_6",
+              label: "\u043a.\u0442.\u043d",
+              nextQuestion: 16,
+            },
+          ],
+          parentId: 9,
+        },
+        {
+          type: "longform",
+          title:
+            "\u0412\u0430\u0448\u0435 \u043d\u043e\u0432\u0435 \u043c\u0456\u0441\u0446\u0435 \u043f\u0440\u043e\u0436\u0438\u0432\u0430\u043d\u043d\u044f",
+          id: 16,
+          parentId: 4,
+          nextQuestion: 17,
+          answers: [
+            {
+              id: "Comune",
+              label: "\u041c\u0456\u0441\u0442\u043e",
+              type: "text",
+              helperText:
+                "\u041d\u0430\u043f\u0440. \u041f\u0430\u043b\u0435\u0440\u043c\u043e",
+              isRequired: true,
+              validate: "RequiredField",
+            },
+            {
+              id: "Prov",
+              label: "\u043f\u0440\u043e\u0432\u0456\u043d\u0446\u0456\u044f",
+              type: "text",
+              helperText:
+                "\u041d\u0430\u043f\u0440. \u041f\u0430\u043b\u0435\u0440\u043c\u043e",
+              isRequired: true,
+              validate: "RequiredField",
+            },
+            {
+              id: "ViaPiazza",
+              label: "\u0410\u0434\u0440\u0435\u0441\u0430",
+              type: "text",
+              helperText: "Via della libert\u00c3",
+              isRequired: true,
+              validate: "RequiredField",
+            },
+            {
+              id: "Numero civico",
+              label:
+                "\u0413\u0440\u043e\u043c\u0430\u0434\u044f\u043d\u0441\u044c\u043a\u0438\u0439 \u043d\u043e\u043c\u0435\u0440",
+              type: "text",
+              helperText: "\u041d\u0430\u043f\u0440. 36",
+              isRequired: true,
+              validate: "RequiredField",
+            },
+            {
+              id: "Scala",
+              label: "\u0421\u0445\u043e\u0434\u0438",
+              type: "number",
+              helperText: "\u041d\u0430\u043f\u0440. 1-\u0439",
+              isRequired: true,
+              validate: "RequiredField",
+            },
+            {
+              id: "Piano",
+              label: "\u043f\u0456\u0434\u043b\u043e\u0433\u0430",
+              type: "number",
+              helperText: "\u041d\u0430\u043f\u0440. 2",
+              isRequired: true,
+              validate: "RequiredField",
+            },
+            {
+              id: "Interno",
+              label: "\u043e\u0434\u0438\u043d\u0438\u0446\u044f",
+              type: "text",
+              helperText: "\u041d\u0430\u043f\u0440. \u0410",
+              isRequired: true,
+              validate: "RequiredField",
+            },
+          ],
+        },
+        {
+          type: "checkbox",
+          title:
+            "\u0422\u0438 \u0440\u0443\u0445\u0430\u0454\u0448\u0441\u044f \u043e\u0434\u0438\u043d?",
+          id: 17,
+          answers: [
+            {
+              id: "yes",
+              nextQuestion: 19,
+            },
+            {
+              id: "no",
+              nextQuestion: 18,
+            },
+          ],
+        },
+        {
+          type: "number",
+          title:
+            "\u0421\u043a\u0456\u043b\u044c\u043a\u0438 \u043b\u044e\u0434\u0435\u0439 \u043f\u043e\u0440\u0443\u0447 \u0437 \u0442\u043e\u0431\u043e\u044e?",
+          id: 18,
+          nextQuestion: 41,
+        },
+        {
+          type: "checkbox",
+          title:
+            "\u0425\u0442\u043e\u0441\u044c \u0443\u0436\u0435 \u043f\u0440\u043e\u0436\u0438\u0432\u0430\u0454 \u043d\u0430 \u0442\u0435\u0440\u0438\u0442\u043e\u0440\u0456\u0457 \u043f\u043e\u043c\u0435\u0448\u043a\u0430\u043d\u043d\u044f?",
+          id: 19,
+          answers: [
+            {
+              id: "yes",
+              nextQuestion: 21,
+            },
+            {
+              id: "no",
+              nextQuestion: 22,
+            },
+          ],
+        },
+        {
+          type: "longform",
+          title:
+            "\u0421\u043a\u0430\u0436\u0456\u0442\u044c \u043d\u0430\u043c \u0445\u0442\u043e (\u043b\u0438\u0448\u0435 \u043e\u0434\u0438\u043d \u043a\u043e\u043c\u043f\u043e\u043d\u0435\u043d\u0442)",
+          id: 21,
+          parentId: 4,
+          nextQuestion: 22,
+          answers: [
+            {
+              id: "Nome_6",
+              label:
+                "\u042f\u043a \u0439\u043e\u0433\u043e/\u0457\u0457 \u0437\u0432\u0430\u0442\u0438?",
+              type: "text",
+              helperText: "\u041d\u0430\u043f\u0440. \u041c\u0443\u0441\u0430",
+              isRequired: true,
+              validate: "RequiredField",
+            },
+            {
+              id: "Cognome_6",
+              label:
+                "\u042f\u043a\u0435 \u0439\u043e\u0433\u043e/\u0457\u0457 \u043f\u0440\u0456\u0437\u0432\u0438\u0449\u0435",
+              type: "text",
+              helperText:
+                "\u041d\u0430\u043f\u0440. \u0421\u0435\u043c\u043f\u0440\u0456\u043d\u0456",
+              isRequired: true,
+              validate: "RequiredField",
+            },
+            {
+              id: "Luogo",
+              label:
+                "\u0414\u0430\u0442\u0430 \u043d\u0430\u0440\u043e\u0434\u0436\u0435\u043d\u043d\u044f",
+              type: "date",
+              helperText: "\u0414\u0414/\u041c\u041c/\u0420\u0420\u0420\u0420",
+              isRequired: true,
+              validate: "RequiredField",
+            },
+            {
+              id: "Luogo di nascita_6",
+              label:
+                "\u041c\u0456\u0441\u0446\u0435 \u043d\u0430\u0440\u043e\u0434\u0436\u0435\u043d\u043d\u044f",
+              type: "text",
+              helperText:
+                "\u0412\u043a\u0430\u0436\u0456\u0442\u044c \u0439\u043e\u0433\u043e/\u0457\u0457 \u043c\u0456\u0441\u0442\u043e \u043d\u0430\u0440\u043e\u0434\u0436\u0435\u043d\u043d\u044f",
+              isRequired: true,
+              validate: "RequiredField",
+              autocomplete: true,
+            },
+            {
+              id: "Sussiste il seguente vincolo rispetto al su indicato  componente della famiglia gi\u00c3\u00a0 residente",
+              label:
+                "\u0412\u043a\u0430\u0436\u0456\u0442\u044c \u0440\u043e\u0434\u0438\u043d\u043d\u0456 \u0441\u0442\u043e\u0441\u0443\u043d\u043a\u0438",
+              type: "select",
+              options: [
+                "none",
+                "mother",
+                "father",
+                "son",
+                "daughter",
+                "brother",
+                "sister",
+                "grandfather",
+                "grandmother",
+                "uncle",
+                "aunt",
+                "cousin",
+              ],
+              helperText:
+                "\u0412\u0438\u0431\u0435\u0440\u0456\u0442\u044c \u0436\u043e\u0434\u043d\u043e\u0433\u043e, \u044f\u043a\u0449\u043e \u0432\u0456\u043d \u0454",
+              isRequired: false,
+            },
+          ],
+        },
+        {
+          type: "form",
+          title:
+            "\u0412\u0430\u0448 \u043a\u043e\u043d\u0442\u0430\u043a\u0442",
+          id: 22,
+          parentId: 4,
+          nextQuestion: 23,
+          answers: [
+            {
+              id: "Telefono",
+              label:
+                "\u041d\u043e\u043c\u0435\u0440 \u0442\u0435\u043b\u0435\u0444\u043e\u043d\u0443",
+              type: "number",
+              helperText: "091665442",
+              validate: "requiredField",
+              isRequired: true,
+              autocomplete: false,
+            },
+            {
+              id: "Cellulare",
+              label:
+                "\u041d\u043e\u043c\u0435\u0440 \u043c\u043e\u0431\u0456\u043b\u044c\u043d\u043e\u0433\u043e",
+              type: "tel",
+              helperText: "3332423421",
+              validate: "",
+              isRequired: false,
+            },
+            {
+              id: "emailPec",
+              label:
+                "\u0415\u043b\u0435\u043a\u0442\u0440\u043e\u043d\u043d\u0430 \u043f\u043e\u0448\u0442\u0430/\u041f\u0435\u0446",
+              type: "email",
+              helperText: "test@email.com",
+              validate: "requiredField",
+              isRequired: true,
+            },
+            {
+              id: "Fax",
+              label: "\u0444\u0430\u043a\u0441",
+              type: "text",
+              helperText: "091666555",
+              validate: "",
+              isRequired: false,
+            },
+          ],
+        },
+        {
+          type: "select",
+          title:
+            "\u0414\u043e \u044f\u043a\u043e\u0457 \u043a\u0430\u0442\u0435\u0433\u043e\u0440\u0456\u0457 \u043d\u0430\u043b\u0435\u0436\u0438\u0442\u044c \u0432\u0430\u0448 \u0431\u0443\u0434\u0438\u043d\u043e\u043a?",
+          label:
+            "\u0412\u0438\u0431\u0435\u0440\u0456\u0442\u044c \u0441\u0432\u0456\u0439 \u0441\u0442\u0430\u0442\u0443\u0441",
+          id: 23,
+          answers: [
+            {
+              selected: false,
+              id: "C9_1_5",
+              label:
+                "\u0411\u0435\u0437\u043a\u043e\u0448\u0442\u043e\u0432\u043d\u0435 \u043a\u043e\u0440\u0438\u0441\u0442\u0443\u0432\u0430\u043d\u043d\u044f",
+              nextQuestion: 25,
+            },
+            {
+              selected: false,
+              id: "C9_1_2",
+              label:
+                "\u0412\u043b\u0430\u0441\u043d\u0438\u0439 \u0431\u0443\u0434\u0438\u043d\u043e\u043a",
+              nextQuestion: 24,
+            },
+            {
+              selected: false,
+              id: "C9_1_3",
+              label: "\u041e\u0440\u0435\u043d\u0434\u0430",
+              nextQuestion: 26,
+            },
+            {
+              selected: false,
+              id: "C9_1_4",
+              label:
+                "\u0413\u0440\u043e\u043c\u0430\u0434\u0441\u044c\u043a\u0438\u0439 \u0431\u0443\u0434\u0438\u043d\u043e\u043a",
+              nextQuestion: 30,
+            },
+            {
+              selected: false,
+              id: "C9_1_6",
+              label:
+                "\u0423\u0437\u0443\u0444\u0440\u0443\u043a\u0442\u0443\u0430\u0440\u0456\u0439",
+              nextQuestion: 27,
+            },
+          ],
+          parentId: 9,
+        },
+        {
+          type: "form",
+          title:
+            "\u0414\u0435\u0442\u0430\u043b\u0456 \u0434\u043e\u0433\u043e\u0432\u043e\u0440\u0443",
+          id: 24,
+          parentId: 4,
+          nextQuestion: 30,
+          answers: [
+            {
+              id: "Sezione",
+              label: "\u0420\u043e\u0437\u0434\u0456\u043b",
+              type: "text",
+              validate: "requiredField",
+              isRequired: true,
+              autocomplete: false,
+            },
+            {
+              id: "foglio",
+              label: "\u043b\u0438\u0441\u0442",
+              type: "tel",
+              helperText: "3332423421",
+              validate: "",
+              isRequired: false,
+            },
+            {
+              id: "particella o mappale",
+              label:
+                "\u0427\u0430\u0441\u0442\u043a\u043e\u0432\u0430 \u0430\u0431\u043e \u0431\u043b\u0456\u0434\u0430",
+              type: "text",
+              validate: "requiredField",
+              isRequired: true,
+            },
+            {
+              id: "subalterno",
+              label: "Subaltern",
+              type: "text",
+              validate: "requiredField",
+              isRequired: true,
+            },
+          ],
+        },
+        {
+          type: "form",
+          title:
+            "\u0414\u0435\u0442\u0430\u043b\u0456 \u0434\u043e\u0433\u043e\u0432\u043e\u0440\u0443",
+          id: 26,
+          parentId: 4,
+          nextQuestion: 30,
+          answers: [
+            {
+              id: "undefined_33",
+              label:
+                "\u0410\u0433\u0435\u043d\u0442\u0441\u0442\u0432\u043e \u0434\u043e\u0445\u043e\u0434\u0456\u0432 \u0441",
+              type: "text",
+              helperText:
+                "\u041d\u0430\u043f\u0440. \u041f\u0430\u043b\u0435\u0440\u043c\u043e",
+              validate: "requiredField",
+              isRequired: true,
+              autocomplete: false,
+            },
+            {
+              id: "in data",
+              label: "\u0414\u0430\u0442\u0430",
+              type: "date",
+              helperText: "\u0414\u0414/\u041c\u041c/\u0420\u0420\u0420\u0420",
+              isRequired: true,
+            },
+            {
+              id: "al n",
+              label: "\u041d\u043e\u043c\u0435\u0440",
+              type: "number",
+              validate: "requiredField",
+              isRequired: true,
+            },
+          ],
+        },
+        {
+          type: "form",
+          title:
+            "\u0414\u0435\u0442\u0430\u043b\u0456 \u0434\u043e\u0433\u043e\u0432\u043e\u0440\u0443",
+          id: 25,
+          parentId: 4,
+          nextQuestion: 30,
+          answers: [
+            {
+              id: "Entrate di",
+              label:
+                "\u0410\u0433\u0435\u043d\u0442\u0441\u0442\u0432\u043e \u0434\u043e\u0445\u043e\u0434\u0456\u0432 \u0441",
+              type: "text",
+              helperText:
+                "\u041d\u0430\u043f\u0440. \u041f\u0430\u043b\u0435\u0440\u043c\u043e",
+              validate: "requiredField",
+              isRequired: true,
+              autocomplete: false,
+            },
+            {
+              id: "in data_2",
+              label: "\u0414\u0430\u0442\u0430",
+              type: "date",
+              helperText: "\u0414\u0414/\u041c\u041c/\u0420\u0420\u0420\u0420",
+              isRequired: true,
+            },
+            {
+              id: "al n_2",
+              label: "\u041d\u043e\u043c\u0435\u0440",
+              type: "number",
+              validate: "requiredField",
+              isRequired: true,
+            },
+          ],
+        },
+        {
+          type: "form",
+          title:
+            "\u0414\u0435\u0442\u0430\u043b\u0456 \u0434\u043e\u0433\u043e\u0432\u043e\u0440\u0443",
+          id: 26,
+          parentId: 4,
+          nextQuestion: 30,
+          answers: [
+            {
+              id: "dati utili 1",
+              label:
+                "\u041f\u0438\u0448\u0456\u0442\u044c \u0434\u0435\u0442\u0430\u043b\u0456",
+              type: "text",
+              validate: "requiredField",
+              isRequired: true,
+              autocomplete: false,
+            },
+          ],
+        },
+        {
+          type: "checkbox",
+          title:
+            "\u0425\u0442\u043e\u0441\u044c \u0443\u0436\u0435 \u0441\u043f\u043b\u0430\u0447\u0443\u0454 TARI?",
+          id: 30,
+          answers: [
+            {
+              id: "yes",
+              nextQuestion: 31,
+            },
+            {
+              id: "no",
+              nextQuestion: 32,
+            },
+          ],
+        },
+        {
+          type: "form",
+          title:
+            "\u0414\u0435\u0442\u0430\u043b\u0456 \u0434\u043e\u0433\u043e\u0432\u043e\u0440\u0443",
+          id: 31,
+          parentId: 4,
+          nextQuestion: 32,
+          answers: [
+            {
+              id: "che la tassa per il nuovo",
+              label:
+                "\u0406\u043c'\u044f \u0442\u0430 \u043f\u0440\u0456\u0437\u0432\u0438\u0449\u0435",
+              type: "text",
+              validate: "requiredField",
+              isRequired: true,
+              autocomplete: false,
+            },
+            {
+              id: "F",
+              label:
+                "\u0424\u0456\u0441\u043a\u0430\u043b\u044c\u043d\u0438\u0439 \u043a\u043e\u0434\u0435\u043a\u0441",
+              type: "text",
+              isRequired: true,
+              validate: "fiscalCodeField",
+            },
+            {
+              id: "Relazione_di_parentela",
+              label: "\u0412\u0456\u0434\u043d\u043e\u0441\u043d\u0438\u0439",
+              type: "select",
+              validate: "requiredField",
+              isRequired: true,
+            },
+          ],
+        },
+        {
+          type: "longform",
+          title:
+            "\u041f\u0456\u0434\u043f\u0438\u0441\u043a\u0430 \u043d\u0430 TARI",
+          id: 32,
+          parentId: 4,
+          nextQuestion: 33,
+          answers: [
+            {
+              id: "foglio10",
+              label: "\u0410\u0440\u043a\u0443\u0448 (Foglio)",
+              type: "text",
+              isRequired: true,
+              validate: "RequiredField",
+            },
+            {
+              id: "particella10",
+              label: "\u0447\u0430\u0441\u0442\u0438\u043d\u043a\u0438",
+              type: "text",
+              isRequired: true,
+              validate: "RequiredField",
+            },
+            {
+              id: "sub10",
+              label: "subalterno",
+              type: "text",
+              isRequired: true,
+              validate: "RequiredField",
+            },
+            {
+              id: "data",
+              label:
+                "\u0414\u0430\u0442\u0430 \u043d\u0430\u0431\u0443\u0442\u0442\u044f \u0447\u0438\u043d\u043d\u043e\u0441\u0442\u0456 \u043e\u043a\u0443\u043f\u0430\u0446\u0456\u0457",
+              type: "date",
+              isRequired: true,
+              validate: "RequiredField",
+              helperText: "ERROR TRANSLATING",
+            },
+            {
+              id: "superficie in mq",
+              label:
+                "\u043f\u043e\u0432\u0435\u0440\u0445\u043d\u044f \u0432 \u043a\u0432",
+              type: "number",
+              isRequired: true,
+              validate: "RequiredField",
+            },
+          ],
+        },
+        {
+          type: "select",
+          title:
+            "\u041d\u0430\u0437\u0432\u0430 \u043f\u0440\u043e\u0444\u0435\u0441\u0456\u0457",
+          label:
+            "\u0414\u044f\u043a\u0443\u044e \u0437\u0430 \u0442\u0435\u0440\u043f\u0456\u043d\u043d\u044f",
+          id: 33,
+          answers: [
+            {
+              selected: false,
+              id: "10_1_1",
+              label:
+                "\u041f\u0440\u0438\u0441\u0442\u043e\u0439\u043d\u0456\u0441\u0442\u044c",
+              nextQuestion: 17,
+            },
+            {
+              selected: false,
+              id: "10_1_2",
+              label:
+                "\u0420\u043e\u0437\u0442\u0430\u0448\u0443\u0432\u0430\u043d\u043d\u044f",
+              nextQuestion: 17,
+            },
+            {
+              selected: false,
+              id: "10_1_3",
+              label:
+                "\u043f\u043e\u0437\u0438\u043a\u0430 \u0432 \u043a\u043e\u0440\u0438\u0441\u0442\u0443\u0432\u0430\u043d\u043d\u044f",
+              nextQuestion: 17,
+            },
+            {
+              selected: false,
+              id: "10_1_4",
+              label: "\u0443\u0437\u0443\u0444\u0440\u0443\u043a\u0442",
+              nextQuestion: 17,
+            },
+            {
+              selected: false,
+              id: "C9_1_6",
+              label:
+                "\u041f\u0440\u0438\u0437\u043d\u0430\u0447\u0435\u043d\u043d\u044f \u0436\u0438\u0442\u043b\u0430 \u0434\u0435\u0440\u0436\u0430\u0432\u043d\u043e\u0433\u043e \u043e\u0440\u0433\u0430\u043d\u0443",
+              nextQuestion: 17,
+            },
+          ],
+          parentId: 9,
+        },
+      ],
+    },
   },
 };
 export default choiceTree;
