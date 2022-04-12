@@ -30,6 +30,8 @@ const CustomInputNumber = ({ state }) => {
         return "Continua";
       case "Spanish":
         return "continuar";
+      case "Ukranian":
+        return "Продовжуйте";
       default:
         return "Continue";
     }

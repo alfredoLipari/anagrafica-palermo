@@ -18,8 +18,10 @@ const Main = () => {
         return "Benvenuto nel comune di Palermo";
       case "Spanish":
         return "Bienvenido al municipio de Palermo";
+      case "Ukranian":
+        return "Ласкаво просимо до Комуни ді Палермо";
       default:
-        return "Welcome to the Comune di Palermo ";
+        return "Welcome to the Comune di Palermo";
     }
   };
 
@@ -29,6 +31,8 @@ const Main = () => {
         return "Servizio di anagrafe online";
       case "Spanish":
         return "Servicio de registro en línea";
+      case "Ukranian":
+        return "РАЦС";
       default:
         return "Registry office";
     }
@@ -40,8 +44,10 @@ const Main = () => {
         return "Tramite questo servizio, potrai compilare velocemente la richiesta di cambio residenza";
       case "Spanish":
         return "Con esta herramienta, podrá rellenar la solicitud de residencia documento";
+      case "Ukranian":
+        return "За допомогою цього інструменту ви зможете заповнити заяву на проживання";
       default:
-        return " With this tool, you will able to fill in the residence application document";
+        return "With this tool, you will able to fill in the residence application document";
     }
   };
 
@@ -51,6 +57,8 @@ const Main = () => {
         return "Iniziamo";
       case "Spanish":
         return "comencemos";
+      case "Ukranian":
+        return "Давайте розпочнемо";
       default:
         return "Let's start";
     }

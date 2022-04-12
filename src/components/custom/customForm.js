@@ -34,6 +34,8 @@ const CustomForm = ({ stateTemp }) => {
         return "Continua";
       case "Spanish":
         return "continuar";
+      case "Ukranian":
+        return "Продовжуйте";
       default:
         return "Continue";
     }

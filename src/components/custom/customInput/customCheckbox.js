@@ -13,6 +13,8 @@ const CustomCheckbox = ({ stateQuestion }) => {
         return "Continua";
       case "Spanish":
         return "continuar";
+      case "Ukranian":
+        return "Продовжуйте";
       default:
         return "Continue";
     }
