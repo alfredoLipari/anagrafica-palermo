@@ -60,6 +60,9 @@ const Navbar = (props) => {
             <MenuItem value="Italian" onClick={(item) => changeLanguage(item)}>
               Italian
             </MenuItem>
+            <MenuItem value="French" onClick={(item) => changeLanguage(item)}>
+              French
+            </MenuItem>
             <MenuItem value="Spanish" onClick={(item) => changeLanguage(item)}>
               Spanish
             </MenuItem>

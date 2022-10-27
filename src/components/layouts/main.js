@@ -29,6 +29,8 @@ const Main = () => {
     switch (state.language) {
       case "Italian":
         return "Servizio di anagrafe online";
+      case "French":
+        return "Bureau d'enregistrement";
       case "Spanish":
         return "Servicio de registro en línea";
       case "Ukranian":
@@ -42,6 +44,8 @@ const Main = () => {
     switch (state.language) {
       case "Italian":
         return "Tramite questo servizio, potrai compilare velocemente la richiesta di cambio residenza";
+      case "French":
+        return "Avec cet outil, vous pourrez remplir le dossier de demande de résidence";
       case "Spanish":
         return "Con esta herramienta, podrá rellenar la solicitud de residencia documento";
       case "Ukranian":
@@ -55,6 +59,8 @@ const Main = () => {
     switch (state.language) {
       case "Italian":
         return "Iniziamo";
+      case "French":
+        return "Commençons";
       case "Spanish":
         return "comencemos";
       case "Ukranian":
