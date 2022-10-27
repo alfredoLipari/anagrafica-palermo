@@ -11,6 +11,8 @@ const CustomCheckbox = ({ stateQuestion }) => {
     switch (state.language) {
       case "Italian":
         return "Continua";
+      case "French":
+        return "Continuez";
       case "Spanish":
         return "continuar";
       case "Ukranian":

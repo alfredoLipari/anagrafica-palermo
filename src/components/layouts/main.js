@@ -16,6 +16,8 @@ const Main = () => {
     switch (state.language) {
       case "Italian":
         return "Benvenuto nel comune di Palermo";
+      case "French":
+        return "Bienvenue dans la Commune de Palerme";
       case "Spanish":
         return "Bienvenido al municipio de Palermo";
       case "Ukranian":
