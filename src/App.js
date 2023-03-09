@@ -16,9 +16,12 @@ const Website = () => {
     componentTree: [],
     documents: [],
     language: "English",
+    questionHistory: [1]
   };
 
   const [state, dispatch] = useReducer(reducer, initialState);
+
+  console.log("history", state.questionHistory)
 
   return (
     <Context.Provider value={{ state, dispatch }}>
