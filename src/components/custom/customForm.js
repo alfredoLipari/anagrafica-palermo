@@ -203,8 +203,11 @@ const CustomForm = ({ stateTemp }) => {
             )}
           </Box>
 
-          <CustomButton submit="submit" handler={() => console.log("click")}>
+          <CustomButton submit="submit" handler={() => console.log("click")} state={state}>
             {translateButton()}
+          </CustomButton>
+          <CustomButton handler={() => dispatch({type: "GO BACK"})} state={state}>
+            Torna indietro
           </CustomButton>
         </Form>
       )}

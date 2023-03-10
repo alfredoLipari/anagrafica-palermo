@@ -15,7 +15,7 @@ import {
 } from "../../lib/validation";
 import "./customDatePicker.css";
 import CustomInputSelect from "./customInput/customInputSelect";
-import CustomButton from "./customInput/customButton";
+import CustomButton, {translateButtonBack, translateButton} from "./customInput/customButton";
 
 const CustomLongForm = ({ stateQuestions }) => {
   let questions = {};
@@ -39,20 +39,6 @@ const CustomLongForm = ({ stateQuestions }) => {
       .map((quest) => (questions[quest.id] = ""))
   );
 
-  const translateButton = () => {
-    switch (state.language) {
-      case "Italian":
-        return "Continua";
-      case "French":
-        return "Continuez";
-      case "Spanish":
-        return "continuar";
-      case "Ukranian":
-        return "Продовжуйте";
-      default:
-        return "Continue";
-    }
-  };
 
   const autosuggestHandler = (value, tag) => {
     if (!tag) {
@@ -207,6 +193,7 @@ const CustomLongForm = ({ stateQuestions }) => {
   };
 
   return (
+    
     <Formik
       initialValues={questions}
       onSubmit={(values, actions) => {
@@ -240,8 +227,11 @@ const CustomLongForm = ({ stateQuestions }) => {
             {renderForm(props)}
           </Flex>
 
-          <CustomButton submit="submit" handler={() => console.log("click")}>
+          <CustomButton submit="submit" handler={() => console.log("click")} state={state} disabled={error}>
             {translateButton()}
+          </CustomButton>
+          <CustomButton handler={() => dispatch({type: "GO BACK"})} state={props.errors}>
+            {translateButtonBack()}
           </CustomButton>
         </Form>
       )}

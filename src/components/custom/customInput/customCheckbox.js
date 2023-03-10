@@ -82,9 +82,12 @@ const CustomCheckbox = ({ stateQuestion }) => {
           {stateQuestion.answers[1].id}
         </Text>
       </Box>
-      <CustomButton handler={() => submitAnswer()}>
+      <CustomButton handler={() => submitAnswer()} state={state}>
         {translateButton()}
       </CustomButton>
+      <CustomButton handler={() => dispatch({type: "GO BACK"})} state={state}>
+            Torna indietro
+          </CustomButton>
     </Box>
   );
 };

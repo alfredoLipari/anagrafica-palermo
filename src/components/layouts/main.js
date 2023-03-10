@@ -90,7 +90,7 @@ const Main = () => {
           <Text marginTop="5" color="#000" padding={{ base: 5, md: 0 }}>
             {translateText()}
           </Text>
-          <CustomButton handler={() => setIsFormStarted(true)}>
+          <CustomButton handler={() => setIsFormStarted(true)} state={state}>
             {translateButton()}
           </CustomButton>
           <Flex marginTop={10} justifyContent={"center"}>

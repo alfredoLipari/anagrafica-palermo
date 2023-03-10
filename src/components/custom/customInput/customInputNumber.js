@@ -74,9 +74,12 @@ const CustomInputNumber = ({ state }) => {
         </NumberInputStepper>
       </NumberInput>
 
-      <CustomButton handler={() => submitAnswer()}>
+      <CustomButton handler={() => submitAnswer()} state={state}>
         {translateButton()}
       </CustomButton>
+      <CustomButton handler={() => dispatch({type: "GO BACK"})} state={state}>
+            Torna indietro
+          </CustomButton>
     </Box>
   );
 };

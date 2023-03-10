@@ -40,7 +40,7 @@ const choiceTree = {
             {
               id: "I am a non-EU citizen",
               label: "I'm a non-EU Citizen",
-              nextQuestion: 2,
+              nextQuestion: 16,
               documentazione: [],
             },
             {
@@ -148,7 +148,7 @@ const choiceTree = {
               label: "worker",
               nextQuestion: 4,
               documentazione: [
-                "documento di identità.*",
+                "copy of a valid Id.*",
                 "documentation proving the quality of worker.*",
                 "copy of the original documents, translated and legalized, proving the civil status and family composition.**",
                 "remember to sign the document",
@@ -636,27 +636,23 @@ const choiceTree = {
             {
               id: "Scala",
               label: "Stairs",
-              type: "number",
+              type: "text",
               helperText: "Ex. 1st",
-              isRequired: true,
-              validate: "RequiredField",
               // add input validate
             },
             {
               id: "Piano",
               label: "Floor",
-              type: "number",
-              helperText: "Ex. 2",
+              type: "text",
               isRequired: true,
+              helperText: "Ex. 2",
               validate: "RequiredField",
             },
             {
               id: "Interno",
               label: "Unit",
               type: "text",
-              helperText: "Ex. A",
-              isRequired: true,
-              validate: "RequiredField",
+              helperText: "Ex. 1",
               // add input validate
             },
           ],
@@ -3060,7 +3056,7 @@ const choiceTree = {
               validate: "RequiredField",
             },
           ],
-        },
+        },   
         {
           type: "select",
           title: "Titolo dell'occupazione",

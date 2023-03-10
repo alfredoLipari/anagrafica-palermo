@@ -7,10 +7,33 @@ export function reducer(state, action) {
         language: action.language,
       };
 
+    case "GO BACK":
+      // take the history, pop the element 
+      let history = state.questionHistory;
+      history.pop();
+
+      let previousAnswers = [...state.answers]
+
+      // also pop out the last answer
+      if(!action.state?.controller){
+        previousAnswers.pop();
+      }
+
+
+      console.log("previousAnswers", previousAnswers)
+
+      return {
+        ...state,
+        currentQuestion: history[history.length - 1],
+        questionHistory: history,
+        answers: previousAnswers
+        
+      }
     case "ANSWER_QUESTION_SELECT":
       // push the answer as Id in the object answer
       // retrive the id of the question and the id parent
-      let documents = [...state.documents];
+      // gestire nuova navigazione indietro:
+      let documents = action.answer?.documentazione?.length > 0 ? [] : [...state.documents];
 
       let newAnswersSelect = [...state.answers];
 
@@ -39,12 +62,17 @@ export function reducer(state, action) {
             documents.push(doc);
           });
 
-          newAnswersSelect = [
-            ...state.answers,
-            {
-              answer: newObject,
-            },
-          ];
+          // gestione documentazione 
+          if(state.answers.length == 0){
+            newAnswersSelect = [
+              ...state.answers,
+              {
+                answer: newObject,
+              },
+            ];
+          }
+
+          
         }
       }
 
@@ -66,11 +94,16 @@ export function reducer(state, action) {
 
       console.log(documents);
 
+      // add the question to the history
+      let newHistory = state.questionHistory
+      newHistory.push(parseInt(nextQuestion))
+
       return {
         ...state,
         answers: newAnswersSelect,
         currentQuestion: parseInt(nextQuestion),
         documents: documents,
+        questionHistory: newHistory
       };
 
     case "ANSWER_QUESTION_FORM":
@@ -131,13 +164,22 @@ export function reducer(state, action) {
         },
       ];
 
+      console.log("action.answer",action.answer)
+
       // delete the first item fromt the componentTree
       state.componentTree.shift();
+
+
+      // add the question to the history
+      let newHistoryForm = state.questionHistory
+      newHistoryForm.push(parseInt(action.state.nextQuestion))
+
 
       return {
         ...state,
         answers: newAnswersForm,
         currentQuestion: parseInt(action.state.nextQuestion),
+        questionHistory: newHistoryForm
       };
     case "ANSWER_QUESTION_CHECKBOX":
       // checbox is for controll, it means we are not pushing any new answer, just switching question
@@ -155,9 +197,14 @@ export function reducer(state, action) {
       // delete the first item fromt the componentTree
       state.componentTree.shift();
 
+      // add the question to the history
+      let checkNewHistory = state.questionHistory
+      checkNewHistory.push(parseInt(action.nextQuestion))
+
       return {
         ...state,
         currentQuestion: parseInt(action.nextQuestion),
+        questionHistory: checkNewHistory
       };
 
     case "ANSWER_QUESTION_COMPONENT_NUMBER":

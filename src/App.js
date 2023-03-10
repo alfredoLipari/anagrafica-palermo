@@ -22,6 +22,7 @@ const Website = () => {
   const [state, dispatch] = useReducer(reducer, initialState);
 
   console.log("history", state.questionHistory)
+  console.log("answer", state.answers)
 
   return (
     <Context.Provider value={{ state, dispatch }}>

@@ -2,27 +2,13 @@ import { useContext, useState } from "react";
 import { Context } from "../../../App";
 import { Select, Text, Box } from "@chakra-ui/react";
 import { useNavigate } from "react-router-dom";
-import CustomButton from "./customButton";
+import CustomButton, {translateButtonBack, translateButton} from "./customButton";
 
 const CustomSelect = ({ stateQuestion }) => {
   const { dispatch, state } = useContext(Context);
   const [selectAnswer, setSelectAnswer] = useState({});
   const navigate = useNavigate();
 
-  const translateButton = () => {
-    switch (state.language) {
-      case "Italian":
-        return "Continua";
-      case "French":
-        return "Continuez";
-      case "Spanish":
-        return "continuar";
-      case "Ukranian":
-        return "Продовжуйте";
-      default:
-        return "Continue";
-    }
-  };
 
   const dispatchAnswer = () => {
     if (Object.keys(selectAnswer).length === 0) {
@@ -33,6 +19,8 @@ const CustomSelect = ({ stateQuestion }) => {
     const answer = stateQuestion.answers.find((answ) => {
       return answ.id === selectAnswer;
     });
+
+    console.log("stateQuestion",stateQuestion)
 
     // dispatch the answer action to the choice reducer
     dispatch({
@@ -74,9 +62,14 @@ const CustomSelect = ({ stateQuestion }) => {
           </option>
         ))}
       </Select>
-      <CustomButton handler={() => dispatchAnswer()}>
+        {stateQuestion.id !== 1 &&  <CustomButton handler={() => dispatch({type: "GO BACK"})} state={state}>
+            {translateButtonBack(state)}
+          </CustomButton>
+          }
+          <CustomButton handler={() => dispatchAnswer()} colorScheme="messenger" state={state}>
         {translateButton()}
       </CustomButton>
+    
     </Box>
   );
 };
