@@ -1,3 +1,7 @@
+import choiceTree from "../../lib/choice";
+
+console.log(choiceTree)
+
 // create reducer
 export function reducer(state, action) {
   switch (action.type) {
@@ -14,10 +18,20 @@ export function reducer(state, action) {
 
       let previousAnswers = [...state.answers]
 
+      let componentTree = [...state.componentTree]
+
+      // delete all the component family
+      console.log("state.componentTree",state.componentTree)
+      if(history[history.length - 1] === 18){
+        componentTree = [];
+      }
+
       // also pop out the last answer
       if(!action.state?.controller){
         previousAnswers.pop();
       }
+
+      // restart the componentFamily
 
 
       console.log("previousAnswers", previousAnswers)
@@ -26,8 +40,8 @@ export function reducer(state, action) {
         ...state,
         currentQuestion: history[history.length - 1],
         questionHistory: history,
-        answers: previousAnswers
-        
+        answers: previousAnswers,
+        componentTree: componentTree,
       }
     case "ANSWER_QUESTION_SELECT":
       // push the answer as Id in the object answer
@@ -211,6 +225,10 @@ export function reducer(state, action) {
     case "ANSWER_QUESTION_COMPONENT_NUMBER":
       // create the tree object for every components
       let componentsTree = [];
+
+      // add the question to the history
+      let newHistoryComponent = state.questionHistory
+      newHistoryComponent.push(parseInt(action.nextQuestion))
 
       // controller for the checkbox
       let page = 2;
@@ -501,37 +519,37 @@ export function reducer(state, action) {
               selected: false,
               id: "C" + page + "_" + moduls + "_11",
               label: "Primary School",
-              nextQuestion: 47 + i + currentIndex,
+              nextQuestion: 19,
             },
             {
               selected: false,
               id: "C" + page + "_" + moduls + "_12",
               label: "Secondary School Certificate",
-              nextQuestion: 47 + i + currentIndex,
+              nextQuestion: 19,
             },
             {
               selected: false,
               id: "C" + page + "_" + moduls + "_13",
               label: "Diploma",
-              nextQuestion: 47 + i + currentIndex,
+              nextQuestion: 19,
             },
             {
               selected: false,
               id: "C" + page + "_" + moduls + "_14",
               label: "Bachelor",
-              nextQuestion: 47 + i + currentIndex,
+              nextQuestion: 19,
             },
             {
               selected: false,
               id: "C" + page + "_" + moduls + "_15",
               label: "Master Degree",
-              nextQuestion: 47 + i + currentIndex,
+              nextQuestion: 19,
             },
             {
               selected: false,
               id: "C" + page + "_" + moduls + "_16",
               label: "Phd",
-              nextQuestion: 47 + i + currentIndex,
+              nextQuestion: 19,
             },
           ],
 
@@ -545,13 +563,18 @@ export function reducer(state, action) {
         moduls++;
         currentIndex += 7;
       }
+      console.log("LOL")
+
+      componentsTree.map(component =>  choiceTree.language.English.questions.push(component))
 
       console.log(componentsTree);
+    
 
       return {
         ...state,
-        componentTree: componentsTree,
+        //componentTree: componentsTree,
         currentQuestion: parseInt(action.nextQuestion),
+        history: newHistoryComponent
       };
     case "ANSWER_QUESTION_COMPONENT_FORM":
       const newAnswersFormComponent = [
@@ -561,17 +584,20 @@ export function reducer(state, action) {
         },
       ];
 
+      let newHistoryComponentForm = state.questionHistory
+      newHistoryComponentForm.push(parseInt(action.state.nextQuestion))
+      
+
       // delete the first item fromt the componentTree
       state.componentTree.shift();
 
-      if (state.componentTree.length === 0) {
-        action.state.nextQuestion = 19;
-      }
+      console.log("parseInt(action.state.nextQuestion)", parseInt(action.state.nextQuestion))
 
       return {
         ...state,
         answers: newAnswersFormComponent,
         currentQuestion: parseInt(action.state.nextQuestion),
+        history: newHistoryComponentForm
       };
 
     case "RETRIEVE_ANSWERS":

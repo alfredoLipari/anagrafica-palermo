@@ -24,7 +24,7 @@
     }
 */
 
-const choiceTree = {
+export const choiceTree = {
   language: {
     English: {
       questions: [
@@ -40,7 +40,7 @@ const choiceTree = {
             {
               id: "I am a non-EU citizen",
               label: "I'm a non-EU Citizen",
-              nextQuestion: 16,
+              nextQuestion: 18,
               documentazione: [],
             },
             {
@@ -2124,7 +2124,7 @@ const choiceTree = {
             {
               id: "I am a non-EU citizen",
               label: "Sono un cittadino extracomunitario",
-              nextQuestion: 2,
+              nextQuestion: 18,
               documentazione: [],
             },
             {

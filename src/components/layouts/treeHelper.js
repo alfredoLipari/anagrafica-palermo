@@ -17,19 +17,10 @@ const TreeHelper = () => {
   const changeCurrentQuestion = () => {
     let currentQuestion = [];
 
-    // see if we are inside the tree components
-    if (state.componentTree.length) {
-      console.log(state.componentTree.length)
-      console.log('state.currentQuestion', state.currentQuestion)
-      currentQuestion = state.componentTree.find(
-        (el) => el.id === state.currentQuestion
-      );
-    } else {
       currentQuestion = choiceTree.language[state.language].questions.find(
         (el) => el.id === state.currentQuestion
       );
-    }
-
+    
     setType(currentQuestion.type);
     setCurrentQuestion(currentQuestion);
   };
