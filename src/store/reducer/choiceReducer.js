@@ -40,6 +40,7 @@ export function reducer(state, action) {
       let nextQuestion = action.answer.nextQuestion;
 
       // check if its a checkbox
+        // commento di prova
       if (action.answer.id[0].toUpperCase() === "C") {
         action.answer = {
           [action.answer.id]: "X",
