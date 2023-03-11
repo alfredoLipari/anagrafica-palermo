@@ -18,13 +18,6 @@ export function reducer(state, action) {
 
       let previousAnswers = [...state.answers]
 
-      let componentTree = [...state.componentTree]
-
-      // delete all the component family
-      console.log("state.componentTree",state.componentTree)
-      if(history[history.length - 1] === 18){
-        componentTree = [];
-      }
 
       // also pop out the last answer
       if(!action.state?.controller){
@@ -40,8 +33,7 @@ export function reducer(state, action) {
         ...state,
         currentQuestion: history[history.length - 1],
         questionHistory: history,
-        answers: previousAnswers,
-        componentTree: componentTree,
+        answers: previousAnswers
       }
     case "ANSWER_QUESTION_SELECT":
       // push the answer as Id in the object answer
@@ -89,22 +81,6 @@ export function reducer(state, action) {
 
           
         }
-      }
-
-      // delete the first item fromt the componentTree
-      state.componentTree.shift();
-
-      // control for the components tree
-      if (action.state.label === "Select her/his Status") {
-        state.componentTree.shift();
-      }
-
-      // control for the components tree
-      if (
-        state.componentTree.length === 0 &&
-        action.state.label === "Select her/his Degree"
-      ) {
-        nextQuestion = 19;
       }
 
       console.log(documents);
@@ -181,9 +157,6 @@ export function reducer(state, action) {
 
       console.log("action.answer",action.answer)
 
-      // delete the first item fromt the componentTree
-      state.componentTree.shift();
-
 
       // add the question to the history
       let newHistoryForm = state.questionHistory
@@ -200,19 +173,8 @@ export function reducer(state, action) {
       // checbox is for controll, it means we are not pushing any new answer, just switching question
       // the next question is calculated by adding 8 to the first one
 
-      if (
-        !action.answer &&
-        (action.nextQuestion === 47 ||
-          action.nextQuestion === 55 ||
-          action.nextQuestion === 63 ||
-          action.nextQuestion === 71)
-      ) {
-        state.componentTree.shift();
-      }
-      // delete the first item fromt the componentTree
-      state.componentTree.shift();
-
-      // add the question to the history
+  
+    // add the question to the history
       let checkNewHistory = state.questionHistory
       checkNewHistory.push(parseInt(action.nextQuestion))
 
@@ -234,7 +196,7 @@ export function reducer(state, action) {
       let page = 2;
       let moduls = 1;
       let currentIndex = 0;
-
+      
       for (let i = 2; i <= parseInt(action.answer) + 1; i++) {
         if (page === 3) {
           moduls = 1;
@@ -519,37 +481,37 @@ export function reducer(state, action) {
               selected: false,
               id: "C" + page + "_" + moduls + "_11",
               label: "Primary School",
-              nextQuestion: 19,
+              nextQuestion: i + 1 <= parseInt(action.answer) + 1 ? 47 + i + currentIndex : 19,
             },
             {
               selected: false,
               id: "C" + page + "_" + moduls + "_12",
               label: "Secondary School Certificate",
-              nextQuestion: 19,
+              nextQuestion: i + 1 <= parseInt(action.answer) + 1 ? 47 + i + currentIndex : 19,
             },
             {
               selected: false,
               id: "C" + page + "_" + moduls + "_13",
               label: "Diploma",
-              nextQuestion: 19,
+              nextQuestion: i + 1 <= parseInt(action.answer) + 1 ? 47 + i + currentIndex : 19,
             },
             {
               selected: false,
               id: "C" + page + "_" + moduls + "_14",
               label: "Bachelor",
-              nextQuestion: 19,
+              nextQuestion: i + 1 <= parseInt(action.answer) + 1 ? 47 + i + currentIndex : 19,
             },
             {
               selected: false,
               id: "C" + page + "_" + moduls + "_15",
               label: "Master Degree",
-              nextQuestion: 19,
+              nextQuestion: i + 1 <= parseInt(action.answer) + 1 ? 47 + i + currentIndex : 19,
             },
             {
               selected: false,
               id: "C" + page + "_" + moduls + "_16",
               label: "Phd",
-              nextQuestion: 19,
+              nextQuestion: i + 1 <= parseInt(action.answer) + 1 ? 47 + i + currentIndex : 19,
             },
           ],
 
@@ -564,9 +526,12 @@ export function reducer(state, action) {
         currentIndex += 7;
       }
       console.log("LOL")
+      
+      // if the length of the question is less than this number dont add the components question as already are added
+      if( choiceTree.language[state.language].questions.length < 35){
+      componentsTree.map(component =>  choiceTree.language[state.language].questions.push(component))
 
-      componentsTree.map(component =>  choiceTree.language.English.questions.push(component))
-
+      }
       console.log(componentsTree);
     
 
@@ -586,18 +551,14 @@ export function reducer(state, action) {
 
       let newHistoryComponentForm = state.questionHistory
       newHistoryComponentForm.push(parseInt(action.state.nextQuestion))
-      
 
-      // delete the first item fromt the componentTree
-      state.componentTree.shift();
-
-      console.log("parseInt(action.state.nextQuestion)", parseInt(action.state.nextQuestion))
+      console.log("parseInt(action.state.nextQuestion)", )
 
       return {
         ...state,
         answers: newAnswersFormComponent,
         currentQuestion: parseInt(action.state.nextQuestion),
-        history: newHistoryComponentForm
+           history: newHistoryComponentForm
       };
 
     case "RETRIEVE_ANSWERS":

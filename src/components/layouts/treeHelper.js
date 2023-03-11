@@ -16,6 +16,7 @@ const TreeHelper = () => {
   // function that dispatch an action to decide the next question
   const changeCurrentQuestion = () => {
     let currentQuestion = [];
+    console.log("choiceTree.language[state.language]", choiceTree.language[state.language])
 
       currentQuestion = choiceTree.language[state.language].questions.find(
         (el) => el.id === state.currentQuestion

@@ -13,7 +13,6 @@ const Website = () => {
   const initialState = {
     currentQuestion: 1,
     answers: [],
-    componentTree: [],
     documents: [],
     language: "English",
     questionHistory: [1]
