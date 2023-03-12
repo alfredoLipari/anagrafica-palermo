@@ -4,6 +4,8 @@ console.log(choiceTree)
 
 // create reducer
 export function reducer(state, action) {
+
+  console.log("state: ", state)
   switch (action.type) {
     case "CHANGE_LANGUAGE":
       return {
@@ -198,6 +200,8 @@ export function reducer(state, action) {
       let currentIndex = 0;
       
       for (let i = 2; i <= parseInt(action.answer) + 1; i++) {
+
+        console.log("Iindex: ", i)
         if (page === 3) {
           moduls = 1;
         }
@@ -532,7 +536,7 @@ export function reducer(state, action) {
       componentsTree.map(component =>  choiceTree.language[state.language].questions.push(component))
 
       }
-      console.log(componentsTree);
+
     
 
       return {

@@ -12,9 +12,16 @@ import {
 import { Context } from "../../../App";
 import CustomButton from "./customButton";
 
+
+export let howManyPeopleBesideYou = 0
 const CustomInputNumber = ({ state }) => {
+
+
   const [answer, setAnswer] = useState(1);
   const { dispatch } = useContext(Context);
+
+
+  howManyPeopleBesideYou = answer
 
   const submitAnswer = () => {
     dispatch({

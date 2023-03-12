@@ -8,7 +8,7 @@ import { Image } from "@chakra-ui/react";
 import People from "../asset/homepageimg.svg";
 import CustomButton from "../custom/customInput/customButton";
 
-const Main = () => {
+const Main = ({history}) => {
   const [isFormStarted, setIsFormStarted] = useState(false);
   const { state } = useContext(Context);
 
@@ -100,7 +100,7 @@ const Main = () => {
           </Flex>
         </Box>
       ) : (
-        <TreeHelper />
+        <TreeHelper history={history} />
       )}
     </Box>
   );
