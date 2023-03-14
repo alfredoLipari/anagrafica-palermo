@@ -12,6 +12,7 @@ import {
   List,
   ListItem,
   ListIcon,
+  Link,
 } from "@chakra-ui/react";
 import axios from "../../axios";
 import { Context } from "../../App";
@@ -25,7 +26,6 @@ const DownloadResult = () => {
   const { state } = useContext(Context);
   const [isLoading, setIsLoading] = useState(true);
   const [isModalOpen, setIsModalOpen] = useState(true);
-
 
   const startDownload = useCallback(async () => {
     try {
@@ -107,17 +107,19 @@ const DownloadResult = () => {
                 Continue with booking
               </Button>
             </Tooltip>
-            <Button
-              color="white"
-              bg="#0073E6"
-              marginTop="5"
-              w="50%"
-              borderRadius="4"
-              paddingY="6"
-              mt="10"
-            >
-              recompile the form
-            </Button>
+            <Link href="/" style={{ textDecoration: "none" }}>
+              <Button
+                color="white"
+                bg="#0073E6"
+                marginTop="5"
+                w="50%"
+                borderRadius="4"
+                paddingY="6"
+                mt="10"
+              >
+                recompile the form
+              </Button>
+            </Link>
             <Tooltip
               colorScheme="twitter"
               aria-label="important documents"

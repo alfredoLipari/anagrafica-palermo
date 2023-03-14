@@ -1,7 +1,4 @@
 import { Button } from "@chakra-ui/react";
-import { Context } from "../../../App";
-import { useContext } from "react";
-
 
 export const translateButtonBack = (state) => {
   switch (state?.language) {
@@ -57,10 +54,11 @@ const CustomButton = (props) => {
     <Button
       color="white"
       marginTop="6"
+      bg={props.colorScheme &&  "#0073E6"}
       w={{ base: "75%", md: "15%" }}
       borderRadius="4"
       paddingY="6"
-      colorScheme={props.colorScheme ? props.colorScheme : "facebook" }
+      colorScheme="facebook"
       onClick={props.handler}
       type={props.submit ? "submit" : "button"}
       disabled={props.disabled}

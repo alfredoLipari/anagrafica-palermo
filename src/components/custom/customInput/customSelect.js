@@ -20,7 +20,7 @@ const CustomSelect = ({ stateQuestion }) => {
       return answ.id === selectAnswer;
     });
 
-    console.log("stateQuestion",stateQuestion)
+    console.log("stateQuestion",answer)
 
     // dispatch the answer action to the choice reducer
     dispatch({
@@ -62,11 +62,11 @@ const CustomSelect = ({ stateQuestion }) => {
           </option>
         ))}
       </Select>
-        {stateQuestion.id !== 1 &&  <CustomButton handler={() => dispatch({type: "GO BACK"})} state={state}>
+        {stateQuestion.id !== 1 &&  <CustomButton handler={() => dispatch({type: "GO BACK"})} state={state} >
             {translateButtonBack(state)}
           </CustomButton>
           }
-          <CustomButton handler={() => dispatchAnswer()} colorScheme="messenger" state={state}>
+          <CustomButton handler={() => dispatchAnswer()} colorScheme="facebook" state={state} >
         {translateButton()}
       </CustomButton>
     

@@ -40,7 +40,7 @@ export const choiceTree = {
             {
               id: "I am a non-EU citizen",
               label: "I'm a non-EU Citizen",
-              nextQuestion: 18,
+              nextQuestion: 2,
               documentazione: [],
             },
             {
