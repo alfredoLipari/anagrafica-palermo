@@ -20,7 +20,7 @@ const Website = () => {
 
   const [state, dispatch] = useReducer(reducer, initialState);
 
-  console.log("history", state.questionHistory)
+  console.log("history", state)
   console.log("answer", state.answers)
 
   return (
@@ -29,7 +29,7 @@ const Website = () => {
         <ChakraProvider theme={theme}>
           <Fonts />
           <Routes>
-            <Route path="/" element={<HomePage />} />
+            <Route path="/" element={<HomePage history={state}/>} />
             <Route path="/download-pdf" element={<DownloadResult />} />
           </Routes>
         </ChakraProvider>

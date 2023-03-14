@@ -4,7 +4,7 @@ import Footer from "../footer.js";
 import Main from "./main.js";
 import { Link } from "react-router-dom";
 
-const HomePage = ({ children, router }) => {
+const HomePage = ({ children, router, history }) => {
   const fetchpdf = async () => {
     <Link
       to="https://8408-78-40-163-30.ngrok.io/pdf"
@@ -26,7 +26,7 @@ const HomePage = ({ children, router }) => {
       justifyContent="space-between"
     >
       <Navbar />
-      <Main />
+      <Main history={history} />
       <Footer />
     </Box>
   );

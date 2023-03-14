@@ -26,7 +26,6 @@ const DownloadResult = () => {
   const [isLoading, setIsLoading] = useState(true);
   const [isModalOpen, setIsModalOpen] = useState(true);
 
-  console.log(state);
 
   const startDownload = useCallback(async () => {
     try {
