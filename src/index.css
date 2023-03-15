@@ -4,6 +4,10 @@
   padding: 0;
 }
 
+.progressBar  div{
+  transition: all 500ms ease-out ;
+}
+
 .d{
   background-image: url('../src/components/asset/logoComuneDiPalermo.png');
 }

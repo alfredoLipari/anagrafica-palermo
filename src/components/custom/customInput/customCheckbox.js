@@ -2,6 +2,7 @@ import React, { useState, useContext } from "react";
 import { Box, Text, Button } from "@chakra-ui/react";
 import { Context } from "../../../App";
 import CustomButton from "./customButton";
+import ActionsButton from "../../button/ActionsButton";
 
 const CustomCheckbox = ({ stateQuestion }) => {
   const [answer, setAnswer] = useState(true);
@@ -82,12 +83,14 @@ const CustomCheckbox = ({ stateQuestion }) => {
           {stateQuestion.answers[1].id}
         </Text>
       </Box>
-      <CustomButton handler={() => submitAnswer()} state={state}>
-        {translateButton()}
-      </CustomButton>
-      <CustomButton handler={() => dispatch({type: "GO BACK"})} state={state}>
-            Torna indietro
-          </CustomButton>
+
+      <ActionsButton
+          goBackButtonHandler = {() => dispatch({type: "GO BACK"}) }
+          continueButtonHandler = {() => submitAnswer()}
+          colorSchemeContinueButton = "facebook"
+          state = {state}
+      />
+
     </Box>
   );
 };

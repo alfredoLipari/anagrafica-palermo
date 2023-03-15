@@ -13,6 +13,7 @@ import CustomAutosuggest from "./customInput/customAutosuggest";
 import { validateText, validateCountry } from "../../lib/validation";
 import "./customDatePicker.css";
 import CustomButton from "./customInput/customButton";
+import ActionsButton from "../button/ActionsButton";
 
 const CustomForm = ({ stateTemp }) => {
   let questions = {};
@@ -203,12 +204,13 @@ const CustomForm = ({ stateTemp }) => {
             )}
           </Box>
 
-          <CustomButton submit="submit" handler={() => console.log("click")} state={state}>
-            {translateButton()}
-          </CustomButton>
-          <CustomButton handler={() => dispatch({type: "GO BACK"})} state={state}>
-            Torna indietro
-          </CustomButton>
+          <ActionsButton
+              goBackButtonHandler = {() => dispatch({type: "GO BACK"}) }
+              colorSchemeContinueButton = "facebook"
+              continueSubmit = "submit"
+              state = {state}
+          />
+
         </Form>
       )}
     </Formik>

@@ -1,8 +1,9 @@
-import { useContext, useState } from "react";
+import React, { useContext, useState } from "react";
 import { Context } from "../../../App";
 import { Select, Text, Box } from "@chakra-ui/react";
 import { useNavigate } from "react-router-dom";
 import CustomButton, {translateButtonBack, translateButton} from "./customButton";
+import ActionsButton from "../../button/ActionsButton";
 
 const CustomSelect = ({ stateQuestion }) => {
   const { dispatch, state } = useContext(Context);
@@ -62,13 +63,14 @@ const CustomSelect = ({ stateQuestion }) => {
           </option>
         ))}
       </Select>
-        {stateQuestion.id !== 1 &&  <CustomButton handler={() => dispatch({type: "GO BACK"})} state={state} >
-            {translateButtonBack(state)}
-          </CustomButton>
-          }
-          <CustomButton handler={() => dispatchAnswer()} colorScheme="facebook" state={state} >
-        {translateButton()}
-      </CustomButton>
+
+        <ActionsButton
+            stateQuestionId ={stateQuestion.id}
+            goBackButtonHandler = {() => dispatch({type: "GO BACK"}) }
+            continueButtonHandler = {() => dispatchAnswer()}
+            colorSchemeContinueButton = "facebook"
+            state = {state}
+        />
     
     </Box>
   );

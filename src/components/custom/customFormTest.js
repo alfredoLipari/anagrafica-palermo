@@ -25,7 +25,7 @@ import {
 } from "../../lib/validation";
 import "./customDatePicker.css";
 import CustomInputSelect from "./customInput/customInputSelect";
-import CustomButton from "./customInput/customButton";
+import CustomButton, {translateButtonBack} from "./customInput/customButton";
 
 const CustomFormTest = ({ stateTemp }) => {
   let country = useRef("");
@@ -289,9 +289,11 @@ const CustomFormTest = ({ stateTemp }) => {
           >
             {stateTemp.id !== 33 ? "Continue" : "Generate pdf"}
           </Button>
+
           <CustomButton handler={() => dispatch({type: "GO BACK"})} state={state}>
-            Torna indietro
+            {translateButtonBack()}
           </CustomButton>
+
         </Form>
       )}
     </Formik>

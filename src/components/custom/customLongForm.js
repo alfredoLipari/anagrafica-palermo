@@ -16,6 +16,7 @@ import {
 import "./customDatePicker.css";
 import CustomInputSelect from "./customInput/customInputSelect";
 import CustomButton, {translateButtonBack, translateButton} from "./customInput/customButton";
+import ActionsButton from "../button/ActionsButton";
 
 const CustomLongForm = ({ stateQuestions }) => {
   let questions = {};
@@ -227,12 +228,13 @@ const CustomLongForm = ({ stateQuestions }) => {
             {renderForm(props)}
           </Flex>
 
-          <CustomButton submit="submit" handler={() => console.log("click")} state={state} disabled={error}>
-            {translateButton()}
-          </CustomButton>
-          <CustomButton handler={() => dispatch({type: "GO BACK"})} state={props.errors}>
-            {translateButtonBack()}
-          </CustomButton>
+          <ActionsButton
+              goBackButtonHandler = {() => dispatch({type: "GO BACK"}) }
+              continueSubmit = {"submit"}
+              colorSchemeContinueButton = "facebook"
+              state = {state}
+          />
+
         </Form>
       )}
     </Formik>

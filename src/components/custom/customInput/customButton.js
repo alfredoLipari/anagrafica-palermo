@@ -63,7 +63,7 @@ const CustomButton = (props) => {
       type={props.submit ? "submit" : "button"}
       disabled={props.disabled}
     >
-      {props.children}
+      {props?.children}
     </Button>
   );
 };
