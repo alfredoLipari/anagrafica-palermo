@@ -60,7 +60,7 @@ const ActionsButton = (props) => {
 
             <Box
                 display={"flex"}
-                flexDir={{ lg:"row", md: "column", sm: "column"}}
+                flexDir={{ lg:"row", md: "column", sm: "column", base: "column"}}
                 alignItems={"center"}
                 width={"100%"}
                 justifyContent={"center"}
