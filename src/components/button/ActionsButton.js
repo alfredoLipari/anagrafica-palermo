@@ -67,7 +67,17 @@ const ActionsButton = (props) => {
                 gap={10}
             >
 
+                <CustomButton
+                    submit={continueSubmit}
+                    handler={continueButtonHandler ? continueButtonHandler : null}
+                    state={state}
+                    colorScheme = {colorSchemeContinueButton}
+                >
+                    {translateContinueButton()}
+                </CustomButton>
+
                 {
+
                     stateQuestionId !== 1
 
                     &&
@@ -81,16 +91,8 @@ const ActionsButton = (props) => {
                         {translateButtonBack()}
 
                     </CustomButton>
-                }
 
-                <CustomButton
-                    submit={continueSubmit}
-                    handler={continueButtonHandler ? continueButtonHandler : null}
-                    state={state}
-                    colorScheme = {colorSchemeContinueButton}
-                >
-                    {translateContinueButton()}
-                </CustomButton>
+                }
 
             </Box>
 
