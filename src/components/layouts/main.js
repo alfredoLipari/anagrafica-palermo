@@ -8,7 +8,7 @@ import { Image } from "@chakra-ui/react";
 import People from "../asset/homepageimg.svg";
 import CustomButton from "../custom/customInput/customButton";
 
-const Main = ({history}) => {
+const Main = ({ history }) => {
   const [isFormStarted, setIsFormStarted] = useState(false);
   const { state } = useContext(Context);
 
@@ -22,6 +22,12 @@ const Main = ({history}) => {
         return "Bienvenido al municipio de Palermo";
       case "Ukranian":
         return "Ласкаво просимо до Комуни ді Палермо";
+      case "Arab":
+        return "متواصلمرحبا بكم في بلدية باليرمو مكتب التسجيلمرحبا بكم في بلدية باليرمو مكتب التسجيل";
+      case "Tamil":
+        return "পালেরমো পৌরসভায় স্বাগতম নিবন্ধন অফিস";
+      case "Bengali":
+        return "চলতে থাকে";
       default:
         return "Welcome to the Comune di Palermo";
     }
@@ -37,6 +43,12 @@ const Main = ({history}) => {
         return "Servicio de registro en línea";
       case "Ukranian":
         return "РАЦС";
+      case "Arab":
+        return "خدمة التسجيل";
+      case "Tamil":
+        return "பதிவு சேவை";
+      case "Bengali":
+        return "রেজিস্ট্রি পরিষেবা";
       default:
         return "Registry office";
     }
@@ -52,6 +64,12 @@ const Main = ({history}) => {
         return "Con esta herramienta, podrá rellenar la solicitud de residencia documento";
       case "Ukranian":
         return "За допомогою цього інструменту ви зможете заповнити заяву на проживання";
+      case "Arab":
+        return "باستخدام هذه الأداة ، ستتمكن من ملء وثيقة طلب الإقامة";
+      case "Tamil":
+        return "இந்த கருவி மூலம், நீங்கள் குடியிருப்பு விண்ணப்ப ஆவணத்தை நிரப்ப முடியும்";
+      case "Bengali":
+        return "এই টুলের সাহায্যে, আপনি আবাসিক আবেদনের নথি পূরণ করতে সক্ষম হবেন";
       default:
         return "With this tool, you will able to fill in the residence application document";
     }
@@ -67,6 +85,12 @@ const Main = ({history}) => {
         return "comencemos";
       case "Ukranian":
         return "Давайте розпочнемо";
+      case "Arab":
+        return "لنبدأ";
+      case "Tamil":
+        return "ஆரம்பிக்கலாம்";
+      case "Bengali":
+        return "চল শুরু করি";
       default:
         return "Let's start";
     }
