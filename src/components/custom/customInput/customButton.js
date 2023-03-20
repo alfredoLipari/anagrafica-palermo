@@ -1,4 +1,5 @@
 import { Button } from "@chakra-ui/react";
+import {useEffect} from "react";
 
 export const translateButtonBack = (state) => {
   switch (state?.language) {
@@ -11,10 +12,10 @@ export const translateButtonBack = (state) => {
     case "Повертатися":
       return "Продовжуйте";
     case "Tamil":
-     return "திரும்பி வா";
+      return "திரும்பி வா";
     case "Arab":
       return "عد‎"
-      case "Bengali":
+    case "Bengali":
       return "ফিরে এসো"
     default:
       return "Go back";
@@ -36,7 +37,7 @@ export const translateButton = (state) => {
       return "متواصل";
     case "Tamil":
       return "தொடர்கிறது";
-      case "Bengali":
+    case "Bengali":
       return "চলতে থাকে"
     default:
       return "Continue";
@@ -46,25 +47,29 @@ export const translateButton = (state) => {
 
 const CustomButton = (props) => {
 
-  translateButtonBack(props.state)  
+  translateButtonBack(props.state)
   translateButton(props.state)
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  },[window])
 
 
   return (
-    <Button
-      color="white"
-      marginTop="6"
-      bg={props.colorScheme &&  "#0073E6"}
-      w={{ base: "75%", md: "15%" }}
-      borderRadius="4"
-      paddingY="6"
-      colorScheme="facebook"
-      onClick={props.handler}
-      type={props.submit ? "submit" : "button"}
-      disabled={props.disabled}
-    >
-      {props?.children}
-    </Button>
+      <Button
+          color="white"
+          marginTop="6"
+          bg={props.colorScheme &&  "#0073E6"}
+          w={{ base: "75%", md: "15%" }}
+          borderRadius="4"
+          paddingY="6"
+          colorScheme="facebook"
+          onClick={props.handler}
+          type={props.submit ? "submit" : "button"}
+          disabled={props.disabled}
+      >
+        {props?.children}
+      </Button>
   );
 };
 
