@@ -15,7 +15,6 @@ import {
 } from "../../lib/validation";
 import "./customDatePicker.css";
 import CustomInputSelect from "./customInput/customInputSelect";
-import CustomButton, {translateButtonBack, translateButton} from "./customInput/customButton";
 import ActionsButton from "../button/ActionsButton";
 
 const CustomLongForm = ({ stateQuestions }) => {

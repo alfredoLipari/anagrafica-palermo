@@ -2,7 +2,6 @@ import React, { useContext, useState } from "react";
 import { Context } from "../../../App";
 import { Select, Text, Box } from "@chakra-ui/react";
 import { useNavigate } from "react-router-dom";
-import CustomButton, {translateButtonBack, translateButton} from "./customButton";
 import ActionsButton from "../../button/ActionsButton";
 
 const CustomSelect = ({ stateQuestion }) => {

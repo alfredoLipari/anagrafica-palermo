@@ -32,24 +32,6 @@ const CustomInputNumber = ({ state }) => {
     });
   };
 
-  const translateButton = () => {
-
-    switch (state.language) {
-
-      case "Italian":
-        return "Continua";
-      case "French":
-        return "Continuez";
-      case "Spanish":
-        return "continuar";
-      case "Ukranian":
-        return "Продовжуйте";
-      default:
-        return "Continue";
-
-    }
-  };
-
   return (
       <Box
           display="flex"
