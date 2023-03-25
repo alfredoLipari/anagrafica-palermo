@@ -40,7 +40,7 @@ export const choiceTree = {
             {
               id: "I am a non-EU citizen",
               label: "I'm a non-EU Citizen",
-              nextQuestion: 2,
+              nextQuestion: 18,
               documentazione: [],
             },
             {
@@ -2771,7 +2771,7 @@ export const choiceTree = {
         },
         {
           type: "form",
-          title: "Il suo contatto",
+          title: "Il tuo contatto",
           id: 22,
           parentId: 4,
           nextQuestion: 23,
@@ -5212,20 +5212,24 @@ export const choiceTree = {
       questions: [
         {
           type: "select",
-          title: "உங்களுக்கு என்ன குடியுரிமை உள்ளது?",
-          label: "உங்கள் குடியுரிமையைத் தேர்ந்தெடுக்கவும்",
+          title:
+            "\u0b89\u0b99\u0bcd\u0b95\u0bb3\u0bc1\u0b95\u0bcd\u0b95\u0bc1 \u0b8e\u0ba9\u0bcd\u0ba9 \u0b95\u0bc1\u0b9f\u0bbf\u0baf\u0bc1\u0bb0\u0bbf\u0bae\u0bc8 \u0b89\u0bb3\u0bcd\u0bb3\u0ba4\u0bc1?",
+          label:
+            "\u0b89\u0b99\u0bcd\u0b95\u0bb3\u0bcd \u0b95\u0bc1\u0b9f\u0bbf\u0baf\u0bc1\u0bb0\u0bbf\u0bae\u0bc8\u0baf\u0bc8\u0ba4\u0bcd \u0ba4\u0bc7\u0bb0\u0bcd\u0ba8\u0bcd\u0ba4\u0bc6\u0b9f\u0bc1\u0b95\u0bcd\u0b95\u0bb5\u0bc1\u0bae\u0bcd",
           id: 1,
           controller: true,
           answers: [
             {
               id: "I am a non-EU citizen",
-              label: "நான் EU அல்லாத குடிமகன்",
+              label:
+                "\u0ba8\u0bbe\u0ba9\u0bcd EU \u0b85\u0bb2\u0bcd\u0bb2\u0bbe\u0ba4 \u0b95\u0bc1\u0b9f\u0bbf\u0bae\u0b95\u0ba9\u0bcd",
               nextQuestion: 2,
               documentazione: [],
             },
             {
               id: "I'm an Italian Citizen",
-              label: "நான் ஒரு இத்தாலிய குடிமகன்",
+              label:
+                "\u0ba8\u0bbe\u0ba9\u0bcd \u0b92\u0bb0\u0bc1 \u0b87\u0ba4\u0bcd\u0ba4\u0bbe\u0bb2\u0bbf\u0baf \u0b95\u0bc1\u0b9f\u0bbf\u0bae\u0b95\u0ba9\u0bcd",
               nextQuestion: 4,
               documentazione: [
                 "identity document of the applicant and of the persons transferring residence together with the applicant",
@@ -5234,7 +5238,8 @@ export const choiceTree = {
             },
             {
               id: "I am a EU citizen",
-              label: "நான் ஒரு ஐரோப்பிய ஒன்றிய குடிமகன்",
+              label:
+                "\u0ba8\u0bbe\u0ba9\u0bcd \u0b92\u0bb0\u0bc1 \u0b90\u0bb0\u0bcb\u0baa\u0bcd\u0baa\u0bbf\u0baf \u0b92\u0ba9\u0bcd\u0bb1\u0bbf\u0baf \u0b95\u0bc1\u0b9f\u0bbf\u0bae\u0b95\u0ba9\u0bcd",
               nextQuestion: 3,
               documentazione: [],
             },
@@ -5242,14 +5247,17 @@ export const choiceTree = {
         },
         {
           type: "select",
-          title: "உங்கள் நிலை என்ன?",
-          label: "உங்கள் நிலையைத் தேர்ந்தெடுக்கவும்",
+          title:
+            "\u0b89\u0b99\u0bcd\u0b95\u0bb3\u0bcd \u0ba8\u0bbf\u0bb2\u0bc8 \u0b8e\u0ba9\u0bcd\u0ba9?",
+          label:
+            "\u0b89\u0b99\u0bcd\u0b95\u0bb3\u0bcd \u0ba8\u0bbf\u0bb2\u0bc8\u0baf\u0bc8\u0ba4\u0bcd \u0ba4\u0bc7\u0bb0\u0bcd\u0ba8\u0bcd\u0ba4\u0bc6\u0b9f\u0bc1\u0b95\u0bcd\u0b95\u0bb5\u0bc1\u0bae\u0bcd",
           id: 2,
           controller: true,
           answers: [
             {
               id: "EU Citizen Relative",
-              label: "ஐரோப்பிய ஒன்றிய குடிமகன் உறவினர்",
+              label:
+                "\u0b90\u0bb0\u0bcb\u0baa\u0bcd\u0baa\u0bbf\u0baf \u0b92\u0ba9\u0bcd\u0bb1\u0bbf\u0baf \u0b95\u0bc1\u0b9f\u0bbf\u0bae\u0b95\u0ba9\u0bcd \u0b89\u0bb1\u0bb5\u0bbf\u0ba9\u0bb0\u0bcd",
               nextQuestion: 4,
               documentazione: [
                 "copy of your passport.*",
@@ -5259,7 +5267,8 @@ export const choiceTree = {
             },
             {
               id: "I have the Residence permit",
-              label: "என்னிடம் குடியிருப்பு அனுமதி உள்ளது",
+              label:
+                "\u0b8e\u0ba9\u0bcd\u0ba9\u0bbf\u0b9f\u0bae\u0bcd \u0b95\u0bc1\u0b9f\u0bbf\u0baf\u0bbf\u0bb0\u0bc1\u0baa\u0bcd\u0baa\u0bc1 \u0b85\u0ba9\u0bc1\u0bae\u0ba4\u0bbf \u0b89\u0bb3\u0bcd\u0bb3\u0ba4\u0bc1",
               nextQuestion: 4,
               documentazione: [
                 "copy of a valid passport or equivalent document.* ",
@@ -5270,7 +5279,8 @@ export const choiceTree = {
             },
             {
               id: "I am renewing my Residence permit",
-              label: "நான் எனது குடியிருப்பு அனுமதியை புதுப்பித்து வருகிறேன்",
+              label:
+                "\u0ba8\u0bbe\u0ba9\u0bcd \u0b8e\u0ba9\u0ba4\u0bc1 \u0b95\u0bc1\u0b9f\u0bbf\u0baf\u0bbf\u0bb0\u0bc1\u0baa\u0bcd\u0baa\u0bc1 \u0b85\u0ba9\u0bc1\u0bae\u0ba4\u0bbf\u0baf\u0bc8 \u0baa\u0bc1\u0ba4\u0bc1\u0baa\u0bcd\u0baa\u0bbf\u0ba4\u0bcd\u0ba4\u0bc1 \u0bb5\u0bb0\u0bc1\u0b95\u0bbf\u0bb1\u0bc7\u0ba9\u0bcd",
               nextQuestion: 4,
               documentazione: [
                 "copy of a valid passport or equivalent document.* ",
@@ -5282,7 +5292,8 @@ export const choiceTree = {
             },
             {
               id: "I am Waiting for a work permit",
-              label: "நான் குடியிருப்பு அனுமதிக்காக காத்திருக்கிறேன்",
+              label:
+                "\u0ba8\u0bbe\u0ba9\u0bcd \u0b95\u0bc1\u0b9f\u0bbf\u0baf\u0bbf\u0bb0\u0bc1\u0baa\u0bcd\u0baa\u0bc1 \u0b85\u0ba9\u0bc1\u0bae\u0ba4\u0bbf\u0b95\u0bcd\u0b95\u0bbe\u0b95 \u0b95\u0bbe\u0ba4\u0bcd\u0ba4\u0bbf\u0bb0\u0bc1\u0b95\u0bcd\u0b95\u0bbf\u0bb1\u0bc7\u0ba9\u0bcd",
               nextQuestion: 4,
               documentazione: [
                 "copy of a valid passport or equivalent document.* ",
@@ -5295,7 +5306,8 @@ export const choiceTree = {
             },
             {
               id: "Awaiting family reunification",
-              label: "குடும்ப ஒற்றுமைக்காக காத்திருக்கிறது",
+              label:
+                "\u0b95\u0bc1\u0b9f\u0bc1\u0bae\u0bcd\u0baa \u0b92\u0bb1\u0bcd\u0bb1\u0bc1\u0bae\u0bc8\u0b95\u0bcd\u0b95\u0bbe\u0b95 \u0b95\u0bbe\u0ba4\u0bcd\u0ba4\u0bbf\u0bb0\u0bc1\u0b95\u0bcd\u0b95\u0bbf\u0bb1\u0ba4\u0bc1",
               nextQuestion: 4,
               documentazione: [
                 "copy of a valid passport or equivalent document.* ",
@@ -5310,14 +5322,16 @@ export const choiceTree = {
         },
         {
           type: "select",
-          title: "உங்கள் நிலை என்ன?",
-          label: "உங்கள் நிலையைத் தேர்ந்தெடுக்கவும்",
+          title:
+            "\u0b89\u0b99\u0bcd\u0b95\u0bb3\u0bcd \u0ba8\u0bbf\u0bb2\u0bc8 \u0b8e\u0ba9\u0bcd\u0ba9?",
+          label:
+            "\u0b89\u0b99\u0bcd\u0b95\u0bb3\u0bcd \u0ba8\u0bbf\u0bb2\u0bc8\u0baf\u0bc8\u0ba4\u0bcd \u0ba4\u0bc7\u0bb0\u0bcd\u0ba8\u0bcd\u0ba4\u0bc6\u0b9f\u0bc1\u0b95\u0bcd\u0b95\u0bb5\u0bc1\u0bae\u0bcd",
           id: 3,
           controller: true,
           answers: [
             {
               id: "worker",
-              label: "தொழிலாளி",
+              label: "\u0ba4\u0bca\u0bb4\u0bbf\u0bb2\u0bbe\u0bb3\u0bbf",
               nextQuestion: 4,
               documentazione: [
                 "copy of a valid Id.*",
@@ -5328,7 +5342,8 @@ export const choiceTree = {
             },
             {
               id: "f.i",
-              label: "நிதி ரீதியாக சுதந்திரமானவர் (தொழிலாளர் இல்லை)",
+              label:
+                "\u0ba8\u0bbf\u0ba4\u0bbf \u0bb0\u0bc0\u0ba4\u0bbf\u0baf\u0bbe\u0b95 \u0b9a\u0bc1\u0ba4\u0ba8\u0bcd\u0ba4\u0bbf\u0bb0\u0bae\u0bbe\u0ba9\u0bb5\u0bb0\u0bcd (\u0ba4\u0bca\u0bb4\u0bbf\u0bb2\u0bbe\u0bb3\u0bb0\u0bcd \u0b87\u0bb2\u0bcd\u0bb2\u0bc8)",
               nextQuestion: 4,
               documentazione: [
                 "copy of a valid ID.*",
@@ -5340,7 +5355,7 @@ export const choiceTree = {
             },
             {
               id: "student",
-              label: "மாணவர்",
+              label: "\u0bae\u0bbe\u0ba3\u0bb5\u0bb0\u0bcd",
               documentazione: [
                 "copy of a valid identification document.*",
                 "documentation proving enrollment at a school or vocational training institution.*",
@@ -5352,7 +5367,8 @@ export const choiceTree = {
             },
             {
               id: "relative",
-              label: "உறவினர் (வேக்கர், மாணவர் இ.சி..)",
+              label:
+                "\u0b89\u0bb1\u0bb5\u0bbf\u0ba9\u0bb0\u0bcd (\u0bb5\u0bc7\u0b95\u0bcd\u0b95\u0bb0\u0bcd, \u0bae\u0bbe\u0ba3\u0bb5\u0bb0\u0bcd \u0baa\u0bcb\u0ba9\u0bcd\u0bb1\u0bb5\u0bc8..)",
               documentazione: [
                 "copy of a valid identification document.*",
                 "copy of original deeds of residence.*",
@@ -5365,34 +5381,38 @@ export const choiceTree = {
         },
         {
           type: "select",
-          title: "நீங்கள் எங்கிருந்து நகர்கிறீர்கள்?",
-          label: "உங்கள் குடியுரிமையைத் தேர்ந்தெடுக்கவும்",
+          title:
+            "\u0ba8\u0bc0\u0b99\u0bcd\u0b95\u0bb3\u0bcd \u0b8e\u0b99\u0bcd\u0b95\u0bbf\u0bb0\u0bc1\u0ba8\u0bcd\u0ba4\u0bc1 \u0ba8\u0b95\u0bb0\u0bcd\u0b95\u0bbf\u0bb1\u0bc0\u0bb0\u0bcd\u0b95\u0bb3\u0bcd?",
+          label:
+            "\u0b89\u0b99\u0bcd\u0b95\u0bb3\u0bcd \u0b95\u0bc1\u0b9f\u0bbf\u0baf\u0bc1\u0bb0\u0bbf\u0bae\u0bc8\u0baf\u0bc8\u0ba4\u0bcd \u0ba4\u0bc7\u0bb0\u0bcd\u0ba8\u0bcd\u0ba4\u0bc6\u0b9f\u0bc1\u0b95\u0bcd\u0b95\u0bb5\u0bc1\u0bae\u0bcd",
           id: 4,
           answers: [
             {
               id: "C1_1_2",
-              label: "வெளிநாடு",
+              label: "\u0bb5\u0bc6\u0bb3\u0bbf\u0ba8\u0bbe\u0b9f\u0bc1",
               nextQuestion: 7,
               documents: "",
             },
             {
               id: "C1_1_3",
-              label: "இத்தாலிய AIRE",
+              label: "\u0b87\u0ba4\u0bcd\u0ba4\u0bbe\u0bb2\u0bbf\u0baf AIRE",
               nextQuestion: 62,
             },
             {
               id: "C1_1_4",
-              label: "அதே நகரம்",
+              label: "\u0b85\u0ba4\u0bc7 \u0ba8\u0b95\u0bb0\u0bae\u0bcd",
               nextQuestion: 8,
             },
             {
               id: "C1_1_1",
-              label: "வெவ்வேறு நகரம்",
+              label:
+                "\u0bb5\u0bc6\u0bb5\u0bcd\u0bb5\u0bc7\u0bb1\u0bc1 \u0ba8\u0b95\u0bb0\u0bae\u0bcd",
               nextQuestion: 63,
             },
             {
               id: "C_1_5",
-              label: "முதல் கோரிக்கை",
+              label:
+                "\u0bae\u0bc1\u0ba4\u0bb2\u0bcd \u0b95\u0bcb\u0bb0\u0bbf\u0b95\u0bcd\u0b95\u0bc8",
               nextQuestion: 8,
             },
           ],
@@ -5400,115 +5420,135 @@ export const choiceTree = {
         },
         {
           type: "form",
-          title: "எந்த நாடு?",
+          title: "\u0b8e\u0ba8\u0bcd\u0ba4 \u0ba8\u0bbe\u0b9f\u0bc1?",
           id: 7,
           nextQuestion: 8,
           answers: [
             {
               id: "Indicare lo Stato estero di provenienza",
-              label: "உங்கள் நாட்டை எழுதுங்கள்",
+              label:
+                "\u0b89\u0b99\u0bcd\u0b95\u0bb3\u0bcd \u0ba8\u0bbe\u0b9f\u0bcd\u0b9f\u0bc8 \u0b8e\u0bb4\u0bc1\u0ba4\u0bc1\u0b99\u0bcd\u0b95\u0bb3\u0bcd",
               type: "autocomplete",
-              helperText: "Ex. Ghana, France, Russia",
+              helperText:
+                "Ex. \u0b95\u0bbe\u0ba9\u0bbe, \u0baa\u0bbf\u0bb0\u0bbe\u0ba9\u0bcd\u0bb8\u0bcd, \u0bb0\u0bb7\u0bcd\u0baf\u0bbe",
               autocomplete: true,
             },
           ],
         },
         {
           type: "form",
-          title: "எந்த நாடு?",
+          title: "\u0b8e\u0ba8\u0bcd\u0ba4 \u0ba8\u0bbe\u0b9f\u0bc1?",
           id: 62,
           nextQuestion: 63,
           answers: [
             {
               id: "Indicare lo Stato estero di provenienza",
-              label: "முதலில் நாட்டை எழுதுங்கள்",
+              label:
+                "\u0bae\u0bc1\u0ba4\u0bb2\u0bbf\u0bb2\u0bcd \u0ba8\u0bbe\u0b9f\u0bcd\u0b9f\u0bc8 \u0b8e\u0bb4\u0bc1\u0ba4\u0bc1\u0b99\u0bcd\u0b95\u0bb3\u0bcd",
               type: "text",
-              helperText: "Ex. Ghana, France, Russia",
+              helperText:
+                "Ex. \u0b95\u0bbe\u0ba9\u0bbe, \u0baa\u0bbf\u0bb0\u0bbe\u0ba9\u0bcd\u0bb8\u0bcd, \u0bb0\u0bb7\u0bcd\u0baf\u0bbe",
               autocomplete: true,
             },
           ],
         },
         {
           type: "form",
-          title: "எந்த நகரம்?",
+          title: "\u0b8e\u0ba8\u0bcd\u0ba4 \u0ba8\u0b95\u0bb0\u0bae\u0bcd?",
           id: 63,
           nextQuestion: 8,
           answers: [
             {
               id: "Indicare il comune di provenienza",
-              label: "உங்கள் நகரத்தை எழுதுங்கள்",
+              label:
+                "\u0b89\u0b99\u0bcd\u0b95\u0bb3\u0bcd \u0ba8\u0b95\u0bb0\u0ba4\u0bcd\u0ba4\u0bc8 \u0b8e\u0bb4\u0bc1\u0ba4\u0bc1\u0b99\u0bcd\u0b95\u0bb3\u0bcd",
               type: "text",
-              helperText: "Ex. Turin, Milan, Pavia",
+              helperText:
+                "Ex. \u0b9f\u0bc1\u0bb0\u0bbf\u0ba9\u0bcd, \u0bae\u0bbf\u0bb2\u0ba9\u0bcd, \u0baa\u0bbe\u0bb5\u0bbf\u0baf\u0bbe",
               autocomplete: true,
             },
           ],
         },
         {
           type: "longform",
-          title: "உங்களைப் பற்றி பேசலாம்",
+          title:
+            "\u0b89\u0b99\u0bcd\u0b95\u0bb3\u0bc8\u0baa\u0bcd \u0baa\u0bb1\u0bcd\u0bb1\u0bbf \u0baa\u0bc7\u0b9a\u0bb2\u0bbe\u0bae\u0bcd",
           id: 8,
           nextQuestion: 9,
           answers: [
             {
               id: "Nome",
-              label: "உன் பெயர் என்ன?",
+              label:
+                "\u0b89\u0ba9\u0bcd \u0baa\u0bc6\u0baf\u0bb0\u0bcd \u0b8e\u0ba9\u0bcd\u0ba9?",
               type: "text",
-              helperText: "Ex. Moussa",
+              helperText: "Ex. \u0bae\u0bcc\u0b9a\u0bbe",
               validate: "RequiredField",
               isRequired: true,
             },
             {
               id: "Cognome",
-              label: "உங்கள் குடும்பப்பெயர் என்ன",
+              label:
+                "\u0b89\u0b99\u0bcd\u0b95\u0bb3\u0bcd \u0b95\u0bc1\u0b9f\u0bc1\u0bae\u0bcd\u0baa\u0baa\u0bcd\u0baa\u0bc6\u0baf\u0bb0\u0bcd \u0b8e\u0ba9\u0bcd\u0ba9",
               type: "text",
-              helperText: "Ex. Semprini",
+              helperText:
+                "Ex. \u0b9a\u0bc6\u0bae\u0bcd\u0baa\u0bcd\u0bb0\u0bbf\u0ba9\u0bbf",
               validate: "RequiredField",
               isRequired: true,
             },
             {
               id: "Data di nascita",
-              label: "பிறந்த தேதி",
+              label:
+                "\u0baa\u0bbf\u0bb1\u0ba8\u0bcd\u0ba4 \u0ba4\u0bc7\u0ba4\u0bbf",
               type: "date",
-              helperText: "Date of birth",
+              helperText:
+                "\u0baa\u0bbf\u0bb1\u0ba8\u0bcd\u0ba4 \u0ba4\u0bc7\u0ba4\u0bbf",
               validate: "dateValidation",
               isRequired: true,
             },
             {
               id: "Luogo di nascita",
-              label: "நீ எங்கே பிறந்தாய்?",
+              label:
+                "\u0ba8\u0bc0 \u0b8e\u0b99\u0bcd\u0b95\u0bc7 \u0baa\u0bbf\u0bb1\u0ba8\u0bcd\u0ba4\u0bbe\u0baf\u0bcd?",
               type: "autocomplete",
-              helperText: "Indicate your city of birth",
+              helperText:
+                "\u0ba8\u0bc0\u0b99\u0bcd\u0b95\u0bb3\u0bcd \u0baa\u0bbf\u0bb1\u0ba8\u0bcd\u0ba4 \u0ba8\u0b95\u0bb0\u0ba4\u0bcd\u0ba4\u0bc8\u0b95\u0bcd \u0b95\u0bc1\u0bb1\u0bbf\u0b95\u0bcd\u0b95\u0bb5\u0bc1\u0bae\u0bcd",
               autocomplete: true,
               isRequired: true,
             },
             {
               id: "Sesso",
-              label: "பாலினம்",
+              label: "\u0baa\u0bbe\u0bb2\u0bbf\u0ba9\u0bae\u0bcd",
               type: "select",
               options: ["male", "female"],
               validate: "RequiredField",
               isRequired: true,
-              helperText: "select your gender",
+              helperText:
+                "\u0b89\u0b99\u0bcd\u0b95\u0bb3\u0bcd \u0baa\u0bbe\u0bb2\u0bbf\u0ba9\u0ba4\u0bcd\u0ba4\u0bc8 \u0ba4\u0bc7\u0bb0\u0bcd\u0bb5\u0bc1\u0b9a\u0bc6\u0baf\u0bcd\u0baf\u0bb5\u0bc1\u0bae\u0bcd",
             },
             {
               id: "Stato Civile",
-              label: "உங்கள் திருமண நிலை?",
+              label:
+                "\u0b89\u0b99\u0bcd\u0b95\u0bb3\u0bcd \u0ba4\u0bbf\u0bb0\u0bc1\u0bae\u0ba3 \u0ba8\u0bbf\u0bb2\u0bc8?",
               type: "select",
               options: ["unmarried", "married", "divorced", "widower"],
-              helperText: "select your status",
+              helperText:
+                "\u0b89\u0b99\u0bcd\u0b95\u0bb3\u0bcd \u0ba8\u0bbf\u0bb2\u0bc8\u0baf\u0bc8 \u0ba4\u0bc7\u0bb0\u0bcd\u0ba8\u0bcd\u0ba4\u0bc6\u0b9f\u0bc1\u0b95\u0bcd\u0b95\u0bb5\u0bc1\u0bae\u0bcd",
               validate: "RequiredField",
             },
             {
               id: "Cittadinanza",
-              label: "குடியுரிமை",
+              label:
+                "\u0b95\u0bc1\u0b9f\u0bbf\u0baf\u0bc1\u0bb0\u0bbf\u0bae\u0bc8",
               type: "text",
-              helperText: "Ex. French",
+              helperText:
+                "Ex. \u0baa\u0bbf\u0bb0\u0bc6\u0b9e\u0bcd\u0b9a\u0bc1",
               validate: "RequiredField",
               isRequired: true,
             },
             {
               id: "Codice Fiscale",
-              label: "வரி ஐடி குறியீடு",
+              label:
+                "\u0b95\u0bcb\u0b9f\u0bbf\u0bb8\u0bcd \u0b83\u0baa\u0bbf\u0bb8\u0bcd\u0b95\u0bc7\u0bb2\u0bcd",
               type: "text",
               helperText: "Ex. R5MRI88L73G273E",
               validate: "fiscalCodeField",
@@ -5518,7 +5558,8 @@ export const choiceTree = {
         },
         {
           type: "checkbox",
-          title: "உனக்கு வேலையிருக்கிறதா?",
+          title:
+            "\u0b89\u0ba9\u0b95\u0bcd\u0b95\u0bc1 \u0bb5\u0bc7\u0bb2\u0bc8\u0baf\u0bbf\u0bb0\u0bc1\u0b95\u0bcd\u0b95\u0bbf\u0bb1\u0ba4\u0bbe?",
           id: 9,
           answers: [
             {
@@ -5533,38 +5574,43 @@ export const choiceTree = {
         },
         {
           type: "select",
-          title: "உங்கள் தொழில் அல்லாத நிலை என்ன?",
-          label: "உங்கள் நிலையைத் தேர்ந்தெடுக்கவும்",
+          title:
+            "\u0b89\u0b99\u0bcd\u0b95\u0bb3\u0bcd \u0ba4\u0bca\u0bb4\u0bbf\u0bb2\u0bcd \u0b85\u0bb2\u0bcd\u0bb2\u0bbe\u0ba4 \u0ba8\u0bbf\u0bb2\u0bc8 \u0b8e\u0ba9\u0bcd\u0ba9?",
+          label:
+            "\u0b89\u0b99\u0bcd\u0b95\u0bb3\u0bcd \u0ba8\u0bbf\u0bb2\u0bc8\u0baf\u0bc8\u0ba4\u0bcd \u0ba4\u0bc7\u0bb0\u0bcd\u0ba8\u0bcd\u0ba4\u0bc6\u0b9f\u0bc1\u0b95\u0bcd\u0b95\u0bb5\u0bc1\u0bae\u0bcd",
           id: 11,
           answers: [
             {
               selected: false,
               id: "C1_2_6",
-              label: "இல்லத்தரசி",
+              label:
+                "\u0b87\u0bb2\u0bcd\u0bb2\u0ba4\u0bcd\u0ba4\u0bb0\u0b9a\u0bbf",
               nextQuestion: 13,
             },
             {
               selected: false,
               id: "C1_2_7",
-              label: "மாணவர்",
+              label: "\u0bae\u0bbe\u0ba3\u0bb5\u0bb0\u0bcd",
               nextQuestion: 13,
             },
             {
               selected: false,
               id: "C1_2_8",
-              label: "வேலையில்லாதவர்",
+              label:
+                "\u0bb5\u0bc7\u0bb2\u0bc8\u0baf\u0bbf\u0bb2\u0bcd\u0bb2\u0bbe\u0ba4\u0bb5\u0bb0\u0bcd",
               nextQuestion: 13,
             },
             {
               selected: false,
               id: "C1_2_9",
-              label: "ஓய்வு பெற்றவர்",
+              label:
+                "\u0b93\u0baf\u0bcd\u0bb5\u0bc1 \u0baa\u0bc6\u0bb1\u0bcd\u0bb1\u0bb5\u0bb0\u0bcd",
               nextQuestion: 13,
             },
             {
               selected: false,
               id: "C1_2_10",
-              label: "மற்றவை",
+              label: "\u0bae\u0bb1\u0bcd\u0bb1\u0bb5\u0bc8",
               nextQuestion: 13,
             },
           ],
@@ -5572,38 +5618,44 @@ export const choiceTree = {
         },
         {
           type: "select",
-          title: "உங்கள் தொழில் நிலை என்ன?",
-          label: "உங்கள் நிலையைத் தேர்ந்தெடுக்கவும்",
+          title:
+            "\u0b89\u0b99\u0bcd\u0b95\u0bb3\u0bcd \u0ba4\u0bca\u0bb4\u0bbf\u0bb2\u0bcd \u0ba8\u0bbf\u0bb2\u0bc8 \u0b8e\u0ba9\u0bcd\u0ba9?",
+          label:
+            "\u0b89\u0b99\u0bcd\u0b95\u0bb3\u0bcd \u0ba8\u0bbf\u0bb2\u0bc8\u0baf\u0bc8\u0ba4\u0bcd \u0ba4\u0bc7\u0bb0\u0bcd\u0ba8\u0bcd\u0ba4\u0bc6\u0b9f\u0bc1\u0b95\u0bcd\u0b95\u0bb5\u0bc1\u0bae\u0bcd",
           id: 12,
           answers: [
             {
               selected: false,
               id: "C1_2_4",
-              label: "தொழிலாளி",
+              label: "\u0ba4\u0bca\u0bb4\u0bbf\u0bb2\u0bbe\u0bb3\u0bbf",
               nextQuestion: 14,
             },
             {
               selected: false,
               id: "C1_2_5",
-              label: "குடும்ப பணியாளர்",
+              label:
+                "\u0b95\u0bc1\u0b9f\u0bc1\u0bae\u0bcd\u0baa \u0baa\u0ba3\u0bbf\u0baf\u0bbe\u0bb3\u0bb0\u0bcd",
               nextQuestion: 14,
             },
             {
               selected: false,
               id: "C1_2_3",
-              label: "ஃப்ரீலான்ஸ் / தொழில்முனைவோர்",
+              label:
+                "\u0b83\u0baa\u0bcd\u0bb0\u0bc0\u0bb2\u0bbe\u0ba9\u0bcd\u0bb8\u0bcd / \u0ba4\u0bca\u0bb4\u0bbf\u0bb2\u0bcd\u0bae\u0bc1\u0ba9\u0bc8\u0bb5\u0bcb\u0bb0\u0bcd",
               nextQuestion: 14,
             },
             {
               selected: false,
               id: "C1_2_1",
-              label: "சுயதொழில்",
+              label:
+                "\u0b9a\u0bc1\u0baf\u0ba4\u0bc6\u0bbe\u0bb4\u0bbf\u0bb2\u0bcd",
               nextQuestion: 14,
             },
             {
               selected: false,
               id: "C1_2_2",
-              label: "நிர்வாகி / பணியாளர்",
+              label:
+                "\u0ba8\u0bbf\u0bb0\u0bcd\u0bb5\u0bbe\u0b95\u0bbf / \u0baa\u0ba3\u0bbf\u0baf\u0bbe\u0bb3\u0bb0\u0bcd",
               nextQuestion: 14,
             },
           ],
@@ -5611,7 +5663,8 @@ export const choiceTree = {
         },
         {
           type: "checkbox",
-          title: "உங்களிடம் இத்தாலிய ஓட்டுநர் உரிமம் உள்ளதா?",
+          title:
+            "\u0b89\u0b99\u0bcd\u0b95\u0bb3\u0bbf\u0b9f\u0bae\u0bcd \u0b87\u0ba4\u0bcd\u0ba4\u0bbe\u0bb2\u0bbf\u0baf \u0b93\u0b9f\u0bcd\u0b9f\u0bc1\u0ba8\u0bb0\u0bcd \u0b89\u0bb0\u0bbf\u0bae\u0bae\u0bcd \u0b89\u0bb3\u0bcd\u0bb3\u0ba4\u0bbe?",
           id: 14,
           answers: [
             {
@@ -5626,14 +5679,15 @@ export const choiceTree = {
         },
         {
           type: "longform",
-          title: "ஓட்டுநர் உரிம விவரங்கள்",
+          title:
+            "\u0b93\u0b9f\u0bcd\u0b9f\u0bc1\u0ba8\u0bb0\u0bcd \u0b89\u0bb0\u0bbf\u0bae \u0bb5\u0bbf\u0bb5\u0bb0\u0b99\u0bcd\u0b95\u0bb3\u0bcd",
           id: 15,
           parentId: 4,
           nextQuestion: 13,
           answers: [
             {
               id: "Numero",
-              label: "எண்",
+              label: "\u0b8e\u0ba3\u0bcd",
               type: "text",
               helperText: "Ex. 91828930",
               validate: "RequiredField",
@@ -5641,32 +5695,35 @@ export const choiceTree = {
             },
             {
               id: "Patente tipo",
-              label: "உரிமம் வகை",
+              label: "\u0b89\u0bb0\u0bbf\u0bae\u0bae\u0bcd \u0bb5\u0b95\u0bc8",
               type: "text",
               helperText: "Ex. A,B,C",
               isRequired: false,
             },
             {
               id: "Data di rilascio",
-              label: "வெளிவரும் தேதி",
+              label:
+                "\u0bb5\u0bc6\u0bb3\u0bbf\u0bb5\u0bb0\u0bc1\u0bae\u0bcd \u0ba4\u0bc7\u0ba4\u0bbf",
               type: "Date",
-              helperText: "Release Date",
+              helperText:
+                "\u0bb5\u0bc6\u0bb3\u0bbf\u0bb5\u0bb0\u0bc1\u0bae\u0bcd \u0ba4\u0bc7\u0ba4\u0bbf",
               validate: "RequiredField",
               isRequired: false,
             },
             {
               id: "Organo di rilascio",
-              label: "உடல் வழங்குதல்",
+              label:
+                "\u0b89\u0b9f\u0bb2\u0bcd \u0bb5\u0bb4\u0b99\u0bcd\u0b95\u0bc1\u0ba4\u0bb2\u0bcd",
               type: "text",
-              helperText: "Motorizzazione",
+              helperText: "Motorizazione",
               validate: "RequiredField",
               isRequired: false,
             },
             {
               id: "Provincia di",
-              label: "மாகாணம்",
+              label: "\u0bae\u0bbe\u0b95\u0bbe\u0ba3\u0bae\u0bcd",
               type: "text",
-              helperText: "Palermo",
+              helperText: "\u0baa\u0bb2\u0bc7\u0bb0\u0bcd\u0bae\u0bcb",
               validate: "RequiredField",
               isRequired: false,
             },
@@ -5674,38 +5731,43 @@ export const choiceTree = {
         },
         {
           type: "select",
-          title: "உங்கள் கல்வி நிலை என்ன?",
-          label: "உங்கள் பட்டப்படிப்பைத் தேர்ந்தெடுக்கவும்",
+          title:
+            "\u0b89\u0b99\u0bcd\u0b95\u0bb3\u0bcd \u0b95\u0bb2\u0bcd\u0bb5\u0bbf \u0ba8\u0bbf\u0bb2\u0bc8 \u0b8e\u0ba9\u0bcd\u0ba9?",
+          label:
+            "\u0b89\u0b99\u0bcd\u0b95\u0bb3\u0bcd \u0baa\u0b9f\u0bcd\u0b9f\u0baa\u0bcd\u0baa\u0b9f\u0bbf\u0baa\u0bcd\u0baa\u0bc8\u0ba4\u0bcd \u0ba4\u0bc7\u0bb0\u0bcd\u0ba8\u0bcd\u0ba4\u0bc6\u0b9f\u0bc1\u0b95\u0bcd\u0b95\u0bb5\u0bc1\u0bae\u0bcd",
           id: 13,
           answers: [
             {
               selected: false,
               id: "C1_2_11",
-              label: "ஆரம்ப பள்ளி",
+              label:
+                "\u0b86\u0bb0\u0bae\u0bcd\u0baa \u0baa\u0bb3\u0bcd\u0bb3\u0bbf",
               nextQuestion: 16,
             },
             {
               selected: false,
               id: "C1_2_12",
-              label: "மேல்நிலைப் பள்ளி சான்றிதழ்",
+              label:
+                "\u0bae\u0bc7\u0bb2\u0bcd\u0ba8\u0bbf\u0bb2\u0bc8\u0baa\u0bcd \u0baa\u0bb3\u0bcd\u0bb3\u0bbf \u0b9a\u0bbe\u0ba9\u0bcd\u0bb1\u0bbf\u0ba4\u0bb4\u0bcd",
               nextQuestion: 16,
             },
             {
               selected: false,
               id: "C1_2_13",
-              label: "டிப்ளமோ",
+              label: "\u0b9f\u0bbf\u0baa\u0bcd\u0bb3\u0bae\u0bcb",
               nextQuestion: 16,
             },
             {
               selected: false,
               id: "C1_2_14",
-              label: "இளங்கலை",
+              label: "\u0b87\u0bb3\u0b99\u0bcd\u0b95\u0bb2\u0bc8",
               nextQuestion: 16,
             },
             {
               selected: false,
               id: "C1_2_15",
-              label: "முதுகலை பட்டம்",
+              label:
+                "\u0bae\u0bc1\u0ba4\u0bc1\u0b95\u0bb2\u0bc8 \u0baa\u0b9f\u0bcd\u0b9f\u0bae\u0bcd",
               nextQuestion: 16,
             },
             {
@@ -5719,38 +5781,40 @@ export const choiceTree = {
         },
         {
           type: "longform",
-          title: "உங்கள் புதிய குடியிருப்பு",
+          title:
+            "\u0b89\u0b99\u0bcd\u0b95\u0bb3\u0bcd \u0baa\u0bc1\u0ba4\u0bbf\u0baf \u0b95\u0bc1\u0b9f\u0bbf\u0baf\u0bbf\u0bb0\u0bc1\u0baa\u0bcd\u0baa\u0bc1",
           id: 16,
           parentId: 4,
           nextQuestion: 17,
           answers: [
             {
               id: "Comune",
-              label: "நகரம்",
+              label: "\u0ba8\u0b95\u0bb0\u0bae\u0bcd",
               type: "text",
-              helperText: "Ex. Palermo",
+              helperText: "Ex. \u0baa\u0bb2\u0bc7\u0bb0\u0bcd\u0bae\u0bcb",
               isRequired: true,
               validate: "RequiredField",
             },
             {
               id: "Prov",
-              label: "மாகாணம்",
+              label: "\u0bae\u0bbe\u0b95\u0bbe\u0ba3\u0bae\u0bcd",
               type: "text",
-              helperText: "Ex. Palermo",
+              helperText: "Ex. \u0baa\u0bb2\u0bc7\u0bb0\u0bcd\u0bae\u0bcb",
               isRequired: true,
               validate: "RequiredField",
             },
             {
               id: "ViaPiazza",
-              label: "முகவரி",
+              label: "\u0bae\u0bc1\u0b95\u0bb5\u0bb0\u0bbf",
               type: "text",
-              helperText: "Via della libertà",
+              helperText:
+                "\u0b9f\u0bc6\u0bb2\u0bcd\u0bb2\u0bbe \u0bb2\u0bbf\u0baa\u0bb0\u0bcd\u0b9f\u0bcd\u0b9f\u0bbe \u0bb5\u0bb4\u0bbf\u0baf\u0bbe\u0b95",
               isRequired: true,
               validate: "RequiredField",
             },
             {
               id: "Numero civico",
-              label: "குடிமை எண்",
+              label: "\u0b95\u0bc1\u0b9f\u0bbf\u0bae\u0bc8 \u0b8e\u0ba3\u0bcd",
               type: "text",
               helperText: "Ex. 36",
               isRequired: true,
@@ -5758,13 +5822,14 @@ export const choiceTree = {
             },
             {
               id: "Scala",
-              label: "படிக்கட்டுகள்",
+              label:
+                "\u0baa\u0b9f\u0bbf\u0b95\u0bcd\u0b95\u0b9f\u0bcd\u0b9f\u0bc1\u0b95\u0bb3\u0bcd",
               type: "text",
-              helperText: "Ex. 1st",
+              helperText: "Ex. 1\u0bb5\u0ba4\u0bc1",
             },
             {
               id: "Piano",
-              label: "தரை",
+              label: "\u0ba4\u0bb0\u0bc8",
               type: "text",
               isRequired: true,
               helperText: "Ex. 2",
@@ -5772,7 +5837,7 @@ export const choiceTree = {
             },
             {
               id: "Interno",
-              label: "அலகு",
+              label: "\u0b85\u0bb2\u0b95\u0bc1",
               type: "text",
               helperText: "Ex. 1",
             },
@@ -5780,7 +5845,8 @@ export const choiceTree = {
         },
         {
           type: "checkbox",
-          title: "நீங்கள் தனியாக நகர்கிறீர்களா?",
+          title:
+            "\u0ba8\u0bc0\u0b99\u0bcd\u0b95\u0bb3\u0bcd \u0ba4\u0ba9\u0bbf\u0baf\u0bbe\u0b95 \u0ba8\u0b95\u0bb0\u0bcd\u0b95\u0bbf\u0bb1\u0bc0\u0bb0\u0bcd\u0b95\u0bb3\u0bbe?",
           id: 17,
           answers: [
             {
@@ -5795,13 +5861,15 @@ export const choiceTree = {
         },
         {
           type: "number",
-          title: "உங்கள் அருகில் எத்தனை பேர்?",
+          title:
+            "\u0b89\u0b99\u0bcd\u0b95\u0bb3\u0bcd \u0b85\u0bb0\u0bc1\u0b95\u0bbf\u0bb2\u0bcd \u0b8e\u0ba4\u0bcd\u0ba4\u0ba9\u0bc8 \u0baa\u0bc7\u0bb0\u0bcd?",
           id: 18,
           nextQuestion: 41,
         },
         {
           type: "checkbox",
-          title: "யாராவது ஏற்கனவே சொத்தில் வசிக்கிறார்களா?",
+          title:
+            "\u0baf\u0bbe\u0bb0\u0bbe\u0bb5\u0ba4\u0bc1 \u0b8f\u0bb1\u0bcd\u0b95\u0ba9\u0bb5\u0bc7 \u0b85\u0ba8\u0bcd\u0ba4 \u0b9a\u0bca\u0ba4\u0bcd\u0ba4\u0bbf\u0bb2\u0bcd \u0bb5\u0b9a\u0bbf\u0b95\u0bcd\u0b95\u0bbf\u0bb1\u0bbe\u0bb0\u0bcd\u0b95\u0bb3\u0bbe?",
           id: 19,
           answers: [
             {
@@ -5816,30 +5884,35 @@ export const choiceTree = {
         },
         {
           type: "longform",
-          title: "எங்களிடம் கூறுங்கள் யார் (ஒரே ஒரு கூறு)",
+          title:
+            "\u0b8e\u0b99\u0bcd\u0b95\u0bb3\u0bbf\u0b9f\u0bae\u0bcd \u0b95\u0bc2\u0bb1\u0bc1\u0b99\u0bcd\u0b95\u0bb3\u0bcd \u0baf\u0bbe\u0bb0\u0bcd (\u0b92\u0bb0\u0bc7 \u0b92\u0bb0\u0bc1 \u0b95\u0bc2\u0bb1\u0bc1)",
           id: 21,
           parentId: 4,
           nextQuestion: 22,
           answers: [
             {
               id: "Nome_6",
-              label: "அவன்/அவள் பெயர் என்ன?",
+              label:
+                "\u0b85\u0bb5\u0ba9\u0bcd/\u0b85\u0bb5\u0bb3\u0bcd \u0baa\u0bc6\u0baf\u0bb0\u0bcd \u0b8e\u0ba9\u0bcd\u0ba9?",
               type: "text",
-              helperText: "Ex. Moussa",
+              helperText: "Ex. \u0bae\u0bcc\u0b9a\u0bbe",
               isRequired: true,
               validate: "RequiredField",
             },
             {
               id: "Cognome_6",
-              label: "அவன்/அவள் குடும்பப்பெயர் என்ன",
+              label:
+                "\u0b85\u0bb5\u0ba9\u0bcd/\u0b85\u0bb5\u0bb3\u0bcd \u0b95\u0bc1\u0b9f\u0bc1\u0bae\u0bcd\u0baa\u0baa\u0bcd\u0baa\u0bc6\u0baf\u0bb0\u0bcd \u0b8e\u0ba9\u0bcd\u0ba9",
               type: "text",
-              helperText: "Ex. Semprini",
+              helperText:
+                "Ex. \u0b9a\u0bc6\u0bae\u0bcd\u0baa\u0bcd\u0bb0\u0bbf\u0ba9\u0bbf",
               isRequired: true,
               validate: "RequiredField",
             },
             {
               id: "Luogo",
-              label: "பிறந்த தேதி",
+              label:
+                "\u0baa\u0bbf\u0bb1\u0ba8\u0bcd\u0ba4 \u0ba4\u0bc7\u0ba4\u0bbf",
               type: "date",
               helperText: "DD/MM/YYYY",
               isRequired: true,
@@ -5847,16 +5920,19 @@ export const choiceTree = {
             },
             {
               id: "Luogo di nascita_6",
-              label: "பிறந்த இடம்",
+              label:
+                "\u0baa\u0bbf\u0bb1\u0ba8\u0bcd\u0ba4 \u0b87\u0b9f\u0bae\u0bcd",
               type: "text",
-              helperText: "Indicate his/her city of birth",
+              helperText:
+                "\u0b85\u0bb5\u0bb0\u0bcd \u0baa\u0bbf\u0bb1\u0ba8\u0bcd\u0ba4 \u0ba8\u0b95\u0bb0\u0ba4\u0bcd\u0ba4\u0bc8\u0b95\u0bcd \u0b95\u0bc1\u0bb1\u0bbf\u0baa\u0bcd\u0baa\u0bbf\u0b9f\u0bb5\u0bc1\u0bae\u0bcd",
               isRequired: true,
               validate: "RequiredField",
               autocomplete: true,
             },
             {
-              id: "Sussiste il seguente vincolo rispetto al su indicato  componente della famiglia già residente",
-              label: "குடும்ப உறவைக் குறிப்பிடவும்",
+              id: "Sussiste il seguente vincolo rispetto al su indicato  componente della famiglia gi\u00e0 residente",
+              label:
+                "\u0b95\u0bc1\u0b9f\u0bc1\u0bae\u0bcd\u0baa \u0b89\u0bb1\u0bb5\u0bc8\u0b95\u0bcd \u0b95\u0bc1\u0bb1\u0bbf\u0baa\u0bcd\u0baa\u0bbf\u0b9f\u0bb5\u0bc1\u0bae\u0bcd",
               type: "select",
               options: [
                 "none",
@@ -5872,21 +5948,24 @@ export const choiceTree = {
                 "aunt",
                 "cousin",
               ],
-              helperText: "Select none if there is any",
+              helperText:
+                "\u0b8f\u0ba4\u0bc7\u0ba9\u0bc1\u0bae\u0bcd \u0b87\u0bb0\u0bc1\u0ba8\u0bcd\u0ba4\u0bbe\u0bb2\u0bcd \u0ba4\u0bc7\u0bb0\u0bcd\u0ba8\u0bcd\u0ba4\u0bc6\u0b9f\u0bc1\u0b95\u0bcd\u0b95\u0bb5\u0bc1\u0bae\u0bcd",
               isRequired: false,
             },
           ],
         },
         {
           type: "form",
-          title: "உங்கள் தொடர்பு",
+          title:
+            "\u0b89\u0b99\u0bcd\u0b95\u0bb3\u0bcd \u0ba4\u0bca\u0b9f\u0bb0\u0bcd\u0baa\u0bc1",
           id: 22,
           parentId: 4,
           nextQuestion: 23,
           answers: [
             {
               id: "Telefono",
-              label: "தொலைபேசி எண்",
+              label:
+                "\u0ba4\u0bc6\u0bbe\u0bb2\u0bc8\u0baa\u0bc7\u0b9a\u0bbf \u0b8e\u0ba3\u0bcd",
               type: "number",
               helperText: "091665442",
               validate: "requiredField",
@@ -5895,7 +5974,7 @@ export const choiceTree = {
             },
             {
               id: "Cellulare",
-              label: "கைபேசி எண்",
+              label: "\u0b95\u0bc8\u0baa\u0bc7\u0b9a\u0bbf \u0b8e\u0ba3\u0bcd",
               type: "tel",
               helperText: "+203332423421",
               validate: "",
@@ -5903,7 +5982,8 @@ export const choiceTree = {
             },
             {
               id: "emailPec",
-              label: "மின்னஞ்சல்/பெசி",
+              label:
+                "\u0bae\u0bbf\u0ba9\u0bcd\u0ba9\u0b9e\u0bcd\u0b9a\u0bb2\u0bcd/\u0baa\u0bc6\u0b9a\u0bbf",
               type: "email",
               helperText: "test@email.com",
               validate: "requiredField",
@@ -5911,7 +5991,7 @@ export const choiceTree = {
             },
             {
               id: "Fax",
-              label: "தொலைநகல்",
+              label: "\u0ba4\u0bca\u0bb2\u0bc8\u0ba8\u0b95\u0bb2\u0bcd",
               type: "text",
               helperText: "091666555",
               validate: "",
@@ -5921,38 +6001,41 @@ export const choiceTree = {
         },
         {
           type: "select",
-          title: "உங்கள் வீடு எந்த வகையைச் சேர்ந்தது?",
-          label: "உங்கள் நிலையைத் தேர்ந்தெடுக்கவும்",
+          title:
+            "\u0b89\u0b99\u0bcd\u0b95\u0bb3\u0bcd \u0bb5\u0bc0\u0b9f\u0bc1 \u0b8e\u0ba8\u0bcd\u0ba4 \u0bb5\u0b95\u0bc8\u0baf\u0bc8\u0b9a\u0bcd \u0b9a\u0bc7\u0bb0\u0bcd\u0ba8\u0bcd\u0ba4\u0ba4\u0bc1?",
+          label:
+            "\u0b89\u0b99\u0bcd\u0b95\u0bb3\u0bcd \u0ba8\u0bbf\u0bb2\u0bc8\u0baf\u0bc8\u0ba4\u0bcd \u0ba4\u0bc7\u0bb0\u0bcd\u0ba8\u0bcd\u0ba4\u0bc6\u0b9f\u0bc1\u0b95\u0bcd\u0b95\u0bb5\u0bc1\u0bae\u0bcd",
           id: 23,
           answers: [
             {
               selected: false,
               id: "C9_1_5",
-              label: "இலவச பயன்பாடு",
+              label:
+                "\u0b87\u0bb2\u0bb5\u0b9a \u0baa\u0baf\u0ba9\u0bcd\u0baa\u0bbe\u0b9f\u0bc1",
               nextQuestion: 25,
             },
             {
               selected: false,
               id: "C9_1_2",
-              label: "சொந்த வீடு",
+              label: "\u0b9a\u0bca\u0ba8\u0bcd\u0ba4 \u0bb5\u0bc0\u0b9f\u0bc1",
               nextQuestion: 24,
             },
             {
               selected: false,
               id: "C9_1_3",
-              label: "வாடகை",
+              label: "\u0bb5\u0bbe\u0b9f\u0b95\u0bc8",
               nextQuestion: 26,
             },
             {
               selected: false,
               id: "C9_1_4",
-              label: "பொது வீடு",
+              label: "\u0baa\u0bc6\u0bbe\u0ba4\u0bc1 \u0bb5\u0bc0\u0b9f\u0bc1",
               nextQuestion: 30,
             },
             {
               selected: false,
               id: "C9_1_6",
-              label: "உபயோகம்",
+              label: "\u0b89\u0baa\u0baf\u0bcb\u0b95\u0bae\u0bcd",
               nextQuestion: 27,
             },
           ],
@@ -5960,14 +6043,15 @@ export const choiceTree = {
         },
         {
           type: "form",
-          title: "ஒப்பந்த விவரங்கள்",
+          title:
+            "\u0b92\u0baa\u0bcd\u0baa\u0ba8\u0bcd\u0ba4 \u0bb5\u0bbf\u0bb5\u0bb0\u0b99\u0bcd\u0b95\u0bb3\u0bcd",
           id: 24,
           parentId: 4,
           nextQuestion: 30,
           answers: [
             {
               id: "Sezione",
-              label: "பிரிவு",
+              label: "\u0baa\u0bbf\u0bb0\u0bbf\u0bb5\u0bc1",
               type: "text",
               validate: "requiredField",
               isRequired: true,
@@ -5975,7 +6059,7 @@ export const choiceTree = {
             },
             {
               id: "foglio",
-              label: "தாள்",
+              label: "\u0ba4\u0bbe\u0bb3\u0bcd",
               type: "tel",
               helperText: "3332423421",
               validate: "",
@@ -5983,14 +6067,16 @@ export const choiceTree = {
             },
             {
               id: "particella o mappale",
-              label: "பகுதி அல்லது மேப்பல்",
+              label:
+                "\u0baa\u0b95\u0bc1\u0ba4\u0bbf \u0b85\u0bb2\u0bcd\u0bb2\u0ba4\u0bc1 \u0bae\u0bc7\u0baa\u0bcd\u0baa\u0bb2\u0bcd",
               type: "text",
               validate: "requiredField",
               isRequired: true,
             },
             {
               id: "subalterno",
-              label: "சபால்டர்ன்",
+              label:
+                "\u0b9a\u0baa\u0bbe\u0bb2\u0bcd\u0b9f\u0bb0\u0bcd\u0ba9\u0bcd",
               type: "text",
               validate: "requiredField",
               isRequired: true,
@@ -5999,30 +6085,32 @@ export const choiceTree = {
         },
         {
           type: "form",
-          title: "ஒப்பந்த விவரங்கள்",
+          title:
+            "\u0b92\u0baa\u0bcd\u0baa\u0ba8\u0bcd\u0ba4 \u0bb5\u0bbf\u0bb5\u0bb0\u0b99\u0bcd\u0b95\u0bb3\u0bcd",
           id: 26,
           parentId: 4,
           nextQuestion: 30,
           answers: [
             {
               id: "undefined_33",
-              label: "வருவாய் முகமை",
+              label:
+                "\u0bb5\u0bb0\u0bc1\u0bb5\u0bbe\u0baf\u0bcd \u0bae\u0bc1\u0b95\u0bae\u0bc8",
               type: "text",
-              helperText: "Ex. Palermo",
+              helperText: "Ex. \u0baa\u0bb2\u0bc7\u0bb0\u0bcd\u0bae\u0bcb",
               validate: "requiredField",
               isRequired: true,
               autocomplete: false,
             },
             {
               id: "in data",
-              label: "தேதி",
+              label: "\u0ba4\u0bc7\u0ba4\u0bbf",
               type: "date",
               helperText: "DD/MM/YYYY",
               isRequired: true,
             },
             {
               id: "al n",
-              label: "எண்",
+              label: "\u0b8e\u0ba3\u0bcd",
               type: "number",
               validate: "requiredField",
               isRequired: true,
@@ -6031,30 +6119,32 @@ export const choiceTree = {
         },
         {
           type: "form",
-          title: "ஒப்பந்த விவரங்கள்",
+          title:
+            "\u0b92\u0baa\u0bcd\u0baa\u0ba8\u0bcd\u0ba4 \u0bb5\u0bbf\u0bb5\u0bb0\u0b99\u0bcd\u0b95\u0bb3\u0bcd",
           id: 25,
           parentId: 4,
           nextQuestion: 30,
           answers: [
             {
               id: "Entrate di",
-              label: "வருவாய் முகமை",
+              label:
+                "\u0bb5\u0bb0\u0bc1\u0bb5\u0bbe\u0baf\u0bcd \u0bae\u0bc1\u0b95\u0bae\u0bc8",
               type: "text",
-              helperText: "Ex. Palermo",
+              helperText: "Ex. \u0baa\u0bb2\u0bc7\u0bb0\u0bcd\u0bae\u0bcb",
               validate: "requiredField",
               isRequired: true,
               autocomplete: false,
             },
             {
               id: "in data_2",
-              label: "தேதி",
+              label: "\u0ba4\u0bc7\u0ba4\u0bbf",
               type: "date",
               helperText: "DD/MM/YYYY",
               isRequired: true,
             },
             {
               id: "al n_2",
-              label: "எண்",
+              label: "\u0b8e\u0ba3\u0bcd",
               type: "number",
               validate: "requiredField",
               isRequired: true,
@@ -6063,14 +6153,16 @@ export const choiceTree = {
         },
         {
           type: "form",
-          title: "ஒப்பந்த விவரங்கள்",
+          title:
+            "\u0b92\u0baa\u0bcd\u0baa\u0ba8\u0bcd\u0ba4 \u0bb5\u0bbf\u0bb5\u0bb0\u0b99\u0bcd\u0b95\u0bb3\u0bcd",
           id: 26,
           parentId: 4,
           nextQuestion: 30,
           answers: [
             {
               id: "dati utili 1",
-              label: "விவரங்களை எழுதுங்கள்",
+              label:
+                "\u0bb5\u0bbf\u0bb5\u0bb0\u0b99\u0bcd\u0b95\u0bb3\u0bc8 \u0b8e\u0bb4\u0bc1\u0ba4\u0bc1\u0b99\u0bcd\u0b95\u0bb3\u0bcd",
               type: "text",
               validate: "requiredField",
               isRequired: true,
@@ -6080,7 +6172,8 @@ export const choiceTree = {
         },
         {
           type: "checkbox",
-          title: "யாராவது ஏற்கனவே TARI செலுத்துகிறார்களா?",
+          title:
+            "\u0baf\u0bbe\u0bb0\u0bbe\u0bb5\u0ba4\u0bc1 \u0b8f\u0bb1\u0bcd\u0b95\u0ba9\u0bb5\u0bc7 TARI \u0b9a\u0bc6\u0bb2\u0bc1\u0ba4\u0bcd\u0ba4\u0bc1\u0b95\u0bbf\u0bb1\u0bbe\u0bb0\u0bcd\u0b95\u0bb3\u0bbe?",
           id: 30,
           answers: [
             {
@@ -6095,14 +6188,16 @@ export const choiceTree = {
         },
         {
           type: "form",
-          title: "ஒப்பந்த விவரங்கள்",
+          title:
+            "\u0b92\u0baa\u0bcd\u0baa\u0ba8\u0bcd\u0ba4 \u0bb5\u0bbf\u0bb5\u0bb0\u0b99\u0bcd\u0b95\u0bb3\u0bcd",
           id: 31,
           parentId: 4,
           nextQuestion: 32,
           answers: [
             {
               id: "che la tassa per il nuovo",
-              label: "பெயர் மற்றும் குடும்பப்பெயர்",
+              label:
+                "\u0baa\u0bc6\u0baf\u0bb0\u0bcd \u0bae\u0bb1\u0bcd\u0bb1\u0bc1\u0bae\u0bcd \u0b95\u0bc1\u0b9f\u0bc1\u0bae\u0bcd\u0baa\u0baa\u0bcd\u0baa\u0bc6\u0baf\u0bb0\u0bcd",
               type: "text",
               validate: "requiredField",
               isRequired: true,
@@ -6110,14 +6205,15 @@ export const choiceTree = {
             },
             {
               id: "F",
-              label: "நிதி குறியீடு",
+              label:
+                "\u0ba8\u0bbf\u0ba4\u0bbf \u0b95\u0bc1\u0bb1\u0bbf\u0baf\u0bc0\u0b9f\u0bc1",
               type: "text",
               isRequired: true,
               validate: "fiscalCodeField",
             },
             {
               id: "Relazione_di_parentela",
-              label: "உறவினர்",
+              label: "\u0b89\u0bb1\u0bb5\u0bbf\u0ba9\u0bb0\u0bcd",
               type: "select",
               validate: "requiredField",
               isRequired: true,
@@ -6126,35 +6222,38 @@ export const choiceTree = {
         },
         {
           type: "longform",
-          title: "பின்வரும் TARI சந்தாவைக் கோருகிறீர்கள்",
+          title:
+            "\u0baa\u0bbf\u0ba9\u0bcd\u0bb5\u0bb0\u0bc1\u0bae\u0bcd TARI \u0b9a\u0ba8\u0bcd\u0ba4\u0bbe\u0bb5\u0bc8\u0b95\u0bcd \u0b95\u0bcb\u0bb0\u0bc1\u0b95\u0bbf\u0bb1\u0bc0\u0bb0\u0bcd\u0b95\u0bb3\u0bcd",
           id: 32,
           parentId: 4,
           nextQuestion: 33,
           answers: [
             {
               id: "foglio10",
-              label: "தாள்",
+              label:
+                "\u0ba4\u0bbe\u0bb3\u0bcd (\u0b83\u0baa\u0bcb\u0b95\u0bcd\u0bb2\u0bbf\u0baf\u0bcb)",
               type: "text",
               isRequired: true,
               validate: "RequiredField",
             },
             {
               id: "particella10",
-              label: "துகள்",
+              label: "\u0ba4\u0bc1\u0b95\u0bb3\u0bcd\u0b95\u0bb3\u0bcd",
               type: "text",
               isRequired: true,
               validate: "RequiredField",
             },
             {
               id: "sub10",
-              label: "கீழ்நிலை",
+              label: "\u0ba4\u0bc1\u0ba3\u0bc8",
               type: "text",
               isRequired: true,
               validate: "RequiredField",
             },
             {
               id: "data",
-              label: "ஆக்கிரமிப்பின் நடைமுறை தேதி",
+              label:
+                "\u0b86\u0b95\u0bcd\u0b95\u0bbf\u0bb0\u0bae\u0bbf\u0baa\u0bcd\u0baa\u0bbf\u0ba9\u0bcd \u0ba8\u0b9f\u0bc8\u0bae\u0bc1\u0bb1\u0bc8 \u0ba4\u0bc7\u0ba4\u0bbf",
               type: "date",
               isRequired: true,
               validate: "RequiredField",
@@ -6162,7 +6261,8 @@ export const choiceTree = {
             },
             {
               id: "superficie in mq",
-              label: "சதுர மீட்டரில் மேற்பரப்பு",
+              label:
+                "\u0b9a\u0ba4\u0bc1\u0bb0 \u0bae\u0bc0\u0b9f\u0bcd\u0b9f\u0bb0\u0bbf\u0bb2\u0bcd \u0bae\u0bc7\u0bb1\u0bcd\u0baa\u0bb0\u0baa\u0bcd\u0baa\u0bc1",
               type: "number",
               isRequired: true,
               validate: "RequiredField",
@@ -6171,38 +6271,43 @@ export const choiceTree = {
         },
         {
           type: "select",
-          title: "தொழிலின் தலைப்பு",
-          label: "பயன்பாட்டை தேர்வு செய்யவும்",
+          title:
+            "\u0ba4\u0bca\u0bb4\u0bbf\u0bb2\u0bbf\u0ba9\u0bcd \u0ba4\u0bb2\u0bc8\u0baa\u0bcd\u0baa\u0bc1",
+          label:
+            "\u0baa\u0baf\u0ba9\u0bcd\u0baa\u0bbe\u0b9f\u0bcd\u0b9f\u0bc8 \u0ba4\u0bc7\u0bb0\u0bcd\u0bb5\u0bc1 \u0b9a\u0bc6\u0baf\u0bcd\u0baf\u0bb5\u0bc1\u0bae\u0bcd",
           id: 33,
           answers: [
             {
               selected: false,
               id: "10_1_1",
-              label: "உரிமை",
+              label: "\u0b89\u0bb0\u0bbf\u0bae\u0bc8",
               nextQuestion: 17,
             },
             {
               selected: false,
               id: "10_1_2",
-              label: "இடம்",
+              label: "\u0b87\u0b9f\u0bae\u0bcd",
               nextQuestion: 17,
             },
             {
               selected: false,
               id: "10_1_3",
-              label: "பயன்படுத்த கடன்",
+              label:
+                "\u0baa\u0baf\u0ba9\u0bcd\u0baa\u0b9f\u0bc1\u0ba4\u0bcd\u0ba4 \u0b95\u0b9f\u0ba9\u0bcd",
               nextQuestion: 17,
             },
             {
               selected: false,
               id: "10_1_4",
-              label: "பயனளிக்கும்",
+              label:
+                "\u0baa\u0baf\u0ba9\u0bb3\u0bbf\u0b95\u0bcd\u0b95\u0bc1\u0bae\u0bcd",
               nextQuestion: 17,
             },
             {
               selected: false,
               id: "C9_1_6",
-              label: "ஒரு பொது அமைப்பின் வீட்டு ஒதுக்கீடு",
+              label:
+                "\u0b92\u0bb0\u0bc1 \u0baa\u0bca\u0ba4\u0bc1 \u0b85\u0bae\u0bc8\u0baa\u0bcd\u0baa\u0bbf\u0ba9\u0bcd \u0bb5\u0bc0\u0b9f\u0bcd\u0b9f\u0bc1 \u0b92\u0ba4\u0bc1\u0b95\u0bcd\u0b95\u0bc0\u0b9f\u0bc1",
               nextQuestion: 17,
             },
           ],
