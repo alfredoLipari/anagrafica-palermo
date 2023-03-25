@@ -1,4 +1,4 @@
-import React, { createContext, useReducer } from "react";
+import React, {createContext, useReducer} from "react";
 import { ChakraProvider } from "@chakra-ui/react";
 import HomePage from "./components/layouts/homepage";
 import Fonts from "./components/fonts";
@@ -20,8 +20,7 @@ const Website = () => {
 
   const [state, dispatch] = useReducer(reducer, initialState);
 
-  console.log("history", state)
-  console.log("answer", state.answers)
+
 
   return (
     <Context.Provider value={{ state, dispatch }}>

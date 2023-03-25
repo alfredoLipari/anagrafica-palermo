@@ -6,11 +6,8 @@ import {
   calculateComponentTamilTree,
 } from "../../lib/familyComponents";
 
-console.log(choiceTree);
-
 // create reducer
 export function reducer(state, action) {
-  console.log("state: ", state);
   switch (action.type) {
     case "CHANGE_LANGUAGE":
       return {
@@ -31,8 +28,6 @@ export function reducer(state, action) {
       }
 
       // restart the componentFamily
-
-      console.log("previousAnswers", previousAnswers);
 
       return {
         ...state,
@@ -76,7 +71,7 @@ export function reducer(state, action) {
           });
 
           // gestione documentazione
-          if (state.answers.length == 0) {
+          if (state.answers.length === 0) {
             newAnswersSelect = [
               ...state.answers,
               {
@@ -86,8 +81,6 @@ export function reducer(state, action) {
           }
         }
       }
-
-      console.log(documents);
 
       // add the question to the history
       let newHistory = state.questionHistory;
@@ -158,8 +151,6 @@ export function reducer(state, action) {
           answer: answers,
         },
       ];
-
-      console.log("action.answer", action.answer);
 
       // add the question to the history
       let newHistoryForm = state.questionHistory;
@@ -256,8 +247,6 @@ export function reducer(state, action) {
 
       let newHistoryComponentForm = state.questionHistory;
       newHistoryComponentForm.push(parseInt(action.state.nextQuestion));
-
-      console.log("parseInt(action.state.nextQuestion)");
 
       return {
         ...state,
