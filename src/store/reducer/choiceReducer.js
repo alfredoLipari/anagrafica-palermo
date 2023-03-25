@@ -1,11 +1,11 @@
 import choiceTree from "../../lib/choice";
 
-console.log(choiceTree)
+
 
 // create reducer
 export function reducer(state, action) {
 
-  console.log("state: ", state)
+
   switch (action.type) {
     case "CHANGE_LANGUAGE":
       return {
@@ -29,7 +29,6 @@ export function reducer(state, action) {
       // restart the componentFamily
 
 
-      console.log("previousAnswers", previousAnswers)
 
       return {
         ...state,
@@ -72,7 +71,7 @@ export function reducer(state, action) {
           });
 
           // gestione documentazione 
-          if(state.answers.length == 0){
+          if(state.answers.length === 0){
             newAnswersSelect = [
               ...state.answers,
               {
@@ -85,7 +84,6 @@ export function reducer(state, action) {
         }
       }
 
-      console.log(documents);
 
       // add the question to the history
       let newHistory = state.questionHistory
@@ -157,8 +155,6 @@ export function reducer(state, action) {
         },
       ];
 
-      console.log("action.answer",action.answer)
-
 
       // add the question to the history
       let newHistoryForm = state.questionHistory
@@ -201,7 +197,6 @@ export function reducer(state, action) {
       
       for (let i = 2; i <= parseInt(action.answer) + 1; i++) {
 
-        console.log("Iindex: ", i)
         if (page === 3) {
           moduls = 1;
         }
@@ -529,7 +524,6 @@ export function reducer(state, action) {
         moduls++;
         currentIndex += 7;
       }
-      console.log("LOL")
       
       // if the length of the question is less than this number dont add the components question as already are added
       if( choiceTree.language[state.language].questions.length < 35){
@@ -556,7 +550,6 @@ export function reducer(state, action) {
       let newHistoryComponentForm = state.questionHistory
       newHistoryComponentForm.push(parseInt(action.state.nextQuestion))
 
-      console.log("parseInt(action.state.nextQuestion)", )
 
       return {
         ...state,

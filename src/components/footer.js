@@ -1,4 +1,4 @@
-import { Box, Text, Divider, Link, Stack, Flex } from "@chakra-ui/react";
+import { Box, Text, Divider, Link, Flex } from "@chakra-ui/react";
 import { Image } from "@chakra-ui/react";
 import comuneLogo from "./asset/comune.svg";
 import EasyRightsLogo from "./asset/easyright.svg";
@@ -7,7 +7,15 @@ import UELogo from "./asset/UE.svg";
 
 const Footer = () => {
   return (
-    <Box bg="#FEBB2C" w="100%" paddingY="3em" mt="3em">
+    <Box
+        bg="#FEBB2C"
+        w="100%"
+        paddingY="3em"
+        mt="3em"
+        position={{base:"relative", sm: "relative", md: "relative", lg:"fixed"}}
+        left={"0"}
+        bottom={"0"}
+    >
       <Flex
         alignItems={{ base: "flex-start", md: "center" }}
         direction={{ base: "column", md: "row" }}

@@ -6,13 +6,12 @@ import React, {
   useRef,
 } from "react";
 import CustomInput from "./customInput/customInput";
-import { FormControl, Button, Text, Divider, Box } from "@chakra-ui/react";
+import { FormControl, Text, Divider, Box } from "@chakra-ui/react";
 import { Formik, Field, Form } from "formik";
 import { Context } from "../../App";
 import CustomAutosuggest from "./customInput/customAutosuggest";
 import { validateText, validateCountry } from "../../lib/validation";
 import "./customDatePicker.css";
-import CustomButton from "./customInput/customButton";
 import ActionsButton from "../button/ActionsButton";
 
 const CustomForm = ({ stateTemp }) => {
@@ -20,29 +19,6 @@ const CustomForm = ({ stateTemp }) => {
   let country = useRef("");
   const { state, dispatch } = useContext(Context);
 
-  // initial values of the form, without the autosuggest input
-  const [content] = useState(
-    stateTemp.answers
-      .filter(function (question) {
-        return question.autocomplete !== true;
-      })
-      .map((quest) => (questions[quest.id] = ""))
-  );
-
-  const translateButton = () => {
-    switch (state.language) {
-      case "Italian":
-        return "Continua";
-      case "French":
-        return "Continuez";
-      case "Spanish":
-        return "continuar";
-      case "Ukranian":
-        return "Продовжуйте";
-      default:
-        return "Continue";
-    }
-  };
 
   // adding autosuggest logic
   const [answers, setAnswers] = useState({});
@@ -69,15 +45,11 @@ const CustomForm = ({ stateTemp }) => {
           },
         };
       }
-      console.log(country.current, "ok");
     }
   }, [state]);
 
   useEffect(() => {
     renderAutoSuggest();
-    return () => {
-      console.log();
-    };
   }, [renderAutoSuggest]);
 
   const autosuggestHandler = (value, tag) => {
@@ -89,7 +61,6 @@ const CustomForm = ({ stateTemp }) => {
     } else {
       setIsValid(true);
     }
-    console.log(tag, value);
     setAnswers({
       ...answers,
       [tag]: value,
@@ -145,11 +116,11 @@ const CustomForm = ({ stateTemp }) => {
       initialValues={questions}
       validateOnChange={false}
       validateOnBlur={false}
-      onSubmit={(values, actions) => {
+      onSubmit={(values) => {
         submitForm(values);
       }}
     >
-      {(props) => (
+      {() => (
         <Form
           style={{
             display: "flex",
@@ -184,7 +155,7 @@ const CustomForm = ({ stateTemp }) => {
                   validate={validateInput(answ.validate)}
                   key={answ.id}
                 >
-                  {({ field, form }) => (
+                  {({ field }) => (
                     <FormControl>
                       <CustomInput {...field} state={answ} />
                     </FormControl>

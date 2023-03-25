@@ -36,8 +36,6 @@ const DownloadResult = () => {
 
       const resData = await data.data;
 
-      console.log(resData, "body");
-
       if (resData) {
         setResult(resData);
         window.open(
@@ -47,7 +45,7 @@ const DownloadResult = () => {
       }
       setIsLoading(false);
     } catch (e) {
-      console.log(e);
+      return e
     }
   }, [state.answers]);
 

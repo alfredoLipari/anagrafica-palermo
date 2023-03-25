@@ -6,7 +6,7 @@ import CustomCheckbox from "../custom/customInput/customCheckbox";
 import CustomLongForm from "../custom/customLongForm";
 import CustomInputNumber, {howManyPeopleBesideYou} from "../custom/customInput/customInputNumber";
 import CustomForm from "../custom/customForm";
-import {Box, Progress, Slide} from "@chakra-ui/react";
+import {Box, Progress} from "@chakra-ui/react";
 
 const TreeHelper = ({history}) => {
   // import the dispatch object from the entry point
@@ -16,8 +16,7 @@ const TreeHelper = ({history}) => {
 
   // function that dispatch an action to decide the next question
   const changeCurrentQuestion = () => {
-    let currentQuestion = [];
-    console.log("choiceTree.language[state.language]", choiceTree.language[state.language])
+    let currentQuestion;
 
       currentQuestion = choiceTree.language[state.language].questions.find(
         (el) => el.id === state.currentQuestion
@@ -50,13 +49,7 @@ const TreeHelper = ({history}) => {
 
     changeCurrentQuestion();
 
-    return () => {
-
-      console.log("unmounting");
-
-    };
-
-  }, [state]);
+  }, [state, changeCurrentQuestion]);
 
   // it exists three type of input
 

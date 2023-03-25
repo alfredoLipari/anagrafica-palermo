@@ -13,7 +13,7 @@ import Logo from "./asset/logoComuneDiPalermo.svg";
 import { ChevronDownIcon } from "@chakra-ui/icons";
 import { Context } from "../App";
 
-const Navbar = (props) => {
+const Navbar = () => {
   const [language, setLanguage] = useState("English");
   const { dispatch } = useContext(Context);
   const changeLanguage = (item) => {
@@ -23,7 +23,7 @@ const Navbar = (props) => {
     });
     setLanguage(item.target.value);
   };
-  console.log("lan", language);
+
   return (
     <Box as="nav" w="100%">
       <Box

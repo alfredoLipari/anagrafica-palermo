@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import Autosuggest from "react-autosuggest";
 import CountryAndCity from "../../../lib/CountryAndCity.json";
-import { Text, FormHelperText, FormControl, Box } from "@chakra-ui/react";
+import { Text, FormHelperText, FormControl } from "@chakra-ui/react";
 import "./customAutosuggest.css";
 
 const CustomAutosuggest = ({
@@ -13,9 +13,8 @@ const CustomAutosuggest = ({
 }) => {
   // Imagine you have a list of languages that you'd like to autosuggest.
   // Teach Autosuggest how to calculate suggestions for any given input value.
-  console.log(error);
   const getSuggestions = (value) => {
-    let filter = [];
+    let filter;
 
     // logic for the filter
     if (country) {
@@ -38,7 +37,7 @@ const CustomAutosuggest = ({
         );
   };
 
-  function shouldRenderSuggestions(value, reason) {
+  function shouldRenderSuggestions(value) {
     if (country) {
       return value.trim().length > 3;
     } else {

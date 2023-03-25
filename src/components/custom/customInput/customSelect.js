@@ -20,7 +20,6 @@ const CustomSelect = ({ stateQuestion }) => {
       return answ.id === selectAnswer;
     });
 
-    console.log("stateQuestion",answer)
 
     // dispatch the answer action to the choice reducer
     dispatch({

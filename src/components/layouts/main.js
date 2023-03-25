@@ -1,4 +1,4 @@
-import {useContext, useEffect} from "react";
+import {useContext} from "react";
 import { Context } from "../../App";
 import { Box, Flex } from "@chakra-ui/react";
 import { Text } from "@chakra-ui/react";
@@ -99,7 +99,7 @@ const Main = ({ history }) => {
   };
 
   return (
-      <Box bg="white" textAlign="center" minH="85vh">
+      <Box bg="white" textAlign="center" height={""}>
         {!isFormStarted ? (
             <Box marginTop="20">
               <Text fontSize="2xl" fontWeight="extrabold" color="#000">

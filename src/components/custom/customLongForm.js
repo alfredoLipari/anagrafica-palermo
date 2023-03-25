@@ -31,14 +31,6 @@ const CustomLongForm = ({ stateQuestions }) => {
   const [error, setError] = useState(false);
 
   // initial values of the form, without the autosuggest input
-  const [content] = useState(
-    stateQuestions.answers
-      .filter(function (question) {
-        return question.autocomplete !== true;
-      })
-      .map((quest) => (questions[quest.id] = ""))
-  );
-
 
   const autosuggestHandler = (value, tag) => {
     if (!tag) {
@@ -51,7 +43,7 @@ const CustomLongForm = ({ stateQuestions }) => {
 
   // handler when the form is submitted, call the dispatcher
   const submitForm = (values) => {
-    console.log(values);
+
     let newAnswers = {};
 
     const isAutosuggestPresent = stateQuestions.answers.some(
@@ -130,7 +122,7 @@ const CustomLongForm = ({ stateQuestions }) => {
               name={answ.id}
               validate={validateInput(answ.validate)}
             >
-              {({ field, form }) => (
+              {({ field }) => (
                 <CustomInputSelect {...field} state={answ} error={props} />
               )}
             </Field>
@@ -155,7 +147,7 @@ const CustomLongForm = ({ stateQuestions }) => {
               validate={validateInput(answ.validate)}
               key={answ.id}
             >
-              {({ field, form }) => (
+              {({ field }) => (
                 <FormControl>
                   <CustomInput
                     {...field}
@@ -183,20 +175,19 @@ const CustomLongForm = ({ stateQuestions }) => {
     });
 
     // now return every key return a column
-    const result = Object.values(formContainer).map((container, index) => (
+    return  Object.values(formContainer).map((container, index) => (
       <Box key={index} marginY={{ base: "0", md: "5" }} marginX="20">
         {container.map((item) => item)}
       </Box>
     ));
 
-    return result;
   };
 
   return (
     
     <Formik
       initialValues={questions}
-      onSubmit={(values, actions) => {
+      onSubmit={(values) => {
         submitForm(values);
       }}
       validateOnChange={false}

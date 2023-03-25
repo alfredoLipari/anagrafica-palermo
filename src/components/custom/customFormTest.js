@@ -36,8 +36,9 @@ const CustomFormTest = ({ stateTemp }) => {
 
   const [error, setError] = useState(false);
   // adding autosuggest logic
+
   const [answers, setAnswers] = useState({});
-  const [isValid, setIsValid] = useState(false);
+
   const [showError, setShowError] = useState(false);
 
   const renderAutoSuggest = useCallback(() => {
@@ -45,12 +46,12 @@ const CustomFormTest = ({ stateTemp }) => {
     if (state.answers.length > 0) {
       // retrieve the country
       country.current = state.answers.find((answ) =>
-        answ.answer.hasOwnProperty("Indicare lo Stato estero di provenienza")
+          answ.answer.hasOwnProperty("Indicare lo Stato estero di provenienza")
       );
 
       // if the user press "different city" we should render the autosuggest with only italian cities
       const isOnlyItalianCity = state.answers.find((answ) =>
-        answ.answer.hasOwnProperty("C1_1_1")
+          answ.answer.hasOwnProperty("C1_1_1")
       );
 
       if (isOnlyItalianCity) {
@@ -70,24 +71,21 @@ const CustomFormTest = ({ stateTemp }) => {
     }
   }, [state]);
 
-  console.log("mh", country.current);
+
 
   const renderQuestions = useCallback(() => {
     let questions = {};
     stateTemp.answers
-      .filter(function (question) {
-        return question.autocomplete !== true;
-      })
-      .map((quest) => (questions[quest.id] = ""));
+        .filter(function (question) {
+          return question.autocomplete !== true;
+        })
+        .map((quest) => (questions[quest.id] = ""));
     setContent(questions);
   }, [stateTemp.answers]);
 
   useEffect(() => {
     renderQuestions();
     renderAutoSuggest();
-    return () => {
-      console.log("lol");
-    };
   }, [renderAutoSuggest, setContent, renderQuestions]);
 
   const autosuggestHandler = (value, tag) => {
@@ -118,7 +116,7 @@ const CustomFormTest = ({ stateTemp }) => {
     let newValues = values;
 
     const isAutosuggestPresent = state.answers.some(
-      (question) => question.autocomplete === true
+        (question) => question.autocomplete === true
     );
     if (isAutosuggestPresent) {
       // check if answers is not empty
@@ -138,7 +136,7 @@ const CustomFormTest = ({ stateTemp }) => {
       newValues = validateCountry(values, answers);
     } else if (Object.keys(answers).length > 0 && country.current) {
       newValues["Indicare il comune di provenienza"] =
-        answers["Indicare il comune di provenienza"];
+          answers["Indicare il comune di provenienza"];
     }
 
     if (state.id >= 40) {
@@ -167,7 +165,7 @@ const CustomFormTest = ({ stateTemp }) => {
 
   // function to build the ui form
   const renderForm = (props) => {
-    console.log("ok", props);
+
     let i = 0;
     let counter = 0;
 
@@ -178,48 +176,48 @@ const CustomFormTest = ({ stateTemp }) => {
       switch (answ.type) {
         case "select":
           containerColumn.push(
-            <Field
-              key={answ.id}
-              id={answ.id}
-              name={answ.id}
-              validate={validateInput(answ.validate)}
-            >
-              {({ field, form }) => (
-                <CustomInputSelect {...field} state={answ} error={props} />
-              )}
-            </Field>
+              <Field
+                  key={answ.id}
+                  id={answ.id}
+                  name={answ.id}
+                  validate={validateInput(answ.validate)}
+              >
+                {({ field }) => (
+                    <CustomInputSelect {...field} state={answ} error={props} />
+                )}
+              </Field>
           );
           break;
         case "autocomplete":
           containerColumn.push(
-            <Box key={answ.id}>
-              <CustomAutosuggest
-                value={answers}
-                autosuggestHandler={autosuggestHandler}
-                tag={answ}
-                country={country.current}
-                error={showError}
-              />
-            </Box>
+              <Box key={answ.id}>
+                <CustomAutosuggest
+                    value={answers}
+                    autosuggestHandler={autosuggestHandler}
+                    tag={answ}
+                    country={country.current}
+                    error={showError}
+                />
+              </Box>
           );
           break;
         default:
           containerColumn.push(
-            <Field
-              name={answ.id}
-              validate={validateInput(answ.validate)}
-              key={answ.id}
-            >
-              {({ field, form }) => (
-                <FormControl>
-                  <CustomInput
-                    {...field}
-                    state={answ}
-                    error={props.errors[answ.id]}
-                  />
-                </FormControl>
-              )}
-            </Field>
+              <Field
+                  name={answ.id}
+                  validate={validateInput(answ.validate)}
+                  key={answ.id}
+              >
+                {({ field }) => (
+                    <FormControl>
+                      <CustomInput
+                          {...field}
+                          state={answ}
+                          error={props.errors[answ.id]}
+                      />
+                    </FormControl>
+                )}
+              </Field>
           );
       }
       i++;
@@ -234,69 +232,69 @@ const CustomFormTest = ({ stateTemp }) => {
     });
 
     // now return every key return a column
-    const result = Object.values(formContainer).map((container, index) => (
-      <Box key={index} marginX="10" marginY="5">
-        {container.map((item) => item)}
-      </Box>
+    return  Object.values(formContainer).map((container, index) => (
+        <Box key={index} marginX="10" marginY="5">
+          {container.map((item) => item)}
+        </Box>
     ));
 
-    return result;
+
   };
 
   return (
-    <Formik
-      initialValues={content}
-      validateOnChange={false}
-      validateOnBlur={false}
-      onSubmit={(values, actions) => {
-        submitForm(values);
-      }}
-    >
-      {(props) => (
-        <Form
-          style={{
-            display: "flex",
-            alignItems: "center",
-
-            flexDirection: "column",
+      <Formik
+          initialValues={content}
+          validateOnChange={false}
+          validateOnBlur={false}
+          onSubmit={(values) => {
+            submitForm(values);
           }}
-        >
-          <Divider mb="5" />
+      >
+        {(props) => (
+            <Form
+                style={{
+                  display: "flex",
+                  alignItems: "center",
 
-          <Text
-            as="h2"
-            color="#000"
-            fontSize="xl"
-            marginTop="2em"
-            marginBottom="5"
-          >
-            {stateTemp.title}
-          </Text>
+                  flexDirection: "column",
+                }}
+            >
+              <Divider mb="5" />
 
-          <Flex direction={{ base: "column", md: "row" }}>
-            {renderForm(props)}
-          </Flex>
+              <Text
+                  as="h2"
+                  color="#000"
+                  fontSize="xl"
+                  marginTop="2em"
+                  marginBottom="5"
+              >
+                {stateTemp.title}
+              </Text>
 
-          <Button
-            type="submit"
-            color="white"
-            bg="#0073E6"
-            marginTop="5"
-            w="15%"
-            borderRadius="4"
-            paddingY="6"
-            marginBottom={"10"}
-          >
-            {stateTemp.id !== 33 ? "Continue" : "Generate pdf"}
-          </Button>
+              <Flex direction={{ base: "column", md: "row" }}>
+                {renderForm(props)}
+              </Flex>
 
-          <CustomButton handler={() => dispatch({type: "GO BACK"})} state={state}>
-            {translateButtonBack()}
-          </CustomButton>
+              <Button
+                  type="submit"
+                  color="white"
+                  bg="#0073E6"
+                  marginTop="5"
+                  w="15%"
+                  borderRadius="4"
+                  paddingY="6"
+                  marginBottom={"10"}
+              >
+                {stateTemp.id !== 33 ? "Continue" : "Generate pdf"}
+              </Button>
 
-        </Form>
-      )}
-    </Formik>
+              <CustomButton handler={() => dispatch({type: "GO BACK"})} state={state}>
+                {translateButtonBack()}
+              </CustomButton>
+
+            </Form>
+        )}
+      </Formik>
   );
 };
 
