@@ -1,9 +1,13 @@
 import choiceTree from "../../lib/choice";
 import {
   calculateComponentArabTree,
+  calculateComponentBengaliTree,
   calculateComponentEnglishTree,
+  calculateComponentFrenchTree,
   calculateComponentItalianTree,
+  calculateComponentSpanishTree,
   calculateComponentTamilTree,
+  calculateComponentUkrainianTree,
 } from "../../lib/familyComponents";
 
 // create reducer
@@ -187,6 +191,10 @@ export function reducer(state, action) {
       const arabComponentsTree = calculateComponentArabTree(action);
       const tamilComponentsTree = calculateComponentTamilTree(action);
       const italianComponentsTree = calculateComponentItalianTree(action);
+      const bengaliComponentsTree = calculateComponentBengaliTree(action);
+      const frenchComponentsTree = calculateComponentFrenchTree(action);
+      const spanishComponentsTree = calculateComponentSpanishTree(action);
+      const ukranianComponentsTree = calculateComponentUkrainianTree(action);
 
       // if the length of the question is less than this number dont add the components question as already are added
       if (choiceTree.language[state.language].questions.length < 35) {
@@ -194,7 +202,7 @@ export function reducer(state, action) {
           "Italian",
           "French",
           "Spanish",
-          "Повертатися",
+          "Ukranian",
           "Tamil",
           "Arab",
           "Bengali",
@@ -204,6 +212,21 @@ export function reducer(state, action) {
           switch (language) {
             case "English":
               englishComponentsTree.map((component) =>
+                choiceTree.language[language].questions.push(component)
+              );
+              break;
+            case "French":
+              frenchComponentsTree.map((component) =>
+                choiceTree.language[language].questions.push(component)
+              );
+              break;
+            case "Spanish":
+              spanishComponentsTree.map((component) =>
+                choiceTree.language[language].questions.push(component)
+              );
+              break;
+            case "Ukranian":
+              ukranianComponentsTree.map((component) =>
                 choiceTree.language[language].questions.push(component)
               );
               break;
@@ -219,6 +242,11 @@ export function reducer(state, action) {
               break;
             case "Italian":
               italianComponentsTree.map((component) =>
+                choiceTree.language[language].questions.push(component)
+              );
+              break;
+            case "Bengali":
+              bengaliComponentsTree.map((component) =>
                 choiceTree.language[language].questions.push(component)
               );
               break;

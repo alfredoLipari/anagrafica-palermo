@@ -341,6 +341,1043 @@ export const calculateComponentEnglishTree = (action) => {
   return result;
 };
 
+export const calculateComponentFrenchTree = (action) => {
+  const result = [];
+
+  // controller for the checkbox
+  let page = 2;
+  let moduls = 1;
+  let currentIndex = 0;
+
+  for (let i = 2; i <= parseInt(action.answer) + 1; i++) {
+    console.log("Iindex: ", i);
+    if (page === 3) {
+      moduls = 1;
+    }
+
+    result.push({
+      type: "longform",
+      title: "Component N." + (i - 1),
+      id: 39 + i + currentIndex,
+      parentId: 4,
+      nextQuestion: 40 + i + currentIndex,
+      answers: [
+        {
+          id: "Nome_" + i,
+          label: "Nom",
+          type: "text",
+          helperText: "Ex. Moussa",
+          validate: "RequiredField",
+          isRequired: true,
+          // add input validate
+        },
+        {
+          id: "Cognome_" + i,
+          label: "Nom de famille",
+          type: "text",
+          helperText: "Ex. Semprini",
+          validate: "RequiredField",
+          isRequired: true,
+        },
+        {
+          id: "Data di nascita_" + i,
+          label: "Date de naissance",
+          type: "date",
+          helperText: "Date de naissance",
+          validate: "dateValidation",
+          isRequired: true,
+          // add input validate
+        },
+        {
+          id: "Luogo di nascita_" + i,
+          label: "Où êtes-vous né?",
+          type: "text",
+          helperText: "Indiquez votre ville de naissance",
+          validate: "RequiredField",
+          isRequired: true,
+        },
+        {
+          id: "Sesso_" + i,
+          label: "Genre",
+          type: "select",
+          options: ["male", "female"],
+          validate: "RequiredField",
+          isRequired: true,
+          helperText: "sélectionnez votre sexe",
+          // add input validate
+        },
+        {
+          id: "Stato Civile_" + i,
+          label: "ton statut matrimonial?",
+          type: "select",
+          options: ["unmarried", "married", "divorced", "widower"],
+          helperText: "sélectionnez votre statut",
+          validate: "RequiredField",
+        },
+        {
+          id: "Cittadinanza_" + i,
+          label: "Citoyenneté",
+          type: "text",
+          helperText: "Ex. Ghanéen, Français, Russe...",
+          validate: "RequiredField",
+          isRequired: true,
+          // add input validate
+        },
+        {
+          id: "Codice Fiscale_" + i,
+          label: "Code fiscal",
+          type: "text",
+          helperText: "Ex. R5MRI88L73G273E",
+          validate: "RequiredField",
+          isRequired: true,
+          // add input validate
+        },
+        {
+          id: "Rapporto di parentela con il richiedente_".concat("", i - 2),
+          label: "Relation avec le demandeur",
+          type: "select",
+          options: [
+            "mother",
+            "father",
+            "son",
+            "daughter",
+            "brother",
+            "sister",
+            "grandfather",
+            "grandmother",
+            "uncle",
+            "aunt",
+            "cousin",
+          ],
+          helperText: "Ex. épouse, fils",
+          validate: "RequiredField",
+          isRequired: true,
+          // add input validate
+        },
+      ],
+    });
+
+    result.push({
+      type: "checkbox",
+      title: "A-t-il/elle un emploi ?",
+      id: 40 + i + currentIndex,
+      answers: [
+        {
+          id: "yes",
+          nextQuestion: 42 + i + currentIndex,
+        },
+        {
+          id: "no",
+          nextQuestion: 41 + i + currentIndex,
+        },
+      ],
+    });
+
+    result.push({
+      type: "select",
+      title: "Quel est son statut de non-professionnel ?",
+      label: "Sélectionnez son statut",
+      id: 41 + i + currentIndex,
+      answers: [
+        {
+          selected: false,
+          id: "C" + page + "_" + moduls + "_6",
+          label: "Femme au foyer",
+          nextQuestion: 43 + i + currentIndex,
+        },
+        {
+          selected: false,
+          id: "C" + page + "_" + moduls + "_7",
+          label: "Étudiant",
+          nextQuestion: 43 + i + currentIndex,
+        },
+        {
+          selected: false,
+          id: "C" + page + "_" + moduls + "_8",
+          label: "Sans emploi",
+          nextQuestion: 43 + i + currentIndex,
+        },
+        {
+          selected: false,
+          id: "C" + page + "_" + moduls + "_9",
+          label: "À la retraite",
+          nextQuestion: 43 + i + currentIndex,
+        },
+        {
+          selected: false,
+          id: "C" + page + "_" + moduls + "_10",
+          label: "Autre",
+          nextQuestion: 43 + i + currentIndex,
+        },
+      ],
+    });
+
+    result.push({
+      type: "select",
+      title: "Quel est son statut professionnel ?",
+      label: "Sélectionnez son statut",
+      id: 42 + i + currentIndex,
+
+      answers: [
+        {
+          selected: false,
+          id: "C" + page + "_" + moduls + "_4",
+          label: "Ouvrier",
+          nextQuestion: 43 + i + currentIndex,
+        },
+        {
+          selected: false,
+          id: "C" + page + "_" + moduls + "_5",
+          label: "Travailleur familial",
+          nextQuestion: 43 + i + currentIndex,
+        },
+        {
+          selected: false,
+          id: "C" + page + "_" + moduls + "_3",
+          label: "Indépendant / Entrepreneur",
+          nextQuestion: 43 + i + currentIndex,
+        },
+        {
+          selected: false,
+          id: "C" + page + "_" + moduls + "_1",
+          label: "Travailleur indépendant",
+          nextQuestion: 43 + i + currentIndex,
+        },
+        {
+          selected: false,
+          id: "C" + page + "_" + moduls + "_2",
+          label: "Cadre / Employé",
+          nextQuestion: 43 + i + currentIndex,
+        },
+      ],
+
+      parentId: 9,
+    });
+
+    result.push(
+      {
+        type: "checkbox",
+        title: "A-t-il/elle un permis de conduire italien ?",
+        id: 43 + i + currentIndex,
+        answers: [
+          {
+            id: "yes",
+            nextQuestion: 44 + i + currentIndex,
+          },
+          {
+            id: "no",
+            nextQuestion: 45 + i + currentIndex,
+          },
+        ],
+      },
+
+      {
+        type: "longform",
+        title:
+          "Détails du permis de conduire, ces détails ne sont pas obligatoires",
+        id: 44 + i + currentIndex,
+        parentId: 4,
+        nextQuestion: 45 + i + currentIndex,
+        answers: [
+          {
+            id: "Numero",
+            label: "Nombre",
+            type: "text",
+            helperText: "Ex. 91828930",
+            isRequired: false,
+          },
+          {
+            id: "Patente tipo",
+            label: "Type de licence",
+            type: "text",
+            helperText: "Ex. ABC",
+            isRequired: false,
+            // add input validate
+          },
+          {
+            id: "Data di rilascio",
+            label: "Date de sortie",
+            type: "Date",
+            helperText: "Date de sortie",
+            validate: "dateValidation",
+            isRequired: false,
+          },
+          {
+            id: "Organo di rilascio",
+            label: "Organisme émetteur",
+            type: "text",
+            helperText: "Motorisation",
+            // validate: "RequiredField", // change validation
+            isRequired: false,
+          },
+          {
+            id: "Provincia di",
+            label: "Province",
+            type: "text",
+            helperText: "Palerme",
+            isRequired: false,
+            // add input validate
+          },
+        ],
+      }
+    );
+
+    result.push({
+      type: "select",
+      title: "Quel est son niveau scolaire ?",
+      label: "Sélectionnez son diplôme",
+      id: 45 + i + currentIndex,
+
+      answers: [
+        {
+          selected: false,
+          id: "C" + page + "_" + moduls + "_11",
+          label: "École primaire",
+          nextQuestion:
+            i + 1 <= parseInt(action.answer) + 1 ? 47 + i + currentIndex : 19,
+        },
+        {
+          selected: false,
+          id: "C" + page + "_" + moduls + "_12",
+          label: "Certificat d'études secondaires",
+          nextQuestion:
+            i + 1 <= parseInt(action.answer) + 1 ? 47 + i + currentIndex : 19,
+        },
+        {
+          selected: false,
+          id: "C" + page + "_" + moduls + "_13",
+          label: "Diplôme",
+          nextQuestion:
+            i + 1 <= parseInt(action.answer) + 1 ? 47 + i + currentIndex : 19,
+        },
+        {
+          selected: false,
+          id: "C" + page + "_" + moduls + "_14",
+          label: "Célibataire",
+          nextQuestion:
+            i + 1 <= parseInt(action.answer) + 1 ? 47 + i + currentIndex : 19,
+        },
+        {
+          selected: false,
+          id: "C" + page + "_" + moduls + "_15",
+          label: "Master",
+          nextQuestion:
+            i + 1 <= parseInt(action.answer) + 1 ? 47 + i + currentIndex : 19,
+        },
+        {
+          selected: false,
+          id: "C" + page + "_" + moduls + "_16",
+          label: "Doctorat",
+          nextQuestion:
+            i + 1 <= parseInt(action.answer) + 1 ? 47 + i + currentIndex : 19,
+        },
+      ],
+
+      parentId: 9,
+    });
+
+    // controller for the page
+    if (i === 3) {
+      page++;
+    }
+    moduls++;
+    currentIndex += 7;
+  }
+
+  return result;
+};
+
+export const calculateComponentSpanishTree = (action) => {
+  const result = [];
+
+  // controller for the checkbox
+  let page = 2;
+  let moduls = 1;
+  let currentIndex = 0;
+
+  for (let i = 2; i <= parseInt(action.answer) + 1; i++) {
+    console.log("Iindex: ", i);
+    if (page === 3) {
+      moduls = 1;
+    }
+
+    result.push({
+      type: "longform",
+      title: "Component N." + (i - 1),
+      id: 39 + i + currentIndex,
+      parentId: 4,
+      nextQuestion: 40 + i + currentIndex,
+      answers: [
+        {
+          id: "Nome_" + i,
+          label: "Nombre",
+          type: "text",
+          helperText: "Ex. Musa",
+          validate: "RequiredField",
+          isRequired: true,
+          // add input validate
+        },
+        {
+          id: "Cognome_" + i,
+          label: "Apellido",
+          type: "text",
+          helperText: "Ex. Semprini",
+          validate: "RequiredField",
+          isRequired: true,
+        },
+        {
+          id: "Data di nascita_" + i,
+          label: "Fecha de nacimiento",
+          type: "date",
+          helperText: "Fecha de nacimiento",
+          validate: "dateValidation",
+          isRequired: true,
+          // add input validate
+        },
+        {
+          id: "Luogo di nascita_" + i,
+          label: "¿Donde naciste?",
+          type: "text",
+          helperText: "Indica tu ciudad de nacimiento",
+          validate: "RequiredField",
+          isRequired: true,
+        },
+        {
+          id: "Sesso_" + i,
+          label: "Género",
+          type: "select",
+          options: ["male", "female"],
+          validate: "RequiredField",
+          isRequired: true,
+          helperText: "Selecciona tu género",
+          // add input validate
+        },
+        {
+          id: "Stato Civile_" + i,
+          label: "¿tu estado civil?",
+          type: "select",
+          options: ["unmarried", "married", "divorced", "widower"],
+          helperText: "seleccione su estado",
+          validate: "RequiredField",
+        },
+        {
+          id: "Cittadinanza_" + i,
+          label: "Ciudadanía",
+          type: "text",
+          helperText: "Ex. ghanesa, francesa, rusa...",
+          validate: "RequiredField",
+          isRequired: true,
+          // add input validate
+        },
+        {
+          id: "Codice Fiscale_" + i,
+          label: "Código fiscal",
+          type: "text",
+          helperText: "Ex. R5MRI88L73G273E",
+          validate: "RequiredField",
+          isRequired: true,
+          // add input validate
+        },
+        {
+          id: "Rapporto di parentela con il richiedente_".concat("", i - 2),
+          label: "Relación con el solicitante",
+          type: "select",
+          options: [
+            "mother",
+            "father",
+            "son",
+            "daughter",
+            "brother",
+            "sister",
+            "grandfather",
+            "grandmother",
+            "uncle",
+            "aunt",
+            "cousin",
+          ],
+          helperText: "Ex. esposa, hijo",
+          validate: "RequiredField",
+          isRequired: true,
+          // add input validate
+        },
+      ],
+    });
+
+    result.push({
+      type: "checkbox",
+      title: "¿Tiene trabajo?",
+      id: 40 + i + currentIndex,
+      answers: [
+        {
+          id: "yes",
+          nextQuestion: 42 + i + currentIndex,
+        },
+        {
+          id: "no",
+          nextQuestion: 41 + i + currentIndex,
+        },
+      ],
+    });
+
+    result.push({
+      type: "select",
+      title: "¿Cuál es su estatus de no profesional?",
+      label: "Seleccione su estado",
+      id: 41 + i + currentIndex,
+      answers: [
+        {
+          selected: false,
+          id: "C" + page + "_" + moduls + "_6",
+          label: "Ama de casa",
+          nextQuestion: 43 + i + currentIndex,
+        },
+        {
+          selected: false,
+          id: "C" + page + "_" + moduls + "_7",
+          label: "Alumno",
+          nextQuestion: 43 + i + currentIndex,
+        },
+        {
+          selected: false,
+          id: "C" + page + "_" + moduls + "_8",
+          label: "Desempleados",
+          nextQuestion: 43 + i + currentIndex,
+        },
+        {
+          selected: false,
+          id: "C" + page + "_" + moduls + "_9",
+          label: "Jubilado",
+          nextQuestion: 43 + i + currentIndex,
+        },
+        {
+          selected: false,
+          id: "C" + page + "_" + moduls + "_10",
+          label: "Otro",
+          nextQuestion: 43 + i + currentIndex,
+        },
+      ],
+    });
+
+    result.push({
+      type: "select",
+      title: "¿Cuál es su estatus profesional?",
+      label: "Seleccione su estado",
+      id: 42 + i + currentIndex,
+
+      answers: [
+        {
+          selected: false,
+          id: "C" + page + "_" + moduls + "_4",
+          label: "Obrero",
+          nextQuestion: 43 + i + currentIndex,
+        },
+        {
+          selected: false,
+          id: "C" + page + "_" + moduls + "_5",
+          label: "trabajador familiar",
+          nextQuestion: 43 + i + currentIndex,
+        },
+        {
+          selected: false,
+          id: "C" + page + "_" + moduls + "_3",
+          label: "Freelance / Emprendedor",
+          nextQuestion: 43 + i + currentIndex,
+        },
+        {
+          selected: false,
+          id: "C" + page + "_" + moduls + "_1",
+          label: "Trabajadores por cuenta propia",
+          nextQuestion: 43 + i + currentIndex,
+        },
+        {
+          selected: false,
+          id: "C" + page + "_" + moduls + "_2",
+          label: "Ejecutivo / Empleado",
+          nextQuestion: 43 + i + currentIndex,
+        },
+      ],
+
+      parentId: 9,
+    });
+
+    result.push(
+      {
+        type: "checkbox",
+        title: "¿Tiene él/ella un permiso de conducir italiano?",
+        id: 43 + i + currentIndex,
+        answers: [
+          {
+            id: "yes",
+            nextQuestion: 44 + i + currentIndex,
+          },
+          {
+            id: "no",
+            nextQuestion: 45 + i + currentIndex,
+          },
+        ],
+      },
+
+      {
+        type: "longform",
+        title:
+          "Detalles del permiso de conducir, estos detalles no son obligatorios",
+        id: 44 + i + currentIndex,
+        parentId: 4,
+        nextQuestion: 45 + i + currentIndex,
+        answers: [
+          {
+            id: "Numero",
+            label: "Número",
+            type: "text",
+            helperText: "Ex. 91828930",
+            isRequired: false,
+          },
+          {
+            id: "Patente tipo",
+            label: "Tipo de licencia",
+            type: "text",
+            helperText: "Ex. A B C",
+            isRequired: false,
+            // add input validate
+          },
+          {
+            id: "Data di rilascio",
+            label: "Fecha de lanzamiento",
+            type: "Date",
+            helperText: "Fecha de lanzamiento",
+            validate: "dateValidation",
+            isRequired: false,
+          },
+          {
+            id: "Organo di rilascio",
+            label: "Organismo emisor",
+            type: "text",
+            helperText: "Motorizzazione",
+            // validate: "RequiredField", // change validation
+            isRequired: false,
+          },
+          {
+            id: "Provincia di",
+            label: "Provincia",
+            type: "text",
+            helperText: "palermo",
+            isRequired: false,
+            // add input validate
+          },
+        ],
+      }
+    );
+
+    result.push({
+      type: "select",
+      title: "¿Cuál es su nivel educativo?",
+      label: "Seleccione su Grado",
+      id: 45 + i + currentIndex,
+
+      answers: [
+        {
+          selected: false,
+          id: "C" + page + "_" + moduls + "_11",
+          label: "Escuela primaria",
+          nextQuestion:
+            i + 1 <= parseInt(action.answer) + 1 ? 47 + i + currentIndex : 19,
+        },
+        {
+          selected: false,
+          id: "C" + page + "_" + moduls + "_12",
+          label: "Certificado de educación secundaria",
+          nextQuestion:
+            i + 1 <= parseInt(action.answer) + 1 ? 47 + i + currentIndex : 19,
+        },
+        {
+          selected: false,
+          id: "C" + page + "_" + moduls + "_13",
+          label: "Diploma",
+          nextQuestion:
+            i + 1 <= parseInt(action.answer) + 1 ? 47 + i + currentIndex : 19,
+        },
+        {
+          selected: false,
+          id: "C" + page + "_" + moduls + "_14",
+          label: "Bachiller",
+          nextQuestion:
+            i + 1 <= parseInt(action.answer) + 1 ? 47 + i + currentIndex : 19,
+        },
+        {
+          selected: false,
+          id: "C" + page + "_" + moduls + "_15",
+          label: "Maestría",
+          nextQuestion:
+            i + 1 <= parseInt(action.answer) + 1 ? 47 + i + currentIndex : 19,
+        },
+        {
+          selected: false,
+          id: "C" + page + "_" + moduls + "_16",
+          label: "Doctor",
+          nextQuestion:
+            i + 1 <= parseInt(action.answer) + 1 ? 47 + i + currentIndex : 19,
+        },
+      ],
+
+      parentId: 9,
+    });
+
+    // controller for the page
+    if (i === 3) {
+      page++;
+    }
+    moduls++;
+    currentIndex += 7;
+  }
+
+  return result;
+};
+
+export const calculateComponentBengaliTree = (action) => {
+  const result = [];
+
+  // controller for the checkbox
+  let page = 2;
+  let moduls = 1;
+  let currentIndex = 0;
+
+  for (let i = 2; i <= parseInt(action.answer) + 1; i++) {
+    console.log("Iindex: ", i);
+    if (page === 3) {
+      moduls = 1;
+    }
+
+    result.push({
+      type: "longform",
+      title: "উপাদান সংখ্যা: " + (i - 1),
+      id: 39 + i + currentIndex,
+      parentId: 4,
+      nextQuestion: 40 + i + currentIndex,
+      answers: [
+        {
+          id: "Nome_" + i,
+          label: "নাম",
+          type: "text",
+          helperText: "যেমন মুসা",
+          validate: "RequiredField",
+          isRequired: true,
+          // add input validate
+        },
+        {
+          id: "Cognome_" + i,
+          label: "পদবি",
+          type: "text",
+          helperText: "যেমন সেমপ্রিনি",
+          validate: "RequiredField",
+          isRequired: true,
+        },
+        {
+          id: "Data di nascita_" + i,
+          label: "জন্ম তারিখ",
+          type: "date",
+          helperText: "জন্ম তারিখ",
+          validate: "dateValidation",
+          isRequired: true,
+          // add input validate
+        },
+        {
+          id: "Luogo di nascita_" + i,
+          label: "আপনি কোথায় জন্মগ্রহণ করেন?",
+          type: "text",
+          helperText: "আপনার জন্মের শহর নির্দেশ করুন",
+          validate: "RequiredField",
+          isRequired: true,
+        },
+        {
+          id: "Sesso_" + i,
+          label: "লিঙ্গ",
+          type: "select",
+          options: ["male", "female"],
+          validate: "RequiredField",
+          isRequired: true,
+          helperText: "আপনার লিঙ্গ নির্বাচন",
+          // add input validate
+        },
+        {
+          id: "Stato Civile_" + i,
+          label: "আপনার বৈবাহিক অবস্থা?",
+          type: "select",
+          options: ["unmarried", "married", "divorced", "widower"],
+          helperText: "আপনার স্থিতি নির্বাচন করুন",
+          validate: "RequiredField",
+        },
+        {
+          id: "Cittadinanza_" + i,
+          label: "নাগরিকত্ব",
+          type: "text",
+          helperText: "যেমন ঘানিয়ান, ফ্রাঙ্কাইজ, রাশিয়ান...",
+          validate: "RequiredField",
+          isRequired: true,
+          // add input validate
+        },
+        {
+          id: "Codice Fiscale_" + i,
+          label: "কোডিস ফিসকেল",
+          type: "text",
+          helperText: "যেমন R5MRI88L73G273E",
+          validate: "RequiredField",
+          isRequired: true,
+          // add input validate
+        },
+        {
+          id: "Rapporto di parentela con il richiedente_".concat("", i - 2),
+          label: "আবেদনকারীর সাথে সম্পর্ক",
+          type: "select",
+          options: [
+            "mother",
+            "father",
+            "son",
+            "daughter",
+            "brother",
+            "sister",
+            "grandfather",
+            "grandmother",
+            "uncle",
+            "aunt",
+            "cousin",
+          ],
+          helperText: "যেমন স্ত্রী, পুত্র",
+          validate: "RequiredField",
+          isRequired: true,
+          // add input validate
+        },
+      ],
+    });
+
+    result.push({
+      type: "checkbox",
+      title: "তার/তার কি চাকরি আছে?",
+      id: 40 + i + currentIndex,
+      answers: [
+        {
+          id: "yes",
+          nextQuestion: 42 + i + currentIndex,
+        },
+        {
+          id: "no",
+          nextQuestion: 41 + i + currentIndex,
+        },
+      ],
+    });
+
+    result.push({
+      type: "select",
+      title: "তার/তার অ-পেশাদার অবস্থা কি?",
+      label: "তাকে/তার স্থিতি নির্বাচন করুন",
+      id: 41 + i + currentIndex,
+      answers: [
+        {
+          selected: false,
+          id: "C" + page + "_" + moduls + "_6",
+          label: "গৃহিণী",
+          nextQuestion: 43 + i + currentIndex,
+        },
+        {
+          selected: false,
+          id: "C" + page + "_" + moduls + "_7",
+          label: "ছাত্র",
+          nextQuestion: 43 + i + currentIndex,
+        },
+        {
+          selected: false,
+          id: "C" + page + "_" + moduls + "_8",
+          label: "বেকার",
+          nextQuestion: 43 + i + currentIndex,
+        },
+        {
+          selected: false,
+          id: "C" + page + "_" + moduls + "_9",
+          label: "অবসরপ্রাপ্ত",
+          nextQuestion: 43 + i + currentIndex,
+        },
+        {
+          selected: false,
+          id: "C" + page + "_" + moduls + "_10",
+          label: "অন্যান্য",
+          nextQuestion: 43 + i + currentIndex,
+        },
+      ],
+    });
+
+    result.push({
+      type: "select",
+      title: "তার পেশাগত অবস্থা কি?",
+      label: "তাকে/তার স্থিতি নির্বাচন করুন",
+      id: 42 + i + currentIndex,
+
+      answers: [
+        {
+          selected: false,
+          id: "C" + page + "_" + moduls + "_4",
+          label: "কর্মী",
+          nextQuestion: 43 + i + currentIndex,
+        },
+        {
+          selected: false,
+          id: "C" + page + "_" + moduls + "_5",
+          label: "পারিবারিক কর্মী",
+          nextQuestion: 43 + i + currentIndex,
+        },
+        {
+          selected: false,
+          id: "C" + page + "_" + moduls + "_3",
+          label: "ফ্রিল্যান্স / উদ্যোক্তা",
+          nextQuestion: 43 + i + currentIndex,
+        },
+        {
+          selected: false,
+          id: "C" + page + "_" + moduls + "_1",
+          label: "স্বনির্ভর",
+          nextQuestion: 43 + i + currentIndex,
+        },
+        {
+          selected: false,
+          id: "C" + page + "_" + moduls + "_2",
+          label: "নির্বাহী / কর্মচারী",
+          nextQuestion: 43 + i + currentIndex,
+        },
+      ],
+
+      parentId: 9,
+    });
+
+    result.push(
+      {
+        type: "checkbox",
+        title: "তার/তার কি ইতালীয় ড্রাইভিং লাইসেন্স আছে?",
+        id: 43 + i + currentIndex,
+        answers: [
+          {
+            id: "yes",
+            nextQuestion: 44 + i + currentIndex,
+          },
+          {
+            id: "no",
+            nextQuestion: 45 + i + currentIndex,
+          },
+        ],
+      },
+
+      {
+        type: "longform",
+        title: "ড্রাইভিং লাইসেন্সের বিবরণ, এই বিবরণ বাধ্যতামূলক নয়",
+        id: 44 + i + currentIndex,
+        parentId: 4,
+        nextQuestion: 45 + i + currentIndex,
+        answers: [
+          {
+            id: "Numero",
+            label: "সংখ্যা",
+            type: "text",
+            helperText: "যেমন 91828930",
+            isRequired: false,
+          },
+          {
+            id: "Patente tipo",
+            label: "লাইসেন্সের ধরন",
+            type: "text",
+            helperText: "যেমন A, B, C",
+            isRequired: false,
+            // add input validate
+          },
+          {
+            id: "Data di rilascio",
+            label: "মুক্তির তারিখ",
+            type: "Date",
+            helperText: "মুক্তির তারিখ",
+            validate: "dateValidation",
+            isRequired: false,
+          },
+          {
+            id: "Organo di rilascio",
+            label: "শরীর দেখানো",
+            type: "text",
+            helperText: "মোটরাইজেশন",
+            // validate: "RequiredField", // change validation
+            isRequired: false,
+          },
+          {
+            id: "Provincia di",
+            label: "প্রদেশ",
+            type: "text",
+            helperText: "পালেরমো",
+            isRequired: false,
+            // add input validate
+          },
+        ],
+      }
+    );
+
+    result.push({
+      type: "select",
+      title: "তার/তার শিক্ষার স্তর কি?",
+      label: "তাকে/তার ডিগ্রী নির্বাচন করুন",
+      id: 45 + i + currentIndex,
+
+      answers: [
+        {
+          selected: false,
+          id: "C" + page + "_" + moduls + "_11",
+          label: "প্রাথমিক বিদ্যালয়",
+          nextQuestion:
+            i + 1 <= parseInt(action.answer) + 1 ? 47 + i + currentIndex : 19,
+        },
+        {
+          selected: false,
+          id: "C" + page + "_" + moduls + "_12",
+          label: "মাধ্যমিক স্কুল সার্টিফিকেট",
+          nextQuestion:
+            i + 1 <= parseInt(action.answer) + 1 ? 47 + i + currentIndex : 19,
+        },
+        {
+          selected: false,
+          id: "C" + page + "_" + moduls + "_13",
+          label: "ডিপ্লোমা",
+          nextQuestion:
+            i + 1 <= parseInt(action.answer) + 1 ? 47 + i + currentIndex : 19,
+        },
+        {
+          selected: false,
+          id: "C" + page + "_" + moduls + "_14",
+          label: "ব্যাচেলর",
+          nextQuestion:
+            i + 1 <= parseInt(action.answer) + 1 ? 47 + i + currentIndex : 19,
+        },
+        {
+          selected: false,
+          id: "C" + page + "_" + moduls + "_15",
+          label: "স্নাতকোত্তর",
+          nextQuestion:
+            i + 1 <= parseInt(action.answer) + 1 ? 47 + i + currentIndex : 19,
+        },
+        {
+          selected: false,
+          id: "C" + page + "_" + moduls + "_16",
+          label: "পিএইচডি",
+          nextQuestion:
+            i + 1 <= parseInt(action.answer) + 1 ? 47 + i + currentIndex : 19,
+        },
+      ],
+
+      parentId: 9,
+    });
+
+    // controller for the page
+    if (i === 3) {
+      page++;
+    }
+    moduls++;
+    currentIndex += 7;
+  }
+
+  return result;
+};
+
 export const calculateComponentArabTree = (action) => {
   const result = [];
 
@@ -665,6 +1702,351 @@ export const calculateComponentArabTree = (action) => {
           selected: false,
           id: "C" + page + "_" + moduls + "_16",
           label: "دكتوراه",
+          nextQuestion:
+            i + 1 <= parseInt(action.answer) + 1 ? 47 + i + currentIndex : 19,
+        },
+      ],
+
+      parentId: 9,
+    });
+
+    // controller for the page
+    if (i === 3) {
+      page++;
+    }
+    moduls++;
+    currentIndex += 7;
+  }
+
+  return result;
+};
+
+export const calculateComponentUkrainianTree = (action) => {
+  const result = [];
+
+  // controller for the checkbox
+  let page = 2;
+  let moduls = 1;
+  let currentIndex = 0;
+
+  for (let i = 2; i <= parseInt(action.answer) + 1; i++) {
+    console.log("Iindex: ", i);
+    if (page === 3) {
+      moduls = 1;
+    }
+
+    result.push({
+      type: "longform",
+      title: "Component N." + (i - 1),
+      id: 39 + i + currentIndex,
+      parentId: 4,
+      nextQuestion: 40 + i + currentIndex,
+      answers: [
+        {
+          id: "Nome_" + i,
+          label: "Ім'я",
+          type: "text",
+          helperText: "Пр. Муса",
+          validate: "RequiredField",
+          isRequired: true,
+          // add input validate
+        },
+        {
+          id: "Cognome_" + i,
+          label: "Прізвище",
+          type: "text",
+          helperText: "Пр. Семпріні",
+          validate: "RequiredField",
+          isRequired: true,
+        },
+        {
+          id: "Data di nascita_" + i,
+          label: "Дата народження",
+          type: "date",
+          helperText: "Дата народження",
+          validate: "dateValidation",
+          isRequired: true,
+          // add input validate
+        },
+        {
+          id: "Luogo di nascita_" + i,
+          label: "Де ви народились?",
+          type: "text",
+          helperText: "Вкажіть своє місто народження",
+          validate: "RequiredField",
+          isRequired: true,
+        },
+        {
+          id: "Sesso_" + i,
+          label: "Стать",
+          type: "select",
+          options: ["male", "female"],
+          validate: "RequiredField",
+          isRequired: true,
+          helperText: "виберіть свою стать",
+          // add input validate
+        },
+        {
+          id: "Stato Civile_" + i,
+          label: "твій сімейний стан?",
+          type: "select",
+          options: ["unmarried", "married", "divorced", "widower"],
+          helperText: "виберіть свій статус",
+          validate: "RequiredField",
+        },
+        {
+          id: "Cittadinanza_" + i,
+          label: "Громадянство",
+          type: "text",
+          helperText: "Пр. Ганська, французька, російська...",
+          validate: "RequiredField",
+          isRequired: true,
+          // add input validate
+        },
+        {
+          id: "Codice Fiscale_" + i,
+          label: "Фіскальний кодекс",
+          type: "text",
+          helperText: "Пр. R5MRI88L73G273E",
+          validate: "RequiredField",
+          isRequired: true,
+          // add input validate
+        },
+        {
+          id: "Rapporto di parentela con il richiedente_".concat("", i - 2),
+          label: "Відношення до заявника",
+          type: "select",
+          options: [
+            "mother",
+            "father",
+            "son",
+            "daughter",
+            "brother",
+            "sister",
+            "grandfather",
+            "grandmother",
+            "uncle",
+            "aunt",
+            "cousin",
+          ],
+          helperText: "Пр. Дружина, Син",
+          validate: "RequiredField",
+          isRequired: true,
+          // add input validate
+        },
+      ],
+    });
+
+    result.push({
+      type: "checkbox",
+      title: "Чи є у неї/він робота?",
+      id: 40 + i + currentIndex,
+      answers: [
+        {
+          id: "yes",
+          nextQuestion: 42 + i + currentIndex,
+        },
+        {
+          id: "no",
+          nextQuestion: 41 + i + currentIndex,
+        },
+      ],
+    });
+
+    result.push({
+      type: "select",
+      title: "Який її/його непрофесійний статус?",
+      label: "Виберіть її/його статус",
+      id: 41 + i + currentIndex,
+      answers: [
+        {
+          selected: false,
+          id: "C" + page + "_" + moduls + "_6",
+          label: "Домогосподарка",
+          nextQuestion: 43 + i + currentIndex,
+        },
+        {
+          selected: false,
+          id: "C" + page + "_" + moduls + "_7",
+          label: "студент",
+          nextQuestion: 43 + i + currentIndex,
+        },
+        {
+          selected: false,
+          id: "C" + page + "_" + moduls + "_8",
+          label: "Безробітний",
+          nextQuestion: 43 + i + currentIndex,
+        },
+        {
+          selected: false,
+          id: "C" + page + "_" + moduls + "_9",
+          label: "На пенсії",
+          nextQuestion: 43 + i + currentIndex,
+        },
+        {
+          selected: false,
+          id: "C" + page + "_" + moduls + "_10",
+          label: "Інший",
+          nextQuestion: 43 + i + currentIndex,
+        },
+      ],
+    });
+
+    result.push({
+      type: "select",
+      title: "Який його/її професійний статус?",
+      label: "Виберіть її/його статус",
+      id: 42 + i + currentIndex,
+
+      answers: [
+        {
+          selected: false,
+          id: "C" + page + "_" + moduls + "_4",
+          label: "робітник",
+          nextQuestion: 43 + i + currentIndex,
+        },
+        {
+          selected: false,
+          id: "C" + page + "_" + moduls + "_5",
+          label: "Сімейний працівник",
+          nextQuestion: 43 + i + currentIndex,
+        },
+        {
+          selected: false,
+          id: "C" + page + "_" + moduls + "_3",
+          label: "Фрілансер / Підприємець",
+          nextQuestion: 43 + i + currentIndex,
+        },
+        {
+          selected: false,
+          id: "C" + page + "_" + moduls + "_1",
+          label: "Самозайнятий",
+          nextQuestion: 43 + i + currentIndex,
+        },
+        {
+          selected: false,
+          id: "C" + page + "_" + moduls + "_2",
+          label: "Керівник / Співробітник",
+          nextQuestion: 43 + i + currentIndex,
+        },
+      ],
+
+      parentId: 9,
+    });
+
+    result.push(
+      {
+        type: "checkbox",
+        title: "Чи має вона/він італійське водійське посвідчення?",
+        id: 43 + i + currentIndex,
+        answers: [
+          {
+            id: "yes",
+            nextQuestion: 44 + i + currentIndex,
+          },
+          {
+            id: "no",
+            nextQuestion: 45 + i + currentIndex,
+          },
+        ],
+      },
+
+      {
+        type: "longform",
+        title: "Відомості про водійські права, ці дані не є обов’язковими",
+        id: 44 + i + currentIndex,
+        parentId: 4,
+        nextQuestion: 45 + i + currentIndex,
+        answers: [
+          {
+            id: "Numero",
+            label: "Номер",
+            type: "text",
+            helperText: "Пр. 91828930",
+            isRequired: false,
+          },
+          {
+            id: "Patente tipo",
+            label: "Тип ліцензії",
+            type: "text",
+            helperText: "Пр. A,B,C",
+            isRequired: false,
+            // add input validate
+          },
+          {
+            id: "Data di rilascio",
+            label: "Дата випуску",
+            type: "Date",
+            helperText: "Дата випуску",
+            validate: "dateValidation",
+            isRequired: false,
+          },
+          {
+            id: "Organo di rilascio",
+            label: "Орган видачі",
+            type: "text",
+            helperText: "Motorizzazione",
+            // validate: "RequiredField", // change validation
+            isRequired: false,
+          },
+          {
+            id: "Provincia di",
+            label: "Провінція",
+            type: "text",
+            helperText: "Палермо",
+            isRequired: false,
+            // add input validate
+          },
+        ],
+      }
+    );
+
+    result.push({
+      type: "select",
+      title: "Який її/його освітній рівень?",
+      label: "Виберіть її/його ступінь",
+      id: 45 + i + currentIndex,
+
+      answers: [
+        {
+          selected: false,
+          id: "C" + page + "_" + moduls + "_11",
+          label: "Початкова школа",
+          nextQuestion:
+            i + 1 <= parseInt(action.answer) + 1 ? 47 + i + currentIndex : 19,
+        },
+        {
+          selected: false,
+          id: "C" + page + "_" + moduls + "_12",
+          label: "Атестат про середню освіту",
+          nextQuestion:
+            i + 1 <= parseInt(action.answer) + 1 ? 47 + i + currentIndex : 19,
+        },
+        {
+          selected: false,
+          id: "C" + page + "_" + moduls + "_13",
+          label: "Диплом",
+          nextQuestion:
+            i + 1 <= parseInt(action.answer) + 1 ? 47 + i + currentIndex : 19,
+        },
+        {
+          selected: false,
+          id: "C" + page + "_" + moduls + "_14",
+          label: "Бакалавр",
+          nextQuestion:
+            i + 1 <= parseInt(action.answer) + 1 ? 47 + i + currentIndex : 19,
+        },
+        {
+          selected: false,
+          id: "C" + page + "_" + moduls + "_15",
+          label: "Магістерський степінь",
+          nextQuestion:
+            i + 1 <= parseInt(action.answer) + 1 ? 47 + i + currentIndex : 19,
+        },
+        {
+          selected: false,
+          id: "C" + page + "_" + moduls + "_16",
+          label: "кандидат наук",
           nextQuestion:
             i + 1 <= parseInt(action.answer) + 1 ? 47 + i + currentIndex : 19,
         },

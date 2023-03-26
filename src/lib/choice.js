@@ -40,7 +40,7 @@ export const choiceTree = {
             {
               id: "I am a non-EU citizen",
               label: "I'm a non-EU Citizen",
-              nextQuestion: 18,
+              nextQuestion: 1,
               documentazione: [],
             },
             {
@@ -1239,7 +1239,7 @@ export const choiceTree = {
             {
               id: "f.i",
               label:
-                  "Ind\u00e9pendant financi\u00e8rement (pas de travailleur)",
+                "Ind\u00e9pendant financi\u00e8rement (pas de travailleur)",
               nextQuestion: 4,
               documentazione: [
                 "copie d'une pièce d'identité valide.*",
@@ -1714,7 +1714,7 @@ export const choiceTree = {
         {
           type: "checkbox",
           title:
-              "Quelqu'un r\u00e9side-t-il d\u00e9j\u00e0 dans la propri\u00e9t\u00e9 ?",
+            "Quelqu'un r\u00e9side-t-il d\u00e9j\u00e0 dans la propri\u00e9t\u00e9 ?",
           id: 19,
           answers: [
             {
@@ -1771,7 +1771,7 @@ export const choiceTree = {
               label: "Pr\u00e9cisez le lien de parent\u00e9",
               type: "text",
               helperText:
-                  "S'il existe un lien de parent\u00e9, laissez ce champ vide.",
+                "S'il existe un lien de parent\u00e9, laissez ce champ vide.",
               isRequired: false,
               validate: "RequiredField",
               options: [
@@ -1787,7 +1787,7 @@ export const choiceTree = {
                 "oncle",
                 "tante",
                 "cousin",
-              ]
+              ],
             },
           ],
         },
@@ -2777,7 +2777,7 @@ export const choiceTree = {
               label: "Specificare il rapporto di parentela",
               type: "text",
               helperText:
-                  "Se c'\u00e8 qualche rapporto di parentela lasciare questo campo vuoto",
+                "Se c'\u00e8 qualche rapporto di parentela lasciare questo campo vuoto",
               isRequired: false,
               validate: "RequiredField",
               options: [
@@ -2793,7 +2793,7 @@ export const choiceTree = {
                 "zio",
                 "zia",
                 "cugino",
-              ]
+              ],
             },
           ],
         },
@@ -3777,10 +3777,10 @@ export const choiceTree = {
               label: "Especifique la relaci\u00f3n familiar",
               type: "text",
               helperText:
-                  "Si hay alguna relaci\u00f3n familiar, deje este campo vac\u00edo",
+                "Si hay alguna relaci\u00f3n familiar, deje este campo vac\u00edo",
               isRequired: false,
               validate: "RequiredField",
-              options:[
+              options: [
                 "ninguno",
                 "madre",
                 "padre",
@@ -3793,7 +3793,7 @@ export const choiceTree = {
                 "tío",
                 "tía",
                 "primo",
-              ]
+              ],
             },
           ],
         },
@@ -4137,23 +4137,23 @@ export const choiceTree = {
         {
           type: "select",
           title:
-              "\u042f\u043a\u0435 \u0443 \u0432\u0430\u0441 \u0433\u0440\u043e\u043c\u0430\u0434\u044f\u043d\u0441\u0442\u0432\u043e?",
+            "\u042f\u043a\u0435 \u0443 \u0432\u0430\u0441 \u0433\u0440\u043e\u043c\u0430\u0434\u044f\u043d\u0441\u0442\u0432\u043e?",
           label:
-              "\u0412\u0438\u0431\u0435\u0440\u0456\u0442\u044c \u0441\u0432\u043e\u0454 \u0433\u0440\u043e\u043c\u0430\u0434\u044f\u043d\u0441\u0442\u0432\u043e",
+            "\u0412\u0438\u0431\u0435\u0440\u0456\u0442\u044c \u0441\u0432\u043e\u0454 \u0433\u0440\u043e\u043c\u0430\u0434\u044f\u043d\u0441\u0442\u0432\u043e",
           id: 1,
           controller: true,
           answers: [
             {
               id: "I am a non-EU citizen",
               label:
-                  "\u042f \u043d\u0435 \u0433\u0440\u043e\u043c\u0430\u0434\u044f\u043d\u0438\u043d \u0404\u0421",
+                "\u042f \u043d\u0435 \u0433\u0440\u043e\u043c\u0430\u0434\u044f\u043d\u0438\u043d \u0404\u0421",
               nextQuestion: 2,
               documentazione: [],
             },
             {
               id: "I'm an Italian Citizen",
               label:
-                  "\u042f \u0433\u0440\u043e\u043c\u0430\u0434\u044f\u043d\u0438\u043d \u0406\u0442\u0430\u043b\u0456\u0457",
+                "\u042f \u0433\u0440\u043e\u043c\u0430\u0434\u044f\u043d\u0438\u043d \u0406\u0442\u0430\u043b\u0456\u0457",
               nextQuestion: 4,
               documentazione: [
                 "документ, що посвідчує особу заявника та осіб, які змінюють місце проживання разом із заявником",
@@ -4163,7 +4163,7 @@ export const choiceTree = {
             {
               id: "I am a EU citizen",
               label:
-                  "\u042f \u0433\u0440\u043e\u043c\u0430\u0434\u044f\u043d\u0438\u043d \u0404\u0421",
+                "\u042f \u0433\u0440\u043e\u043c\u0430\u0434\u044f\u043d\u0438\u043d \u0404\u0421",
               nextQuestion: 3,
               documentazione: [],
             },
@@ -4172,16 +4172,16 @@ export const choiceTree = {
         {
           type: "select",
           title:
-              "\u042f\u043a\u0438\u0439 \u0442\u0432\u0456\u0439 \u0441\u0442\u0430\u0442\u0443\u0441?",
+            "\u042f\u043a\u0438\u0439 \u0442\u0432\u0456\u0439 \u0441\u0442\u0430\u0442\u0443\u0441?",
           label:
-              "\u0412\u0438\u0431\u0435\u0440\u0456\u0442\u044c \u0441\u0432\u0456\u0439 \u0441\u0442\u0430\u0442\u0443\u0441",
+            "\u0412\u0438\u0431\u0435\u0440\u0456\u0442\u044c \u0441\u0432\u0456\u0439 \u0441\u0442\u0430\u0442\u0443\u0441",
           id: 2,
           controller: true,
           answers: [
             {
               id: "EU Citizen Relative",
               label:
-                  "\u0420\u043e\u0434\u0438\u0447 \u0433\u0440\u043e\u043c\u0430\u0434\u044f\u043d\u0438\u043d\u0430 \u0404\u0421",
+                "\u0420\u043e\u0434\u0438\u0447 \u0433\u0440\u043e\u043c\u0430\u0434\u044f\u043d\u0438\u043d\u0430 \u0404\u0421",
               nextQuestion: 4,
               documentazione: [
                 "копія вашого паспорта.*",
@@ -4192,7 +4192,7 @@ export const choiceTree = {
             {
               id: "I have the Residence permit",
               label:
-                  "\u042f \u043c\u0430\u044e \u0434\u043e\u0437\u0432\u0456\u043b \u043d\u0430 \u043f\u0440\u043e\u0436\u0438\u0432\u0430\u043d\u043d\u044f",
+                "\u042f \u043c\u0430\u044e \u0434\u043e\u0437\u0432\u0456\u043b \u043d\u0430 \u043f\u0440\u043e\u0436\u0438\u0432\u0430\u043d\u043d\u044f",
               nextQuestion: 4,
               documentazione: [
                 "копія дійсного паспорта або еквівалентного документа.* ",
@@ -4204,7 +4204,7 @@ export const choiceTree = {
             {
               id: "I am renewing my Residence permit",
               label:
-                  "\u041f\u043e\u043d\u043e\u0432\u043b\u044e\u044e \u0434\u043e\u0437\u0432\u0456\u043b \u043d\u0430 \u043f\u0440\u043e\u0436\u0438\u0432\u0430\u043d\u043d\u044f",
+                "\u041f\u043e\u043d\u043e\u0432\u043b\u044e\u044e \u0434\u043e\u0437\u0432\u0456\u043b \u043d\u0430 \u043f\u0440\u043e\u0436\u0438\u0432\u0430\u043d\u043d\u044f",
               nextQuestion: 4,
               documentazione: [
                 "копія дійсного паспорта або еквівалентного документа.* ",
@@ -4217,7 +4217,7 @@ export const choiceTree = {
             {
               id: "I am Waiting for a work permit",
               label:
-                  "\u0427\u0435\u043a\u0430\u044e \u043f\u043e\u0441\u0432\u0456\u0434\u043a\u0443 \u043d\u0430 \u043f\u0440\u043e\u0436\u0438\u0432\u0430\u043d\u043d\u044f",
+                "\u0427\u0435\u043a\u0430\u044e \u043f\u043e\u0441\u0432\u0456\u0434\u043a\u0443 \u043d\u0430 \u043f\u0440\u043e\u0436\u0438\u0432\u0430\u043d\u043d\u044f",
               nextQuestion: 4,
               documentazione: [
                 "копія дійсного паспорта або еквівалентного документа.* ",
@@ -4231,7 +4231,7 @@ export const choiceTree = {
             {
               id: "Awaiting family reunification",
               label:
-                  "\u0412 \u043e\u0447\u0456\u043a\u0443\u0432\u0430\u043d\u043d\u0456 \u0432\u043e\u0437\u0437'\u0454\u0434\u043d\u0430\u043d\u043d\u044f \u0441\u0456\u043c'\u0457",
+                "\u0412 \u043e\u0447\u0456\u043a\u0443\u0432\u0430\u043d\u043d\u0456 \u0432\u043e\u0437\u0437'\u0454\u0434\u043d\u0430\u043d\u043d\u044f \u0441\u0456\u043c'\u0457",
               nextQuestion: 4,
               documentazione: [
                 "копія дійсного паспорта або еквівалентного документа.* ",
@@ -4247,9 +4247,9 @@ export const choiceTree = {
         {
           type: "select",
           title:
-              "\u042f\u043a\u0438\u0439 \u0442\u0432\u0456\u0439 \u0441\u0442\u0430\u0442\u0443\u0441?",
+            "\u042f\u043a\u0438\u0439 \u0442\u0432\u0456\u0439 \u0441\u0442\u0430\u0442\u0443\u0441?",
           label:
-              "\u0412\u0438\u0431\u0435\u0440\u0456\u0442\u044c \u0441\u0432\u0456\u0439 \u0441\u0442\u0430\u0442\u0443\u0441",
+            "\u0412\u0438\u0431\u0435\u0440\u0456\u0442\u044c \u0441\u0432\u0456\u0439 \u0441\u0442\u0430\u0442\u0443\u0441",
           id: 3,
           controller: true,
           answers: [
@@ -4267,7 +4267,7 @@ export const choiceTree = {
             {
               id: "f.i",
               label:
-                  "\u0424\u0456\u043d\u0430\u043d\u0441\u043e\u0432\u043e \u043d\u0435\u0437\u0430\u043b\u0435\u0436\u043d\u0438\u0439 (\u0431\u0435\u0437 \u043f\u0440\u0430\u0446\u0456\u0432\u043d\u0438\u043a\u0430)",
+                "\u0424\u0456\u043d\u0430\u043d\u0441\u043e\u0432\u043e \u043d\u0435\u0437\u0430\u043b\u0435\u0436\u043d\u0438\u0439 (\u0431\u0435\u0437 \u043f\u0440\u0430\u0446\u0456\u0432\u043d\u0438\u043a\u0430)",
               nextQuestion: 4,
               documentazione: [
                 "копія дійсного посвідчення особи.*",
@@ -4292,7 +4292,7 @@ export const choiceTree = {
             {
               id: "relative",
               label:
-                  "\u0420\u043e\u0434\u0438\u0447 (\u043f\u0440\u0430\u0446\u0456\u0432\u043d\u0438\u043a, \u0441\u0442\u0443\u0434\u0435\u043d\u0442 \u0442\u043e\u0449\u043e)",
+                "\u0420\u043e\u0434\u0438\u0447 (\u043f\u0440\u0430\u0446\u0456\u0432\u043d\u0438\u043a, \u0441\u0442\u0443\u0434\u0435\u043d\u0442 \u0442\u043e\u0449\u043e)",
               documentazione: [
                 "копія дійсного документа, що посвідчує особу.*",
                 "копія оригіналу акта про проживання.*",
@@ -4306,28 +4306,28 @@ export const choiceTree = {
         {
           type: "select",
           title:
-              "\u0417\u0432\u0456\u0434\u043a\u0438 \u0442\u0438 \u043f\u0435\u0440\u0435\u0457\u0436\u0434\u0436\u0430\u0454\u0448?",
+            "\u0417\u0432\u0456\u0434\u043a\u0438 \u0442\u0438 \u043f\u0435\u0440\u0435\u0457\u0436\u0434\u0436\u0430\u0454\u0448?",
           label:
-              "\u0412\u0438\u0431\u0435\u0440\u0456\u0442\u044c \u0441\u0432\u043e\u0454 \u0433\u0440\u043e\u043c\u0430\u0434\u044f\u043d\u0441\u0442\u0432\u043e",
+            "\u0412\u0438\u0431\u0435\u0440\u0456\u0442\u044c \u0441\u0432\u043e\u0454 \u0433\u0440\u043e\u043c\u0430\u0434\u044f\u043d\u0441\u0442\u0432\u043e",
           id: 4,
           answers: [
             {
               id: "C1_1_2",
               label:
-                  "\u0417\u0430\u0440\u0443\u0431\u0456\u0436\u043d\u0430 \u043a\u0440\u0430\u0457\u043d\u0430",
+                "\u0417\u0430\u0440\u0443\u0431\u0456\u0436\u043d\u0430 \u043a\u0440\u0430\u0457\u043d\u0430",
               nextQuestion: 7,
               documents: "",
             },
             {
               id: "C1_1_3",
               label:
-                  "\u0406\u0442\u0430\u043b\u0456\u0439\u0441\u044c\u043a\u0438\u0439 AIRE",
+                "\u0406\u0442\u0430\u043b\u0456\u0439\u0441\u044c\u043a\u0438\u0439 AIRE",
               nextQuestion: 62,
             },
             {
               id: "C1_1_4",
               label:
-                  "\u0422\u0435 \u0441\u0430\u043c\u0435 \u043c\u0456\u0441\u0442\u043e",
+                "\u0422\u0435 \u0441\u0430\u043c\u0435 \u043c\u0456\u0441\u0442\u043e",
               nextQuestion: 8,
             },
             {
@@ -4338,7 +4338,7 @@ export const choiceTree = {
             {
               id: "C_1_5",
               label:
-                  "\u041f\u0435\u0440\u0448\u0438\u0439 \u0437\u0430\u043f\u0438\u0442",
+                "\u041f\u0435\u0440\u0448\u0438\u0439 \u0437\u0430\u043f\u0438\u0442",
               nextQuestion: 8,
             },
           ],
@@ -4353,10 +4353,10 @@ export const choiceTree = {
             {
               id: "Indicare lo Stato estero di provenienza",
               label:
-                  "\u043d\u0430\u043f\u0438\u0448\u0438 \u0441\u0432\u043e\u044e \u043a\u0440\u0430\u0457\u043d\u0443",
+                "\u043d\u0430\u043f\u0438\u0448\u0438 \u0441\u0432\u043e\u044e \u043a\u0440\u0430\u0457\u043d\u0443",
               type: "autocomplete",
               helperText:
-                  "\u041d\u0430\u043f\u0440. \u0413\u0430\u043d\u0430, \u0424\u0440\u0430\u043d\u0446\u0456\u044f, \u0420\u043e\u0441\u0456\u044f",
+                "\u041d\u0430\u043f\u0440. \u0413\u0430\u043d\u0430, \u0424\u0440\u0430\u043d\u0446\u0456\u044f, \u0420\u043e\u0441\u0456\u044f",
               autocomplete: true,
             },
           ],
@@ -4370,10 +4370,10 @@ export const choiceTree = {
             {
               id: "Indicare lo Stato estero di provenienza",
               label:
-                  "\u0411\u0443\u0434\u044c \u043b\u0430\u0441\u043a\u0430, \u0441\u043f\u043e\u0447\u0430\u0442\u043a\u0443 \u043d\u0430\u043f\u0438\u0448\u0456\u0442\u044c \u0441\u0432\u043e\u044e \u043a\u0440\u0430\u0457\u043d\u0443",
+                "\u0411\u0443\u0434\u044c \u043b\u0430\u0441\u043a\u0430, \u0441\u043f\u043e\u0447\u0430\u0442\u043a\u0443 \u043d\u0430\u043f\u0438\u0448\u0456\u0442\u044c \u0441\u0432\u043e\u044e \u043a\u0440\u0430\u0457\u043d\u0443",
               type: "text",
               helperText:
-                  "\u041d\u0430\u043f\u0440. \u0413\u0430\u043d\u0430, \u0424\u0440\u0430\u043d\u0446\u0456\u044f, \u0420\u043e\u0441\u0456\u044f",
+                "\u041d\u0430\u043f\u0440. \u0413\u0430\u043d\u0430, \u0424\u0440\u0430\u043d\u0446\u0456\u044f, \u0420\u043e\u0441\u0456\u044f",
               autocomplete: true,
             },
           ],
@@ -4387,10 +4387,10 @@ export const choiceTree = {
             {
               id: "Indicare il comune di provenienza",
               label:
-                  "\u041d\u0430\u043f\u0438\u0448\u0456\u0442\u044c \u0441\u0432\u043e\u0454 \u043c\u0456\u0441\u0442\u043e",
+                "\u041d\u0430\u043f\u0438\u0448\u0456\u0442\u044c \u0441\u0432\u043e\u0454 \u043c\u0456\u0441\u0442\u043e",
               type: "text",
               helperText:
-                  "\u041d\u0430\u043f\u0440. \u0422\u0443\u0440\u0438\u043d, \u041c\u0456\u043b\u0430\u043d, \u041f\u0430\u0432\u0456\u044f",
+                "\u041d\u0430\u043f\u0440. \u0422\u0443\u0440\u0438\u043d, \u041c\u0456\u043b\u0430\u043d, \u041f\u0430\u0432\u0456\u044f",
               autocomplete: true,
             },
           ],
@@ -4398,14 +4398,14 @@ export const choiceTree = {
         {
           type: "longform",
           title:
-              "\u0414\u0430\u0432\u0430\u0439\u0442\u0435 \u043f\u043e\u0433\u043e\u0432\u043e\u0440\u0438\u043c\u043e \u043f\u0440\u043e \u0432\u0430\u0441",
+            "\u0414\u0430\u0432\u0430\u0439\u0442\u0435 \u043f\u043e\u0433\u043e\u0432\u043e\u0440\u0438\u043c\u043e \u043f\u0440\u043e \u0432\u0430\u0441",
           id: 8,
           nextQuestion: 9,
           answers: [
             {
               id: "Nome",
               label:
-                  "\u042f\u043a \u0432\u0430\u0441 \u0437\u0432\u0430\u0442\u0438?",
+                "\u042f\u043a \u0432\u0430\u0441 \u0437\u0432\u0430\u0442\u0438?",
               type: "text",
               helperText: "\u041d\u0430\u043f\u0440. \u041c\u0443\u0441\u0430",
               validate: "RequiredField",
@@ -4414,30 +4414,30 @@ export const choiceTree = {
             {
               id: "Cognome",
               label:
-                  "\u042f\u043a \u0442\u0432\u043e\u0454 \u043f\u0440\u0456\u0437\u0432\u0438\u0449\u0435",
+                "\u042f\u043a \u0442\u0432\u043e\u0454 \u043f\u0440\u0456\u0437\u0432\u0438\u0449\u0435",
               type: "text",
               helperText:
-                  "\u041d\u0430\u043f\u0440. \u0421\u0435\u043c\u043f\u0440\u0456\u043d\u0456",
+                "\u041d\u0430\u043f\u0440. \u0421\u0435\u043c\u043f\u0440\u0456\u043d\u0456",
               validate: "RequiredField",
               isRequired: true,
             },
             {
               id: "Data di nascita",
               label:
-                  "\u0414\u0430\u0442\u0430 \u043d\u0430\u0440\u043e\u0434\u0436\u0435\u043d\u043d\u044f",
+                "\u0414\u0430\u0442\u0430 \u043d\u0430\u0440\u043e\u0434\u0436\u0435\u043d\u043d\u044f",
               type: "date",
               helperText:
-                  "\u0414\u0430\u0442\u0430 \u043d\u0430\u0440\u043e\u0434\u0436\u0435\u043d\u043d\u044f",
+                "\u0414\u0430\u0442\u0430 \u043d\u0430\u0440\u043e\u0434\u0436\u0435\u043d\u043d\u044f",
               validate: "dateValidation",
               isRequired: true,
             },
             {
               id: "Luogo di nascita",
               label:
-                  "\u0414\u0435 \u0442\u0438 \u043d\u0430\u0440\u043e\u0434\u0438\u0432\u0441\u044f?",
+                "\u0414\u0435 \u0442\u0438 \u043d\u0430\u0440\u043e\u0434\u0438\u0432\u0441\u044f?",
               type: "autocomplete",
               helperText:
-                  "\u0412\u043a\u0430\u0436\u0456\u0442\u044c \u0441\u0432\u043e\u0454 \u043c\u0456\u0441\u0442\u043e \u043d\u0430\u0440\u043e\u0434\u0436\u0435\u043d\u043d\u044f",
+                "\u0412\u043a\u0430\u0436\u0456\u0442\u044c \u0441\u0432\u043e\u0454 \u043c\u0456\u0441\u0442\u043e \u043d\u0430\u0440\u043e\u0434\u0436\u0435\u043d\u043d\u044f",
               autocomplete: true,
               isRequired: true,
             },
@@ -4449,25 +4449,25 @@ export const choiceTree = {
               validate: "RequiredField",
               isRequired: true,
               helperText:
-                  "\u0432\u0438\u0431\u0435\u0440\u0456\u0442\u044c \u0441\u0432\u043e\u044e \u0441\u0442\u0430\u0442\u044c",
+                "\u0432\u0438\u0431\u0435\u0440\u0456\u0442\u044c \u0441\u0432\u043e\u044e \u0441\u0442\u0430\u0442\u044c",
             },
             {
               id: "Stato Civile",
               label:
-                  "\u0442\u0432\u0456\u0439 \u0441\u0456\u043c\u0435\u0439\u043d\u0438\u0439 \u0441\u0442\u0430\u043d?",
+                "\u0442\u0432\u0456\u0439 \u0441\u0456\u043c\u0435\u0439\u043d\u0438\u0439 \u0441\u0442\u0430\u043d?",
               type: "select",
               options: ["unmarried", "married", "divorced", "widower"],
               helperText:
-                  "\u0432\u0438\u0431\u0435\u0440\u0456\u0442\u044c \u0441\u0432\u0456\u0439 \u0441\u0442\u0430\u0442\u0443\u0441",
+                "\u0432\u0438\u0431\u0435\u0440\u0456\u0442\u044c \u0441\u0432\u0456\u0439 \u0441\u0442\u0430\u0442\u0443\u0441",
               validate: "RequiredField",
             },
             {
               id: "Cittadinanza",
               label:
-                  "\u0413\u0440\u043e\u043c\u0430\u0434\u044f\u043d\u0441\u0442\u0432\u043e",
+                "\u0413\u0440\u043e\u043c\u0430\u0434\u044f\u043d\u0441\u0442\u0432\u043e",
               type: "text",
               helperText:
-                  "\u041d\u0430\u043f\u0440. \u0444\u0440\u0430\u043d\u0446\u0443\u0437\u044c\u043a\u0438\u0439",
+                "\u041d\u0430\u043f\u0440. \u0444\u0440\u0430\u043d\u0446\u0443\u0437\u044c\u043a\u0438\u0439",
               validate: "RequiredField",
               isRequired: true,
             },
@@ -4484,7 +4484,7 @@ export const choiceTree = {
         {
           type: "checkbox",
           title:
-              "\u0423 \u0432\u0430\u0441 \u0454 \u0440\u043e\u0431\u043e\u0442\u0430?",
+            "\u0423 \u0432\u0430\u0441 \u0454 \u0440\u043e\u0431\u043e\u0442\u0430?",
           id: 9,
           answers: [
             {
@@ -4500,16 +4500,16 @@ export const choiceTree = {
         {
           type: "select",
           title:
-              "\u042f\u043a\u0438\u0439 \u0442\u0432\u0456\u0439 \u043d\u0435\u043f\u0440\u043e\u0444\u0435\u0441\u0456\u0439\u043d\u0438\u0439 \u0441\u0442\u0430\u0442\u0443\u0441?",
+            "\u042f\u043a\u0438\u0439 \u0442\u0432\u0456\u0439 \u043d\u0435\u043f\u0440\u043e\u0444\u0435\u0441\u0456\u0439\u043d\u0438\u0439 \u0441\u0442\u0430\u0442\u0443\u0441?",
           label:
-              "\u0412\u0438\u0431\u0435\u0440\u0456\u0442\u044c \u0441\u0432\u0456\u0439 \u0441\u0442\u0430\u0442\u0443\u0441",
+            "\u0412\u0438\u0431\u0435\u0440\u0456\u0442\u044c \u0441\u0432\u0456\u0439 \u0441\u0442\u0430\u0442\u0443\u0441",
           id: 11,
           answers: [
             {
               selected: false,
               id: "C1_2_6",
               label:
-                  "\u0434\u043e\u043c\u043e\u0433\u043e\u0441\u043f\u043e\u0434\u0430\u0440\u043a\u0430",
+                "\u0434\u043e\u043c\u043e\u0433\u043e\u0441\u043f\u043e\u0434\u0430\u0440\u043a\u0430",
               nextQuestion: 13,
             },
             {
@@ -4522,7 +4522,7 @@ export const choiceTree = {
               selected: false,
               id: "C1_2_8",
               label:
-                  "\u0411\u0435\u0437\u0440\u043e\u0431\u0456\u0442\u043d\u0438\u0439",
+                "\u0411\u0435\u0437\u0440\u043e\u0431\u0456\u0442\u043d\u0438\u0439",
               nextQuestion: 13,
             },
             {
@@ -4543,9 +4543,9 @@ export const choiceTree = {
         {
           type: "select",
           title:
-              "\u042f\u043a\u0438\u0439 \u0443 \u0432\u0430\u0441 \u043f\u0440\u043e\u0444\u0435\u0441\u0456\u0439\u043d\u0438\u0439 \u0441\u0442\u0430\u0442\u0443\u0441?",
+            "\u042f\u043a\u0438\u0439 \u0443 \u0432\u0430\u0441 \u043f\u0440\u043e\u0444\u0435\u0441\u0456\u0439\u043d\u0438\u0439 \u0441\u0442\u0430\u0442\u0443\u0441?",
           label:
-              "\u0412\u0438\u0431\u0435\u0440\u0456\u0442\u044c \u0441\u0432\u0456\u0439 \u0441\u0442\u0430\u0442\u0443\u0441",
+            "\u0412\u0438\u0431\u0435\u0440\u0456\u0442\u044c \u0441\u0432\u0456\u0439 \u0441\u0442\u0430\u0442\u0443\u0441",
           id: 12,
           answers: [
             {
@@ -4558,28 +4558,28 @@ export const choiceTree = {
               selected: false,
               id: "C1_2_5",
               label:
-                  "\u0421\u0456\u043c\u0435\u0439\u043d\u0438\u0439 \u043f\u0440\u0430\u0446\u0456\u0432\u043d\u0438\u043a",
+                "\u0421\u0456\u043c\u0435\u0439\u043d\u0438\u0439 \u043f\u0440\u0430\u0446\u0456\u0432\u043d\u0438\u043a",
               nextQuestion: 14,
             },
             {
               selected: false,
               id: "C1_2_3",
               label:
-                  "\u0424\u0440\u0456\u043b\u0430\u043d\u0441\u0435\u0440 / \u041f\u0456\u0434\u043f\u0440\u0438\u0454\u043c\u0435\u0446\u044c",
+                "\u0424\u0440\u0456\u043b\u0430\u043d\u0441\u0435\u0440 / \u041f\u0456\u0434\u043f\u0440\u0438\u0454\u043c\u0435\u0446\u044c",
               nextQuestion: 14,
             },
             {
               selected: false,
               id: "C1_2_1",
               label:
-                  "\u0421\u0430\u043c\u043e\u0437\u0430\u0439\u043d\u044f\u0442\u0438\u0439",
+                "\u0421\u0430\u043c\u043e\u0437\u0430\u0439\u043d\u044f\u0442\u0438\u0439",
               nextQuestion: 14,
             },
             {
               selected: false,
               id: "C1_2_2",
               label:
-                  "\u041a\u0435\u0440\u0456\u0432\u043d\u0438\u043a / \u0421\u043f\u0456\u0432\u0440\u043e\u0431\u0456\u0442\u043d\u0438\u043a",
+                "\u041a\u0435\u0440\u0456\u0432\u043d\u0438\u043a / \u0421\u043f\u0456\u0432\u0440\u043e\u0431\u0456\u0442\u043d\u0438\u043a",
               nextQuestion: 14,
             },
           ],
@@ -4588,7 +4588,7 @@ export const choiceTree = {
         {
           type: "checkbox",
           title:
-              "\u0423 \u0432\u0430\u0441 \u0454 \u0456\u0442\u0430\u043b\u0456\u0439\u0441\u044c\u043a\u0456 \u0432\u043e\u0434\u0456\u0439\u0441\u044c\u043a\u0456 \u043f\u0440\u0430\u0432\u0430?",
+            "\u0423 \u0432\u0430\u0441 \u0454 \u0456\u0442\u0430\u043b\u0456\u0439\u0441\u044c\u043a\u0456 \u0432\u043e\u0434\u0456\u0439\u0441\u044c\u043a\u0456 \u043f\u0440\u0430\u0432\u0430?",
           id: 14,
           answers: [
             {
@@ -4604,7 +4604,7 @@ export const choiceTree = {
         {
           type: "longform",
           title:
-              "\u0412\u0456\u0434\u043e\u043c\u043e\u0441\u0442\u0456 \u043f\u0440\u043e \u0432\u043e\u0434\u0456\u0439\u0441\u044c\u043a\u0456 \u043f\u0440\u0430\u0432\u0430",
+            "\u0412\u0456\u0434\u043e\u043c\u043e\u0441\u0442\u0456 \u043f\u0440\u043e \u0432\u043e\u0434\u0456\u0439\u0441\u044c\u043a\u0456 \u043f\u0440\u0430\u0432\u0430",
           id: 15,
           parentId: 4,
           nextQuestion: 13,
@@ -4620,7 +4620,7 @@ export const choiceTree = {
             {
               id: "Patente tipo",
               label:
-                  "\u0422\u0438\u043f \u043b\u0456\u0446\u0435\u043d\u0437\u0456\u0457",
+                "\u0422\u0438\u043f \u043b\u0456\u0446\u0435\u043d\u0437\u0456\u0457",
               type: "text",
               helperText: "\u041d\u0430\u043f\u0440. A,B,C",
               isRequired: false,
@@ -4628,17 +4628,17 @@ export const choiceTree = {
             {
               id: "Data di rilascio",
               label:
-                  "\u0414\u0430\u0442\u0430 \u0432\u0438\u043f\u0443\u0441\u043a\u0443",
+                "\u0414\u0430\u0442\u0430 \u0432\u0438\u043f\u0443\u0441\u043a\u0443",
               type: "Date",
               helperText:
-                  "\u0414\u0430\u0442\u0430 \u0432\u0438\u043f\u0443\u0441\u043a\u0443",
+                "\u0414\u0430\u0442\u0430 \u0432\u0438\u043f\u0443\u0441\u043a\u0443",
               validate: "RequiredField",
               isRequired: false,
             },
             {
               id: "Organo di rilascio",
               label:
-                  "\u041e\u0440\u0433\u0430\u043d \u0432\u0438\u0434\u0430\u0447\u0456",
+                "\u041e\u0440\u0433\u0430\u043d \u0432\u0438\u0434\u0430\u0447\u0456",
               type: "text",
               helperText: "Motorizzazione",
               validate: "RequiredField",
@@ -4657,23 +4657,23 @@ export const choiceTree = {
         {
           type: "select",
           title:
-              "\u042f\u043a\u0438\u0439 \u0443 \u0432\u0430\u0441 \u043e\u0441\u0432\u0456\u0442\u043d\u0456\u0439 \u0440\u0456\u0432\u0435\u043d\u044c?",
+            "\u042f\u043a\u0438\u0439 \u0443 \u0432\u0430\u0441 \u043e\u0441\u0432\u0456\u0442\u043d\u0456\u0439 \u0440\u0456\u0432\u0435\u043d\u044c?",
           label:
-              "\u0412\u0438\u0431\u0435\u0440\u0456\u0442\u044c \u0441\u0432\u0456\u0439 \u0441\u0442\u0443\u043f\u0456\u043d\u044c",
+            "\u0412\u0438\u0431\u0435\u0440\u0456\u0442\u044c \u0441\u0432\u0456\u0439 \u0441\u0442\u0443\u043f\u0456\u043d\u044c",
           id: 13,
           answers: [
             {
               selected: false,
               id: "C1_2_11",
               label:
-                  "\u041f\u043e\u0447\u0430\u0442\u043a\u043e\u0432\u0430 \u0448\u043a\u043e\u043b\u0430",
+                "\u041f\u043e\u0447\u0430\u0442\u043a\u043e\u0432\u0430 \u0448\u043a\u043e\u043b\u0430",
               nextQuestion: 16,
             },
             {
               selected: false,
               id: "C1_2_12",
               label:
-                  "\u0410\u0442\u0435\u0441\u0442\u0430\u0442 \u043f\u0440\u043e \u0441\u0435\u0440\u0435\u0434\u043d\u044e \u0448\u043a\u043e\u043b\u0443",
+                "\u0410\u0442\u0435\u0441\u0442\u0430\u0442 \u043f\u0440\u043e \u0441\u0435\u0440\u0435\u0434\u043d\u044e \u0448\u043a\u043e\u043b\u0443",
               nextQuestion: 16,
             },
             {
@@ -4692,7 +4692,7 @@ export const choiceTree = {
               selected: false,
               id: "C1_2_15",
               label:
-                  "\u0421\u0442\u0443\u043f\u0456\u043d\u044c \u043c\u0430\u0433\u0456\u0441\u0442\u0440\u0430",
+                "\u0421\u0442\u0443\u043f\u0456\u043d\u044c \u043c\u0430\u0433\u0456\u0441\u0442\u0440\u0430",
               nextQuestion: 16,
             },
             {
@@ -4707,7 +4707,7 @@ export const choiceTree = {
         {
           type: "longform",
           title:
-              "\u0412\u0430\u0448\u0435 \u043d\u043e\u0432\u0435 \u043c\u0456\u0441\u0446\u0435 \u043f\u0440\u043e\u0436\u0438\u0432\u0430\u043d\u043d\u044f",
+            "\u0412\u0430\u0448\u0435 \u043d\u043e\u0432\u0435 \u043c\u0456\u0441\u0446\u0435 \u043f\u0440\u043e\u0436\u0438\u0432\u0430\u043d\u043d\u044f",
           id: 16,
           parentId: 4,
           nextQuestion: 17,
@@ -4717,7 +4717,7 @@ export const choiceTree = {
               label: "\u041c\u0456\u0441\u0442\u043e",
               type: "text",
               helperText:
-                  "\u041d\u0430\u043f\u0440. \u041f\u0430\u043b\u0435\u0440\u043c\u043e",
+                "\u041d\u0430\u043f\u0440. \u041f\u0430\u043b\u0435\u0440\u043c\u043e",
               isRequired: true,
               validate: "RequiredField",
             },
@@ -4726,7 +4726,7 @@ export const choiceTree = {
               label: "\u043f\u0440\u043e\u0432\u0456\u043d\u0446\u0456\u044f",
               type: "text",
               helperText:
-                  "\u041d\u0430\u043f\u0440. \u041f\u0430\u043b\u0435\u0440\u043c\u043e",
+                "\u041d\u0430\u043f\u0440. \u041f\u0430\u043b\u0435\u0440\u043c\u043e",
               isRequired: true,
               validate: "RequiredField",
             },
@@ -4741,7 +4741,7 @@ export const choiceTree = {
             {
               id: "Numero civico",
               label:
-                  "\u0413\u0440\u043e\u043c\u0430\u0434\u044f\u043d\u0441\u044c\u043a\u0438\u0439 \u043d\u043e\u043c\u0435\u0440",
+                "\u0413\u0440\u043e\u043c\u0430\u0434\u044f\u043d\u0441\u044c\u043a\u0438\u0439 \u043d\u043e\u043c\u0435\u0440",
               type: "text",
               helperText: "\u041d\u0430\u043f\u0440. 36",
               isRequired: true,
@@ -4776,7 +4776,7 @@ export const choiceTree = {
         {
           type: "checkbox",
           title:
-              "\u0422\u0438 \u0440\u0443\u0445\u0430\u0454\u0448\u0441\u044f \u043e\u0434\u0438\u043d?",
+            "\u0422\u0438 \u0440\u0443\u0445\u0430\u0454\u0448\u0441\u044f \u043e\u0434\u0438\u043d?",
           id: 17,
           answers: [
             {
@@ -4792,14 +4792,14 @@ export const choiceTree = {
         {
           type: "number",
           title:
-              "\u0421\u043a\u0456\u043b\u044c\u043a\u0438 \u043b\u044e\u0434\u0435\u0439 \u043f\u043e\u0440\u0443\u0447 \u0437 \u0442\u043e\u0431\u043e\u044e?",
+            "\u0421\u043a\u0456\u043b\u044c\u043a\u0438 \u043b\u044e\u0434\u0435\u0439 \u043f\u043e\u0440\u0443\u0447 \u0437 \u0442\u043e\u0431\u043e\u044e?",
           id: 18,
           nextQuestion: 41,
         },
         {
           type: "checkbox",
           title:
-              "\u0425\u0442\u043e\u0441\u044c \u0443\u0436\u0435 \u043f\u0440\u043e\u0436\u0438\u0432\u0430\u0454 \u043d\u0430 \u0442\u0435\u0440\u0438\u0442\u043e\u0440\u0456\u0457 \u043f\u043e\u043c\u0435\u0448\u043a\u0430\u043d\u043d\u044f?",
+            "\u0425\u0442\u043e\u0441\u044c \u0443\u0436\u0435 \u043f\u0440\u043e\u0436\u0438\u0432\u0430\u0454 \u043d\u0430 \u0442\u0435\u0440\u0438\u0442\u043e\u0440\u0456\u0457 \u043f\u043e\u043c\u0435\u0448\u043a\u0430\u043d\u043d\u044f?",
           id: 19,
           answers: [
             {
@@ -4815,7 +4815,7 @@ export const choiceTree = {
         {
           type: "longform",
           title:
-              "\u0421\u043a\u0430\u0436\u0456\u0442\u044c \u043d\u0430\u043c \u0445\u0442\u043e (\u043b\u0438\u0448\u0435 \u043e\u0434\u0438\u043d \u043a\u043e\u043c\u043f\u043e\u043d\u0435\u043d\u0442)",
+            "\u0421\u043a\u0430\u0436\u0456\u0442\u044c \u043d\u0430\u043c \u0445\u0442\u043e (\u043b\u0438\u0448\u0435 \u043e\u0434\u0438\u043d \u043a\u043e\u043c\u043f\u043e\u043d\u0435\u043d\u0442)",
           id: 21,
           parentId: 4,
           nextQuestion: 22,
@@ -4823,7 +4823,7 @@ export const choiceTree = {
             {
               id: "Nome_6",
               label:
-                  "\u042f\u043a \u0439\u043e\u0433\u043e/\u0457\u0457 \u0437\u0432\u0430\u0442\u0438?",
+                "\u042f\u043a \u0439\u043e\u0433\u043e/\u0457\u0457 \u0437\u0432\u0430\u0442\u0438?",
               type: "text",
               helperText: "\u041d\u0430\u043f\u0440. \u041c\u0443\u0441\u0430",
               isRequired: true,
@@ -4832,17 +4832,17 @@ export const choiceTree = {
             {
               id: "Cognome_6",
               label:
-                  "\u042f\u043a\u0435 \u0439\u043e\u0433\u043e/\u0457\u0457 \u043f\u0440\u0456\u0437\u0432\u0438\u0449\u0435",
+                "\u042f\u043a\u0435 \u0439\u043e\u0433\u043e/\u0457\u0457 \u043f\u0440\u0456\u0437\u0432\u0438\u0449\u0435",
               type: "text",
               helperText:
-                  "\u041d\u0430\u043f\u0440. \u0421\u0435\u043c\u043f\u0440\u0456\u043d\u0456",
+                "\u041d\u0430\u043f\u0440. \u0421\u0435\u043c\u043f\u0440\u0456\u043d\u0456",
               isRequired: true,
               validate: "RequiredField",
             },
             {
               id: "Luogo",
               label:
-                  "\u0414\u0430\u0442\u0430 \u043d\u0430\u0440\u043e\u0434\u0436\u0435\u043d\u043d\u044f",
+                "\u0414\u0430\u0442\u0430 \u043d\u0430\u0440\u043e\u0434\u0436\u0435\u043d\u043d\u044f",
               type: "date",
               helperText: "\u0414\u0414/\u041c\u041c/\u0420\u0420\u0420\u0420",
               isRequired: true,
@@ -4851,10 +4851,10 @@ export const choiceTree = {
             {
               id: "Luogo di nascita_6",
               label:
-                  "\u041c\u0456\u0441\u0446\u0435 \u043d\u0430\u0440\u043e\u0434\u0436\u0435\u043d\u043d\u044f",
+                "\u041c\u0456\u0441\u0446\u0435 \u043d\u0430\u0440\u043e\u0434\u0436\u0435\u043d\u043d\u044f",
               type: "text",
               helperText:
-                  "\u0412\u043a\u0430\u0436\u0456\u0442\u044c \u0439\u043e\u0433\u043e/\u0457\u0457 \u043c\u0456\u0441\u0442\u043e \u043d\u0430\u0440\u043e\u0434\u0436\u0435\u043d\u043d\u044f",
+                "\u0412\u043a\u0430\u0436\u0456\u0442\u044c \u0439\u043e\u0433\u043e/\u0457\u0457 \u043c\u0456\u0441\u0442\u043e \u043d\u0430\u0440\u043e\u0434\u0436\u0435\u043d\u043d\u044f",
               isRequired: true,
               validate: "RequiredField",
               autocomplete: true,
@@ -4862,7 +4862,7 @@ export const choiceTree = {
             {
               id: "Sussiste il seguente vincolo rispetto al su indicato  componente della famiglia gi\u00c3\u00a0 residente",
               label:
-                  "\u0412\u043a\u0430\u0436\u0456\u0442\u044c \u0440\u043e\u0434\u0438\u043d\u043d\u0456 \u0441\u0442\u043e\u0441\u0443\u043d\u043a\u0438",
+                "\u0412\u043a\u0430\u0436\u0456\u0442\u044c \u0440\u043e\u0434\u0438\u043d\u043d\u0456 \u0441\u0442\u043e\u0441\u0443\u043d\u043a\u0438",
               type: "select",
               options: [
                 "жоден",
@@ -4879,7 +4879,7 @@ export const choiceTree = {
                 "двоюрідний брат",
               ],
               helperText:
-                  "\u0412\u0438\u0431\u0435\u0440\u0456\u0442\u044c \u0436\u043e\u0434\u043d\u043e\u0433\u043e, \u044f\u043a\u0449\u043e \u0432\u0456\u043d \u0454",
+                "\u0412\u0438\u0431\u0435\u0440\u0456\u0442\u044c \u0436\u043e\u0434\u043d\u043e\u0433\u043e, \u044f\u043a\u0449\u043e \u0432\u0456\u043d \u0454",
               isRequired: false,
             },
           ],
@@ -4887,7 +4887,7 @@ export const choiceTree = {
         {
           type: "form",
           title:
-              "\u0412\u0430\u0448 \u043a\u043e\u043d\u0442\u0430\u043a\u0442",
+            "\u0412\u0430\u0448 \u043a\u043e\u043d\u0442\u0430\u043a\u0442",
           id: 22,
           parentId: 4,
           nextQuestion: 23,
@@ -4895,7 +4895,7 @@ export const choiceTree = {
             {
               id: "Telefono",
               label:
-                  "\u041d\u043e\u043c\u0435\u0440 \u0442\u0435\u043b\u0435\u0444\u043e\u043d\u0443",
+                "\u041d\u043e\u043c\u0435\u0440 \u0442\u0435\u043b\u0435\u0444\u043e\u043d\u0443",
               type: "number",
               helperText: "091665442",
               validate: "requiredField",
@@ -4905,7 +4905,7 @@ export const choiceTree = {
             {
               id: "Cellulare",
               label:
-                  "\u041d\u043e\u043c\u0435\u0440 \u043c\u043e\u0431\u0456\u043b\u044c\u043d\u043e\u0433\u043e",
+                "\u041d\u043e\u043c\u0435\u0440 \u043c\u043e\u0431\u0456\u043b\u044c\u043d\u043e\u0433\u043e",
               type: "tel",
               helperText: "3332423421",
               validate: "",
@@ -4914,7 +4914,7 @@ export const choiceTree = {
             {
               id: "emailPec",
               label:
-                  "\u0415\u043b\u0435\u043a\u0442\u0440\u043e\u043d\u043d\u0430 \u043f\u043e\u0448\u0442\u0430/\u041f\u0435\u0446",
+                "\u0415\u043b\u0435\u043a\u0442\u0440\u043e\u043d\u043d\u0430 \u043f\u043e\u0448\u0442\u0430/\u041f\u0435\u0446",
               type: "email",
               helperText: "test@email.com",
               validate: "requiredField",
@@ -4933,23 +4933,23 @@ export const choiceTree = {
         {
           type: "select",
           title:
-              "\u0414\u043e \u044f\u043a\u043e\u0457 \u043a\u0430\u0442\u0435\u0433\u043e\u0440\u0456\u0457 \u043d\u0430\u043b\u0435\u0436\u0438\u0442\u044c \u0432\u0430\u0448 \u0431\u0443\u0434\u0438\u043d\u043e\u043a?",
+            "\u0414\u043e \u044f\u043a\u043e\u0457 \u043a\u0430\u0442\u0435\u0433\u043e\u0440\u0456\u0457 \u043d\u0430\u043b\u0435\u0436\u0438\u0442\u044c \u0432\u0430\u0448 \u0431\u0443\u0434\u0438\u043d\u043e\u043a?",
           label:
-              "\u0412\u0438\u0431\u0435\u0440\u0456\u0442\u044c \u0441\u0432\u0456\u0439 \u0441\u0442\u0430\u0442\u0443\u0441",
+            "\u0412\u0438\u0431\u0435\u0440\u0456\u0442\u044c \u0441\u0432\u0456\u0439 \u0441\u0442\u0430\u0442\u0443\u0441",
           id: 23,
           answers: [
             {
               selected: false,
               id: "C9_1_5",
               label:
-                  "\u0411\u0435\u0437\u043a\u043e\u0448\u0442\u043e\u0432\u043d\u0435 \u043a\u043e\u0440\u0438\u0441\u0442\u0443\u0432\u0430\u043d\u043d\u044f",
+                "\u0411\u0435\u0437\u043a\u043e\u0448\u0442\u043e\u0432\u043d\u0435 \u043a\u043e\u0440\u0438\u0441\u0442\u0443\u0432\u0430\u043d\u043d\u044f",
               nextQuestion: 25,
             },
             {
               selected: false,
               id: "C9_1_2",
               label:
-                  "\u0412\u043b\u0430\u0441\u043d\u0438\u0439 \u0431\u0443\u0434\u0438\u043d\u043e\u043a",
+                "\u0412\u043b\u0430\u0441\u043d\u0438\u0439 \u0431\u0443\u0434\u0438\u043d\u043e\u043a",
               nextQuestion: 24,
             },
             {
@@ -4962,14 +4962,14 @@ export const choiceTree = {
               selected: false,
               id: "C9_1_4",
               label:
-                  "\u0413\u0440\u043e\u043c\u0430\u0434\u0441\u044c\u043a\u0438\u0439 \u0431\u0443\u0434\u0438\u043d\u043e\u043a",
+                "\u0413\u0440\u043e\u043c\u0430\u0434\u0441\u044c\u043a\u0438\u0439 \u0431\u0443\u0434\u0438\u043d\u043e\u043a",
               nextQuestion: 30,
             },
             {
               selected: false,
               id: "C9_1_6",
               label:
-                  "\u0423\u0437\u0443\u0444\u0440\u0443\u043a\u0442\u0443\u0430\u0440\u0456\u0439",
+                "\u0423\u0437\u0443\u0444\u0440\u0443\u043a\u0442\u0443\u0430\u0440\u0456\u0439",
               nextQuestion: 27,
             },
           ],
@@ -4978,7 +4978,7 @@ export const choiceTree = {
         {
           type: "form",
           title:
-              "\u0414\u0435\u0442\u0430\u043b\u0456 \u0434\u043e\u0433\u043e\u0432\u043e\u0440\u0443",
+            "\u0414\u0435\u0442\u0430\u043b\u0456 \u0434\u043e\u0433\u043e\u0432\u043e\u0440\u0443",
           id: 24,
           parentId: 4,
           nextQuestion: 30,
@@ -5002,7 +5002,7 @@ export const choiceTree = {
             {
               id: "particella o mappale",
               label:
-                  "\u0427\u0430\u0441\u0442\u043a\u043e\u0432\u0430 \u0430\u0431\u043e \u0431\u043b\u0456\u0434\u0430",
+                "\u0427\u0430\u0441\u0442\u043a\u043e\u0432\u0430 \u0430\u0431\u043e \u0431\u043b\u0456\u0434\u0430",
               type: "text",
               validate: "requiredField",
               isRequired: true,
@@ -5019,7 +5019,7 @@ export const choiceTree = {
         {
           type: "form",
           title:
-              "\u0414\u0435\u0442\u0430\u043b\u0456 \u0434\u043e\u0433\u043e\u0432\u043e\u0440\u0443",
+            "\u0414\u0435\u0442\u0430\u043b\u0456 \u0434\u043e\u0433\u043e\u0432\u043e\u0440\u0443",
           id: 26,
           parentId: 4,
           nextQuestion: 30,
@@ -5027,10 +5027,10 @@ export const choiceTree = {
             {
               id: "undefined_33",
               label:
-                  "\u0410\u0433\u0435\u043d\u0442\u0441\u0442\u0432\u043e \u0434\u043e\u0445\u043e\u0434\u0456\u0432 \u0441",
+                "\u0410\u0433\u0435\u043d\u0442\u0441\u0442\u0432\u043e \u0434\u043e\u0445\u043e\u0434\u0456\u0432 \u0441",
               type: "text",
               helperText:
-                  "\u041d\u0430\u043f\u0440. \u041f\u0430\u043b\u0435\u0440\u043c\u043e",
+                "\u041d\u0430\u043f\u0440. \u041f\u0430\u043b\u0435\u0440\u043c\u043e",
               validate: "requiredField",
               isRequired: true,
               autocomplete: false,
@@ -5054,7 +5054,7 @@ export const choiceTree = {
         {
           type: "form",
           title:
-              "\u0414\u0435\u0442\u0430\u043b\u0456 \u0434\u043e\u0433\u043e\u0432\u043e\u0440\u0443",
+            "\u0414\u0435\u0442\u0430\u043b\u0456 \u0434\u043e\u0433\u043e\u0432\u043e\u0440\u0443",
           id: 25,
           parentId: 4,
           nextQuestion: 30,
@@ -5062,10 +5062,10 @@ export const choiceTree = {
             {
               id: "Entrate di",
               label:
-                  "\u0410\u0433\u0435\u043d\u0442\u0441\u0442\u0432\u043e \u0434\u043e\u0445\u043e\u0434\u0456\u0432 \u0441",
+                "\u0410\u0433\u0435\u043d\u0442\u0441\u0442\u0432\u043e \u0434\u043e\u0445\u043e\u0434\u0456\u0432 \u0441",
               type: "text",
               helperText:
-                  "\u041d\u0430\u043f\u0440. \u041f\u0430\u043b\u0435\u0440\u043c\u043e",
+                "\u041d\u0430\u043f\u0440. \u041f\u0430\u043b\u0435\u0440\u043c\u043e",
               validate: "requiredField",
               isRequired: true,
               autocomplete: false,
@@ -5089,7 +5089,7 @@ export const choiceTree = {
         {
           type: "form",
           title:
-              "\u0414\u0435\u0442\u0430\u043b\u0456 \u0434\u043e\u0433\u043e\u0432\u043e\u0440\u0443",
+            "\u0414\u0435\u0442\u0430\u043b\u0456 \u0434\u043e\u0433\u043e\u0432\u043e\u0440\u0443",
           id: 26,
           parentId: 4,
           nextQuestion: 30,
@@ -5097,7 +5097,7 @@ export const choiceTree = {
             {
               id: "dati utili 1",
               label:
-                  "\u041f\u0438\u0448\u0456\u0442\u044c \u0434\u0435\u0442\u0430\u043b\u0456",
+                "\u041f\u0438\u0448\u0456\u0442\u044c \u0434\u0435\u0442\u0430\u043b\u0456",
               type: "text",
               validate: "requiredField",
               isRequired: true,
@@ -5108,7 +5108,7 @@ export const choiceTree = {
         {
           type: "checkbox",
           title:
-              "\u0425\u0442\u043e\u0441\u044c \u0443\u0436\u0435 \u0441\u043f\u043b\u0430\u0447\u0443\u0454 TARI?",
+            "\u0425\u0442\u043e\u0441\u044c \u0443\u0436\u0435 \u0441\u043f\u043b\u0430\u0447\u0443\u0454 TARI?",
           id: 30,
           answers: [
             {
@@ -5124,7 +5124,7 @@ export const choiceTree = {
         {
           type: "form",
           title:
-              "\u0414\u0435\u0442\u0430\u043b\u0456 \u0434\u043e\u0433\u043e\u0432\u043e\u0440\u0443",
+            "\u0414\u0435\u0442\u0430\u043b\u0456 \u0434\u043e\u0433\u043e\u0432\u043e\u0440\u0443",
           id: 31,
           parentId: 4,
           nextQuestion: 32,
@@ -5132,7 +5132,7 @@ export const choiceTree = {
             {
               id: "che la tassa per il nuovo",
               label:
-                  "\u0406\u043c'\u044f \u0442\u0430 \u043f\u0440\u0456\u0437\u0432\u0438\u0449\u0435",
+                "\u0406\u043c'\u044f \u0442\u0430 \u043f\u0440\u0456\u0437\u0432\u0438\u0449\u0435",
               type: "text",
               validate: "requiredField",
               isRequired: true,
@@ -5141,7 +5141,7 @@ export const choiceTree = {
             {
               id: "F",
               label:
-                  "\u0424\u0456\u0441\u043a\u0430\u043b\u044c\u043d\u0438\u0439 \u043a\u043e\u0434\u0435\u043a\u0441",
+                "\u0424\u0456\u0441\u043a\u0430\u043b\u044c\u043d\u0438\u0439 \u043a\u043e\u0434\u0435\u043a\u0441",
               type: "text",
               isRequired: true,
               validate: "fiscalCodeField",
@@ -5158,7 +5158,7 @@ export const choiceTree = {
         {
           type: "longform",
           title:
-              "\u041f\u0456\u0434\u043f\u0438\u0441\u043a\u0430 \u043d\u0430 TARI",
+            "\u041f\u0456\u0434\u043f\u0438\u0441\u043a\u0430 \u043d\u0430 TARI",
           id: 32,
           parentId: 4,
           nextQuestion: 33,
@@ -5187,7 +5187,7 @@ export const choiceTree = {
             {
               id: "data",
               label:
-                  "\u0414\u0430\u0442\u0430 \u043d\u0430\u0431\u0443\u0442\u0442\u044f \u0447\u0438\u043d\u043d\u043e\u0441\u0442\u0456 \u043e\u043a\u0443\u043f\u0430\u0446\u0456\u0457",
+                "\u0414\u0430\u0442\u0430 \u043d\u0430\u0431\u0443\u0442\u0442\u044f \u0447\u0438\u043d\u043d\u043e\u0441\u0442\u0456 \u043e\u043a\u0443\u043f\u0430\u0446\u0456\u0457",
               type: "date",
               isRequired: true,
               validate: "RequiredField",
@@ -5196,7 +5196,7 @@ export const choiceTree = {
             {
               id: "superficie in mq",
               label:
-                  "\u043f\u043e\u0432\u0435\u0440\u0445\u043d\u044f \u0432 \u043a\u0432",
+                "\u043f\u043e\u0432\u0435\u0440\u0445\u043d\u044f \u0432 \u043a\u0432",
               type: "number",
               isRequired: true,
               validate: "RequiredField",
@@ -5206,30 +5206,30 @@ export const choiceTree = {
         {
           type: "select",
           title:
-              "\u041d\u0430\u0437\u0432\u0430 \u043f\u0440\u043e\u0444\u0435\u0441\u0456\u0457",
+            "\u041d\u0430\u0437\u0432\u0430 \u043f\u0440\u043e\u0444\u0435\u0441\u0456\u0457",
           label:
-              "\u0414\u044f\u043a\u0443\u044e \u0437\u0430 \u0442\u0435\u0440\u043f\u0456\u043d\u043d\u044f",
+            "\u0414\u044f\u043a\u0443\u044e \u0437\u0430 \u0442\u0435\u0440\u043f\u0456\u043d\u043d\u044f",
           id: 33,
           answers: [
             {
               selected: false,
               id: "10_1_1",
               label:
-                  "\u041f\u0440\u0438\u0441\u0442\u043e\u0439\u043d\u0456\u0441\u0442\u044c",
+                "\u041f\u0440\u0438\u0441\u0442\u043e\u0439\u043d\u0456\u0441\u0442\u044c",
               nextQuestion: 17,
             },
             {
               selected: false,
               id: "10_1_2",
               label:
-                  "\u0420\u043e\u0437\u0442\u0430\u0448\u0443\u0432\u0430\u043d\u043d\u044f",
+                "\u0420\u043e\u0437\u0442\u0430\u0448\u0443\u0432\u0430\u043d\u043d\u044f",
               nextQuestion: 17,
             },
             {
               selected: false,
               id: "10_1_3",
               label:
-                  "\u043f\u043e\u0437\u0438\u043a\u0430 \u0432 \u043a\u043e\u0440\u0438\u0441\u0442\u0443\u0432\u0430\u043d\u043d\u044f",
+                "\u043f\u043e\u0437\u0438\u043a\u0430 \u0432 \u043a\u043e\u0440\u0438\u0441\u0442\u0443\u0432\u0430\u043d\u043d\u044f",
               nextQuestion: 17,
             },
             {
@@ -5242,7 +5242,7 @@ export const choiceTree = {
               selected: false,
               id: "C9_1_6",
               label:
-                  "\u041f\u0440\u0438\u0437\u043d\u0430\u0447\u0435\u043d\u043d\u044f \u0436\u0438\u0442\u043b\u0430 \u0434\u0435\u0440\u0436\u0430\u0432\u043d\u043e\u0433\u043e \u043e\u0440\u0433\u0430\u043d\u0443",
+                "\u041f\u0440\u0438\u0437\u043d\u0430\u0447\u0435\u043d\u043d\u044f \u0436\u0438\u0442\u043b\u0430 \u0434\u0435\u0440\u0436\u0430\u0432\u043d\u043e\u0433\u043e \u043e\u0440\u0433\u0430\u043d\u0443",
               nextQuestion: 17,
             },
           ],
@@ -6362,7 +6362,7 @@ export const choiceTree = {
         {
           type: "select",
           title:
-              "\u0645\u0627 \u0647\u064a \u0627\u0644\u062c\u0646\u0633\u064a\u0629 \u0627\u0644\u062a\u064a \u0644\u062f\u064a\u0643\u061f",
+            "\u0645\u0627 \u0647\u064a \u0627\u0644\u062c\u0646\u0633\u064a\u0629 \u0627\u0644\u062a\u064a \u0644\u062f\u064a\u0643\u061f",
           label: "\u062d\u062f\u062f \u062c\u0646\u0633\u064a\u062a\u0643",
           id: 1,
           controller: true,
@@ -6370,24 +6370,24 @@ export const choiceTree = {
             {
               id: "I am a non-EU citizen",
               label:
-                  "\u0623\u0646\u0627 \u0645\u0648\u0627\u0637\u0646 \u0645\u0646 \u062e\u0627\u0631\u062c \u0627\u0644\u0627\u062a\u062d\u0627\u062f \u0627\u0644\u0623\u0648\u0631\u0648\u0628\u064a",
+                "\u0623\u0646\u0627 \u0645\u0648\u0627\u0637\u0646 \u0645\u0646 \u062e\u0627\u0631\u062c \u0627\u0644\u0627\u062a\u062d\u0627\u062f \u0627\u0644\u0623\u0648\u0631\u0648\u0628\u064a",
               nextQuestion: 2,
               documentazione: [],
             },
             {
               id: "I'm an Italian Citizen",
               label:
-                  "\u0623\u0646\u0627 \u0645\u0648\u0627\u0637\u0646 \u0625\u064a\u0637\u0627\u0644\u064a",
+                "\u0623\u0646\u0627 \u0645\u0648\u0627\u0637\u0646 \u0625\u064a\u0637\u0627\u0644\u064a",
               nextQuestion: 4,
               documentazione: [
-                "وثيقة هوية مقدم الطلب والأشخاص الذين نقلوا الإقامة مع مقدم الطلب" ,
-                "تذكر توقيع المستند" ,
+                "وثيقة هوية مقدم الطلب والأشخاص الذين نقلوا الإقامة مع مقدم الطلب",
+                "تذكر توقيع المستند",
               ],
             },
             {
               id: "I am a EU citizen",
               label:
-                  "\u0623\u0646\u0627 \u0645\u0648\u0627\u0637\u0646 \u0641\u064a \u0627\u0644\u0627\u062a\u062d\u0627\u062f \u0627\u0644\u0623\u0648\u0631\u0648\u0628\u064a",
+                "\u0623\u0646\u0627 \u0645\u0648\u0627\u0637\u0646 \u0641\u064a \u0627\u0644\u0627\u062a\u062d\u0627\u062f \u0627\u0644\u0623\u0648\u0631\u0648\u0628\u064a",
               nextQuestion: 3,
               documentazione: [],
             },
@@ -6396,7 +6396,7 @@ export const choiceTree = {
         {
           type: "select",
           title:
-              "\u0645\u0627 \u0647\u064a \u062d\u0627\u0644\u062a\u0643\u061f",
+            "\u0645\u0627 \u0647\u064a \u062d\u0627\u0644\u062a\u0643\u061f",
           label: "\u062d\u062f\u062f \u062d\u0627\u0644\u062a\u0643",
           id: 2,
           controller: true,
@@ -6404,64 +6404,64 @@ export const choiceTree = {
             {
               id: "EU Citizen Relative",
               label:
-                  "\u0642\u0631\u064a\u0628 \u0645\u0646 \u0645\u0648\u0627\u0637\u0646\u064a \u0627\u0644\u0627\u062a\u062d\u0627\u062f \u0627\u0644\u0623\u0648\u0631\u0648\u0628\u064a",
+                "\u0642\u0631\u064a\u0628 \u0645\u0646 \u0645\u0648\u0627\u0637\u0646\u064a \u0627\u0644\u0627\u062a\u062d\u0627\u062f \u0627\u0644\u0623\u0648\u0631\u0648\u0628\u064a",
               nextQuestion: 4,
               documentazione: [
-                "نسخة من جواز سفرك. *" ,
-                "بطاقة إقامة أحد أفراد عائلة أحد مواطني الاتحاد الأوروبي ، أو استلام طلب إصدار بطاقة إقامة. *" ,
-                "تذكر توقيع المستند" ,
+                "نسخة من جواز سفرك. *",
+                "بطاقة إقامة أحد أفراد عائلة أحد مواطني الاتحاد الأوروبي ، أو استلام طلب إصدار بطاقة إقامة. *",
+                "تذكر توقيع المستند",
               ],
             },
             {
               id: "I have the Residence permit",
               label:
-                  "\u0644\u062f\u064a \u062a\u0635\u0631\u064a\u062d \u0627\u0644\u0625\u0642\u0627\u0645\u0629",
+                "\u0644\u062f\u064a \u062a\u0635\u0631\u064a\u062d \u0627\u0644\u0625\u0642\u0627\u0645\u0629",
               nextQuestion: 4,
               documentazione: [
-                "نسخة من جواز سفر ساري المفعول أو وثيقة معادلة. *" ,
-                "نسخة من تصريح إقامة ساري المفعول. *" ,
-                "نسخة من أصل الوثائق مترجمة ومصدقة تثبت الحالة المدنية وتكوين الأسرة. **" ,
-                "تذكر توقيع المستند" ,
+                "نسخة من جواز سفر ساري المفعول أو وثيقة معادلة. *",
+                "نسخة من تصريح إقامة ساري المفعول. *",
+                "نسخة من أصل الوثائق مترجمة ومصدقة تثبت الحالة المدنية وتكوين الأسرة. **",
+                "تذكر توقيع المستند",
               ],
             },
             {
               id: "I am renewing my Residence permit",
               label:
-                  "\u0623\u0646\u0627 \u0623\u062c\u062f\u062f \u062a\u0635\u0631\u064a\u062d \u0625\u0642\u0627\u0645\u062a\u064a",
+                "\u0623\u0646\u0627 \u0623\u062c\u062f\u062f \u062a\u0635\u0631\u064a\u062d \u0625\u0642\u0627\u0645\u062a\u064a",
               nextQuestion: 4,
               documentazione: [
-                "نسخة من جواز سفر ساري المفعول أو وثيقة معادلة. *" ,
-                "نسخة من تصريح الإقامة منتهي الصلاحية. *" ,
-                "استلام طلب تجديد تصريح الإقامة. *" ,
-                "نسخة من أصل الوثائق مترجمة ومصدقة تثبت الحالة المدنية وتكوين الأسرة. **" ,
-                "تذكر توقيع المستند" ,
+                "نسخة من جواز سفر ساري المفعول أو وثيقة معادلة. *",
+                "نسخة من تصريح الإقامة منتهي الصلاحية. *",
+                "استلام طلب تجديد تصريح الإقامة. *",
+                "نسخة من أصل الوثائق مترجمة ومصدقة تثبت الحالة المدنية وتكوين الأسرة. **",
+                "تذكر توقيع المستند",
               ],
             },
             {
               id: "I am Waiting for a work permit",
               label:
-                  "\u0623\u0646\u0627 \u0641\u064a \u0627\u0646\u062a\u0638\u0627\u0631 \u062a\u0635\u0631\u064a\u062d \u0627\u0644\u0625\u0642\u0627\u0645\u0629",
+                "\u0623\u0646\u0627 \u0641\u064a \u0627\u0646\u062a\u0638\u0627\u0631 \u062a\u0635\u0631\u064a\u062d \u0627\u0644\u0625\u0642\u0627\u0645\u0629",
               nextQuestion: 4,
               documentazione: [
-                "نسخة من جواز سفر ساري المفعول أو وثيقة معادلة. *" ,
-                "نسخة من عقد الإقامة في Sportello Unico per l'immigrazione *" ,
-                "إيصال صادر عن مكتب البريد يشهد على تقديم طلب تصريح الإقامة. *" ,
-                "طلب إصدار تصريح إقامة للعمل الثانوي المقدم إلى Sportello Unico. *" ,
-                "نسخة من أصل الوثائق مترجمة ومصدقة تثبت الحالة المدنية وتكوين الأسرة. **" ,
-                "تذكر توقيع المستند" ,
+                "نسخة من جواز سفر ساري المفعول أو وثيقة معادلة. *",
+                "نسخة من عقد الإقامة في Sportello Unico per l'immigrazione *",
+                "إيصال صادر عن مكتب البريد يشهد على تقديم طلب تصريح الإقامة. *",
+                "طلب إصدار تصريح إقامة للعمل الثانوي المقدم إلى Sportello Unico. *",
+                "نسخة من أصل الوثائق مترجمة ومصدقة تثبت الحالة المدنية وتكوين الأسرة. **",
+                "تذكر توقيع المستند",
               ],
             },
             {
               id: "Awaiting family reunification",
               label:
-                  "\u0641\u064a \u0627\u0646\u062a\u0638\u0627\u0631 \u0644\u0645 \u0634\u0645\u0644 \u0627\u0644\u0623\u0633\u0631\u0629",
+                "\u0641\u064a \u0627\u0646\u062a\u0638\u0627\u0631 \u0644\u0645 \u0634\u0645\u0644 \u0627\u0644\u0623\u0633\u0631\u0629",
               nextQuestion: 4,
               documentazione: [
-                "نسخة من جواز سفر ساري المفعول أو وثيقة معادلة. *" ,
-                "نسخة غير مصدق عليها من الإذن الصادر عن المكتب الفردي. *" ,
-                "إيصال صادر عن مكتب البريد يشهد على تقديم طلب الإذن. *" ,
-                "نسخة من أصل الوثائق مترجمة ومصدقة تثبت الحالة المدنية وتكوين الأسرة. **" ,
-                "تذكر توقيع المستند" ,
+                "نسخة من جواز سفر ساري المفعول أو وثيقة معادلة. *",
+                "نسخة غير مصدق عليها من الإذن الصادر عن المكتب الفردي. *",
+                "إيصال صادر عن مكتب البريد يشهد على تقديم طلب الإذن. *",
+                "نسخة من أصل الوثائق مترجمة ومصدقة تثبت الحالة المدنية وتكوين الأسرة. **",
+                "تذكر توقيع المستند",
               ],
             },
           ],
@@ -6470,7 +6470,7 @@ export const choiceTree = {
         {
           type: "select",
           title:
-              "\u0645\u0627 \u0647\u064a \u062d\u0627\u0644\u062a\u0643\u061f",
+            "\u0645\u0627 \u0647\u064a \u062d\u0627\u0644\u062a\u0643\u061f",
           label: "\u062d\u062f\u062f \u062d\u0627\u0644\u062a\u0643",
           id: 3,
           controller: true,
@@ -6480,45 +6480,45 @@ export const choiceTree = {
               label: "\u0639\u0627\u0645\u0644",
               nextQuestion: 4,
               documentazione: [
-                "نسخة من معرف صالح. *" ,
-                 "وثائق تثبت جودة العامل. *" ,
-                 "نسخة من أصل الوثائق مترجمة ومصدقة تثبت الحالة المدنية وتكوين الأسرة. **" ,
-                 "تذكر توقيع المستند" ,
+                "نسخة من معرف صالح. *",
+                "وثائق تثبت جودة العامل. *",
+                "نسخة من أصل الوثائق مترجمة ومصدقة تثبت الحالة المدنية وتكوين الأسرة. **",
+                "تذكر توقيع المستند",
               ],
             },
             {
               id: "f.i",
               label:
-                  "\u0645\u0633\u062a\u0642\u0644 \u0645\u0627\u0644\u064a\u0627 (\u0644\u0627 \u0639\u0627\u0645\u0644)",
+                "\u0645\u0633\u062a\u0642\u0644 \u0645\u0627\u0644\u064a\u0627 (\u0644\u0627 \u0639\u0627\u0645\u0644)",
               nextQuestion: 4,
               documentazione: [
-                "نسخة من هوية صالحة. *" ,
-                 "إعلان ذاتي عن امتلاك الموارد الاقتصادية. *" ,
-                 "نسخة من التأمين الصحي. *" ,
-                 "نسخة من أصل الوثائق مترجمة ومصدقة تثبت الحالة المدنية وتكوين الأسرة. **" ,
-                 "تذكر توقيع المستند" ,
+                "نسخة من هوية صالحة. *",
+                "إعلان ذاتي عن امتلاك الموارد الاقتصادية. *",
+                "نسخة من التأمين الصحي. *",
+                "نسخة من أصل الوثائق مترجمة ومصدقة تثبت الحالة المدنية وتكوين الأسرة. **",
+                "تذكر توقيع المستند",
               ],
             },
             {
               id: "student",
               label: "\u0637\u0627\u0644\u0628",
               documentazione: [
-                "نسخة من وثيقة هوية صالحة. *" ,
-                 "وثائق تثبت التسجيل في مدرسة أو مؤسسة تدريب مهني. *" ,
-                 "إعلان ذاتي عن امتلاك الموارد الاقتصادية. *" ,
-                 "تغطية المخاطر الصحية. *" ,
-                 "تذكر توقيع المستند" ,
+                "نسخة من وثيقة هوية صالحة. *",
+                "وثائق تثبت التسجيل في مدرسة أو مؤسسة تدريب مهني. *",
+                "إعلان ذاتي عن امتلاك الموارد الاقتصادية. *",
+                "تغطية المخاطر الصحية. *",
+                "تذكر توقيع المستند",
               ],
               nextQuestion: 4,
             },
             {
               id: "relative",
               label:
-                  "\u0642\u0631\u064a\u0628 \u0645\u0646 (\u0648\u0643\u0631 \u060c \u0637\u0627\u0644\u0628 \u0625\u0644\u062e ..)",
+                "\u0642\u0631\u064a\u0628 \u0645\u0646 (\u0648\u0643\u0631 \u060c \u0637\u0627\u0644\u0628 \u0625\u0644\u062e ..)",
               documentazione: [
-                "نسخة من وثيقة هوية صالحة. *" ,
-                 "نسخة من سندات الإقامة الأصلية. *" ,
-                 "تذكر توقيع المستند" ,
+                "نسخة من وثيقة هوية صالحة. *",
+                "نسخة من سندات الإقامة الأصلية. *",
+                "تذكر توقيع المستند",
               ],
               nextQuestion: 4,
             },
@@ -6528,7 +6528,7 @@ export const choiceTree = {
         {
           type: "select",
           title:
-              "\u0645\u0646 \u0627\u064a\u0646 \u062a\u0646\u062a\u0642\u0644\u061f",
+            "\u0645\u0646 \u0627\u064a\u0646 \u062a\u0646\u062a\u0642\u0644\u061f",
           label: "\u062d\u062f\u062f \u062c\u0646\u0633\u064a\u062a\u0643",
           id: 4,
           answers: [
@@ -6541,25 +6541,25 @@ export const choiceTree = {
             {
               id: "C1_1_3",
               label:
-                  "\u0627\u0644\u0627\u064a\u0637\u0627\u0644\u064a\u0629 AIRE",
+                "\u0627\u0644\u0627\u064a\u0637\u0627\u0644\u064a\u0629 AIRE",
               nextQuestion: 62,
             },
             {
               id: "C1_1_4",
               label:
-                  "\u0646\u0641\u0633 \u0627\u0644\u0645\u062f\u064a\u0646\u0629",
+                "\u0646\u0641\u0633 \u0627\u0644\u0645\u062f\u064a\u0646\u0629",
               nextQuestion: 8,
             },
             {
               id: "C1_1_1",
               label:
-                  "\u0645\u062f\u064a\u0646\u0629 \u0645\u062e\u062a\u0644\u0641\u0629",
+                "\u0645\u062f\u064a\u0646\u0629 \u0645\u062e\u062a\u0644\u0641\u0629",
               nextQuestion: 63,
             },
             {
               id: "C_1_5",
               label:
-                  "\u0627\u0644\u0637\u0644\u0628 \u0627\u0644\u0623\u0648\u0644",
+                "\u0627\u0644\u0637\u0644\u0628 \u0627\u0644\u0623\u0648\u0644",
               nextQuestion: 8,
             },
           ],
@@ -6576,7 +6576,7 @@ export const choiceTree = {
               label: "\u0627\u0643\u062a\u0628 \u0628\u0644\u062f\u0643",
               type: "autocomplete",
               helperText:
-                  "\u0627\u0644\u0633\u0627\u0628\u0642. \u063a\u0627\u0646\u0627 \u0648\u0641\u0631\u0646\u0633\u0627 \u0648\u0631\u0648\u0633\u064a\u0627",
+                "\u0627\u0644\u0633\u0627\u0628\u0642. \u063a\u0627\u0646\u0627 \u0648\u0641\u0631\u0646\u0633\u0627 \u0648\u0631\u0648\u0633\u064a\u0627",
               autocomplete: true,
             },
           ],
@@ -6590,10 +6590,10 @@ export const choiceTree = {
             {
               id: "Indicare lo Stato estero di provenienza",
               label:
-                  "\u0645\u0646 \u0641\u0636\u0644\u0643 \u0627\u0643\u062a\u0628 \u0628\u0644\u062f\u0643 \u0627\u0648\u0644\u0627",
+                "\u0645\u0646 \u0641\u0636\u0644\u0643 \u0627\u0643\u062a\u0628 \u0628\u0644\u062f\u0643 \u0627\u0648\u0644\u0627",
               type: "text",
               helperText:
-                  "\u0627\u0644\u0633\u0627\u0628\u0642. \u063a\u0627\u0646\u0627 \u0648\u0641\u0631\u0646\u0633\u0627 \u0648\u0631\u0648\u0633\u064a\u0627",
+                "\u0627\u0644\u0633\u0627\u0628\u0642. \u063a\u0627\u0646\u0627 \u0648\u0641\u0631\u0646\u0633\u0627 \u0648\u0631\u0648\u0633\u064a\u0627",
               autocomplete: true,
             },
           ],
@@ -6601,17 +6601,17 @@ export const choiceTree = {
         {
           type: "form",
           title:
-              "\u0645\u0627 \u0627\u0633\u0645  \u0627\u0644\u0645\u062f\u064a\u0646\u0629\u061f",
+            "\u0645\u0627 \u0627\u0633\u0645  \u0627\u0644\u0645\u062f\u064a\u0646\u0629\u061f",
           id: 63,
           nextQuestion: 8,
           answers: [
             {
               id: "Indicare il comune di provenienza",
               label:
-                  "\u0627\u0643\u062a\u0628 \u0645\u062f\u064a\u0646\u062a\u0643",
+                "\u0627\u0643\u062a\u0628 \u0645\u062f\u064a\u0646\u062a\u0643",
               type: "text",
               helperText:
-                  "\u0627\u0644\u0633\u0627\u0628\u0642. \u062a\u0648\u0631\u064a\u0646\u0648 \u060c \u0645\u064a\u0644\u0627\u0646 \u060c \u0628\u0627\u0641\u064a\u0627",
+                "\u0627\u0644\u0633\u0627\u0628\u0642. \u062a\u0648\u0631\u064a\u0646\u0648 \u060c \u0645\u064a\u0644\u0627\u0646 \u060c \u0628\u0627\u0641\u064a\u0627",
               autocomplete: true,
             },
           ],
@@ -6627,27 +6627,27 @@ export const choiceTree = {
               label: "\u0645\u0627 \u0627\u0633\u0645\u0643\u061f",
               type: "text",
               helperText:
-                  "\u0627\u0644\u0633\u0627\u0628\u0642. \u0645\u0648\u0633\u0649",
+                "\u0627\u0644\u0633\u0627\u0628\u0642. \u0645\u0648\u0633\u0649",
               validate: "RequiredField",
               isRequired: true,
             },
             {
               id: "Cognome",
               label:
-                  "\u0645\u0627 \u0647\u0648 \u0644\u0642\u0628\u0643 \u0627\u0644\u062e\u0627\u0635",
+                "\u0645\u0627 \u0647\u0648 \u0644\u0642\u0628\u0643 \u0627\u0644\u062e\u0627\u0635",
               type: "text",
               helperText:
-                  "\u0627\u0644\u0633\u0627\u0628\u0642. \u0633\u064a\u0645\u0628\u0631\u064a\u0646\u064a",
+                "\u0627\u0644\u0633\u0627\u0628\u0642. \u0633\u064a\u0645\u0628\u0631\u064a\u0646\u064a",
               validate: "RequiredField",
               isRequired: true,
             },
             {
               id: "Data di nascita",
               label:
-                  "\u062a\u0627\u0631\u064a\u062e \u0627\u0644\u0645\u064a\u0644\u0627\u062f",
+                "\u062a\u0627\u0631\u064a\u062e \u0627\u0644\u0645\u064a\u0644\u0627\u062f",
               type: "date",
               helperText:
-                  "\u062a\u0627\u0631\u064a\u062e \u0627\u0644\u0645\u064a\u0644\u0627\u062f",
+                "\u062a\u0627\u0631\u064a\u062e \u0627\u0644\u0645\u064a\u0644\u0627\u062f",
               validate: "dateValidation",
               isRequired: true,
             },
@@ -6656,7 +6656,7 @@ export const choiceTree = {
               label: "\u0623\u064a\u0646 \u0648\u0644\u062f\u062a\u061f",
               type: "autocomplete",
               helperText:
-                  "\u062d\u062f\u062f \u0645\u062f\u064a\u0646\u0629 \u0645\u064a\u0644\u0627\u062f\u0643",
+                "\u062d\u062f\u062f \u0645\u062f\u064a\u0646\u0629 \u0645\u064a\u0644\u0627\u062f\u0643",
               autocomplete: true,
               isRequired: true,
             },
@@ -6672,7 +6672,7 @@ export const choiceTree = {
             {
               id: "Stato Civile",
               label:
-                  "\u0627\u0644\u062d\u0627\u0644\u0629 \u0627\u0644\u0627\u062c\u062a\u0645\u0627\u0639\u064a\u0629\u061f",
+                "\u0627\u0644\u062d\u0627\u0644\u0629 \u0627\u0644\u0627\u062c\u062a\u0645\u0627\u0639\u064a\u0629\u061f",
               type: "select",
               options: ["unmarried", "married", "divorced", "widower"],
               helperText: "\u062d\u062f\u062f \u062d\u0627\u0644\u062a\u0643",
@@ -6683,17 +6683,17 @@ export const choiceTree = {
               label: "\u0627\u0644\u0645\u0648\u0627\u0637\u0646\u0629",
               type: "text",
               helperText:
-                  "\u0627\u0644\u0633\u0627\u0628\u0642. \u0641\u0631\u0646\u0633\u064a",
+                "\u0627\u0644\u0633\u0627\u0628\u0642. \u0641\u0631\u0646\u0633\u064a",
               validate: "RequiredField",
               isRequired: true,
             },
             {
               id: "Codice Fiscale",
               label:
-                  "\u0643\u0648\u062f\u0633 \u0641\u064a\u0633\u0643\u0627\u0644\u064a",
+                "\u0643\u0648\u062f\u0633 \u0641\u064a\u0633\u0643\u0627\u0644\u064a",
               type: "text",
               helperText:
-                  "\u0627\u0644\u0633\u0627\u0628\u0642. R5MRI88L73G273E",
+                "\u0627\u0644\u0633\u0627\u0628\u0642. R5MRI88L73G273E",
               validate: "fiscalCodeField",
               isRequired: true,
             },
@@ -6702,7 +6702,7 @@ export const choiceTree = {
         {
           type: "checkbox",
           title:
-              "\u0647\u0644 \u0644\u062f\u064a\u0643 \u0648\u0638\u064a\u0641\u0629\u061f",
+            "\u0647\u0644 \u0644\u062f\u064a\u0643 \u0648\u0638\u064a\u0641\u0629\u061f",
           id: 9,
           answers: [
             {
@@ -6718,7 +6718,7 @@ export const choiceTree = {
         {
           type: "select",
           title:
-              "\u0645\u0627 \u0647\u0648 \u0648\u0636\u0639\u0643 \u063a\u064a\u0631 \u0627\u0644\u0645\u0647\u0646\u064a\u061f",
+            "\u0645\u0627 \u0647\u0648 \u0648\u0636\u0639\u0643 \u063a\u064a\u0631 \u0627\u0644\u0645\u0647\u0646\u064a\u061f",
           label: "\u062d\u062f\u062f \u062d\u0627\u0644\u062a\u0643",
           id: 11,
           answers: [
@@ -6758,7 +6758,7 @@ export const choiceTree = {
         {
           type: "select",
           title:
-              "\u0645\u0627 \u0647\u0648 \u0648\u0636\u0639\u0643 \u0627\u0644\u0645\u0647\u0646\u064a\u061f",
+            "\u0645\u0627 \u0647\u0648 \u0648\u0636\u0639\u0643 \u0627\u0644\u0645\u0647\u0646\u064a\u061f",
           label: "\u062d\u062f\u062f \u062d\u0627\u0644\u062a\u0643",
           id: 12,
           answers: [
@@ -6772,28 +6772,28 @@ export const choiceTree = {
               selected: false,
               id: "C1_2_5",
               label:
-                  "\u0639\u0627\u0645\u0644 \u0627\u0644\u0623\u0633\u0631\u0629",
+                "\u0639\u0627\u0645\u0644 \u0627\u0644\u0623\u0633\u0631\u0629",
               nextQuestion: 14,
             },
             {
               selected: false,
               id: "C1_2_3",
               label:
-                  "\u0644\u062d\u0633\u0627\u0628\u0647\u0645 \u0627\u0644\u062e\u0627\u0635 / \u0631\u062c\u0644 \u0623\u0639\u0645\u0627\u0644",
+                "\u0644\u062d\u0633\u0627\u0628\u0647\u0645 \u0627\u0644\u062e\u0627\u0635 / \u0631\u062c\u0644 \u0623\u0639\u0645\u0627\u0644",
               nextQuestion: 14,
             },
             {
               selected: false,
               id: "C1_2_1",
               label:
-                  "\u0627\u0644\u0639\u0627\u0645\u0644\u0648\u0646 \u0644\u062d\u0633\u0627\u0628\u0647\u0645 \u0627\u0644\u062e\u0627\u0635",
+                "\u0627\u0644\u0639\u0627\u0645\u0644\u0648\u0646 \u0644\u062d\u0633\u0627\u0628\u0647\u0645 \u0627\u0644\u062e\u0627\u0635",
               nextQuestion: 14,
             },
             {
               selected: false,
               id: "C1_2_2",
               label:
-                  "\u062a\u0646\u0641\u064a\u0630\u064a / \u0645\u0648\u0638\u0641",
+                "\u062a\u0646\u0641\u064a\u0630\u064a / \u0645\u0648\u0638\u0641",
               nextQuestion: 14,
             },
           ],
@@ -6802,7 +6802,7 @@ export const choiceTree = {
         {
           type: "checkbox",
           title:
-              "\u0647\u0644 \u0644\u062f\u064a\u0643 \u0631\u062e\u0635\u0629 \u0642\u064a\u0627\u062f\u0629 \u0625\u064a\u0637\u0627\u0644\u064a\u0629\u061f",
+            "\u0647\u0644 \u0644\u062f\u064a\u0643 \u0631\u062e\u0635\u0629 \u0642\u064a\u0627\u062f\u0629 \u0625\u064a\u0637\u0627\u0644\u064a\u0629\u061f",
           id: 14,
           answers: [
             {
@@ -6818,7 +6818,7 @@ export const choiceTree = {
         {
           type: "longform",
           title:
-              "\u062a\u0641\u0627\u0635\u064a\u0644 \u0631\u062e\u0635\u0629 \u0627\u0644\u0642\u064a\u0627\u062f\u0629",
+            "\u062a\u0641\u0627\u0635\u064a\u0644 \u0631\u062e\u0635\u0629 \u0627\u0644\u0642\u064a\u0627\u062f\u0629",
           id: 15,
           parentId: 4,
           nextQuestion: 13,
@@ -6836,23 +6836,23 @@ export const choiceTree = {
               label: "\u0646\u0648\u0639 \u0627\u0644\u0631\u062e\u0635\u0629",
               type: "text",
               helperText:
-                  "\u0627\u0644\u0633\u0627\u0628\u0642. \u0623 \u060c \u0628 \u060c \u062c",
+                "\u0627\u0644\u0633\u0627\u0628\u0642. \u0623 \u060c \u0628 \u060c \u062c",
               isRequired: false,
             },
             {
               id: "Data di rilascio",
               label:
-                  "\u062a\u0627\u0631\u064a\u062e \u0627\u0644\u0627\u0641\u0631\u0627\u062c \u0639\u0646\u0647",
+                "\u062a\u0627\u0631\u064a\u062e \u0627\u0644\u0627\u0641\u0631\u0627\u062c \u0639\u0646\u0647",
               type: "Date",
               helperText:
-                  "\u062a\u0627\u0631\u064a\u062e \u0627\u0644\u0627\u0641\u0631\u0627\u062c \u0639\u0646\u0647",
+                "\u062a\u0627\u0631\u064a\u062e \u0627\u0644\u0627\u0641\u0631\u0627\u062c \u0639\u0646\u0647",
               validate: "RequiredField",
               isRequired: false,
             },
             {
               id: "Organo di rilascio",
               label:
-                  "\u0627\u0644\u062c\u0647\u0629 \u0627\u0644\u0645\u0635\u062f\u0631\u0629",
+                "\u0627\u0644\u062c\u0647\u0629 \u0627\u0644\u0645\u0635\u062f\u0631\u0629",
               type: "text",
               helperText: "Motorizzazione",
               validate: "RequiredField",
@@ -6871,7 +6871,7 @@ export const choiceTree = {
         {
           type: "select",
           title:
-              "\u0645\u0627 \u0647\u0648 \u0645\u0633\u062a\u0648\u0627\u0643 \u0627\u0644\u062a\u0639\u0644\u064a\u0645\u064a\u061f",
+            "\u0645\u0627 \u0647\u0648 \u0645\u0633\u062a\u0648\u0627\u0643 \u0627\u0644\u062a\u0639\u0644\u064a\u0645\u064a\u061f",
           label: "\u062d\u062f\u062f \u062f\u0631\u062c\u062a\u0643",
           id: 13,
           answers: [
@@ -6879,21 +6879,21 @@ export const choiceTree = {
               selected: false,
               id: "C1_2_11",
               label:
-                  "\u0645\u062f\u0631\u0633\u0629 \u0625\u0628\u062a\u062f\u0627\u0626\u064a\u0629",
+                "\u0645\u062f\u0631\u0633\u0629 \u0625\u0628\u062a\u062f\u0627\u0626\u064a\u0629",
               nextQuestion: 16,
             },
             {
               selected: false,
               id: "C1_2_12",
               label:
-                  "\u0634\u0647\u0627\u062f\u0629 \u0627\u0644\u062b\u0627\u0646\u0648\u064a\u0629 \u0627\u0644\u0639\u0627\u0645\u0629",
+                "\u0634\u0647\u0627\u062f\u0629 \u0627\u0644\u062b\u0627\u0646\u0648\u064a\u0629 \u0627\u0644\u0639\u0627\u0645\u0629",
               nextQuestion: 16,
             },
             {
               selected: false,
               id: "C1_2_13",
               label:
-                  "\u0634\u0647\u0627\u062f\u0629 \u062f\u0628\u0644\u0648\u0645",
+                "\u0634\u0647\u0627\u062f\u0629 \u062f\u0628\u0644\u0648\u0645",
               nextQuestion: 16,
             },
             {
@@ -6906,7 +6906,7 @@ export const choiceTree = {
               selected: false,
               id: "C1_2_15",
               label:
-                  "\u062f\u0631\u062c\u0629 \u0627\u0644\u0645\u0627\u062c\u0633\u062a\u064a\u0631",
+                "\u062f\u0631\u062c\u0629 \u0627\u0644\u0645\u0627\u062c\u0633\u062a\u064a\u0631",
               nextQuestion: 16,
             },
             {
@@ -6921,7 +6921,7 @@ export const choiceTree = {
         {
           type: "longform",
           title:
-              "\u0645\u0633\u0643\u0646\u0643 \u0627\u0644\u062c\u062f\u064a\u062f",
+            "\u0645\u0633\u0643\u0646\u0643 \u0627\u0644\u062c\u062f\u064a\u062f",
           id: 16,
           parentId: 4,
           nextQuestion: 17,
@@ -6931,7 +6931,7 @@ export const choiceTree = {
               label: "\u0645\u062f\u064a\u0646\u0629",
               type: "text",
               helperText:
-                  "\u0627\u0644\u0633\u0627\u0628\u0642. \u0628\u0627\u0644\u064a\u0631\u0645\u0648",
+                "\u0627\u0644\u0633\u0627\u0628\u0642. \u0628\u0627\u0644\u064a\u0631\u0645\u0648",
               isRequired: true,
               validate: "RequiredField",
             },
@@ -6940,7 +6940,7 @@ export const choiceTree = {
               label: "\u0645\u0642\u0627\u0637\u0639\u0629",
               type: "text",
               helperText:
-                  "\u0627\u0644\u0633\u0627\u0628\u0642. \u0628\u0627\u0644\u064a\u0631\u0645\u0648",
+                "\u0627\u0644\u0633\u0627\u0628\u0642. \u0628\u0627\u0644\u064a\u0631\u0645\u0648",
               isRequired: true,
               validate: "RequiredField",
             },
@@ -6949,7 +6949,7 @@ export const choiceTree = {
               label: "\u0639\u0646\u0648\u0627\u0646",
               type: "text",
               helperText:
-                  "\u0639\u0628\u0631 \u062f\u064a\u0644\u0627 \u0644\u064a\u0628\u0631\u062a\u0627",
+                "\u0639\u0628\u0631 \u062f\u064a\u0644\u0627 \u0644\u064a\u0628\u0631\u062a\u0627",
               isRequired: true,
               validate: "RequiredField",
             },
@@ -6966,7 +6966,7 @@ export const choiceTree = {
               label: "\u0633\u0644\u0627\u0644\u0645",
               type: "text",
               helperText:
-                  "\u0627\u0644\u0633\u0627\u0628\u0642. \u0627\u0644\u0623\u0648\u0644",
+                "\u0627\u0644\u0633\u0627\u0628\u0642. \u0627\u0644\u0623\u0648\u0644",
             },
             {
               id: "Piano",
@@ -6987,7 +6987,7 @@ export const choiceTree = {
         {
           type: "checkbox",
           title:
-              "\u0647\u0644 \u062a\u0646\u062a\u0642\u0644 \u0648\u062d\u062f\u0643\u061f",
+            "\u0647\u0644 \u062a\u0646\u062a\u0642\u0644 \u0648\u062d\u062f\u0643\u061f",
           id: 17,
           answers: [
             {
@@ -7003,14 +7003,14 @@ export const choiceTree = {
         {
           type: "number",
           title:
-              "\u0643\u0645 \u0634\u062e\u0635 \u0628\u062c\u0627\u0646\u0628\u0643\u061f",
+            "\u0643\u0645 \u0634\u062e\u0635 \u0628\u062c\u0627\u0646\u0628\u0643\u061f",
           id: 18,
           nextQuestion: 41,
         },
         {
           type: "checkbox",
           title:
-              "\u0647\u0644 \u064a\u0648\u062c\u062f \u0623\u064a \u0634\u062e\u0635 \u064a\u0642\u064a\u0645 \u0628\u0627\u0644\u0641\u0639\u0644 \u0641\u064a \u0627\u0644\u0639\u0642\u0627\u0631\u061f",
+            "\u0647\u0644 \u064a\u0648\u062c\u062f \u0623\u064a \u0634\u062e\u0635 \u064a\u0642\u064a\u0645 \u0628\u0627\u0644\u0641\u0639\u0644 \u0641\u064a \u0627\u0644\u0639\u0642\u0627\u0631\u061f",
           id: 19,
           answers: [
             {
@@ -7026,7 +7026,7 @@ export const choiceTree = {
         {
           type: "longform",
           title:
-              "\u0623\u062e\u0628\u0631\u0646\u0627 \u0645\u0646 (\u0645\u0643\u0648\u0646 \u0648\u0627\u062d\u062f \u0641\u0642\u0637)",
+            "\u0623\u062e\u0628\u0631\u0646\u0627 \u0645\u0646 (\u0645\u0643\u0648\u0646 \u0648\u0627\u062d\u062f \u0641\u0642\u0637)",
           id: 21,
           parentId: 4,
           nextQuestion: 22,
@@ -7036,37 +7036,37 @@ export const choiceTree = {
               label: "\u0645\u0627 \u0647\u0648 \u0627\u0633\u0645\u0647\u061f",
               type: "text",
               helperText:
-                  "\u0627\u0644\u0633\u0627\u0628\u0642. \u0645\u0648\u0633\u0649",
+                "\u0627\u0644\u0633\u0627\u0628\u0642. \u0645\u0648\u0633\u0649",
               isRequired: true,
               validate: "RequiredField",
             },
             {
               id: "Cognome_6",
               label:
-                  "\u0645\u0627 \u0647\u0648 \u0644\u0642\u0628\u0647 / \u0627\u0633\u0645\u0647\u0627",
+                "\u0645\u0627 \u0647\u0648 \u0644\u0642\u0628\u0647 / \u0627\u0633\u0645\u0647\u0627",
               type: "text",
               helperText:
-                  "\u0627\u0644\u0633\u0627\u0628\u0642. \u0633\u064a\u0645\u0628\u0631\u064a\u0646\u064a",
+                "\u0627\u0644\u0633\u0627\u0628\u0642. \u0633\u064a\u0645\u0628\u0631\u064a\u0646\u064a",
               isRequired: true,
               validate: "RequiredField",
             },
             {
               id: "Luogo",
               label:
-                  "\u062a\u0627\u0631\u064a\u062e \u0627\u0644\u0645\u064a\u0644\u0627\u062f",
+                "\u062a\u0627\u0631\u064a\u062e \u0627\u0644\u0645\u064a\u0644\u0627\u062f",
               type: "date",
               helperText:
-                  "\u0627\u0644\u064a\u0648\u0645 / \u0627\u0644\u0634\u0647\u0631 / \u0627\u0644\u0633\u0646\u0629",
+                "\u0627\u0644\u064a\u0648\u0645 / \u0627\u0644\u0634\u0647\u0631 / \u0627\u0644\u0633\u0646\u0629",
               isRequired: true,
               validate: "RequiredField",
             },
             {
               id: "Luogo di nascita_6",
               label:
-                  "\u0645\u0643\u0627\u0646 \u0627\u0644\u0645\u064a\u0644\u0627\u062f",
+                "\u0645\u0643\u0627\u0646 \u0627\u0644\u0645\u064a\u0644\u0627\u062f",
               type: "text",
               helperText:
-                  "\u062d\u062f\u062f \u0645\u062f\u064a\u0646\u0629 \u0648\u0644\u0627\u062f\u062a\u0647",
+                "\u062d\u062f\u062f \u0645\u062f\u064a\u0646\u0629 \u0648\u0644\u0627\u062f\u062a\u0647",
               isRequired: true,
               validate: "RequiredField",
               autocomplete: true,
@@ -7074,7 +7074,7 @@ export const choiceTree = {
             {
               id: "Sussiste il seguente vincolo rispetto al su indicato  componente della famiglia gi\u00e0 residente",
               label:
-                  "\u062d\u062f\u062f \u0627\u0644\u0639\u0644\u0627\u0642\u0629 \u0627\u0644\u0623\u0633\u0631\u064a\u0629",
+                "\u062d\u062f\u062f \u0627\u0644\u0639\u0644\u0627\u0642\u0629 \u0627\u0644\u0623\u0633\u0631\u064a\u0629",
               type: "select",
               options: [
                 "لا أحد",
@@ -7091,7 +7091,7 @@ export const choiceTree = {
                 "ابن عم",
               ],
               helperText:
-                  "\u062d\u062f\u062f \u0644\u0627 \u0634\u064a\u0621 \u0625\u0630\u0627 \u0643\u0627\u0646 \u0647\u0646\u0627\u0643 \u0623\u064a \u0645\u0646\u0647\u0627",
+                "\u062d\u062f\u062f \u0644\u0627 \u0634\u064a\u0621 \u0625\u0630\u0627 \u0643\u0627\u0646 \u0647\u0646\u0627\u0643 \u0623\u064a \u0645\u0646\u0647\u0627",
               isRequired: false,
             },
           ],
@@ -7099,7 +7099,7 @@ export const choiceTree = {
         {
           type: "form",
           title:
-              "\u062c\u0647\u0629 \u0627\u0644\u0627\u062a\u0635\u0627\u0644 \u0627\u0644\u062e\u0627\u0635\u0629 \u0628\u0643",
+            "\u062c\u0647\u0629 \u0627\u0644\u0627\u062a\u0635\u0627\u0644 \u0627\u0644\u062e\u0627\u0635\u0629 \u0628\u0643",
           id: 22,
           parentId: 4,
           nextQuestion: 23,
@@ -7107,7 +7107,7 @@ export const choiceTree = {
             {
               id: "Telefono",
               label:
-                  "\u0631\u0642\u0645 \u0627\u0644\u062a\u0644\u064a\u0641\u0648\u0646",
+                "\u0631\u0642\u0645 \u0627\u0644\u062a\u0644\u064a\u0641\u0648\u0646",
               type: "number",
               helperText: "091665442",
               validate: "requiredField",
@@ -7117,7 +7117,7 @@ export const choiceTree = {
             {
               id: "Cellulare",
               label:
-                  "\u0631\u0642\u0645 \u0627\u0644\u0647\u0627\u062a\u0641 \u0627\u0644\u0645\u062d\u0645\u0648\u0644",
+                "\u0631\u0642\u0645 \u0627\u0644\u0647\u0627\u062a\u0641 \u0627\u0644\u0645\u062d\u0645\u0648\u0644",
               type: "tel",
               helperText: "+203332423421",
               validate: "",
@@ -7126,7 +7126,7 @@ export const choiceTree = {
             {
               id: "emailPec",
               label:
-                  "\u0627\u0644\u0628\u0631\u064a\u062f \u0627\u0644\u0625\u0644\u0643\u062a\u0631\u0648\u0646\u064a / Pec",
+                "\u0627\u0644\u0628\u0631\u064a\u062f \u0627\u0644\u0625\u0644\u0643\u062a\u0631\u0648\u0646\u064a / Pec",
               type: "email",
               helperText: "test@email.com",
               validate: "requiredField",
@@ -7145,7 +7145,7 @@ export const choiceTree = {
         {
           type: "select",
           title:
-              "\u0625\u0644\u0649 \u0623\u064a \u0641\u0626\u0629 \u064a\u0646\u062a\u0645\u064a \u0645\u0646\u0632\u0644\u0643\u061f",
+            "\u0625\u0644\u0649 \u0623\u064a \u0641\u0626\u0629 \u064a\u0646\u062a\u0645\u064a \u0645\u0646\u0632\u0644\u0643\u061f",
           label: "\u062d\u062f\u062f \u062d\u0627\u0644\u062a\u0643",
           id: 23,
           answers: [
@@ -7153,7 +7153,7 @@ export const choiceTree = {
               selected: false,
               id: "C9_1_5",
               label:
-                  "\u0627\u0633\u062a\u062e\u062f\u0627\u0645 \u0645\u062c\u0627\u0646\u064a",
+                "\u0627\u0633\u062a\u062e\u062f\u0627\u0645 \u0645\u062c\u0627\u0646\u064a",
               nextQuestion: 25,
             },
             {
@@ -7186,7 +7186,7 @@ export const choiceTree = {
         {
           type: "form",
           title:
-              "\u062a\u0641\u0627\u0635\u064a\u0644 \u0627\u0644\u0639\u0642\u062f",
+            "\u062a\u0641\u0627\u0635\u064a\u0644 \u0627\u0644\u0639\u0642\u062f",
           id: 24,
           parentId: 4,
           nextQuestion: 30,
@@ -7226,7 +7226,7 @@ export const choiceTree = {
         {
           type: "form",
           title:
-              "\u062a\u0641\u0627\u0635\u064a\u0644 \u0627\u0644\u0639\u0642\u062f",
+            "\u062a\u0641\u0627\u0635\u064a\u0644 \u0627\u0644\u0639\u0642\u062f",
           id: 26,
           parentId: 4,
           nextQuestion: 30,
@@ -7234,10 +7234,10 @@ export const choiceTree = {
             {
               id: "undefined_33",
               label:
-                  "\u0648\u0643\u0627\u0644\u0629 \u0627\u0644\u0625\u064a\u0631\u0627\u062f\u0627\u062a",
+                "\u0648\u0643\u0627\u0644\u0629 \u0627\u0644\u0625\u064a\u0631\u0627\u062f\u0627\u062a",
               type: "text",
               helperText:
-                  "\u0627\u0644\u0633\u0627\u0628\u0642. \u0628\u0627\u0644\u064a\u0631\u0645\u0648",
+                "\u0627\u0644\u0633\u0627\u0628\u0642. \u0628\u0627\u0644\u064a\u0631\u0645\u0648",
               validate: "requiredField",
               isRequired: true,
               autocomplete: false,
@@ -7247,7 +7247,7 @@ export const choiceTree = {
               label: "\u062a\u0627\u0631\u064a\u062e",
               type: "date",
               helperText:
-                  "\u0627\u0644\u064a\u0648\u0645 / \u0627\u0644\u0634\u0647\u0631 / \u0627\u0644\u0633\u0646\u0629",
+                "\u0627\u0644\u064a\u0648\u0645 / \u0627\u0644\u0634\u0647\u0631 / \u0627\u0644\u0633\u0646\u0629",
               isRequired: true,
             },
             {
@@ -7262,7 +7262,7 @@ export const choiceTree = {
         {
           type: "form",
           title:
-              "\u062a\u0641\u0627\u0635\u064a\u0644 \u0627\u0644\u0639\u0642\u062f",
+            "\u062a\u0641\u0627\u0635\u064a\u0644 \u0627\u0644\u0639\u0642\u062f",
           id: 25,
           parentId: 4,
           nextQuestion: 30,
@@ -7270,10 +7270,10 @@ export const choiceTree = {
             {
               id: "Entrate di",
               label:
-                  "\u0648\u0643\u0627\u0644\u0629 \u0627\u0644\u0625\u064a\u0631\u0627\u062f\u0627\u062a",
+                "\u0648\u0643\u0627\u0644\u0629 \u0627\u0644\u0625\u064a\u0631\u0627\u062f\u0627\u062a",
               type: "text",
               helperText:
-                  "\u0627\u0644\u0633\u0627\u0628\u0642. \u0628\u0627\u0644\u064a\u0631\u0645\u0648",
+                "\u0627\u0644\u0633\u0627\u0628\u0642. \u0628\u0627\u0644\u064a\u0631\u0645\u0648",
               validate: "requiredField",
               isRequired: true,
               autocomplete: false,
@@ -7283,7 +7283,7 @@ export const choiceTree = {
               label: "\u062a\u0627\u0631\u064a\u062e",
               type: "date",
               helperText:
-                  "\u0627\u0644\u064a\u0648\u0645 / \u0627\u0644\u0634\u0647\u0631 / \u0627\u0644\u0633\u0646\u0629",
+                "\u0627\u0644\u064a\u0648\u0645 / \u0627\u0644\u0634\u0647\u0631 / \u0627\u0644\u0633\u0646\u0629",
               isRequired: true,
             },
             {
@@ -7298,7 +7298,7 @@ export const choiceTree = {
         {
           type: "form",
           title:
-              "\u062a\u0641\u0627\u0635\u064a\u0644 \u0627\u0644\u0639\u0642\u062f",
+            "\u062a\u0641\u0627\u0635\u064a\u0644 \u0627\u0644\u0639\u0642\u062f",
           id: 26,
           parentId: 4,
           nextQuestion: 30,
@@ -7306,7 +7306,7 @@ export const choiceTree = {
             {
               id: "dati utili 1",
               label:
-                  "\u0627\u0643\u062a\u0628 \u0627\u0644\u062a\u0641\u0627\u0635\u064a\u0644",
+                "\u0627\u0643\u062a\u0628 \u0627\u0644\u062a\u0641\u0627\u0635\u064a\u0644",
               type: "text",
               validate: "requiredField",
               isRequired: true,
@@ -7317,7 +7317,7 @@ export const choiceTree = {
         {
           type: "checkbox",
           title:
-              "\u0647\u0644 \u0647\u0646\u0627\u0643 \u0645\u0646 \u064a\u062f\u0641\u0639 \u0627\u0644\u062a\u0627\u0631\u064a \u0628\u0627\u0644\u0641\u0639\u0644\u061f",
+            "\u0647\u0644 \u0647\u0646\u0627\u0643 \u0645\u0646 \u064a\u062f\u0641\u0639 \u0627\u0644\u062a\u0627\u0631\u064a \u0628\u0627\u0644\u0641\u0639\u0644\u061f",
           id: 30,
           answers: [
             {
@@ -7333,7 +7333,7 @@ export const choiceTree = {
         {
           type: "form",
           title:
-              "\u062a\u0641\u0627\u0635\u064a\u0644 \u0627\u0644\u0639\u0642\u062f",
+            "\u062a\u0641\u0627\u0635\u064a\u0644 \u0627\u0644\u0639\u0642\u062f",
           id: 31,
           parentId: 4,
           nextQuestion: 32,
@@ -7349,7 +7349,7 @@ export const choiceTree = {
             {
               id: "F",
               label:
-                  "\u0642\u0627\u0646\u0648\u0646 \u0627\u0644\u0645\u0627\u0644\u064a\u0629 \u0627\u0644\u0639\u0627\u0645\u0629",
+                "\u0642\u0627\u0646\u0648\u0646 \u0627\u0644\u0645\u0627\u0644\u064a\u0629 \u0627\u0644\u0639\u0627\u0645\u0629",
               type: "text",
               isRequired: true,
               validate: "fiscalCodeField",
@@ -7366,7 +7366,7 @@ export const choiceTree = {
         {
           type: "longform",
           title:
-              "\u0623\u0646\u062a \u062a\u0637\u0644\u0628 \u0627\u0634\u062a\u0631\u0627\u0643 TARI \u0627\u0644\u062a\u0627\u0644\u064a",
+            "\u0623\u0646\u062a \u062a\u0637\u0644\u0628 \u0627\u0634\u062a\u0631\u0627\u0643 TARI \u0627\u0644\u062a\u0627\u0644\u064a",
           id: 32,
           parentId: 4,
           nextQuestion: 33,
@@ -7395,7 +7395,7 @@ export const choiceTree = {
             {
               id: "data",
               label:
-                  "\u0627\u0644\u062a\u0627\u0631\u064a\u062e \u0627\u0644\u0641\u0639\u0644\u064a \u0644\u0644\u0627\u062d\u062a\u0644\u0627\u0644",
+                "\u0627\u0644\u062a\u0627\u0631\u064a\u062e \u0627\u0644\u0641\u0639\u0644\u064a \u0644\u0644\u0627\u062d\u062a\u0644\u0627\u0644",
               type: "date",
               isRequired: true,
               validate: "RequiredField",
@@ -7404,7 +7404,7 @@ export const choiceTree = {
             {
               id: "superficie in mq",
               label:
-                  "\u0627\u0644\u0633\u0637\u062d \u0641\u064a \u0645\u062a\u0631 \u0645\u0631\u0628\u0639",
+                "\u0627\u0644\u0633\u0637\u062d \u0641\u064a \u0645\u062a\u0631 \u0645\u0631\u0628\u0639",
               type: "number",
               isRequired: true,
               validate: "RequiredField",
@@ -7414,9 +7414,9 @@ export const choiceTree = {
         {
           type: "select",
           title:
-              "\u0639\u0646\u0648\u0627\u0646 \u0627\u0644\u0627\u062d\u062a\u0644\u0627\u0644",
+            "\u0639\u0646\u0648\u0627\u0646 \u0627\u0644\u0627\u062d\u062a\u0644\u0627\u0644",
           label:
-              "\u0627\u062e\u062a\u0631 \u0627\u0644\u0627\u0633\u062a\u062e\u062f\u0627\u0645",
+            "\u0627\u062e\u062a\u0631 \u0627\u0644\u0627\u0633\u062a\u062e\u062f\u0627\u0645",
           id: 33,
           answers: [
             {
@@ -7435,21 +7435,21 @@ export const choiceTree = {
               selected: false,
               id: "10_1_3",
               label:
-                  "\u0642\u0631\u0636 \u0644\u0644\u0627\u0633\u062a\u062e\u062f\u0627\u0645",
+                "\u0642\u0631\u0636 \u0644\u0644\u0627\u0633\u062a\u062e\u062f\u0627\u0645",
               nextQuestion: 17,
             },
             {
               selected: false,
               id: "10_1_4",
               label:
-                  "\u062d\u0642 \u0627\u0644\u0627\u0646\u062a\u0641\u0627\u0639",
+                "\u062d\u0642 \u0627\u0644\u0627\u0646\u062a\u0641\u0627\u0639",
               nextQuestion: 17,
             },
             {
               selected: false,
               id: "C9_1_6",
               label:
-                  "\u0627\u0644\u062a\u0646\u0627\u0632\u0644 \u0639\u0646 \u0627\u0644\u0633\u0643\u0646 \u0645\u0646 \u0647\u064a\u0626\u0629 \u0639\u0627\u0645\u0629",
+                "\u0627\u0644\u062a\u0646\u0627\u0632\u0644 \u0639\u0646 \u0627\u0644\u0633\u0643\u0646 \u0645\u0646 \u0647\u064a\u0626\u0629 \u0639\u0627\u0645\u0629",
               nextQuestion: 17,
             },
           ],
@@ -7462,30 +7462,30 @@ export const choiceTree = {
         {
           type: "select",
           title:
-              "\u09a4\u09be\u09b0 \u0995\u09bf \u09a8\u09be\u0997\u09b0\u09bf\u0995\u09a4\u09cd\u09ac \u0986\u099b\u09c7?",
+            "\u09a4\u09be\u09b0 \u0995\u09bf \u09a8\u09be\u0997\u09b0\u09bf\u0995\u09a4\u09cd\u09ac \u0986\u099b\u09c7?",
           label:
-              "\u0986\u09aa\u09a8\u09be\u09b0 \u09a8\u09be\u0997\u09b0\u09bf\u0995\u09a4\u09cd\u09ac \u09a8\u09bf\u09b0\u09cd\u09ac\u09be\u099a\u09a8 \u0995\u09b0\u09c1\u09a8",
+            "\u0986\u09aa\u09a8\u09be\u09b0 \u09a8\u09be\u0997\u09b0\u09bf\u0995\u09a4\u09cd\u09ac \u09a8\u09bf\u09b0\u09cd\u09ac\u09be\u099a\u09a8 \u0995\u09b0\u09c1\u09a8",
           id: 1,
           controller: true,
           answers: [
             {
               id: "I am a non-EU citizen",
               label:
-                  "\u0986\u09ae\u09bf \u098f\u0995\u099c\u09a8 \u09a8\u09a8-\u0987\u0987\u0989 \u09a8\u09be\u0997\u09b0\u09bf\u0995",
+                "\u0986\u09ae\u09bf \u098f\u0995\u099c\u09a8 \u09a8\u09a8-\u0987\u0987\u0989 \u09a8\u09be\u0997\u09b0\u09bf\u0995",
               nextQuestion: 18,
               documentazione: [],
             },
             {
               id: "I'm an Italian Citizen",
               label:
-                  "\u0986\u09ae\u09bf \u098f\u0995\u099c\u09a8 \u0987\u09a4\u09be\u09b2\u09c0\u09af\u09bc \u09a8\u09be\u0997\u09b0\u09bf\u0995",
+                "\u0986\u09ae\u09bf \u098f\u0995\u099c\u09a8 \u0987\u09a4\u09be\u09b2\u09c0\u09af\u09bc \u09a8\u09be\u0997\u09b0\u09bf\u0995",
               nextQuestion: 4,
               documentazione: [],
             },
             {
               id: "I am a EU citizen",
               label:
-                  "\u0986\u09ae\u09bf \u098f\u0995\u099c\u09a8 \u0987\u0987\u0989 \u09a8\u09be\u0997\u09b0\u09bf\u0995",
+                "\u0986\u09ae\u09bf \u098f\u0995\u099c\u09a8 \u0987\u0987\u0989 \u09a8\u09be\u0997\u09b0\u09bf\u0995",
               nextQuestion: 3,
               documentazione: [],
             },
@@ -7494,16 +7494,16 @@ export const choiceTree = {
         {
           type: "select",
           title:
-              "\u098f\u09b0 \u0985\u09ac\u09b8\u09cd\u09a5\u09be \u0995\u09bf?",
+            "\u098f\u09b0 \u0985\u09ac\u09b8\u09cd\u09a5\u09be \u0995\u09bf?",
           label:
-              "\u0986\u09aa\u09a8\u09be\u09b0 \u09b0\u09be\u099c\u09cd\u09af \u09a8\u09bf\u09b0\u09cd\u09ac\u09be\u099a\u09a8 \u0995\u09b0\u09c1\u09a8",
+            "\u0986\u09aa\u09a8\u09be\u09b0 \u09b0\u09be\u099c\u09cd\u09af \u09a8\u09bf\u09b0\u09cd\u09ac\u09be\u099a\u09a8 \u0995\u09b0\u09c1\u09a8",
           id: 2,
           controller: true,
           answers: [
             {
               id: "EU Citizen Relative",
               label:
-                  "\u0987\u0987\u0989 \u09a8\u09be\u0997\u09b0\u09bf\u0995\u09c7\u09b0 \u0986\u09a4\u09cd\u09ae\u09c0\u09af\u09bc",
+                "\u0987\u0987\u0989 \u09a8\u09be\u0997\u09b0\u09bf\u0995\u09c7\u09b0 \u0986\u09a4\u09cd\u09ae\u09c0\u09af\u09bc",
               nextQuestion: 4,
               documentazione: [
                 "পাসপোর্টের অনুলিপি.*",
@@ -7513,7 +7513,7 @@ export const choiceTree = {
             {
               id: "I have the Residence permit",
               label:
-                  "\u0986\u09ae\u09be\u09b0 \u098f\u0995\u099f\u09be \u09b0\u09c7\u09b8\u09bf\u09a1\u09c7\u09a8\u09cd\u09b8 \u09aa\u09be\u09b0\u09ae\u09bf\u099f \u0986\u099b\u09c7",
+                "\u0986\u09ae\u09be\u09b0 \u098f\u0995\u099f\u09be \u09b0\u09c7\u09b8\u09bf\u09a1\u09c7\u09a8\u09cd\u09b8 \u09aa\u09be\u09b0\u09ae\u09bf\u099f \u0986\u099b\u09c7",
               nextQuestion: 4,
               documentazione: [
                 "বৈধ পাসপোর্ট বা সমতুল্য নথির অনুলিপি।* ",
@@ -7524,7 +7524,7 @@ export const choiceTree = {
             {
               id: "I am renewing my Residence permit",
               label:
-                  "\u0986\u09ae\u09bf \u0986\u09ae\u09be\u09b0 \u09b0\u09c7\u09b8\u09bf\u09a1\u09c7\u09a8\u09cd\u09b8 \u09aa\u09be\u09b0\u09ae\u09bf\u099f \u09a8\u09ac\u09be\u09af\u09bc\u09a8 \u0995\u09b0\u099b\u09bf",
+                "\u0986\u09ae\u09bf \u0986\u09ae\u09be\u09b0 \u09b0\u09c7\u09b8\u09bf\u09a1\u09c7\u09a8\u09cd\u09b8 \u09aa\u09be\u09b0\u09ae\u09bf\u099f \u09a8\u09ac\u09be\u09af\u09bc\u09a8 \u0995\u09b0\u099b\u09bf",
               nextQuestion: 4,
               documentazione: [
                 "বৈধ পাসপোর্ট বা সমতুল্য নথির অনুলিপি।* ",
@@ -7536,7 +7536,7 @@ export const choiceTree = {
             {
               id: "I am Waiting for a work permit",
               label:
-                  "\u0986\u09ae\u09bf \u098f\u0995\u099f\u09bf \u09ac\u09b8\u09ac\u09be\u09b8\u09c7\u09b0 \u0985\u09a8\u09c1\u09ae\u09a4\u09bf\u09b0 \u099c\u09a8\u09cd\u09af \u0985\u09aa\u09c7\u0995\u09cd\u09b7\u09be \u0995\u09b0\u099b\u09bf",
+                "\u0986\u09ae\u09bf \u098f\u0995\u099f\u09bf \u09ac\u09b8\u09ac\u09be\u09b8\u09c7\u09b0 \u0985\u09a8\u09c1\u09ae\u09a4\u09bf\u09b0 \u099c\u09a8\u09cd\u09af \u0985\u09aa\u09c7\u0995\u09cd\u09b7\u09be \u0995\u09b0\u099b\u09bf",
               nextQuestion: 4,
               documentazione: [
                 "বৈধ পাসপোর্ট বা সমতুল্য নথির অনুলিপি।* ",
@@ -7549,7 +7549,7 @@ export const choiceTree = {
             {
               id: "Awaiting family reunification",
               label:
-                  "\u09aa\u09be\u09b0\u09bf\u09ac\u09be\u09b0\u09bf\u0995 \u09aa\u09c1\u09a8\u09b0\u09cd\u09ae\u09bf\u09b2\u09a8\u09c7\u09b0 \u0985\u09aa\u09c7\u0995\u09cd\u09b7\u09be\u09af\u09bc",
+                "\u09aa\u09be\u09b0\u09bf\u09ac\u09be\u09b0\u09bf\u0995 \u09aa\u09c1\u09a8\u09b0\u09cd\u09ae\u09bf\u09b2\u09a8\u09c7\u09b0 \u0985\u09aa\u09c7\u0995\u09cd\u09b7\u09be\u09af\u09bc",
               nextQuestion: 4,
               documentazione: [
                 "বৈধ পাসপোর্ট বা সমতুল্য নথির অনুলিপি।* ",
@@ -7564,9 +7564,9 @@ export const choiceTree = {
         {
           type: "select",
           title:
-              "\u098f\u09b0 \u0985\u09ac\u09b8\u09cd\u09a5\u09be \u0995\u09bf?",
+            "\u098f\u09b0 \u0985\u09ac\u09b8\u09cd\u09a5\u09be \u0995\u09bf?",
           label:
-              "\u0986\u09aa\u09a8\u09be\u09b0 \u09b0\u09be\u099c\u09cd\u09af \u09a8\u09bf\u09b0\u09cd\u09ac\u09be\u099a\u09a8 \u0995\u09b0\u09c1\u09a8",
+            "\u0986\u09aa\u09a8\u09be\u09b0 \u09b0\u09be\u099c\u09cd\u09af \u09a8\u09bf\u09b0\u09cd\u09ac\u09be\u099a\u09a8 \u0995\u09b0\u09c1\u09a8",
           id: 3,
           controller: true,
           answers: [
@@ -7583,7 +7583,7 @@ export const choiceTree = {
             {
               id: "f.i",
               label:
-                  "\u0986\u09b0\u09cd\u09a5\u09bf\u0995\u09ad\u09be\u09ac\u09c7 \u09b8\u09cd\u09ac\u09be\u09a7\u09c0\u09a8 (\u0995\u09cb\u09a8 \u0995\u09b0\u09cd\u09ae\u09c0 \u09a8\u09af\u09bc)",
+                "\u0986\u09b0\u09cd\u09a5\u09bf\u0995\u09ad\u09be\u09ac\u09c7 \u09b8\u09cd\u09ac\u09be\u09a7\u09c0\u09a8 (\u0995\u09cb\u09a8 \u0995\u09b0\u09cd\u09ae\u09c0 \u09a8\u09af\u09bc)",
               nextQuestion: 4,
               documentazione: [
                 "একটি বৈধ আইডি নথির অনুলিপি।*",
@@ -7606,7 +7606,7 @@ export const choiceTree = {
             {
               id: "relative",
               label:
-                  "\u0986\u09a4\u09cd\u09ae\u09c0\u09af\u09bc (\u0995\u09b0\u09cd\u09ae\u0995\u09b0\u09cd\u09a4\u09be, \u099b\u09be\u09a4\u09cd\u09b0, \u0987\u09a4\u09cd\u09af\u09be\u09a6\u09bf)",
+                "\u0986\u09a4\u09cd\u09ae\u09c0\u09af\u09bc (\u0995\u09b0\u09cd\u09ae\u0995\u09b0\u09cd\u09a4\u09be, \u099b\u09be\u09a4\u09cd\u09b0, \u0987\u09a4\u09cd\u09af\u09be\u09a6\u09bf)",
               documentazione: [
                 "একটি বৈধ আইডির অনুলিপি।*",
                 "আবাসনের মূল নথির কপি।*",
@@ -7619,15 +7619,15 @@ export const choiceTree = {
         {
           type: "select",
           title:
-              "\u0986\u09aa\u09a8\u09bf \u0995\u09cb\u09a5\u09be\u09af\u09bc \u09a5\u09c7\u0995\u09c7 \u09b8\u09b0\u099b\u09c7\u09a8?",
+            "\u0986\u09aa\u09a8\u09bf \u0995\u09cb\u09a5\u09be\u09af\u09bc \u09a5\u09c7\u0995\u09c7 \u09b8\u09b0\u099b\u09c7\u09a8?",
           label:
-              "\u0986\u09aa\u09a8\u09be\u09b0 \u09a8\u09be\u0997\u09b0\u09bf\u0995\u09a4\u09cd\u09ac \u09a8\u09bf\u09b0\u09cd\u09ac\u09be\u099a\u09a8 \u0995\u09b0\u09c1\u09a8",
+            "\u0986\u09aa\u09a8\u09be\u09b0 \u09a8\u09be\u0997\u09b0\u09bf\u0995\u09a4\u09cd\u09ac \u09a8\u09bf\u09b0\u09cd\u09ac\u09be\u099a\u09a8 \u0995\u09b0\u09c1\u09a8",
           id: 4,
           answers: [
             {
               id: "C1_1_2",
               label:
-                  "\u09ac\u09bf\u09a6\u09c7\u09b6\u09c0 \u09a6\u09c7\u09b6\u09c7",
+                "\u09ac\u09bf\u09a6\u09c7\u09b6\u09c0 \u09a6\u09c7\u09b6\u09c7",
               nextQuestion: 7,
               documents: "",
             },
@@ -7649,7 +7649,7 @@ export const choiceTree = {
             {
               id: "C_1_5",
               label:
-                  "\u09aa\u09cd\u09b0\u09a5\u09ae \u0985\u09a8\u09c1\u09b0\u09cb\u09a7",
+                "\u09aa\u09cd\u09b0\u09a5\u09ae \u0985\u09a8\u09c1\u09b0\u09cb\u09a7",
               nextQuestion: 8,
             },
           ],
@@ -7664,10 +7664,10 @@ export const choiceTree = {
             {
               id: "Indicare lo Stato estero di provenienza",
               label:
-                  "\u0986\u09aa\u09a8\u09be\u09b0 \u09a6\u09c7\u09b6 \u09b2\u09bf\u0996\u09c1\u09a8",
+                "\u0986\u09aa\u09a8\u09be\u09b0 \u09a6\u09c7\u09b6 \u09b2\u09bf\u0996\u09c1\u09a8",
               type: "text",
               helperText:
-                  "\u09af\u09c7\u09ae\u09a8 \u0998\u09be\u09a8\u09be, \u09ab\u09cd\u09b0\u09be\u09a8\u09cd\u09b8, \u09b0\u09be\u09b6\u09bf\u09af\u09bc\u09be",
+                "\u09af\u09c7\u09ae\u09a8 \u0998\u09be\u09a8\u09be, \u09ab\u09cd\u09b0\u09be\u09a8\u09cd\u09b8, \u09b0\u09be\u09b6\u09bf\u09af\u09bc\u09be",
               autocomplete: true,
             },
           ],
@@ -7681,10 +7681,10 @@ export const choiceTree = {
             {
               id: "Indicare lo Stato estero di provenienza",
               label:
-                  "\u0986\u0997\u09c7 \u0986\u09aa\u09a8\u09be\u09b0 \u09a6\u09c7\u09b6 \u09b2\u09bf\u0996\u09c1\u09a8",
+                "\u0986\u0997\u09c7 \u0986\u09aa\u09a8\u09be\u09b0 \u09a6\u09c7\u09b6 \u09b2\u09bf\u0996\u09c1\u09a8",
               type: "text",
               helperText:
-                  "\u09af\u09c7\u09ae\u09a8 \u0998\u09be\u09a8\u09be, \u09ab\u09cd\u09b0\u09be\u09a8\u09cd\u09b8, \u09b0\u09be\u09b6\u09bf\u09af\u09bc\u09be",
+                "\u09af\u09c7\u09ae\u09a8 \u0998\u09be\u09a8\u09be, \u09ab\u09cd\u09b0\u09be\u09a8\u09cd\u09b8, \u09b0\u09be\u09b6\u09bf\u09af\u09bc\u09be",
               autocomplete: true,
             },
           ],
@@ -7698,10 +7698,10 @@ export const choiceTree = {
             {
               id: "Indicare il comune di provenienza",
               label:
-                  "\u0986\u09aa\u09a8\u09be\u09b0 \u09b6\u09b9\u09b0 \u09b2\u09bf\u0996\u09c1\u09a8",
+                "\u0986\u09aa\u09a8\u09be\u09b0 \u09b6\u09b9\u09b0 \u09b2\u09bf\u0996\u09c1\u09a8",
               type: "text",
               helperText:
-                  "\u09af\u09c7\u09ae\u09a8 \u09a4\u09c1\u09b0\u09bf\u09a8, \u09ae\u09bf\u09b2\u09be\u09a8, \u09aa\u09be\u09ad\u09bf\u09af\u09bc\u09be",
+                "\u09af\u09c7\u09ae\u09a8 \u09a4\u09c1\u09b0\u09bf\u09a8, \u09ae\u09bf\u09b2\u09be\u09a8, \u09aa\u09be\u09ad\u09bf\u09af\u09bc\u09be",
               autocomplete: true,
             },
           ],
@@ -7709,14 +7709,14 @@ export const choiceTree = {
         {
           type: "longform",
           title:
-              "\u0986\u09b8\u09c1\u09a8 \u09a8\u09bf\u099c\u09c7\u09b0 \u09b8\u09ae\u09cd\u09aa\u09b0\u09cd\u0995\u09c7 \u0995\u09a5\u09be \u09ac\u09b2\u09bf",
+            "\u0986\u09b8\u09c1\u09a8 \u09a8\u09bf\u099c\u09c7\u09b0 \u09b8\u09ae\u09cd\u09aa\u09b0\u09cd\u0995\u09c7 \u0995\u09a5\u09be \u09ac\u09b2\u09bf",
           id: 8,
           nextQuestion: 9,
           answers: [
             {
               id: "Nome",
               label:
-                  "\u0986\u09aa\u09a8\u09be\u09b0 \u09a8\u09be\u09ae \u0995\u09bf?",
+                "\u0986\u09aa\u09a8\u09be\u09b0 \u09a8\u09be\u09ae \u0995\u09bf?",
               type: "text",
               helperText: "\u0989\u09a6\u09be\u0983 \u09ae\u09c1\u09b8\u09be",
               validate: "RequiredField",
@@ -7725,10 +7725,10 @@ export const choiceTree = {
             {
               id: "Cognome",
               label:
-                  "\u09a4\u09cb\u09ae\u09be\u09b0 \u09a8\u09be\u09ae\u09c7\u09b0 \u09b6\u09c7\u09b7 \u0985\u0982\u09b6 \u0995\u09bf",
+                "\u09a4\u09cb\u09ae\u09be\u09b0 \u09a8\u09be\u09ae\u09c7\u09b0 \u09b6\u09c7\u09b7 \u0985\u0982\u09b6 \u0995\u09bf",
               type: "text",
               helperText:
-                  "\u09af\u09c7\u09ae\u09a8 \u09b8\u09c7\u09ae\u09aa\u09cd\u09b0\u09bf\u09a8\u09bf",
+                "\u09af\u09c7\u09ae\u09a8 \u09b8\u09c7\u09ae\u09aa\u09cd\u09b0\u09bf\u09a8\u09bf",
               validate: "RequiredField",
               isRequired: true,
             },
@@ -7743,10 +7743,10 @@ export const choiceTree = {
             {
               id: "Luogo di nascita",
               label:
-                  "\u0986\u09aa\u09a8\u09bf \u0995\u09cb\u09a5\u09be\u09af\u09bc \u099c\u09a8\u09cd\u09ae\u0997\u09cd\u09b0\u09b9\u09a3 \u0995\u09b0\u09c7\u09a8?",
+                "\u0986\u09aa\u09a8\u09bf \u0995\u09cb\u09a5\u09be\u09af\u09bc \u099c\u09a8\u09cd\u09ae\u0997\u09cd\u09b0\u09b9\u09a3 \u0995\u09b0\u09c7\u09a8?",
               type: "text",
               helperText:
-                  "\u0986\u09aa\u09a8\u09be\u09b0 \u099c\u09a8\u09cd\u09ae\u09c7\u09b0 \u09b6\u09b9\u09b0 \u09a8\u09bf\u09b0\u09cd\u09a6\u09c7\u09b6 \u0995\u09b0\u09c1\u09a8",
+                "\u0986\u09aa\u09a8\u09be\u09b0 \u099c\u09a8\u09cd\u09ae\u09c7\u09b0 \u09b6\u09b9\u09b0 \u09a8\u09bf\u09b0\u09cd\u09a6\u09c7\u09b6 \u0995\u09b0\u09c1\u09a8",
               autocomplete: true,
               isRequired: true,
             },
@@ -7758,16 +7758,16 @@ export const choiceTree = {
               validate: "RequiredField",
               isRequired: true,
               helperText:
-                  "\u0986\u09aa\u09a8\u09be\u09b0 \u09b2\u09bf\u0999\u09cd\u0997 \u09a8\u09bf\u09b0\u09cd\u09ac\u09be\u099a\u09a8",
+                "\u0986\u09aa\u09a8\u09be\u09b0 \u09b2\u09bf\u0999\u09cd\u0997 \u09a8\u09bf\u09b0\u09cd\u09ac\u09be\u099a\u09a8",
             },
             {
               id: "Stato Civile",
               label:
-                  "\u09a4\u09be\u09b0 \u09ac\u09c8\u09ac\u09be\u09b9\u09bf\u0995 \u0985\u09ac\u09b8\u09cd\u09a5\u09be?",
+                "\u09a4\u09be\u09b0 \u09ac\u09c8\u09ac\u09be\u09b9\u09bf\u0995 \u0985\u09ac\u09b8\u09cd\u09a5\u09be?",
               type: "select",
               options: ["unmarried", "married", "divorced", "widower"],
               helperText:
-                  "\u0986\u09aa\u09a8\u09be\u09b0 \u09b0\u09be\u099c\u09cd\u09af \u09a8\u09bf\u09b0\u09cd\u09ac\u09be\u099a\u09a8 \u0995\u09b0\u09c1\u09a8",
+                "\u0986\u09aa\u09a8\u09be\u09b0 \u09b0\u09be\u099c\u09cd\u09af \u09a8\u09bf\u09b0\u09cd\u09ac\u09be\u099a\u09a8 \u0995\u09b0\u09c1\u09a8",
               validate: "RequiredField",
             },
             {
@@ -7775,14 +7775,14 @@ export const choiceTree = {
               label: "\u09a8\u09be\u0997\u09b0\u09bf\u0995\u09a4\u09cd\u09ac",
               type: "text",
               helperText:
-                  "\u09af\u09c7\u09ae\u09a8 \u0998\u09be\u09a8\u09bf\u09af\u09bc\u09be, \u09ab\u09b0\u09be\u09b8\u09bf, \u09b0\u09be\u09b6\u09bf\u09af\u09bc\u09be\u09a8...",
+                "\u09af\u09c7\u09ae\u09a8 \u0998\u09be\u09a8\u09bf\u09af\u09bc\u09be, \u09ab\u09b0\u09be\u09b8\u09bf, \u09b0\u09be\u09b6\u09bf\u09af\u09bc\u09be\u09a8...",
               validate: "RequiredField",
               isRequired: true,
             },
             {
               id: "Codice Fiscale",
               label:
-                  "\u099f\u09cd\u09af\u09be\u0995\u09cd\u09b8 \u0986\u0987\u09a1\u09bf \u0995\u09cb\u09a1",
+                "\u099f\u09cd\u09af\u09be\u0995\u09cd\u09b8 \u0986\u0987\u09a1\u09bf \u0995\u09cb\u09a1",
               type: "text",
               helperText: "\u09af\u09c7\u09ae\u09a8 R5MRI88L73G273E",
               validate: "fiscalCodeField",
@@ -7793,7 +7793,7 @@ export const choiceTree = {
         {
           type: "checkbox",
           title:
-              "\u09a4\u09cb\u09ae\u09be\u09b0 \u0995\u09bf \u0995\u09cb\u09a8 \u099a\u09be\u0995\u09b0\u09bf \u0986\u099b\u09c7?",
+            "\u09a4\u09cb\u09ae\u09be\u09b0 \u0995\u09bf \u0995\u09cb\u09a8 \u099a\u09be\u0995\u09b0\u09bf \u0986\u099b\u09c7?",
           id: 9,
           answers: [
             {
@@ -7809,9 +7809,9 @@ export const choiceTree = {
         {
           type: "select",
           title:
-              "\u0986\u09aa\u09a8\u09be\u09b0 \u0985\u09aa\u09cd\u09b0\u09ab\u09c7\u09b6\u09a8\u09be\u09b2 \u0985\u09ac\u09b8\u09cd\u09a5\u09be \u0995\u09bf?",
+            "\u0986\u09aa\u09a8\u09be\u09b0 \u0985\u09aa\u09cd\u09b0\u09ab\u09c7\u09b6\u09a8\u09be\u09b2 \u0985\u09ac\u09b8\u09cd\u09a5\u09be \u0995\u09bf?",
           label:
-              "\u0986\u09aa\u09a8\u09be\u09b0 \u09b0\u09be\u099c\u09cd\u09af \u09a8\u09bf\u09b0\u09cd\u09ac\u09be\u099a\u09a8 \u0995\u09b0\u09c1\u09a8",
+            "\u0986\u09aa\u09a8\u09be\u09b0 \u09b0\u09be\u099c\u09cd\u09af \u09a8\u09bf\u09b0\u09cd\u09ac\u09be\u099a\u09a8 \u0995\u09b0\u09c1\u09a8",
           id: 11,
           answers: [
             {
@@ -7836,7 +7836,7 @@ export const choiceTree = {
               selected: false,
               id: "C1_2_9",
               label:
-                  "\u0985\u09ac\u09b8\u09b0\u09aa\u09cd\u09b0\u09be\u09aa\u09cd\u09a4",
+                "\u0985\u09ac\u09b8\u09b0\u09aa\u09cd\u09b0\u09be\u09aa\u09cd\u09a4",
               nextQuestion: 13,
             },
             {
@@ -7851,9 +7851,9 @@ export const choiceTree = {
         {
           type: "select",
           title:
-              "\u0986\u09aa\u09a8\u09be\u09b0 \u09aa\u09c7\u09b6\u09be\u0997\u09a4 \u0985\u09ac\u09b8\u09cd\u09a5\u09be \u0995\u09bf?",
+            "\u0986\u09aa\u09a8\u09be\u09b0 \u09aa\u09c7\u09b6\u09be\u0997\u09a4 \u0985\u09ac\u09b8\u09cd\u09a5\u09be \u0995\u09bf?",
           label:
-              "\u0986\u09aa\u09a8\u09be\u09b0 \u09b0\u09be\u099c\u09cd\u09af \u09a8\u09bf\u09b0\u09cd\u09ac\u09be\u099a\u09a8 \u0995\u09b0\u09c1\u09a8",
+            "\u0986\u09aa\u09a8\u09be\u09b0 \u09b0\u09be\u099c\u09cd\u09af \u09a8\u09bf\u09b0\u09cd\u09ac\u09be\u099a\u09a8 \u0995\u09b0\u09c1\u09a8",
           id: 12,
           answers: [
             {
@@ -7866,14 +7866,14 @@ export const choiceTree = {
               selected: false,
               id: "C1_2_5",
               label:
-                  "\u09aa\u09be\u09b0\u09bf\u09ac\u09be\u09b0\u09bf\u0995 \u0995\u09b0\u09cd\u09ae\u09c0",
+                "\u09aa\u09be\u09b0\u09bf\u09ac\u09be\u09b0\u09bf\u0995 \u0995\u09b0\u09cd\u09ae\u09c0",
               nextQuestion: 14,
             },
             {
               selected: false,
               id: "C1_2_3",
               label:
-                  "\u09ab\u09cd\u09b0\u09bf\u09b2\u09cd\u09af\u09be\u09a8\u09cd\u09b8\u09be\u09b0/\u0989\u09a6\u09cd\u09af\u09cb\u0995\u09cd\u09a4\u09be",
+                "\u09ab\u09cd\u09b0\u09bf\u09b2\u09cd\u09af\u09be\u09a8\u09cd\u09b8\u09be\u09b0/\u0989\u09a6\u09cd\u09af\u09cb\u0995\u09cd\u09a4\u09be",
               nextQuestion: 14,
             },
             {
@@ -7886,7 +7886,7 @@ export const choiceTree = {
               selected: false,
               id: "C1_2_2",
               label:
-                  "\u09ae\u09cd\u09af\u09be\u09a8\u09c7\u099c\u09be\u09b0/\u0995\u09b0\u09cd\u09ae\u099a\u09be\u09b0\u09c0",
+                "\u09ae\u09cd\u09af\u09be\u09a8\u09c7\u099c\u09be\u09b0/\u0995\u09b0\u09cd\u09ae\u099a\u09be\u09b0\u09c0",
               nextQuestion: 14,
             },
           ],
@@ -7895,7 +7895,7 @@ export const choiceTree = {
         {
           type: "checkbox",
           title:
-              "\u0986\u09aa\u09a8\u09be\u09b0 \u0995\u09bf \u0987\u09a4\u09be\u09b2\u09c0\u09af\u09bc \u09a1\u09cd\u09b0\u09be\u0987\u09ad\u09bf\u0982 \u09b2\u09be\u0987\u09b8\u09c7\u09a8\u09cd\u09b8 \u0986\u099b\u09c7?",
+            "\u0986\u09aa\u09a8\u09be\u09b0 \u0995\u09bf \u0987\u09a4\u09be\u09b2\u09c0\u09af\u09bc \u09a1\u09cd\u09b0\u09be\u0987\u09ad\u09bf\u0982 \u09b2\u09be\u0987\u09b8\u09c7\u09a8\u09cd\u09b8 \u0986\u099b\u09c7?",
           id: 14,
           answers: [
             {
@@ -7911,7 +7911,7 @@ export const choiceTree = {
         {
           type: "longform",
           title:
-              "\u09a1\u09cd\u09b0\u09be\u0987\u09ad\u09bf\u0982 \u09b2\u09be\u0987\u09b8\u09c7\u09a8\u09cd\u09b8\u09c7\u09b0 \u09ac\u09bf\u09b6\u09a6 \u09ac\u09bf\u09ac\u09b0\u09a3",
+            "\u09a1\u09cd\u09b0\u09be\u0987\u09ad\u09bf\u0982 \u09b2\u09be\u0987\u09b8\u09c7\u09a8\u09cd\u09b8\u09c7\u09b0 \u09ac\u09bf\u09b6\u09a6 \u09ac\u09bf\u09ac\u09b0\u09a3",
           id: 15,
           parentId: 4,
           nextQuestion: 13,
@@ -7927,7 +7927,7 @@ export const choiceTree = {
             {
               id: "Patente tipo",
               label:
-                  "\u09b2\u09be\u0987\u09b8\u09c7\u09a8\u09cd\u09b8\u09c7\u09b0 \u09a7\u09b0\u09a8",
+                "\u09b2\u09be\u0987\u09b8\u09c7\u09a8\u09cd\u09b8\u09c7\u09b0 \u09a7\u09b0\u09a8",
               type: "text",
               helperText: "\u09af\u09c7\u09ae\u09a8 A, B, C",
               isRequired: false,
@@ -7935,20 +7935,20 @@ export const choiceTree = {
             {
               id: "Data di rilascio",
               label:
-                  "\u09ae\u09c1\u0995\u09cd\u09a4\u09bf\u09b0 \u09a4\u09be\u09b0\u09bf\u0996",
+                "\u09ae\u09c1\u0995\u09cd\u09a4\u09bf\u09b0 \u09a4\u09be\u09b0\u09bf\u0996",
               type: "Date",
               helperText:
-                  "\u09ae\u09c1\u0995\u09cd\u09a4\u09bf\u09b0 \u09a4\u09be\u09b0\u09bf\u0996",
+                "\u09ae\u09c1\u0995\u09cd\u09a4\u09bf\u09b0 \u09a4\u09be\u09b0\u09bf\u0996",
               validate: "RequiredField",
               isRequired: false,
             },
             {
               id: "Organo di rilascio",
               label:
-                  "\u0987\u09b8\u09cd\u09af\u09c1\u0995\u09be\u09b0\u09c0 \u09b8\u0982\u09b8\u09cd\u09a5\u09be",
+                "\u0987\u09b8\u09cd\u09af\u09c1\u0995\u09be\u09b0\u09c0 \u09b8\u0982\u09b8\u09cd\u09a5\u09be",
               type: "text",
               helperText:
-                  "\u09ae\u09cb\u099f\u09b0\u09be\u0987\u099c\u09c7\u09b6\u09a8",
+                "\u09ae\u09cb\u099f\u09b0\u09be\u0987\u099c\u09c7\u09b6\u09a8",
               validate: "RequiredField",
               isRequired: false,
             },
@@ -7965,23 +7965,23 @@ export const choiceTree = {
         {
           type: "select",
           title:
-              "\u09a4\u09be\u09b0 \u09b6\u09bf\u0995\u09cd\u09b7\u09be\u09b0 \u09b8\u09cd\u09a4\u09b0 \u0995\u09bf?",
+            "\u09a4\u09be\u09b0 \u09b6\u09bf\u0995\u09cd\u09b7\u09be\u09b0 \u09b8\u09cd\u09a4\u09b0 \u0995\u09bf?",
           label:
-              "\u0986\u09aa\u09a8\u09be\u09b0 \u09a1\u09bf\u0997\u09cd\u09b0\u09c0 \u09a8\u09bf\u09b0\u09cd\u09ac\u09be\u099a\u09a8 \u0995\u09b0\u09c1\u09a8",
+            "\u0986\u09aa\u09a8\u09be\u09b0 \u09a1\u09bf\u0997\u09cd\u09b0\u09c0 \u09a8\u09bf\u09b0\u09cd\u09ac\u09be\u099a\u09a8 \u0995\u09b0\u09c1\u09a8",
           id: 13,
           answers: [
             {
               selected: false,
               id: "C1_2_11",
               label:
-                  "\u09aa\u09cd\u09b0\u09be\u09a5\u09ae\u09bf\u0995 \u09b8\u09cd\u0995\u09c1\u09b2",
+                "\u09aa\u09cd\u09b0\u09be\u09a5\u09ae\u09bf\u0995 \u09b8\u09cd\u0995\u09c1\u09b2",
               nextQuestion: 16,
             },
             {
               selected: false,
               id: "C1_2_12",
               label:
-                  "\u09ae\u09be\u09a7\u09cd\u09af\u09ae\u09bf\u0995 \u09b8\u09cd\u0995\u09c1\u09b2 \u09b8\u09be\u09b0\u09cd\u099f\u09bf\u09ab\u09bf\u0995\u09c7\u099f",
+                "\u09ae\u09be\u09a7\u09cd\u09af\u09ae\u09bf\u0995 \u09b8\u09cd\u0995\u09c1\u09b2 \u09b8\u09be\u09b0\u09cd\u099f\u09bf\u09ab\u09bf\u0995\u09c7\u099f",
               nextQuestion: 16,
             },
             {
@@ -8000,7 +8000,7 @@ export const choiceTree = {
               selected: false,
               id: "C1_2_15",
               label:
-                  "\u09ae\u09be\u09b8\u09cd\u099f\u09be\u09b0\u09cd\u09b8 \u09a1\u09bf\u0997\u09cd\u09b0\u09c0",
+                "\u09ae\u09be\u09b8\u09cd\u099f\u09be\u09b0\u09cd\u09b8 \u09a1\u09bf\u0997\u09cd\u09b0\u09c0",
               nextQuestion: 16,
             },
             {
@@ -8015,7 +8015,7 @@ export const choiceTree = {
         {
           type: "longform",
           title:
-              "\u0986\u09aa\u09a8\u09be\u09b0 \u09a8\u09a4\u09c1\u09a8 \u09ac\u09be\u09b8\u09b8\u09cd\u09a5\u09be\u09a8",
+            "\u0986\u09aa\u09a8\u09be\u09b0 \u09a8\u09a4\u09c1\u09a8 \u09ac\u09be\u09b8\u09b8\u09cd\u09a5\u09be\u09a8",
           id: 16,
           parentId: 4,
           nextQuestion: 17,
@@ -8025,7 +8025,7 @@ export const choiceTree = {
               label: "\u09b6\u09b9\u09b0",
               type: "text",
               helperText:
-                  "\u09af\u09c7\u09ae\u09a8 \u09aa\u09be\u09b2\u09c7\u09b0\u09ae\u09cb",
+                "\u09af\u09c7\u09ae\u09a8 \u09aa\u09be\u09b2\u09c7\u09b0\u09ae\u09cb",
               isRequired: true,
               validate: "RequiredField",
             },
@@ -8034,7 +8034,7 @@ export const choiceTree = {
               label: "\u09aa\u09cd\u09b0\u09a6\u09c7\u09b6",
               type: "text",
               helperText:
-                  "\u09af\u09c7\u09ae\u09a8 \u09aa\u09be\u09b2\u09c7\u09b0\u09ae\u09cb",
+                "\u09af\u09c7\u09ae\u09a8 \u09aa\u09be\u09b2\u09c7\u09b0\u09ae\u09cb",
               isRequired: true,
               validate: "RequiredField",
             },
@@ -8043,14 +8043,14 @@ export const choiceTree = {
               label: "\u09a0\u09bf\u0995\u09be\u09a8\u09be",
               type: "text",
               helperText:
-                  "\u09b8\u09cd\u09ac\u09be\u09a7\u09c0\u09a8\u09a4\u09be\u09b0 \u09aa\u09a5",
+                "\u09b8\u09cd\u09ac\u09be\u09a7\u09c0\u09a8\u09a4\u09be\u09b0 \u09aa\u09a5",
               isRequired: true,
               validate: "RequiredField",
             },
             {
               id: "Numero civico",
               label:
-                  "\u09ac\u09be\u09a1\u09bc\u09bf\u09b0 \u09a8\u09ae\u09cd\u09ac\u09b0",
+                "\u09ac\u09be\u09a1\u09bc\u09bf\u09b0 \u09a8\u09ae\u09cd\u09ac\u09b0",
               type: "text",
               helperText: "\u0989\u09a6\u09be\u0983 36",
               isRequired: true,
@@ -8085,7 +8085,7 @@ export const choiceTree = {
         {
           type: "checkbox",
           title:
-              "\u09a4\u09c1\u09ae\u09bf \u0995\u09bf \u098f\u0995\u09be \u099a\u09b2\u09be\u09ab\u09c7\u09b0\u09be \u0995\u09b0?",
+            "\u09a4\u09c1\u09ae\u09bf \u0995\u09bf \u098f\u0995\u09be \u099a\u09b2\u09be\u09ab\u09c7\u09b0\u09be \u0995\u09b0?",
           id: 17,
           answers: [
             {
@@ -8101,14 +8101,14 @@ export const choiceTree = {
         {
           type: "number",
           title:
-              "\u0986\u09aa\u09a8\u09be\u09b0 \u09aa\u09be\u09b6\u09c7 \u0995\u09a4 \u09ae\u09be\u09a8\u09c1\u09b7?",
+            "\u0986\u09aa\u09a8\u09be\u09b0 \u09aa\u09be\u09b6\u09c7 \u0995\u09a4 \u09ae\u09be\u09a8\u09c1\u09b7?",
           id: 18,
           nextQuestion: 51,
         },
         {
           type: "checkbox",
           title:
-              "\u0995\u09c7\u0989 \u0995\u09bf \u0987\u09a4\u09bf\u09ae\u09a7\u09cd\u09af\u09c7 \u09b8\u09ae\u09cd\u09aa\u09a4\u09cd\u09a4\u09bf\u09a4\u09c7 \u09ac\u09b8\u09ac\u09be\u09b8 \u0995\u09b0\u099b\u09c7\u09a8?",
+            "\u0995\u09c7\u0989 \u0995\u09bf \u0987\u09a4\u09bf\u09ae\u09a7\u09cd\u09af\u09c7 \u09b8\u09ae\u09cd\u09aa\u09a4\u09cd\u09a4\u09bf\u09a4\u09c7 \u09ac\u09b8\u09ac\u09be\u09b8 \u0995\u09b0\u099b\u09c7\u09a8?",
           id: 19,
           answers: [
             {
@@ -8124,7 +8124,7 @@ export const choiceTree = {
         {
           type: "longform",
           title:
-              "\u0986\u09ae\u09be\u09a6\u09c7\u09b0 \u09ac\u09b2\u09c1\u09a8 \u0995\u09c7 (\u09b6\u09c1\u09a7\u09c1\u09ae\u09be\u09a4\u09cd\u09b0 \u098f\u0995\u099c\u09a8 \u09b8\u09a6\u09b8\u09cd\u09af)",
+            "\u0986\u09ae\u09be\u09a6\u09c7\u09b0 \u09ac\u09b2\u09c1\u09a8 \u0995\u09c7 (\u09b6\u09c1\u09a7\u09c1\u09ae\u09be\u09a4\u09cd\u09b0 \u098f\u0995\u099c\u09a8 \u09b8\u09a6\u09b8\u09cd\u09af)",
           id: 21,
           parentId: 4,
           nextQuestion: 22,
@@ -8140,10 +8140,10 @@ export const choiceTree = {
             {
               id: "Cognome_6",
               label:
-                  "\u09a4\u09cb\u09ae\u09be\u09b0 \u09a1\u09be\u0995 \u09a8\u09be\u09ae \u0995\u09bf",
+                "\u09a4\u09cb\u09ae\u09be\u09b0 \u09a1\u09be\u0995 \u09a8\u09be\u09ae \u0995\u09bf",
               type: "text",
               helperText:
-                  "\u09af\u09c7\u09ae\u09a8 \u09b8\u09c7\u09ae\u09aa\u09cd\u09b0\u09bf\u09a8\u09bf",
+                "\u09af\u09c7\u09ae\u09a8 \u09b8\u09c7\u09ae\u09aa\u09cd\u09b0\u09bf\u09a8\u09bf",
               isRequired: true,
               validate: "RequiredField",
             },
@@ -8160,17 +8160,17 @@ export const choiceTree = {
               label: "\u099c\u09a8\u09cd\u09ae\u09b8\u09cd\u09a5\u09be\u09a8",
               type: "text",
               helperText:
-                  "\u0986\u09aa\u09a8\u09be\u09b0 \u099c\u09a8\u09cd\u09ae\u09c7\u09b0 \u09b6\u09b9\u09b0 \u09a8\u09bf\u09b0\u09cd\u09a6\u09c7\u09b6 \u0995\u09b0\u09c1\u09a8",
+                "\u0986\u09aa\u09a8\u09be\u09b0 \u099c\u09a8\u09cd\u09ae\u09c7\u09b0 \u09b6\u09b9\u09b0 \u09a8\u09bf\u09b0\u09cd\u09a6\u09c7\u09b6 \u0995\u09b0\u09c1\u09a8",
               isRequired: true,
               validate: "RequiredField",
             },
             {
               id: "Sussiste il seguente vincolo rispetto al su indicato  componente della famiglia gi\u00c3\u00a0 residente",
               label:
-                  "\u09b8\u09ae\u09cd\u09aa\u09b0\u09cd\u0995 \u0989\u09b2\u09cd\u09b2\u09c7\u0996 \u0995\u09b0\u09c1\u09a8",
+                "\u09b8\u09ae\u09cd\u09aa\u09b0\u09cd\u0995 \u0989\u09b2\u09cd\u09b2\u09c7\u0996 \u0995\u09b0\u09c1\u09a8",
               type: "text",
               helperText:
-                  "\u0995\u09cb\u09a8\u09cb \u09b8\u09ae\u09cd\u09aa\u09b0\u09cd\u0995 \u09a5\u09be\u0995\u09b2\u09c7 \u098f\u0987 \u0995\u09cd\u09b7\u09c7\u09a4\u09cd\u09b0\u099f\u09bf \u09ab\u09be\u0981\u0995\u09be \u09b0\u09be\u0996\u09c1\u09a8",
+                "\u0995\u09cb\u09a8\u09cb \u09b8\u09ae\u09cd\u09aa\u09b0\u09cd\u0995 \u09a5\u09be\u0995\u09b2\u09c7 \u098f\u0987 \u0995\u09cd\u09b7\u09c7\u09a4\u09cd\u09b0\u099f\u09bf \u09ab\u09be\u0981\u0995\u09be \u09b0\u09be\u0996\u09c1\u09a8",
               isRequired: true,
               validate: "RequiredField",
             },
@@ -8179,7 +8179,7 @@ export const choiceTree = {
         {
           type: "form",
           title:
-              "\u09a4\u09be\u09b0 \u09aa\u09b0\u09bf\u099a\u09bf\u09a4\u09bf",
+            "\u09a4\u09be\u09b0 \u09aa\u09b0\u09bf\u099a\u09bf\u09a4\u09bf",
           id: 22,
           parentId: 4,
           nextQuestion: 23,
@@ -8187,7 +8187,7 @@ export const choiceTree = {
             {
               id: "Telefono",
               label:
-                  "\u099f\u09c7\u09b2\u09bf\u09ab\u09cb\u09a8 \u09a8\u09be\u09ae\u09cd\u09ac\u09be\u09b0",
+                "\u099f\u09c7\u09b2\u09bf\u09ab\u09cb\u09a8 \u09a8\u09be\u09ae\u09cd\u09ac\u09be\u09b0",
               type: "number",
               helperText: "091665442",
               validate: "requiredField",
@@ -8197,10 +8197,10 @@ export const choiceTree = {
             {
               id: "Cellulare",
               label:
-                  "\u09ae\u09cb\u09ac\u09be\u0987\u09b2 \u09a8\u09ae\u09cd\u09ac\u09b0",
+                "\u09ae\u09cb\u09ac\u09be\u0987\u09b2 \u09a8\u09ae\u09cd\u09ac\u09b0",
               type: "tel",
               helperText:
-                  "\u09e9\u09e9\u09e9\u09e8\u09ea\u09e8\u09e9\u09ea\u09e8\u09e7",
+                "\u09e9\u09e9\u09e9\u09e8\u09ea\u09e8\u09e9\u09ea\u09e8\u09e7",
               validate: "",
               isRequired: false,
             },
@@ -8225,23 +8225,23 @@ export const choiceTree = {
         {
           type: "select",
           title:
-              "\u0986\u09aa\u09a8\u09be\u09b0 \u09ac\u09be\u09a1\u09bc\u09bf \u0995\u09cb\u09a8 \u09b6\u09cd\u09b0\u09c7\u09a3\u09c0\u09b0 \u0985\u09a8\u09cd\u09a4\u09b0\u09cd\u0997\u09a4?",
+            "\u0986\u09aa\u09a8\u09be\u09b0 \u09ac\u09be\u09a1\u09bc\u09bf \u0995\u09cb\u09a8 \u09b6\u09cd\u09b0\u09c7\u09a3\u09c0\u09b0 \u0985\u09a8\u09cd\u09a4\u09b0\u09cd\u0997\u09a4?",
           label:
-              "\u0986\u09aa\u09a8\u09be\u09b0 \u09b0\u09be\u099c\u09cd\u09af \u09a8\u09bf\u09b0\u09cd\u09ac\u09be\u099a\u09a8 \u0995\u09b0\u09c1\u09a8",
+            "\u0986\u09aa\u09a8\u09be\u09b0 \u09b0\u09be\u099c\u09cd\u09af \u09a8\u09bf\u09b0\u09cd\u09ac\u09be\u099a\u09a8 \u0995\u09b0\u09c1\u09a8",
           id: 23,
           answers: [
             {
               selected: false,
               id: "C9_1_5",
               label:
-                  "\u09ac\u09bf\u09a8\u09be\u09ae\u09c2\u09b2\u09cd\u09af\u09c7 \u09ac\u09cd\u09af\u09ac\u09b9\u09be\u09b0",
+                "\u09ac\u09bf\u09a8\u09be\u09ae\u09c2\u09b2\u09cd\u09af\u09c7 \u09ac\u09cd\u09af\u09ac\u09b9\u09be\u09b0",
               nextQuestion: 25,
             },
             {
               selected: false,
               id: "C9_1_2",
               label:
-                  "\u09b8\u09ae\u09cd\u09aa\u09a4\u09cd\u09a4\u09bf \u09ac\u09be\u09a1\u09bc\u09bf\u09a4\u09c7",
+                "\u09b8\u09ae\u09cd\u09aa\u09a4\u09cd\u09a4\u09bf \u09ac\u09be\u09a1\u09bc\u09bf\u09a4\u09c7",
               nextQuestion: 24,
             },
             {
@@ -8268,7 +8268,7 @@ export const choiceTree = {
         {
           type: "form",
           title:
-              "\u099a\u09c1\u0995\u09cd\u09a4\u09bf\u09b0 \u09ac\u09bf\u09ac\u09b0\u09a3",
+            "\u099a\u09c1\u0995\u09cd\u09a4\u09bf\u09b0 \u09ac\u09bf\u09ac\u09b0\u09a3",
           id: 24,
           parentId: 4,
           nextQuestion: 30,
@@ -8286,14 +8286,14 @@ export const choiceTree = {
               label: "\u09b6\u09c0\u099f",
               type: "tel",
               helperText:
-                  "\u09e9\u09e9\u09e9\u09e8\u09ea\u09e8\u09e9\u09ea\u09e8\u09e7",
+                "\u09e9\u09e9\u09e9\u09e8\u09ea\u09e8\u09e9\u09ea\u09e8\u09e7",
               validate: "",
               isRequired: false,
             },
             {
               id: "particella o mappale",
               label:
-                  "\u0986\u0982\u09b6\u09bf\u0995 \u09ac\u09be \u09ae\u09be\u09a8\u099a\u09bf\u09a4\u09cd\u09b0",
+                "\u0986\u0982\u09b6\u09bf\u0995 \u09ac\u09be \u09ae\u09be\u09a8\u099a\u09bf\u09a4\u09cd\u09b0",
               type: "text",
               validate: "requiredField",
               isRequired: true,
@@ -8310,7 +8310,7 @@ export const choiceTree = {
         {
           type: "form",
           title:
-              "\u099a\u09c1\u0995\u09cd\u09a4\u09bf\u09b0 \u09ac\u09bf\u09ac\u09b0\u09a3",
+            "\u099a\u09c1\u0995\u09cd\u09a4\u09bf\u09b0 \u09ac\u09bf\u09ac\u09b0\u09a3",
           id: 26,
           parentId: 4,
           nextQuestion: 30,
@@ -8318,10 +8318,10 @@ export const choiceTree = {
             {
               id: "undefined_33",
               label:
-                  "\u098f\u09b0 \u09b0\u09be\u099c\u09b8\u09cd\u09ac \u09b8\u0982\u09b8\u09cd\u09a5\u09be",
+                "\u098f\u09b0 \u09b0\u09be\u099c\u09b8\u09cd\u09ac \u09b8\u0982\u09b8\u09cd\u09a5\u09be",
               type: "text",
               helperText:
-                  "\u09af\u09c7\u09ae\u09a8 \u09aa\u09be\u09b2\u09c7\u09b0\u09ae\u09cb",
+                "\u09af\u09c7\u09ae\u09a8 \u09aa\u09be\u09b2\u09c7\u09b0\u09ae\u09cb",
               validate: "requiredField",
               isRequired: true,
               autocomplete: false,
@@ -8345,7 +8345,7 @@ export const choiceTree = {
         {
           type: "form",
           title:
-              "\u099a\u09c1\u0995\u09cd\u09a4\u09bf\u09b0 \u09ac\u09bf\u09ac\u09b0\u09a3",
+            "\u099a\u09c1\u0995\u09cd\u09a4\u09bf\u09b0 \u09ac\u09bf\u09ac\u09b0\u09a3",
           id: 25,
           parentId: 4,
           nextQuestion: 30,
@@ -8353,10 +8353,10 @@ export const choiceTree = {
             {
               id: "Entrate di",
               label:
-                  "\u098f\u09b0 \u09b0\u09be\u099c\u09b8\u09cd\u09ac \u09b8\u0982\u09b8\u09cd\u09a5\u09be",
+                "\u098f\u09b0 \u09b0\u09be\u099c\u09b8\u09cd\u09ac \u09b8\u0982\u09b8\u09cd\u09a5\u09be",
               type: "text",
               helperText:
-                  "\u09af\u09c7\u09ae\u09a8 \u09aa\u09be\u09b2\u09c7\u09b0\u09ae\u09cb",
+                "\u09af\u09c7\u09ae\u09a8 \u09aa\u09be\u09b2\u09c7\u09b0\u09ae\u09cb",
               validate: "requiredField",
               isRequired: true,
               autocomplete: false,
@@ -8380,7 +8380,7 @@ export const choiceTree = {
         {
           type: "form",
           title:
-              "\u099a\u09c1\u0995\u09cd\u09a4\u09bf\u09b0 \u09ac\u09bf\u09ac\u09b0\u09a3",
+            "\u099a\u09c1\u0995\u09cd\u09a4\u09bf\u09b0 \u09ac\u09bf\u09ac\u09b0\u09a3",
           id: 26,
           parentId: 4,
           nextQuestion: 30,
@@ -8388,7 +8388,7 @@ export const choiceTree = {
             {
               id: "dati utili 1",
               label:
-                  "\u09ac\u09bf\u09b8\u09cd\u09a4\u09be\u09b0\u09bf\u09a4 \u09b2\u09bf\u0996\u09c1\u09a8",
+                "\u09ac\u09bf\u09b8\u09cd\u09a4\u09be\u09b0\u09bf\u09a4 \u09b2\u09bf\u0996\u09c1\u09a8",
               type: "text",
               validate: "requiredField",
               isRequired: true,
@@ -8399,7 +8399,7 @@ export const choiceTree = {
         {
           type: "checkbox",
           title:
-              "\u0995\u09c7\u0989 \u0995\u09bf \u0987\u09a4\u09bf\u09ae\u09a7\u09cd\u09af\u09c7\u0987 TARI \u09aa\u09b0\u09bf\u09b6\u09cb\u09a7 \u0995\u09b0\u09c7?",
+            "\u0995\u09c7\u0989 \u0995\u09bf \u0987\u09a4\u09bf\u09ae\u09a7\u09cd\u09af\u09c7\u0987 TARI \u09aa\u09b0\u09bf\u09b6\u09cb\u09a7 \u0995\u09b0\u09c7?",
           id: 30,
           answers: [
             {
@@ -8415,7 +8415,7 @@ export const choiceTree = {
         {
           type: "form",
           title:
-              "\u099a\u09c1\u0995\u09cd\u09a4\u09bf\u09b0 \u09ac\u09bf\u09ac\u09b0\u09a3",
+            "\u099a\u09c1\u0995\u09cd\u09a4\u09bf\u09b0 \u09ac\u09bf\u09ac\u09b0\u09a3",
           id: 31,
           parentId: 4,
           nextQuestion: 32,
@@ -8431,7 +8431,7 @@ export const choiceTree = {
             {
               id: "F",
               label:
-                  "\u099f\u09cd\u09af\u09be\u0995\u09cd\u09b8 \u0986\u0987\u09a1\u09bf \u0995\u09cb\u09a1",
+                "\u099f\u09cd\u09af\u09be\u0995\u09cd\u09b8 \u0986\u0987\u09a1\u09bf \u0995\u09cb\u09a1",
               type: "text",
               isRequired: true,
               validate: "fiscalCodeField",
@@ -8448,7 +8448,7 @@ export const choiceTree = {
         {
           type: "longform",
           title:
-              "TARI \u09b8\u09be\u09ac\u09b8\u09cd\u0995\u09cd\u09b0\u09bf\u09aa\u09b6\u09a8",
+            "TARI \u09b8\u09be\u09ac\u09b8\u09cd\u0995\u09cd\u09b0\u09bf\u09aa\u09b6\u09a8",
           id: 32,
           parentId: 4,
           nextQuestion: 17,
@@ -8479,17 +8479,17 @@ export const choiceTree = {
             {
               id: "data",
               label:
-                  "\u0995\u09b0\u09cd\u09ae\u09b8\u0982\u09b8\u09cd\u09a5\u09be\u09a8 \u09a4\u09a5\u09cd\u09af \u09b6\u09c7\u09b7",
+                "\u0995\u09b0\u09cd\u09ae\u09b8\u0982\u09b8\u09cd\u09a5\u09be\u09a8 \u09a4\u09a5\u09cd\u09af \u09b6\u09c7\u09b7",
               type: "date",
               isRequired: true,
               validate: "RequiredField",
               helperText:
-                  "\u0995\u09b0\u09cd\u09ae\u09b8\u0982\u09b8\u09cd\u09a5\u09be\u09a8 \u09a4\u09a5\u09cd\u09af \u09b6\u09c7\u09b7",
+                "\u0995\u09b0\u09cd\u09ae\u09b8\u0982\u09b8\u09cd\u09a5\u09be\u09a8 \u09a4\u09a5\u09cd\u09af \u09b6\u09c7\u09b7",
             },
             {
               id: "superficie in mq",
               label:
-                  "\u09ac\u09b0\u09cd\u0997 \u09ae\u09bf\u099f\u09be\u09b0\u09c7 \u09aa\u09c3\u09b7\u09cd\u09a0\u09c7\u09b0 \u0995\u09cd\u09b7\u09c7\u09a4\u09cd\u09b0\u09ab\u09b2",
+                "\u09ac\u09b0\u09cd\u0997 \u09ae\u09bf\u099f\u09be\u09b0\u09c7 \u09aa\u09c3\u09b7\u09cd\u09a0\u09c7\u09b0 \u0995\u09cd\u09b7\u09c7\u09a4\u09cd\u09b0\u09ab\u09b2",
               type: "number",
               isRequired: true,
               validate: "RequiredField",
@@ -8499,9 +8499,9 @@ export const choiceTree = {
         {
           type: "select",
           title:
-              "\u0995\u09b0\u09cd\u09ae\u09b8\u0982\u09b8\u09cd\u09a5\u09be\u09a8 \u09b6\u09bf\u09b0\u09cb\u09a8\u09be\u09ae",
+            "\u0995\u09b0\u09cd\u09ae\u09b8\u0982\u09b8\u09cd\u09a5\u09be\u09a8 \u09b6\u09bf\u09b0\u09cb\u09a8\u09be\u09ae",
           label:
-              "\u0986\u09aa\u09a8\u09be\u09b0 \u09a7\u09c8\u09b0\u09cd\u09af\u09cd\u09af\u09c7\u09b0 \u099c\u09a8\u09cd\u09af \u09a7\u09a8\u09cd\u09af\u09ac\u09be\u09a6",
+            "\u0986\u09aa\u09a8\u09be\u09b0 \u09a7\u09c8\u09b0\u09cd\u09af\u09cd\u09af\u09c7\u09b0 \u099c\u09a8\u09cd\u09af \u09a7\u09a8\u09cd\u09af\u09ac\u09be\u09a6",
           id: 33,
           answers: [
             {
@@ -8520,7 +8520,7 @@ export const choiceTree = {
               selected: false,
               id: "10_1_3",
               label:
-                  "\u09ac\u09cd\u09af\u09ac\u09b9\u09be\u09b0\u09c7\u09b0 \u099c\u09a8\u09cd\u09af \u098b\u09a3",
+                "\u09ac\u09cd\u09af\u09ac\u09b9\u09be\u09b0\u09c7\u09b0 \u099c\u09a8\u09cd\u09af \u098b\u09a3",
               nextQuestion: 26,
             },
             {
@@ -8533,7 +8533,7 @@ export const choiceTree = {
               selected: false,
               id: "C9_1_6",
               label:
-                  "\u098f\u0995\u099f\u09bf \u09aa\u09be\u09ac\u09b2\u09bf\u0995 \u09b8\u0982\u09b8\u09cd\u09a5\u09be \u0986\u09ac\u09be\u09b8\u09a8 \u09ac\u09b0\u09be\u09a6\u09cd\u09a6",
+                "\u098f\u0995\u099f\u09bf \u09aa\u09be\u09ac\u09b2\u09bf\u0995 \u09b8\u0982\u09b8\u09cd\u09a5\u09be \u0986\u09ac\u09be\u09b8\u09a8 \u09ac\u09b0\u09be\u09a6\u09cd\u09a6",
               nextQuestion: 27,
             },
           ],
