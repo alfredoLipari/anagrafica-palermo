@@ -11,8 +11,7 @@ const Footer = () => {
         bg="#FEBB2C"
         w="100%"
         paddingY="3em"
-        mt="3em"
-        position={{base:"relative", sm: "relative", md: "relative", lg:"fixed"}}
+        position={"relative"}
         left={"0"}
         bottom={"0"}
     >

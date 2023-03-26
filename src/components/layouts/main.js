@@ -7,6 +7,7 @@ import TreeHelper from "./treeHelper";
 import { Image } from "@chakra-ui/react";
 import People from "../asset/homepageimg.svg";
 import CustomButton from "../custom/customInput/customButton";
+import Footer from "../footer";
 
 const Main = ({ history }) => {
   const [isFormStarted, setIsFormStarted] = useState(false);
@@ -99,38 +100,42 @@ const Main = ({ history }) => {
   };
 
   return (
-      <Box bg="white" textAlign="center" height={""}>
-        {!isFormStarted ? (
-            <Box marginTop="20">
-              <Text fontSize="2xl" fontWeight="extrabold" color="#000">
-                {translateFirstHeading()}
-              </Text>
-              <Text
-                  fontSize="2xl"
-                  fontWeight="bold"
-                  color="#000"
-                  padding={{ base: 5, md: 0 }}
-              >
-                {translateSecondHeading()}
-              </Text>
-              <Text marginTop="5" color="#000" padding={{ base: 5, md: 0 }}>
-                {translateText()}
-              </Text>
+      <>
+        <Box bg="white" textAlign="center"
+             minHeight="calc(100vh - 250px)"
+        >
+          {!isFormStarted ? (
+              <Box marginTop="20">
+                <Text fontSize="2xl" fontWeight="extrabold" color="#000">
+                  {translateFirstHeading()}
+                </Text>
+                <Text
+                    fontSize="2xl"
+                    fontWeight="bold"
+                    color="#000"
+                    padding={{ base: 5, md: 0 }}
+                >
+                  {translateSecondHeading()}
+                </Text>
+                <Text marginTop="5" color="#000" padding={{ base: 5, md: 0 }}>
+                  {translateText()}
+                </Text>
 
-              <CustomButton handler={() => setIsFormStarted(true)} state={state}>
-                {translateButton()}
-              </CustomButton>
+                <CustomButton handler={() => setIsFormStarted(true)} state={state}>
+                  {translateButton()}
+                </CustomButton>
 
-              <Flex marginTop={10} justifyContent={"center"}>
-                <Box w="825px" margin={18}>
-                  <Image src={People} alt="logo comune" />
-                </Box>
-              </Flex>
-            </Box>
-        ) : (
-            <TreeHelper history={history} />
-        )}
-      </Box>
+                <Flex marginTop={10} justifyContent={"center"}>
+                  <Box w="825px" margin={18}>
+                    <Image src={People} alt="logo comune" />
+                  </Box>
+                </Flex>
+              </Box>
+          ) : (
+              <TreeHelper history={history} />
+          )}
+        </Box>
+      </>
   );
 };
 

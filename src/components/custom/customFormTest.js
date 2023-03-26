@@ -255,7 +255,7 @@ const CustomFormTest = ({ stateTemp }) => {
                 style={{
                   display: "flex",
                   alignItems: "center",
-
+                  justifyContent:"center",
                   flexDirection: "column",
                 }}
             >

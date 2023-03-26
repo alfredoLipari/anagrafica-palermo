@@ -79,6 +79,7 @@ const ActionsButton = (props) => {
         width={"100%"}
         justifyContent={"center"}
         gap={10}
+        marginBottom={"40px"}
       >
         <CustomButton
           submit={continueSubmit}
