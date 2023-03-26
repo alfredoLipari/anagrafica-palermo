@@ -341,6 +341,353 @@ export const calculateComponentEnglishTree = (action) => {
   return result;
 };
 
+export const calculateComponentBengaliTree = (action) => {
+  const result = [];
+
+  // controller for the checkbox
+  let page = 2;
+  let moduls = 1;
+  let currentIndex = 0;
+
+  for (let i = 2; i <= parseInt(action.answer) + 1; i++) {
+    console.log("Iindex: ", i);
+    if (page === 3) {
+      moduls = 1;
+    }
+
+    result.push({
+      type: "longform",
+      title: "Component N." + (i - 1),
+      id: 39 + i + currentIndex,
+      parentId: 4,
+      nextQuestion: 40 + i + currentIndex,
+      answers: [
+        {
+          id: "Nome_" + i,
+          label: "নাম",
+          type: "text",
+          helperText: "যেমন মুসা",
+          validate: "RequiredField",
+          isRequired: true,
+          // add input validate
+        },
+        {
+          id: "Cognome_" + i,
+          label: "পদবি",
+          type: "text",
+          helperText: "যেমন সেমপ্রিনি",
+          validate: "RequiredField",
+          isRequired: true,
+        },
+        {
+          id: "Data di nascita_" + i,
+          label: "জন্ম তারিখ",
+          type: "date",
+          helperText: "জন্ম তারিখ",
+          validate: "dateValidation",
+          isRequired: true,
+          // add input validate
+        },
+        {
+          id: "Luogo di nascita_" + i,
+          label: "আপনি কোথায় জন্মগ্রহণ করেন?",
+          type: "text",
+          helperText: "আপনার জন্মের শহর নির্দেশ করুন",
+          validate: "RequiredField",
+          isRequired: true,
+        },
+        {
+          id: "Sesso_" + i,
+          label: "লিঙ্গ",
+          type: "select",
+          options: ["male", "female"],
+          validate: "RequiredField",
+          isRequired: true,
+          helperText: "আপনার লিঙ্গ নির্বাচন",
+          // add input validate
+        },
+        {
+          id: "Stato Civile_" + i,
+          label: "আপনার বৈবাহিক অবস্থা?",
+          type: "select",
+          options: ["unmarried", "married", "divorced", "widower"],
+          helperText: "আপনার স্থিতি নির্বাচন করুন",
+          validate: "RequiredField",
+        },
+        {
+          id: "Cittadinanza_" + i,
+          label: "নাগরিকত্ব",
+          type: "text",
+          helperText: "যেমন ঘানিয়ান, ফ্রাঙ্কাইজ, রাশিয়ান...",
+          validate: "RequiredField",
+          isRequired: true,
+          // add input validate
+        },
+        {
+          id: "Codice Fiscale_" + i,
+          label: "কোডিস ফিসকেল",
+          type: "text",
+          helperText: "যেমন R5MRI88L73G273E",
+          validate: "RequiredField",
+          isRequired: true,
+          // add input validate
+        },
+        {
+          id: "Rapporto di parentela con il richiedente_".concat("", i - 2),
+          label: "আবেদনকারীর সাথে সম্পর্ক",
+          type: "select",
+          options: [
+            "mother",
+            "father",
+            "son",
+            "daughter",
+            "brother",
+            "sister",
+            "grandfather",
+            "grandmother",
+            "uncle",
+            "aunt",
+            "cousin",
+          ],
+          helperText: "যেমন স্ত্রী, পুত্র",
+          validate: "RequiredField",
+          isRequired: true,
+          // add input validate
+        },
+      ],
+    });
+
+    result.push({
+      type: "checkbox",
+      title: "Does she/he has a job?",
+      id: 40 + i + currentIndex,
+      answers: [
+        {
+          id: "yes",
+          nextQuestion: 42 + i + currentIndex,
+        },
+        {
+          id: "no",
+          nextQuestion: 41 + i + currentIndex,
+        },
+      ],
+    });
+
+    result.push({
+      type: "select",
+      title: "What's her/his Non-professional status?",
+      label: "তাকে/তার স্থিতি নির্বাচন করুন",
+      id: 41 + i + currentIndex,
+      answers: [
+        {
+          selected: false,
+          id: "C" + page + "_" + moduls + "_6",
+          label: "গৃহিণী",
+          nextQuestion: 43 + i + currentIndex,
+        },
+        {
+          selected: false,
+          id: "C" + page + "_" + moduls + "_7",
+          label: "ছাত্র",
+          nextQuestion: 43 + i + currentIndex,
+        },
+        {
+          selected: false,
+          id: "C" + page + "_" + moduls + "_8",
+          label: "বেকার",
+          nextQuestion: 43 + i + currentIndex,
+        },
+        {
+          selected: false,
+          id: "C" + page + "_" + moduls + "_9",
+          label: "অবসরপ্রাপ্ত",
+          nextQuestion: 43 + i + currentIndex,
+        },
+        {
+          selected: false,
+          id: "C" + page + "_" + moduls + "_10",
+          label: "অন্যান্য",
+          nextQuestion: 43 + i + currentIndex,
+        },
+      ],
+    });
+
+    result.push({
+      type: "select",
+      title: "What's his/her professional status?",
+      label: "তাকে/তার স্থিতি নির্বাচন করুন",
+      id: 42 + i + currentIndex,
+
+      answers: [
+        {
+          selected: false,
+          id: "C" + page + "_" + moduls + "_4",
+          label: "কর্মী",
+          nextQuestion: 43 + i + currentIndex,
+        },
+        {
+          selected: false,
+          id: "C" + page + "_" + moduls + "_5",
+          label: "পারিবারিক কর্মী",
+          nextQuestion: 43 + i + currentIndex,
+        },
+        {
+          selected: false,
+          id: "C" + page + "_" + moduls + "_3",
+          label: "ফ্রিল্যান্স / উদ্যোক্তা",
+          nextQuestion: 43 + i + currentIndex,
+        },
+        {
+          selected: false,
+          id: "C" + page + "_" + moduls + "_1",
+          label: "স্বনির্ভর",
+          nextQuestion: 43 + i + currentIndex,
+        },
+        {
+          selected: false,
+          id: "C" + page + "_" + moduls + "_2",
+          label: "নির্বাহী / কর্মচারী",
+          nextQuestion: 43 + i + currentIndex,
+        },
+      ],
+
+      parentId: 9,
+    });
+
+    result.push(
+      {
+        type: "checkbox",
+        title: "Does she/he has an Italian Driving License?",
+        id: 43 + i + currentIndex,
+        answers: [
+          {
+            id: "yes",
+            nextQuestion: 44 + i + currentIndex,
+          },
+          {
+            id: "no",
+            nextQuestion: 45 + i + currentIndex,
+          },
+        ],
+      },
+
+      {
+        type: "longform",
+        title: "Driving License Details, this details are not mandatory",
+        id: 44 + i + currentIndex,
+        parentId: 4,
+        nextQuestion: 45 + i + currentIndex,
+        answers: [
+          {
+            id: "Numero",
+            label: "সংখ্যা",
+            type: "text",
+            helperText: "যেমন 91828930",
+            validate: "RequiredField",
+            isRequired: false,
+          },
+          {
+            id: "Patente tipo",
+            label: "লাইসেন্সের ধরন",
+            type: "text",
+            helperText: "যেমন A, B, C",
+            validate: "RequiredField",
+            isRequired: false,
+            // add input validate
+          },
+          {
+            id: "Data di rilascio",
+            label: "মুক্তির তারিখ",
+            type: "Date",
+            helperText: "মুক্তির তারিখ",
+            validate: "dateValidation",
+            isRequired: false,
+          },
+          {
+            id: "Organo di rilascio",
+            label: "শরীর দেখানো",
+            type: "text",
+            helperText: "মোটরাইজেশন",
+            // validate: "RequiredField", // change validation
+            isRequired: false,
+          },
+          {
+            id: "Provincia di",
+            label: "প্রদেশ",
+            type: "text",
+            helperText: "পালেরমো",
+            isRequired: false,
+            // add input validate
+          },
+        ],
+      }
+    );
+
+    result.push({
+      type: "select",
+      title: "What's her/his educational level?",
+      label: "তাকে/তার ডিগ্রী নির্বাচন করুন",
+      id: 45 + i + currentIndex,
+
+      answers: [
+        {
+          selected: false,
+          id: "C" + page + "_" + moduls + "_11",
+          label: "প্রাথমিক বিদ্যালয়",
+          nextQuestion:
+            i + 1 <= parseInt(action.answer) + 1 ? 47 + i + currentIndex : 19,
+        },
+        {
+          selected: false,
+          id: "C" + page + "_" + moduls + "_12",
+          label: "মাধ্যমিক স্কুল সার্টিফিকেট",
+          nextQuestion:
+            i + 1 <= parseInt(action.answer) + 1 ? 47 + i + currentIndex : 19,
+        },
+        {
+          selected: false,
+          id: "C" + page + "_" + moduls + "_13",
+          label: "ডিপ্লোমা",
+          nextQuestion:
+            i + 1 <= parseInt(action.answer) + 1 ? 47 + i + currentIndex : 19,
+        },
+        {
+          selected: false,
+          id: "C" + page + "_" + moduls + "_14",
+          label: "ব্যাচেলর",
+          nextQuestion:
+            i + 1 <= parseInt(action.answer) + 1 ? 47 + i + currentIndex : 19,
+        },
+        {
+          selected: false,
+          id: "C" + page + "_" + moduls + "_15",
+          label: "স্নাতকোত্তর",
+          nextQuestion:
+            i + 1 <= parseInt(action.answer) + 1 ? 47 + i + currentIndex : 19,
+        },
+        {
+          selected: false,
+          id: "C" + page + "_" + moduls + "_16",
+          label: "পিএইচডি",
+          nextQuestion:
+            i + 1 <= parseInt(action.answer) + 1 ? 47 + i + currentIndex : 19,
+        },
+      ],
+
+      parentId: 9,
+    });
+
+    // controller for the page
+    if (i === 3) {
+      page++;
+    }
+    moduls++;
+    currentIndex += 7;
+  }
+
+  return result;
+};
+
 export const calculateComponentArabTree = (action) => {
   const result = [];
 
