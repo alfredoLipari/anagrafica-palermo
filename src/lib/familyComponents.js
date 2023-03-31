@@ -2751,3 +2751,108 @@ export const calculateComponentItalianTree = (action) => {
 
   return result;
 };
+
+export const clickHereTranslations = (state) => {
+  switch (state?.language) {
+    case "Italian":
+      return "Clicca qui";
+    case "French":
+      return "Cliquez ici";
+    case "Spanish":
+      return "haga clic aquíT";
+    case "Повертатися":
+      return "натисніть тут";
+    case "Tamil":
+      return "இங்கே கிளிக் செய்யவும்";
+    case "Arab":
+      return " انقر هنا";
+    case "Bengali":
+      return "এখানে ক্লিক করুন";
+    default:
+      return "Click Here";
+  }
+};
+
+export const downloadDontOccurTranslation = (state) => {
+  switch (state?.language) {
+    case "Italian":
+      return "se il download non è avvenuto";
+    case "French":
+      return "si le téléchargement n'a pas eu lieu";
+    case "Spanish":
+      return "si la descarga no se produjo";
+    case "Повертатися":
+      return "якщо завантаження не відбулося";
+    case "Tamil":
+      return "பதிவிறக்கம் நடக்கவில்லை என்றால்";
+    case "Arab":
+      return " إذا لم يتم التنزيل";
+    case "Bengali":
+      return "যদি ডাউনলোড না হয়";
+    default:
+      return "if the download didn't occur";
+  }
+};
+
+export const continueWithBookingTranslation = (state) => {
+  switch (state?.language) {
+    case "Italian":
+      return "Continua con la prenotazione";
+    case "French":
+      return "Continuer la réservation";
+    case "Spanish":
+      return "Continuar con la reserva";
+    case "Повертатися":
+      return "Продовжити бронювання";
+    case "Tamil":
+      return "முன்பதிவைத் தொடரவும்";
+    case "Arab":
+      return " تواصل مع الحجز";
+    case "Bengali":
+      return "বুকিং দিয়ে চালিয়ে যান";
+    default:
+      return "Continue with booking";
+  }
+};
+
+export const recompileFormTranslations = (state) => {
+  switch (state?.language) {
+    case "Italian":
+      return "Ricompilare il modulo";
+    case "French":
+      return "Recompiler le formulaire";
+    case "Spanish":
+      return "haga clic aquíT";
+    case "Повертатися":
+      return "Перекомпілюйте форму";
+    case "Tamil":
+      return "படிவத்தை மீண்டும் தொகுக்கவும்";
+    case "Arab":
+      return " أعد تجميع النموذج";
+    case "Bengali":
+      return "ফর্মটি পুনরায় কম্পাইল করুন";
+    default:
+      return "Recompile the form";
+  }
+};
+
+export const pdfReadyTranslations = (state) => {
+  switch (state?.language) {
+    case "Italian":
+      return "Il tuo pdf è pronto per il download!";
+    case "French":
+      return "Votre pdf est prêt à être téléchargé !";
+    case "Spanish":
+      return "¡Tu pdf está listo para ser descargado!";
+    case "Повертатися":
+      return "Ваш PDF готовий до завантаження!";
+    case "Tamil":
+      return "உங்கள் pdf தரவிறக்கம் செய்ய தயாராக உள்ளது!";
+    case "Arab":
+      return "pdf الخاص بك جاهز للتنزيل!";
+    case "Bengali":
+      return "আপনার পিডিএফ ডাউনলোড করার জন্য প্রস্তুত!";
+    default:
+      return "Your pdf is ready to be dowloaded!";
+  }
+};

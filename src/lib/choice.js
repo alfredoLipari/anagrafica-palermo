@@ -40,7 +40,7 @@ export const choiceTree = {
             {
               id: "I am a non-EU citizen",
               label: "I'm a non-EU Citizen",
-              nextQuestion: 1,
+              nextQuestion: 2,
               documentazione: [],
             },
             {
@@ -49,7 +49,6 @@ export const choiceTree = {
               nextQuestion: 4,
               documentazione: [
                 "identity document of the applicant and of the persons transferring residence together with the applicant",
-                "remember to sign the document",
               ],
             },
             {
@@ -77,7 +76,6 @@ export const choiceTree = {
               documentazione: [
                 "copy of your passport.*",
                 "residence card of a family member of an EU citizen, or receipt of the application for the issuance of a residence card.*",
-                "remember to sign the document",
               ],
             },
             {
@@ -88,7 +86,6 @@ export const choiceTree = {
                 "copy of a valid passport or equivalent document.* ",
                 "copy of valid residence permit.*",
                 "copy of the original documents, translated and legalized, proving the civil status and family composition.**",
-                "remember to sign the document",
               ],
             },
             {
@@ -100,7 +97,6 @@ export const choiceTree = {
                 "copy of expired residence permit.*",
                 "receipt of application for renewal of residence permit.*",
                 "copy of the original documents, translated and legalized, proving the civil status and family composition.**",
-                "remember to sign the document",
               ],
             },
             {
@@ -113,7 +109,6 @@ export const choiceTree = {
                 "receipt issued by the post office certifying the submission of the application for residence permit.*",
                 "application for the issuance of a residence permit for subordinate work submitted to the Sportello Unico.*",
                 "copy of the original documents, translated and legalized, proving the civil status and family composition.**",
-                "remember to sign the document",
               ],
             },
             {
@@ -125,7 +120,6 @@ export const choiceTree = {
                 "unauthenticated photocopy of the clearance issued by the Single Desk.*",
                 "receipt issued by the post office certifying the submission of the request for permission.*",
                 "copy of the original documents, translated and legalized, proving the civil status and family composition.**",
-                "remember to sign the document",
               ],
             },
           ],
@@ -151,7 +145,6 @@ export const choiceTree = {
                 "copy of a valid Id.*",
                 "documentation proving the quality of worker.*",
                 "copy of the original documents, translated and legalized, proving the civil status and family composition.**",
-                "remember to sign the document",
               ],
             },
             {
@@ -163,7 +156,6 @@ export const choiceTree = {
                 "autodichiarazione del possesso di risorse economiche.*",
                 " copia di un'assicurazione sanitaria.*",
                 "copy of the original documents, translated and legalized, proving the civil status and family composition.**",
-                "remember to sign the document",
               ],
             },
             {
@@ -174,7 +166,6 @@ export const choiceTree = {
                 "documentation proving enrollment at a school or vocational training institution.*",
                 "self-declaration of possession of economic resources.*",
                 "coverage of health risks.*",
-                "remember to sign the document",
               ],
               nextQuestion: 4,
             },
@@ -184,7 +175,6 @@ export const choiceTree = {
               documentazione: [
                 "copy of a valid identification document.*",
                 "copy of original deeds of residence.*",
-                "remember to sign the document",
               ],
               nextQuestion: 4,
             },
@@ -2138,7 +2128,7 @@ export const choiceTree = {
             {
               id: "I am a non-EU citizen",
               label: "Sono un cittadino extracomunitario",
-              nextQuestion: 18,
+              nextQuestion: 2,
               documentazione: [],
             },
             {
@@ -2147,7 +2137,6 @@ export const choiceTree = {
               nextQuestion: 4,
               documentazione: [
                 "documento d'identità del richiedente e delle persone che trasferiscono la residenza insieme al richiedente",
-                "ricordarsi di firmare il documento",
               ],
             },
             {
@@ -2286,17 +2275,17 @@ export const choiceTree = {
             },
             {
               id: "C1_1_3",
-              label: "Italiano AIRE",
+              label: "Zona AIRE",
               nextQuestion: 62,
             },
             {
               id: "C1_1_4",
-              label: "Stessa citt\u00e0",
+              label: "Comune diverso Italiano",
               nextQuestion: 8,
             },
             {
               id: "C1_1_1",
-              label: "Citt\u00e0 diversa",
+              label: "Stesso comune interessato",
               nextQuestion: 63,
             },
             {
@@ -2777,7 +2766,7 @@ export const choiceTree = {
               label: "Specificare il rapporto di parentela",
               type: "text",
               helperText:
-                "Se c'\u00e8 qualche rapporto di parentela lasciare questo campo vuoto",
+                "Se non c'\u00e8 qualche rapporto di parentela lasciare questo campo vuoto",
               isRequired: false,
               validate: "RequiredField",
               options: [
@@ -3094,7 +3083,7 @@ export const choiceTree = {
         {
           type: "select",
           title: "Titolo dell'occupazione",
-          label: "Grazie per la pazienza",
+          label: "Scegli il titolo",
           id: 33,
           answers: [
             {
