@@ -149,6 +149,13 @@ export function reducer(state, action) {
         };
       }
 
+      if (action.state.id === 34) {
+        answers = {
+          ...action.answer,
+          Note: action.answer["Note"],
+        };
+      }
+
       const newAnswersForm = [
         ...state.answers,
         {

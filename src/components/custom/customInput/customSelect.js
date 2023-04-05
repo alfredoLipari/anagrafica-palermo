@@ -9,7 +9,6 @@ const CustomSelect = ({ stateQuestion }) => {
   const [selectAnswer, setSelectAnswer] = useState({});
   const navigate = useNavigate();
 
-
   const dispatchAnswer = () => {
     if (Object.keys(selectAnswer).length === 0) {
       //the user didnt select anything
@@ -20,7 +19,6 @@ const CustomSelect = ({ stateQuestion }) => {
       return answ.id === selectAnswer;
     });
 
-
     // dispatch the answer action to the choice reducer
     dispatch({
       type: "ANSWER_QUESTION_SELECT",
@@ -28,13 +26,13 @@ const CustomSelect = ({ stateQuestion }) => {
       state: stateQuestion,
     });
     setSelectAnswer({});
-    if (stateQuestion.id === 33) {
+    if (stateQuestion.id === 34) {
       navigate("/download-pdf");
     }
   };
 
   return (
-    <Box marginTop="48" display="flex" alignItems="center" flexDir="column">
+    <Box marginTop="12" display="flex" alignItems="center" flexDir="column">
       <Text
         fontWeight="bold"
         fontSize="3xl"
@@ -62,14 +60,13 @@ const CustomSelect = ({ stateQuestion }) => {
         ))}
       </Select>
 
-        <ActionsButton
-            stateQuestionId ={stateQuestion.id}
-            goBackButtonHandler = {() => dispatch({type: "GO BACK"}) }
-            continueButtonHandler = {() => dispatchAnswer()}
-            colorSchemeContinueButton = "facebook"
-            state = {state}
-        />
-    
+      <ActionsButton
+        stateQuestionId={stateQuestion.id}
+        goBackButtonHandler={() => dispatch({ type: "GO BACK" })}
+        continueButtonHandler={() => dispatchAnswer()}
+        colorSchemeContinueButton="facebook"
+        state={state}
+      />
     </Box>
   );
 };

@@ -40,7 +40,7 @@ export const choiceTree = {
             {
               id: "I am a non-EU citizen",
               label: "I'm a non-EU Citizen",
-              nextQuestion: 2,
+              nextQuestion: 33,
               documentazione: [],
             },
             {
@@ -1081,35 +1081,53 @@ export const choiceTree = {
               selected: false,
               id: "10_1_1",
               label: "Propriety",
-              nextQuestion: 17,
+              nextQuestion: 34,
             },
             {
               selected: false,
               id: "10_1_2",
               label: "Location",
-              nextQuestion: 17,
+              nextQuestion: 34,
             },
             {
               selected: false,
               id: "10_1_3",
               label: "loan for use",
-              nextQuestion: 17,
+              nextQuestion: 34,
             },
             {
               selected: false,
               id: "10_1_4",
               label: "usufruct",
-              nextQuestion: 17,
+              nextQuestion: 34,
             },
             {
               selected: false,
               id: "C9_1_6",
               label: "Housing assignment of a public body",
-              nextQuestion: 17,
+              nextQuestion: 34,
             },
           ],
 
           parentId: 9,
+        },
+        {
+          type: "form",
+          title: "Additional Notes",
+          id: 34,
+          parentId: 33,
+          nextQuestion: 17,
+          answers: [
+            {
+              id: "Note",
+              label: "",
+              type: "textarea",
+              helperText: "Add here additional notes you want to present",
+              validate: "requiredField",
+              isRequired: false,
+              autocomplete: false,
+            },
+          ],
         },
       ],
     },
@@ -2229,7 +2247,7 @@ export const choiceTree = {
             },
             {
               id: "f.i",
-              label: "Finanziariamente indipendente (nessun lavoratore)",
+              label: "Finanziariamente indipendente (no lavoratore)",
               nextQuestion: 4,
               documentazione: [
                 "copia di un documento di identit\u00c3\u00a0 valido.*",
@@ -2251,7 +2269,16 @@ export const choiceTree = {
             },
             {
               id: "relative",
-              label: "Parente di (woker, studente ecc.)",
+              label: "Parente di (lavoratore, studente ecc.)",
+              documentazione: [
+                "copia di un documento di identit\u00c3\u00a0 valido.*",
+                "copia degli atti originali di soggiorno.*",
+              ],
+              nextQuestion: 4,
+            },
+            {
+              id: "worker",
+              label: "Studente lavoratore",
               documentazione: [
                 "copia di un documento di identit\u00c3\u00a0 valido.*",
                 "copia degli atti originali di soggiorno.*",
@@ -2483,7 +2510,7 @@ export const choiceTree = {
             {
               selected: false,
               id: "C1_2_4",
-              label: "Lavoratore Studente",
+              label: "Studente Lavoratore",
               nextQuestion: 14,
             },
             {
@@ -2538,7 +2565,7 @@ export const choiceTree = {
             {
               id: "Numero",
               label: "Numero",
-              type: "number",
+              type: "text",
               helperText: "Ex. 91828930",
               validate: "RequiredField",
               isRequired: false,

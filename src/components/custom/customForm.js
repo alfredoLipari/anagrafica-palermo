@@ -13,12 +13,13 @@ import CustomAutosuggest from "./customInput/customAutosuggest";
 import { validateText, validateCountry } from "../../lib/validation";
 import "./customDatePicker.css";
 import ActionsButton from "../button/ActionsButton";
+import { useNavigate } from "react-router-dom";
 
 const CustomForm = ({ stateTemp }) => {
   let questions = {};
   let country = useRef("");
   const { state, dispatch } = useContext(Context);
-
+  const navigate = useNavigate();
 
   // adding autosuggest logic
   const [answers, setAnswers] = useState({});
@@ -109,6 +110,9 @@ const CustomForm = ({ stateTemp }) => {
 
     setAnswers({});
     questions = {};
+    if (stateTemp.id === 34) {
+      navigate("/download-pdf");
+    }
   };
 
   return (
@@ -176,12 +180,11 @@ const CustomForm = ({ stateTemp }) => {
           </Box>
 
           <ActionsButton
-              goBackButtonHandler = {() => dispatch({type: "GO BACK"}) }
-              colorSchemeContinueButton = "facebook"
-              continueSubmit = "submit"
-              state = {state}
+            goBackButtonHandler={() => dispatch({ type: "GO BACK" })}
+            colorSchemeContinueButton="facebook"
+            continueSubmit="submit"
+            state={state}
           />
-
         </Form>
       )}
     </Formik>
