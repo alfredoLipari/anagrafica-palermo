@@ -150,6 +150,11 @@ export function reducer(state, action) {
       }
 
       if (action.state.id === 34) {
+
+        if(action.answer["Note"] === undefined){
+          action.answer["Note"] = "";
+        }
+
         answers = {
           ...action.answer,
           Note: action.answer["Note"],

@@ -112,6 +112,8 @@ const CustomLongForm = ({ stateQuestions }) => {
     let containerColumn = [];
     let formContainer = {};
 
+
+
     stateQuestions.answers.forEach((answ, index) => {
       switch (answ.type) {
         case "select":
@@ -153,9 +155,7 @@ const CustomLongForm = ({ stateQuestions }) => {
                     {...field}
                     state={answ}
                     error={
-                      props.errors[answ.id] &&
-                      props.touched[answ.id] &&
-                      props.errors[answ.id]
+                      props.errors[answ.id] 
                     }
                   />
                 </FormControl>

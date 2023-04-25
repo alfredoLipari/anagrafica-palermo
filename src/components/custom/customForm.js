@@ -83,6 +83,7 @@ const CustomForm = ({ stateTemp }) => {
 
   // handler when the form is submitted, call the dispatcher
   const submitForm = (values) => {
+    console.log("submit", values)
     let newValues = values;
 
     if (Object.keys(answers).length > 0 && !country.current) {
@@ -92,15 +93,16 @@ const CustomForm = ({ stateTemp }) => {
         answers["Indicare il comune di provenienza"];
     }
     // if the return type is invalid return the errore message
-
     if (!isValid || !Object.keys(newValues).length > 0) {
-      if (!Object.keys(newValues).length > 0) {
+      if (!Object.keys(newValues).length > 0 && stateTemp.id !== 34) {
         setShowError(true);
         return;
       }
     } else {
       setShowError(false);
     }
+
+    console.log("newValues", newValues)
 
     dispatch({
       type: "ANSWER_QUESTION_FORM",
