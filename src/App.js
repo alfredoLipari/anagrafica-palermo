@@ -21,6 +21,7 @@ const Website = () => {
 
   const [state, dispatch] = useReducer(reducer, initialState);
 
+  console.log("state", state)
 
 
   return (

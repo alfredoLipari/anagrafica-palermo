@@ -12,6 +12,7 @@ import {
 
 // create reducer
 export function reducer(state, action) {
+  console.log("answ", state.answers)
   switch (action.type) {
     case "CHANGE_LANGUAGE":
       return {

@@ -126,7 +126,7 @@ const CustomForm = ({ stateTemp }) => {
         submitForm(values);
       }}
     >
-      {() => (
+      {(props) => (
         <Form
           style={{
             display: "flex",
@@ -163,7 +163,7 @@ const CustomForm = ({ stateTemp }) => {
                 >
                   {({ field }) => (
                     <FormControl>
-                      <CustomInput {...field} state={answ} />
+                      <CustomInput {...field} state={answ} error={props.errors[answ.id]}/>
                     </FormControl>
                   )}
                 </Field>

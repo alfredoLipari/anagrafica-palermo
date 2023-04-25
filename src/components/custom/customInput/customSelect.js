@@ -54,6 +54,7 @@ const CustomSelect = ({ stateQuestion }) => {
         marginBottom="12"
       >
         {stateQuestion.answers.map((el) => (
+          
           <option value={el.id} key={el.id}>
             {el.label}
           </option>

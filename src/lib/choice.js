@@ -334,6 +334,7 @@ export const choiceTree = {
               options: ["unmarried", "married", "divorced", "widower"],
               helperText: "select your status",
               validate: "RequiredField",
+              isRequired: true,
             },
             {
               id: "Cittadinanza",
@@ -904,6 +905,7 @@ export const choiceTree = {
               type: "date",
               helperText: "DD/MM/YYYY",
               isRequired: true,
+              validate: "requiredField",
             },
             {
               id: "al n",
@@ -937,8 +939,9 @@ export const choiceTree = {
               id: "in data_2",
               label: "Date",
               type: "date",
-              helperText: "DD/MM/YYYY",
+              helperText: "Date start contract",
               isRequired: true,
+              validate: "requiredField",
             },
             {
               id: "al n_2",
@@ -954,7 +957,7 @@ export const choiceTree = {
         {
           type: "form",
           title: "Contract details",
-          id: 26,
+          id: 27,
           parentId: 4,
           nextQuestion: 30,
           answers: [
@@ -2191,7 +2194,7 @@ export const choiceTree = {
             },
             {
               id: "I am renewing my Residence permit",
-              label: "Sto rinnovando il mio Residence permi",
+              label: "Sto rinnovando il mio permesso di soggiorno",
               nextQuestion: 4,
               documentazione: [
                 "copia del passaporto o documento equipollente in corso di validit\u00c3\u00a0.* ",
@@ -2275,7 +2278,7 @@ export const choiceTree = {
               nextQuestion: 4,
             },
             {
-              id: "worker",
+              id: "worker-student",
               label: "Studente lavoratore",
               documentazione: [
                 "copia di un documento di identit\u00c3\u00a0 valido.*",
@@ -2508,7 +2511,7 @@ export const choiceTree = {
             },
             {
               selected: false,
-              id: "C1_2_4",
+              id: "C1_2_6",
               label: "Studente Lavoratore",
               nextQuestion: 14,
             },
@@ -2689,22 +2692,22 @@ export const choiceTree = {
             {
               id: "Scala",
               label: "Scale",
-              type: "number",
+              type: "text",
               helperText: "Ex. 1\u00ba",
               isRequired: true,
               validate: "RequiredField",
             },
             {
               id: "Piano",
-              label: "Pavimento",
-              type: "number",
+              label: "Piano",
+              type: "text",
               helperText: "Es. 2",
               isRequired: true,
               validate: "RequiredField",
             },
             {
               id: "Interno",
-              label: "Unit\u00e0",
+              label: "Interno",
               type: "text",
               helperText: "Ex. A",
               isRequired: true,
@@ -2794,7 +2797,6 @@ export const choiceTree = {
               helperText:
                 "Se non c'\u00e8 qualche rapporto di parentela lasciare questo campo vuoto",
               isRequired: false,
-              validate: "RequiredField",
               options: [
                 "nessuno",
                 "madre",
@@ -2860,7 +2862,7 @@ export const choiceTree = {
           label: "Seleziona il tuo stato",
           id: 23,
           answers: [
-            {
+            { 
               selected: false,
               id: "C9_1_5",
               label: "Uso gratuito",
@@ -2993,13 +2995,14 @@ export const choiceTree = {
               type: "number",
               validate: "requiredField",
               isRequired: true,
+              helperText: "Ex. 1234",
             },
           ],
         },
         {
           type: "form",
           title: "Dettagli del contratto",
-          id: 26,
+          id: 27,
           parentId: 4,
           nextQuestion: 30,
           answers: [
@@ -3033,7 +3036,7 @@ export const choiceTree = {
           title: "Dettagli del contratto",
           id: 31,
           parentId: 4,
-          nextQuestion: 32,
+          nextQuestion: 33,
           answers: [
             {
               id: "che la tassa per il nuovo",
@@ -3042,6 +3045,7 @@ export const choiceTree = {
               validate: "requiredField",
               isRequired: true,
               autocomplete: false,
+              helperText: "Mario Rossi"
             },
             {
               id: "F",
@@ -3049,6 +3053,7 @@ export const choiceTree = {
               type: "text",
               isRequired: true,
               validate: "fiscalCodeField",
+              helperText: "Ex. RSSMRA80A01H501T",
             },
             {
               id: "Relazione_di_parentela",
@@ -3056,6 +3061,7 @@ export const choiceTree = {
               type: "select",
               validate: "requiredField",
               isRequired: true,
+              helperText: "Ex. Coniuge",
             },
           ],
         },
@@ -3072,6 +3078,7 @@ export const choiceTree = {
               type: "text",
               isRequired: true,
               validate: "RequiredField",
+              helperText: "Ex. 36",
             },
             {
               id: "particella10",
@@ -3103,6 +3110,7 @@ export const choiceTree = {
               type: "number",
               isRequired: true,
               validate: "RequiredField",
+              helperText: "Ex. 100",
             },
           ],
         },
@@ -3116,34 +3124,51 @@ export const choiceTree = {
               selected: false,
               id: "10_1_1",
               label: "Propriet\u00e0",
-              nextQuestion: 25,
+              nextQuestion: 34,
             },
             {
               selected: false,
               id: "10_1_2",
-              label: "Posizione",
-              nextQuestion: 24,
+              label: "Locazione",
+              nextQuestion: 34,
             },
             {
               selected: false,
               id: "10_1_3",
-              label: "prestito per l'uso",
-              nextQuestion: 26,
+              label: "Comodato d'uso",
+              nextQuestion: 34,
             },
             {
               selected: false,
               id: "10_1_4",
-              label: "usufrutto",
-              nextQuestion: 30,
+              label: "Usufrutto",
+              nextQuestion: 34,
             },
             {
               selected: false,
-              id: "C9_1_6",
+              id: "C10_1_5",
               label: "Assegnazione di alloggi di un ente pubblico",
-              nextQuestion: 27,
+              nextQuestion: 34,
             },
           ],
           parentId: 9,
+        },
+        {
+          type: "form",
+          title: "Note",
+          id: 34,
+          parentId: 33,
+          nextQuestion: 17,
+          answers: [
+            {
+              id: "Note",
+              label: "",
+              type: "textarea",
+              helperText: "Aggiungi qui note integrative che vuoi presentare",
+              isRequired: false,
+              autocomplete: false,
+            },
+          ],
         },
       ],
     },

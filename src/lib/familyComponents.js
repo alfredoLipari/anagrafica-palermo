@@ -2453,6 +2453,7 @@ export const calculateComponentItalianTree = (action) => {
           type: "date",
           helperText: "Data di nascita",
           isRequired: true,
+          validate: "RequiredField",
           // add input validate
         },
         {
@@ -2480,6 +2481,7 @@ export const calculateComponentItalianTree = (action) => {
           options: ["celibe", "sposato/a", "divorziato/a", "vedovo/a"],
           helperText: "scegli stato civile",
           validate: "RequiredField",
+          required: true,
         },
         {
           id: "Cittadinanza_" + i,
@@ -2514,6 +2516,8 @@ export const calculateComponentItalianTree = (action) => {
             "nonna",
             "zio",
             "zia",
+            "moglie",
+            "marito",
             "cugino",
           ],
           helperText: "Ex. moglie, figlio",
