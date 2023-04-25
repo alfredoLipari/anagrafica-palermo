@@ -288,7 +288,7 @@ export const choiceTree = {
               label: "What's your name?",
               type: "text",
               helperText: "Ex. Moussa",
-              validate: "RequiredField",
+              validate: "requiredField",
               isRequired: true,
               // add input validate
             },
@@ -297,7 +297,7 @@ export const choiceTree = {
               label: "What's your surname",
               type: "text",
               helperText: "Ex. Semprini",
-              validate: "RequiredField",
+              validate: "requiredField",
               isRequired: true,
             },
             {
@@ -322,7 +322,7 @@ export const choiceTree = {
               label: "Gender",
               type: "select",
               options: ["male", "female"],
-              validate: "RequiredField",
+              validate: "requiredField",
               isRequired: true,
               helperText: "select your gender",
               // add input validate
@@ -333,7 +333,7 @@ export const choiceTree = {
               type: "select",
               options: ["unmarried", "married", "divorced", "widower"],
               helperText: "select your status",
-              validate: "RequiredField",
+              validate: "requiredField",
               isRequired: true,
             },
             {
@@ -341,7 +341,7 @@ export const choiceTree = {
               label: "Citizenship",
               type: "text",
               helperText: "Ex. French",
-              validate: "RequiredField",
+              validate: "requiredField",
               isRequired: true,
               // add input validate
             },
@@ -492,7 +492,7 @@ export const choiceTree = {
               label: "Number",
               type: "text",
               helperText: "Ex. 91828930",
-              validate: "RequiredField",
+              validate: "requiredField",
               isRequired: false,
               // add input validate
             },
@@ -501,7 +501,7 @@ export const choiceTree = {
               label: "License Type",
               type: "text",
               helperText: "Ex. A,B,C",
-              //validate: "RequiredField",
+              //validate: "requiredField",
               isRequired: false,
             },
             {
@@ -509,7 +509,7 @@ export const choiceTree = {
               label: "Release Date",
               type: "Date",
               helperText: "Release Date",
-              validate: "RequiredField",
+              validate: "requiredField",
               isRequired: false,
               // add input validate
             },
@@ -518,7 +518,7 @@ export const choiceTree = {
               label: "Issuing body",
               type: "text",
               helperText: "Motorizzazione",
-              validate: "RequiredField",
+              validate: "requiredField",
               isRequired: false,
             },
             {
@@ -526,7 +526,7 @@ export const choiceTree = {
               label: "Province",
               type: "text",
               helperText: "Palermo",
-              validate: "RequiredField",
+              validate: "requiredField",
               isRequired: false,
               // add input validate
             },
@@ -596,7 +596,7 @@ export const choiceTree = {
               type: "text",
               helperText: "Ex. Palermo",
               isRequired: true,
-              validate: "RequiredField",
+              validate: "requiredField",
               // add input validate
             },
             {
@@ -605,7 +605,7 @@ export const choiceTree = {
               type: "text",
               helperText: "Ex. Palermo",
               isRequired: true,
-              validate: "RequiredField",
+              validate: "requiredField",
             },
             {
               id: "ViaPiazza",
@@ -613,7 +613,7 @@ export const choiceTree = {
               type: "text",
               helperText: "Via della libertà",
               isRequired: true,
-              validate: "RequiredField",
+              validate: "requiredField",
               // add input validate
             },
             {
@@ -622,7 +622,7 @@ export const choiceTree = {
               type: "text",
               helperText: "Ex. 36",
               isRequired: true,
-              validate: "RequiredField",
+              validate: "requiredField",
             },
             {
               id: "Scala",
@@ -637,7 +637,7 @@ export const choiceTree = {
               type: "text",
               isRequired: true,
               helperText: "Ex. 2",
-              validate: "RequiredField",
+              validate: "requiredField",
             },
             {
               id: "Interno",
@@ -702,7 +702,7 @@ export const choiceTree = {
               type: "text",
               helperText: "Ex. Moussa",
               isRequired: true,
-              validate: "RequiredField",
+              validate: "requiredField",
               // add input validate
             },
             {
@@ -711,7 +711,7 @@ export const choiceTree = {
               type: "text",
               helperText: "Ex. Semprini",
               isRequired: true,
-              validate: "RequiredField",
+              validate: "requiredField",
             },
             {
               id: "Luogo",
@@ -719,7 +719,7 @@ export const choiceTree = {
               type: "date",
               helperText: "DD/MM/YYYY",
               isRequired: true,
-              validate: "RequiredField",
+              validate: "requiredField",
               // add input validate
             },
             {
@@ -728,7 +728,7 @@ export const choiceTree = {
               type: "text",
               helperText: "Indicate his/her city of birth",
               isRequired: true,
-              validate: "RequiredField",
+              validate: "requiredField",
               autocomplete: true,
             },
             {
@@ -1035,7 +1035,7 @@ export const choiceTree = {
               label: "Sheet (Foglio)",
               type: "text",
               isRequired: true,
-              validate: "RequiredField",
+              validate: "requiredField",
               // add input validate
             },
             {
@@ -1043,14 +1043,14 @@ export const choiceTree = {
               label: "particella",
               type: "text",
               isRequired: true,
-              validate: "RequiredField",
+              validate: "requiredField",
             },
             {
               id: "sub10",
               label: "subalterno",
               type: "text",
               isRequired: true,
-              validate: "RequiredField",
+              validate: "requiredField",
               // add input validate
             },
             {
@@ -1058,7 +1058,7 @@ export const choiceTree = {
               label: "Effective date of occupation",
               type: "date",
               isRequired: true,
-              validate: "RequiredField",
+              validate: "requiredField",
               helperText: "",
             },
             {
@@ -1066,7 +1066,7 @@ export const choiceTree = {
               label: "surface in sq. m",
               type: "number",
               isRequired: true,
-              validate: "RequiredField",
+              validate: "requiredField",
               // add input validate
             },
           ],
@@ -1371,7 +1371,7 @@ export const choiceTree = {
               label: "Quel est votre nom ?",
               type: "text",
               helperText: "Ex. Moussa",
-              validate: "RequiredField",
+              validate: "requiredField",
               isRequired: true,
             },
             {
@@ -1379,7 +1379,7 @@ export const choiceTree = {
               label: "Quel est votre nom de famille ?",
               type: "text",
               helperText: "Ex. Semprini",
-              validate: "RequiredField",
+              validate: "requiredField",
               isRequired: true,
             },
             {
@@ -1387,7 +1387,7 @@ export const choiceTree = {
               label: "Date de naissance",
               type: "date",
               helperText: "DD/MM/YYYY",
-              validate: "RequiredField",
+              validate: "requiredField",
               isRequired: true,
             },
             {
@@ -1396,6 +1396,7 @@ export const choiceTree = {
               type: "text",
               helperText: "Indiquez votre ville de naissance",
               autocomplete: true,
+              validate: "requiredField",
               isRequired: true,
             },
             {
@@ -1403,7 +1404,7 @@ export const choiceTree = {
               label: "Genre",
               type: "select",
               options: ["male", "female"],
-              validate: "RequiredField",
+              validate: "requiredField",
               isRequired: true,
               helperText: "s\u00e9lectionnez votre sexe",
             },
@@ -1413,14 +1414,14 @@ export const choiceTree = {
               type: "select",
               options: ["unmarried", "married", "divorced", "widower"],
               helperText: "s\u00e9lectionnez votre statut",
-              validate: "RequiredField",
+              validate: "requiredField",
             },
             {
               id: "Cittadinanza",
               label: "Citoyennet\u00e9",
               type: "text",
               helperText: "Ex. Ghan\u00e9en, Francaise, Russe...",
-              validate: "RequiredField",
+              validate: "requiredField",
               isRequired: true,
             },
             {
@@ -1553,7 +1554,7 @@ export const choiceTree = {
               label: "Num\u00e9ro",
               type: "number",
               helperText: "Ex. 91828930",
-              validate: "RequiredField",
+              validate: "requiredField",
               isRequired: false,
             },
             {
@@ -1568,7 +1569,7 @@ export const choiceTree = {
               label: "Date de sortie",
               type: "Date",
               helperText: "Date de sortie",
-              validate: "RequiredField",
+              validate: "requiredField",
               isRequired: false,
             },
             {
@@ -1576,7 +1577,7 @@ export const choiceTree = {
               label: "Organisme \u00e9metteur",
               type: "text",
               helperText: "Motorizzazione",
-              validate: "RequiredField",
+              validate: "requiredField",
               isRequired: false,
             },
             {
@@ -1584,7 +1585,7 @@ export const choiceTree = {
               label: "Province",
               type: "text",
               helperText: "Palerme",
-              validate: "RequiredField",
+              validate: "requiredField",
               isRequired: false,
             },
           ],
@@ -1647,7 +1648,7 @@ export const choiceTree = {
               type: "text",
               helperText: "Ex. Palerme",
               isRequired: true,
-              validate: "RequiredField",
+              validate: "requiredField",
             },
             {
               id: "Prov",
@@ -1655,7 +1656,7 @@ export const choiceTree = {
               type: "text",
               helperText: "Ex. Palerme",
               isRequired: true,
-              validate: "RequiredField",
+              validate: "requiredField",
             },
             {
               id: "ViaPiazza",
@@ -1663,7 +1664,7 @@ export const choiceTree = {
               type: "text",
               helperText: "Via della libert\u00c3",
               isRequired: true,
-              validate: "RequiredField",
+              validate: "requiredField",
             },
             {
               id: "Numero civico",
@@ -1671,7 +1672,7 @@ export const choiceTree = {
               type: "text",
               helperText: "Ex. 36",
               isRequired: true,
-              validate: "RequiredField",
+              validate: "requiredField",
             },
             {
               id: "Scala",
@@ -1679,7 +1680,7 @@ export const choiceTree = {
               type: "number",
               helperText: "Ex. 1er",
               isRequired: true,
-              validate: "RequiredField",
+              validate: "requiredField",
             },
             {
               id: "Piano",
@@ -1687,7 +1688,7 @@ export const choiceTree = {
               type: "number",
               helperText: "Ex. 2",
               isRequired: true,
-              validate: "RequiredField",
+              validate: "requiredField",
             },
             {
               id: "Interno",
@@ -1695,7 +1696,7 @@ export const choiceTree = {
               type: "number",
               helperText: "Ex. A",
               isRequired: true,
-              validate: "RequiredField",
+              validate: "requiredField",
             },
           ],
         },
@@ -1749,7 +1750,7 @@ export const choiceTree = {
               type: "text",
               helperText: "Ex. Moussa",
               isRequired: true,
-              validate: "RequiredField",
+              validate: "requiredField",
             },
             {
               id: "Cognome_6",
@@ -1757,7 +1758,7 @@ export const choiceTree = {
               type: "text",
               helperText: "Ex. Semprini",
               isRequired: true,
-              validate: "RequiredField",
+              validate: "requiredField",
             },
             {
               id: "Luogo",
@@ -1765,7 +1766,7 @@ export const choiceTree = {
               type: "date",
               helperText: "DD/MM/YYYY",
               isRequired: true,
-              validate: "RequiredField",
+              validate: "requiredField",
             },
             {
               id: "Luogo di nascita_6",
@@ -1773,7 +1774,7 @@ export const choiceTree = {
               type: "text",
               helperText: "Indiquez votre ville de naissance",
               isRequired: true,
-              validate: "RequiredField",
+              validate: "requiredField",
             },
             {
               id: "Sussiste il seguente vincolo rispetto al su indicato  componente della famiglia gi\u00c3\u00a0 residente",
@@ -1782,7 +1783,6 @@ export const choiceTree = {
               helperText:
                 "S'il existe un lien de parent\u00e9, laissez ce champ vide.",
               isRequired: false,
-              validate: "RequiredField",
               options: [
                 "aucun",
                 "mère",
@@ -1837,7 +1837,6 @@ export const choiceTree = {
               label: "Fax",
               type: "text",
               helperText: "091666555",
-              validate: "",
               isRequired: false,
             },
           ],
@@ -1901,7 +1900,6 @@ export const choiceTree = {
               label: "Feuille",
               type: "tel",
               helperText: "3332423421",
-              validate: "",
               isRequired: false,
             },
             {
@@ -2059,7 +2057,7 @@ export const choiceTree = {
               label: "Feuille (Foglio)",
               type: "text",
               isRequired: true,
-              validate: "RequiredField",
+              validate: "requiredField",
             },
             {
               id: "particella10",
@@ -2067,7 +2065,7 @@ export const choiceTree = {
               type: "text",
               helperText: "Ex. 36",
               isRequired: true,
-              validate: "RequiredField",
+              validate: "requiredField",
             },
             {
               id: "sub10",
@@ -2075,14 +2073,14 @@ export const choiceTree = {
               type: "text",
               helperText: "Ex. 1er",
               isRequired: true,
-              validate: "RequiredField",
+              validate: "requiredField",
             },
             {
               id: "data",
               label: "Data fine occupazione",
               type: "date",
               isRequired: true,
-              validate: "RequiredField",
+              validate: "requiredField",
               helperText: "Data fine occupazione",
             },
             {
@@ -2090,7 +2088,7 @@ export const choiceTree = {
               label: "surface en m\u00e8tres carr\u00e9s",
               type: "number",
               isRequired: true,
-              validate: "RequiredField",
+              validate: "requiredField",
             },
           ],
         },
@@ -2380,7 +2378,7 @@ export const choiceTree = {
               label: "Come ti chiami?",
               type: "text",
               helperText: "Ex. Moussa",
-              validate: "RequiredField",
+              validate: "requiredField",
               isRequired: true,
             },
             {
@@ -2388,7 +2386,7 @@ export const choiceTree = {
               label: "Qual \u00e8 il tuo cognome",
               type: "text",
               helperText: "Ex. Semprini",
-              validate: "RequiredField",
+              validate: "requiredField",
               isRequired: true,
             },
             {
@@ -2396,7 +2394,7 @@ export const choiceTree = {
               label: "Data di nascita",
               type: "date",
               helperText: "Data di nascita",
-              validate: "RequiredField",
+              validate: "requiredField",
               isRequired: true,
             },
             {
@@ -2406,14 +2404,14 @@ export const choiceTree = {
               helperText: "Indichi la sua citt\u00e0 di nascita",
               autocomplete: true,
               isRequired: true,
-              validate: "RequiredField",
+              validate: "requiredField",
             },
             {
               id: "Sesso",
               label: "Genere",
               type: "select",
               options: ["maschio", "femmina"],
-              validate: "RequiredField",
+              validate: "requiredField",
               isRequired: true,
               helperText: "seleziona il tuo sesso",
             },
@@ -2423,14 +2421,14 @@ export const choiceTree = {
               type: "select",
               options: ["celibe","nubile", "sposato/a", "divorziato/a", "vedovo/a"],
               helperText: "seleziona il tuo stato",
-              validate: "RequiredField",
+              validate: "requiredField",
             },
             {
               id: "Cittadinanza",
               label: "Cittadinanza",
               type: "text",
               helperText: "Ex. Francese",
-              validate: "RequiredField",
+              validate: "requiredField",
               isRequired: true,
             },
             {
@@ -2569,7 +2567,7 @@ export const choiceTree = {
               label: "Numero",
               type: "text",
               helperText: "Ex. 91828930",
-              validate: "RequiredField",
+              validate: "requiredField",
               isRequired: false,
             },
             {
@@ -2584,7 +2582,7 @@ export const choiceTree = {
               label: "Data di rilascio",
               type: "Date",
               helperText: "Data di rilascio",
-              validate: "RequiredField",
+              validate: "requiredField",
               isRequired: false,
             },
             {
@@ -2592,7 +2590,7 @@ export const choiceTree = {
               label: "Ente emittente",
               type: "text",
               helperText: "Motorizzazione",
-              validate: "RequiredField",
+              validate: "requiredField",
               isRequired: false,
             },
             {
@@ -2600,7 +2598,7 @@ export const choiceTree = {
               label: "Provincia",
               type: "text",
               helperText: "Palermo",
-              validate: "RequiredField",
+              validate: "requiredField",
               isRequired: false,
             },
           ],
@@ -2663,7 +2661,7 @@ export const choiceTree = {
               type: "text",
               helperText: "Ex. Palermo",
               isRequired: true,
-              validate: "RequiredField",
+              validate: "requiredField",
             },
             {
               id: "Prov",
@@ -2671,7 +2669,7 @@ export const choiceTree = {
               type: "text",
               helperText: "Ex. Palermo",
               isRequired: true,
-              validate: "RequiredField",
+              validate: "requiredField",
             },
             {
               id: "ViaPiazza",
@@ -2679,7 +2677,7 @@ export const choiceTree = {
               type: "text",
               helperText: "Via della libert\u00e0",
               isRequired: true,
-              validate: "RequiredField",
+              validate: "requiredField",
             },
             {
               id: "Numero civico",
@@ -2687,7 +2685,7 @@ export const choiceTree = {
               type: "text",
               helperText: "Ex. 36",
               isRequired: true,
-              validate: "RequiredField",
+              validate: "requiredField",
             },
             {
               id: "Scala",
@@ -2695,7 +2693,7 @@ export const choiceTree = {
               type: "text",
               helperText: "Ex. 1\u00ba",
               isRequired: true,
-              validate: "RequiredField",
+              validate: "requiredField",
             },
             {
               id: "Piano",
@@ -2703,7 +2701,7 @@ export const choiceTree = {
               type: "text",
               helperText: "Es. 2",
               isRequired: true,
-              validate: "RequiredField",
+              validate: "requiredField",
             },
             {
               id: "Interno",
@@ -2711,7 +2709,7 @@ export const choiceTree = {
               type: "text",
               helperText: "Ex. A",
               isRequired: true,
-              validate: "RequiredField",
+              validate: "requiredField",
             },
           ],
         },
@@ -2764,7 +2762,7 @@ export const choiceTree = {
               type: "text",
               helperText: "Ex. Moussa",
               isRequired: true,
-              validate: "RequiredField",
+              validate: "requiredField",
             },
             {
               id: "Cognome_6",
@@ -2772,7 +2770,7 @@ export const choiceTree = {
               type: "text",
               helperText: "Ex. Semprini",
               isRequired: true,
-              validate: "RequiredField",
+              validate: "requiredField",
             },
             {
               id: "Luogo",
@@ -2780,7 +2778,7 @@ export const choiceTree = {
               type: "date",
               helperText: "GG/MM/AAAA",
               isRequired: true,
-              validate: "RequiredField",
+              validate: "requiredField",
             },
             {
               id: "Luogo di nascita_6",
@@ -2788,7 +2786,7 @@ export const choiceTree = {
               type: "text",
               helperText: "Indichi la sua citt\u00e0 di nascita",
               isRequired: true,
-              validate: "RequiredField",
+              validate: "requiredField",
             },
             {
               id: "Sussiste il seguente vincolo rispetto al su indicato  componente della famiglia gi\u00c3\u00a0 residente",
@@ -2835,7 +2833,6 @@ export const choiceTree = {
               label: "Numero di cellulare",
               type: "tel",
               helperText: "3332423421",
-              validate: "",
               isRequired: false,
             },
             {
@@ -2955,6 +2952,7 @@ export const choiceTree = {
               label: "Data",
               type: "date",
               helperText: "GG/MM/AAAA",
+              validate: "requiredField",
               isRequired: true,
             },
             {
@@ -2987,6 +2985,7 @@ export const choiceTree = {
               label: "Data",
               type: "date",
               helperText: "GG/MM/AAAA",
+              validate: "requiredField",
               isRequired: true,
             },
             {
@@ -3077,7 +3076,7 @@ export const choiceTree = {
               label: "Foglio (Foglio)",
               type: "text",
               isRequired: true,
-              validate: "RequiredField",
+              validate: "requiredField",
               helperText: "Ex. 36",
             },
             {
@@ -3086,7 +3085,7 @@ export const choiceTree = {
               type: "text",
               helperText: "Ex. 36",
               isRequired: true,
-              validate: "RequiredField",
+              validate: "requiredField",
             },
             {
               id: "sub10",
@@ -3094,14 +3093,14 @@ export const choiceTree = {
               type: "text",
               helperText: "Ex. 1\u00ba",
               isRequired: true,
-              validate: "RequiredField",
+              validate: "requiredField",
             },
             {
               id: "data",
               label: "Data decorrenza occupazione",
               type: "date",
               isRequired: true,
-              validate: "RequiredField",
+              validate: "requiredField",
               helperText: "Data decorrenza occupazione",
             },
             {
@@ -3109,7 +3108,7 @@ export const choiceTree = {
               label: "superficie in mq",
               type: "number",
               isRequired: true,
-              validate: "RequiredField",
+              validate: "requiredField",
               helperText: "Ex. 100",
             },
           ],
@@ -3409,7 +3408,7 @@ export const choiceTree = {
               label: "\u00bfC\u00f3mo te llamas?",
               type: "text",
               helperText: "Ex. Moussa",
-              validate: "RequiredField",
+              validate: "requiredField",
               isRequired: true,
             },
             {
@@ -3417,7 +3416,7 @@ export const choiceTree = {
               label: "\u00bfCu\u00e1l es su apellido?",
               type: "text",
               helperText: "Ex. Semprini",
-              validate: "RequiredField",
+              validate: "requiredField",
               isRequired: true,
             },
             {
@@ -3425,7 +3424,7 @@ export const choiceTree = {
               label: "Fecha de nacimiento",
               type: "date",
               helperText: "fecha de nacimiento",
-              validate: "RequiredField",
+              validate: "requiredField",
               isRequired: true,
             },
             {
@@ -3434,6 +3433,7 @@ export const choiceTree = {
               type: "text",
               helperText: "Indique su ciudad de nacimiento",
               autocomplete: true,
+              validate: "requiredField",
               isRequired: true,
             },
             {
@@ -3441,7 +3441,7 @@ export const choiceTree = {
               label: "G\u00e9nero",
               type: "select",
               options: ["male", "female"],
-              validate: "RequiredField",
+              validate: "requiredField",
               isRequired: true,
               helperText: "seleccione su g\u00e9nero",
             },
@@ -3451,14 +3451,14 @@ export const choiceTree = {
               type: "select",
               options: ["unmarried", "married", "divorced", "widower"],
               helperText: "seleccione su estado",
-              validate: "RequiredField",
+              validate: "requiredField",
             },
             {
               id: "Cittadinanza",
               label: "Ciudadan\u00eda",
               type: "text",
               helperText: "Ex. Ghanesa, Francesa, Rusa...",
-              validate: "RequiredField",
+              validate: "requiredField",
               isRequired: true,
             },
             {
@@ -3591,7 +3591,7 @@ export const choiceTree = {
               label: "N\u00famero",
               type: "number",
               helperText: "Ex. 91828930",
-              validate: "RequiredField",
+              validate: "requiredField",
               isRequired: false,
             },
             {
@@ -3606,7 +3606,7 @@ export const choiceTree = {
               label: "Fecha de publicaci\u00f3n",
               type: "Date",
               helperText: "Fecha de publicaci\u00f3n",
-              validate: "RequiredField",
+              validate: "requiredField",
               isRequired: false,
             },
             {
@@ -3614,7 +3614,7 @@ export const choiceTree = {
               label: "Organismo emisor",
               type: "text",
               helperText: "Motorizaci\u00f3n",
-              validate: "RequiredField",
+              validate: "requiredField",
               isRequired: false,
             },
             {
@@ -3622,7 +3622,7 @@ export const choiceTree = {
               label: "Provincia",
               type: "text",
               helperText: "Palermo",
-              validate: "RequiredField",
+              validate: "requiredField",
               isRequired: false,
             },
           ],
@@ -3685,7 +3685,7 @@ export const choiceTree = {
               type: "text",
               helperText: "Ex. Palermo",
               isRequired: true,
-              validate: "RequiredField",
+              validate: "requiredField",
             },
             {
               id: "Prov",
@@ -3693,7 +3693,7 @@ export const choiceTree = {
               type: "text",
               helperText: "Ex. Palermo",
               isRequired: true,
-              validate: "RequiredField",
+              validate: "requiredField",
             },
             {
               id: "ViaPiazza",
@@ -3701,7 +3701,7 @@ export const choiceTree = {
               type: "text",
               helperText: "Via della libert\u00c3\u00a2a",
               isRequired: true,
-              validate: "RequiredField",
+              validate: "requiredField",
             },
             {
               id: "Numero civico",
@@ -3709,7 +3709,7 @@ export const choiceTree = {
               type: "text",
               helperText: "Ex. 36",
               isRequired: true,
-              validate: "RequiredField",
+              validate: "requiredField",
             },
             {
               id: "Scala",
@@ -3717,7 +3717,7 @@ export const choiceTree = {
               type: "number",
               helperText: "Ex. 1er.",
               isRequired: true,
-              validate: "RequiredField",
+              validate: "requiredField",
             },
             {
               id: "Piano",
@@ -3725,7 +3725,7 @@ export const choiceTree = {
               type: "number",
               helperText: "Ej. 2",
               isRequired: true,
-              validate: "RequiredField",
+              validate: "requiredField",
             },
             {
               id: "Interno",
@@ -3733,7 +3733,7 @@ export const choiceTree = {
               type: "text",
               helperText: "Ex. A",
               isRequired: false,
-              validate: "RequiredField",
+              validate: "requiredField",
             },
           ],
         },
@@ -3786,7 +3786,7 @@ export const choiceTree = {
               type: "text",
               helperText: "Ex. Moussa",
               isRequired: true,
-              validate: "RequiredField",
+              validate: "requiredField",
             },
             {
               id: "Cognome_6",
@@ -3794,7 +3794,7 @@ export const choiceTree = {
               type: "text",
               helperText: "Ex. Semprini",
               isRequired: true,
-              validate: "RequiredField",
+              validate: "requiredField",
             },
             {
               id: "Luogo",
@@ -3802,7 +3802,7 @@ export const choiceTree = {
               type: "date",
               helperText: "DD/MM/AAAA",
               isRequired: true,
-              validate: "RequiredField",
+              validate: "requiredField",
             },
             {
               id: "Luogo di nascita_6",
@@ -3810,7 +3810,7 @@ export const choiceTree = {
               type: "text",
               helperText: "Indique su ciudad de nacimiento",
               isRequired: true,
-              validate: "RequiredField",
+              validate: "requiredField",
             },
             {
               id: "Sussiste il seguente vincolo rispetto al su indicato  componente della famiglia gi\u00c3\u00a0 residente",
@@ -3819,7 +3819,7 @@ export const choiceTree = {
               helperText:
                 "Si hay alguna relaci\u00f3n familiar, deje este campo vac\u00edo",
               isRequired: false,
-              validate: "RequiredField",
+              validate: "requiredField",
               options: [
                 "ninguno",
                 "madre",
@@ -3978,6 +3978,7 @@ export const choiceTree = {
               label: "Fecha",
               type: "date",
               helperText: "Fecha",
+              validate: "requiredField",
               isRequired: true,
             },
             {
@@ -4010,6 +4011,7 @@ export const choiceTree = {
               label: "Fecha",
               type: "date",
               helperText: "DD/MM/AAAA",
+              validate: "requiredField",
               isRequired: true,
             },
             {
@@ -4096,7 +4098,7 @@ export const choiceTree = {
               label: "Hoja (Foglio)",
               type: "text",
               isRequired: true,
-              validate: "RequiredField",
+              validate: "requiredField",
             },
             {
               id: "particella10",
@@ -4104,7 +4106,7 @@ export const choiceTree = {
               type: "text",
               helperText: "Ex. 36",
               isRequired: true,
-              validate: "RequiredField",
+              validate: "requiredField",
             },
             {
               id: "sub10",
@@ -4112,14 +4114,14 @@ export const choiceTree = {
               type: "text",
               helperText: "Ex. 1er.",
               isRequired: true,
-              validate: "RequiredField",
+              validate: "requiredField",
             },
             {
               id: "data",
               label: "Datos de ocupaci\u00f3n fina",
               type: "date",
               isRequired: true,
-              validate: "RequiredField",
+              validate: "requiredField",
               helperText: "Datos de ocupaci\u00f3n fina",
             },
             {
@@ -4127,7 +4129,7 @@ export const choiceTree = {
               label: "superficie en metros cuadrados",
               type: "number",
               isRequired: true,
-              validate: "RequiredField",
+              validate: "requiredField",
             },
           ],
         },
@@ -4448,7 +4450,7 @@ export const choiceTree = {
                 "\u042f\u043a \u0432\u0430\u0441 \u0437\u0432\u0430\u0442\u0438?",
               type: "text",
               helperText: "\u041d\u0430\u043f\u0440. \u041c\u0443\u0441\u0430",
-              validate: "RequiredField",
+              validate: "requiredField",
               isRequired: true,
             },
             {
@@ -4458,7 +4460,7 @@ export const choiceTree = {
               type: "text",
               helperText:
                 "\u041d\u0430\u043f\u0440. \u0421\u0435\u043c\u043f\u0440\u0456\u043d\u0456",
-              validate: "RequiredField",
+              validate: "requiredField",
               isRequired: true,
             },
             {
@@ -4480,13 +4482,14 @@ export const choiceTree = {
                 "\u0412\u043a\u0430\u0436\u0456\u0442\u044c \u0441\u0432\u043e\u0454 \u043c\u0456\u0441\u0442\u043e \u043d\u0430\u0440\u043e\u0434\u0436\u0435\u043d\u043d\u044f",
               autocomplete: true,
               isRequired: true,
+              validate: "requiredField"
             },
             {
               id: "Sesso",
               label: "\u0421\u0442\u0430\u0442\u044c",
               type: "select",
               options: ["male", "female"],
-              validate: "RequiredField",
+              validate: "requiredField",
               isRequired: true,
               helperText:
                 "\u0432\u0438\u0431\u0435\u0440\u0456\u0442\u044c \u0441\u0432\u043e\u044e \u0441\u0442\u0430\u0442\u044c",
@@ -4499,7 +4502,7 @@ export const choiceTree = {
               options: ["unmarried", "married", "divorced", "widower"],
               helperText:
                 "\u0432\u0438\u0431\u0435\u0440\u0456\u0442\u044c \u0441\u0432\u0456\u0439 \u0441\u0442\u0430\u0442\u0443\u0441",
-              validate: "RequiredField",
+              validate: "requiredField",
             },
             {
               id: "Cittadinanza",
@@ -4508,7 +4511,7 @@ export const choiceTree = {
               type: "text",
               helperText:
                 "\u041d\u0430\u043f\u0440. \u0444\u0440\u0430\u043d\u0446\u0443\u0437\u044c\u043a\u0438\u0439",
-              validate: "RequiredField",
+              validate: "requiredField",
               isRequired: true,
             },
             {
@@ -4654,7 +4657,7 @@ export const choiceTree = {
               label: "\u041d\u043e\u043c\u0435\u0440",
               type: "number",
               helperText: "\u041d\u0430\u043f\u0440. 91828930",
-              validate: "RequiredField",
+              validate: "requiredField",
               isRequired: false,
             },
             {
@@ -4672,7 +4675,7 @@ export const choiceTree = {
               type: "Date",
               helperText:
                 "\u0414\u0430\u0442\u0430 \u0432\u0438\u043f\u0443\u0441\u043a\u0443",
-              validate: "RequiredField",
+              validate: "requiredField",
               isRequired: false,
             },
             {
@@ -4681,7 +4684,7 @@ export const choiceTree = {
                 "\u041e\u0440\u0433\u0430\u043d \u0432\u0438\u0434\u0430\u0447\u0456",
               type: "text",
               helperText: "Motorizzazione",
-              validate: "RequiredField",
+              validate: "requiredField",
               isRequired: false,
             },
             {
@@ -4689,7 +4692,7 @@ export const choiceTree = {
               label: "\u043f\u0440\u043e\u0432\u0456\u043d\u0446\u0456\u044f",
               type: "text",
               helperText: "\u041f\u0430\u043b\u0435\u0440\u043c\u043e",
-              validate: "RequiredField",
+              validate: "requiredField",
               isRequired: false,
             },
           ],
@@ -4759,7 +4762,7 @@ export const choiceTree = {
               helperText:
                 "\u041d\u0430\u043f\u0440. \u041f\u0430\u043b\u0435\u0440\u043c\u043e",
               isRequired: true,
-              validate: "RequiredField",
+              validate: "requiredField",
             },
             {
               id: "Prov",
@@ -4768,7 +4771,7 @@ export const choiceTree = {
               helperText:
                 "\u041d\u0430\u043f\u0440. \u041f\u0430\u043b\u0435\u0440\u043c\u043e",
               isRequired: true,
-              validate: "RequiredField",
+              validate: "requiredField",
             },
             {
               id: "ViaPiazza",
@@ -4776,7 +4779,7 @@ export const choiceTree = {
               type: "text",
               helperText: "Via della libert\u00c3",
               isRequired: true,
-              validate: "RequiredField",
+              validate: "requiredField",
             },
             {
               id: "Numero civico",
@@ -4785,7 +4788,7 @@ export const choiceTree = {
               type: "text",
               helperText: "\u041d\u0430\u043f\u0440. 36",
               isRequired: true,
-              validate: "RequiredField",
+              validate: "requiredField",
             },
             {
               id: "Scala",
@@ -4793,7 +4796,7 @@ export const choiceTree = {
               type: "number",
               helperText: "\u041d\u0430\u043f\u0440. 1-\u0439",
               isRequired: true,
-              validate: "RequiredField",
+              validate: "requiredField",
             },
             {
               id: "Piano",
@@ -4801,7 +4804,7 @@ export const choiceTree = {
               type: "number",
               helperText: "\u041d\u0430\u043f\u0440. 2",
               isRequired: true,
-              validate: "RequiredField",
+              validate: "requiredField",
             },
             {
               id: "Interno",
@@ -4809,7 +4812,6 @@ export const choiceTree = {
               type: "text",
               helperText: "\u041d\u0430\u043f\u0440. \u0410",
               isRequired: false,
-              validate: "RequiredField",
             },
           ],
         },
@@ -4867,7 +4869,7 @@ export const choiceTree = {
               type: "text",
               helperText: "\u041d\u0430\u043f\u0440. \u041c\u0443\u0441\u0430",
               isRequired: true,
-              validate: "RequiredField",
+              validate: "requiredField",
             },
             {
               id: "Cognome_6",
@@ -4877,7 +4879,7 @@ export const choiceTree = {
               helperText:
                 "\u041d\u0430\u043f\u0440. \u0421\u0435\u043c\u043f\u0440\u0456\u043d\u0456",
               isRequired: true,
-              validate: "RequiredField",
+              validate: "requiredField",
             },
             {
               id: "Luogo",
@@ -4886,7 +4888,7 @@ export const choiceTree = {
               type: "date",
               helperText: "\u0414\u0414/\u041c\u041c/\u0420\u0420\u0420\u0420",
               isRequired: true,
-              validate: "RequiredField",
+              validate: "requiredField",
             },
             {
               id: "Luogo di nascita_6",
@@ -4896,7 +4898,7 @@ export const choiceTree = {
               helperText:
                 "\u0412\u043a\u0430\u0436\u0456\u0442\u044c \u0439\u043e\u0433\u043e/\u0457\u0457 \u043c\u0456\u0441\u0442\u043e \u043d\u0430\u0440\u043e\u0434\u0436\u0435\u043d\u043d\u044f",
               isRequired: true,
-              validate: "RequiredField",
+              validate: "requiredField",
               autocomplete: true,
             },
             {
@@ -5080,6 +5082,7 @@ export const choiceTree = {
               label: "\u0414\u0430\u0442\u0430",
               type: "date",
               helperText: "\u0414\u0414/\u041c\u041c/\u0420\u0420\u0420\u0420",
+              validate: "dateValidation",
               isRequired: true,
             },
             {
@@ -5115,6 +5118,7 @@ export const choiceTree = {
               label: "\u0414\u0430\u0442\u0430",
               type: "date",
               helperText: "\u0414\u0414/\u041c\u041c/\u0420\u0420\u0420\u0420",
+              validate: "dateValidation",
               isRequired: true,
             },
             {
@@ -5208,21 +5212,21 @@ export const choiceTree = {
               label: "\u0410\u0440\u043a\u0443\u0448 (Foglio)",
               type: "text",
               isRequired: true,
-              validate: "RequiredField",
+              validate: "requiredField",
             },
             {
               id: "particella10",
               label: "\u0447\u0430\u0441\u0442\u0438\u043d\u043a\u0438",
               type: "text",
               isRequired: true,
-              validate: "RequiredField",
+              validate: "requiredField",
             },
             {
               id: "sub10",
               label: "subalterno",
               type: "text",
               isRequired: true,
-              validate: "RequiredField",
+              validate: "requiredField",
             },
             {
               id: "data",
@@ -5230,7 +5234,7 @@ export const choiceTree = {
                 "\u0414\u0430\u0442\u0430 \u043d\u0430\u0431\u0443\u0442\u0442\u044f \u0447\u0438\u043d\u043d\u043e\u0441\u0442\u0456 \u043e\u043a\u0443\u043f\u0430\u0446\u0456\u0457",
               type: "date",
               isRequired: true,
-              validate: "RequiredField",
+              validate: "requiredField",
               helperText: "ERROR TRANSLATING",
             },
             {
@@ -5239,7 +5243,7 @@ export const choiceTree = {
                 "\u043f\u043e\u0432\u0435\u0440\u0445\u043d\u044f \u0432 \u043a\u0432",
               type: "number",
               isRequired: true,
-              validate: "RequiredField",
+              validate: "requiredField",
             },
           ],
         },
@@ -5564,7 +5568,7 @@ export const choiceTree = {
                 "\u0b89\u0ba9\u0bcd \u0baa\u0bc6\u0baf\u0bb0\u0bcd \u0b8e\u0ba9\u0bcd\u0ba9?",
               type: "text",
               helperText: "Ex. \u0bae\u0bcc\u0b9a\u0bbe",
-              validate: "RequiredField",
+              validate: "requiredField",
               isRequired: true,
             },
             {
@@ -5574,7 +5578,7 @@ export const choiceTree = {
               type: "text",
               helperText:
                 "Ex. \u0b9a\u0bc6\u0bae\u0bcd\u0baa\u0bcd\u0bb0\u0bbf\u0ba9\u0bbf",
-              validate: "RequiredField",
+              validate: "requiredField",
               isRequired: true,
             },
             {
@@ -5602,7 +5606,7 @@ export const choiceTree = {
               label: "\u0baa\u0bbe\u0bb2\u0bbf\u0ba9\u0bae\u0bcd",
               type: "select",
               options: ["male", "female"],
-              validate: "RequiredField",
+              validate: "requiredField",
               isRequired: true,
               helperText:
                 "\u0b89\u0b99\u0bcd\u0b95\u0bb3\u0bcd \u0baa\u0bbe\u0bb2\u0bbf\u0ba9\u0ba4\u0bcd\u0ba4\u0bc8 \u0ba4\u0bc7\u0bb0\u0bcd\u0bb5\u0bc1\u0b9a\u0bc6\u0baf\u0bcd\u0baf\u0bb5\u0bc1\u0bae\u0bcd",
@@ -5615,7 +5619,7 @@ export const choiceTree = {
               options: ["unmarried", "married", "divorced", "widower"],
               helperText:
                 "\u0b89\u0b99\u0bcd\u0b95\u0bb3\u0bcd \u0ba8\u0bbf\u0bb2\u0bc8\u0baf\u0bc8 \u0ba4\u0bc7\u0bb0\u0bcd\u0ba8\u0bcd\u0ba4\u0bc6\u0b9f\u0bc1\u0b95\u0bcd\u0b95\u0bb5\u0bc1\u0bae\u0bcd",
-              validate: "RequiredField",
+              validate: "requiredField",
             },
             {
               id: "Cittadinanza",
@@ -5624,7 +5628,7 @@ export const choiceTree = {
               type: "text",
               helperText:
                 "Ex. \u0baa\u0bbf\u0bb0\u0bc6\u0b9e\u0bcd\u0b9a\u0bc1",
-              validate: "RequiredField",
+              validate: "requiredField",
               isRequired: true,
             },
             {
@@ -5772,7 +5776,7 @@ export const choiceTree = {
               label: "\u0b8e\u0ba3\u0bcd",
               type: "text",
               helperText: "Ex. 91828930",
-              validate: "RequiredField",
+              validate: "requiredField",
               isRequired: false,
             },
             {
@@ -5789,7 +5793,7 @@ export const choiceTree = {
               type: "Date",
               helperText:
                 "\u0bb5\u0bc6\u0bb3\u0bbf\u0bb5\u0bb0\u0bc1\u0bae\u0bcd \u0ba4\u0bc7\u0ba4\u0bbf",
-              validate: "RequiredField",
+              validate: "requiredField",
               isRequired: false,
             },
             {
@@ -5798,7 +5802,7 @@ export const choiceTree = {
                 "\u0b89\u0b9f\u0bb2\u0bcd \u0bb5\u0bb4\u0b99\u0bcd\u0b95\u0bc1\u0ba4\u0bb2\u0bcd",
               type: "text",
               helperText: "Motorizazione",
-              validate: "RequiredField",
+              validate: "requiredField",
               isRequired: false,
             },
             {
@@ -5806,7 +5810,7 @@ export const choiceTree = {
               label: "\u0bae\u0bbe\u0b95\u0bbe\u0ba3\u0bae\u0bcd",
               type: "text",
               helperText: "\u0baa\u0bb2\u0bc7\u0bb0\u0bcd\u0bae\u0bcb",
-              validate: "RequiredField",
+              validate: "requiredField",
               isRequired: false,
             },
           ],
@@ -5875,7 +5879,7 @@ export const choiceTree = {
               type: "text",
               helperText: "Ex. \u0baa\u0bb2\u0bc7\u0bb0\u0bcd\u0bae\u0bcb",
               isRequired: true,
-              validate: "RequiredField",
+              validate: "requiredField",
             },
             {
               id: "Prov",
@@ -5883,7 +5887,7 @@ export const choiceTree = {
               type: "text",
               helperText: "Ex. \u0baa\u0bb2\u0bc7\u0bb0\u0bcd\u0bae\u0bcb",
               isRequired: true,
-              validate: "RequiredField",
+              validate: "requiredField",
             },
             {
               id: "ViaPiazza",
@@ -5892,7 +5896,7 @@ export const choiceTree = {
               helperText:
                 "\u0b9f\u0bc6\u0bb2\u0bcd\u0bb2\u0bbe \u0bb2\u0bbf\u0baa\u0bb0\u0bcd\u0b9f\u0bcd\u0b9f\u0bbe \u0bb5\u0bb4\u0bbf\u0baf\u0bbe\u0b95",
               isRequired: true,
-              validate: "RequiredField",
+              validate: "requiredField",
             },
             {
               id: "Numero civico",
@@ -5900,7 +5904,7 @@ export const choiceTree = {
               type: "text",
               helperText: "Ex. 36",
               isRequired: true,
-              validate: "RequiredField",
+              validate: "requiredField",
             },
             {
               id: "Scala",
@@ -5915,7 +5919,7 @@ export const choiceTree = {
               type: "text",
               isRequired: true,
               helperText: "Ex. 2",
-              validate: "RequiredField",
+              validate: "requiredField",
             },
             {
               id: "Interno",
@@ -5979,7 +5983,7 @@ export const choiceTree = {
               type: "text",
               helperText: "Ex. \u0bae\u0bcc\u0b9a\u0bbe",
               isRequired: true,
-              validate: "RequiredField",
+              validate: "requiredField",
             },
             {
               id: "Cognome_6",
@@ -5989,7 +5993,7 @@ export const choiceTree = {
               helperText:
                 "Ex. \u0b9a\u0bc6\u0bae\u0bcd\u0baa\u0bcd\u0bb0\u0bbf\u0ba9\u0bbf",
               isRequired: true,
-              validate: "RequiredField",
+              validate: "requiredField",
             },
             {
               id: "Luogo",
@@ -5998,7 +6002,7 @@ export const choiceTree = {
               type: "date",
               helperText: "DD/MM/YYYY",
               isRequired: true,
-              validate: "RequiredField",
+              validate: "requiredField",
             },
             {
               id: "Luogo di nascita_6",
@@ -6008,7 +6012,7 @@ export const choiceTree = {
               helperText:
                 "\u0b85\u0bb5\u0bb0\u0bcd \u0baa\u0bbf\u0bb1\u0ba8\u0bcd\u0ba4 \u0ba8\u0b95\u0bb0\u0ba4\u0bcd\u0ba4\u0bc8\u0b95\u0bcd \u0b95\u0bc1\u0bb1\u0bbf\u0baa\u0bcd\u0baa\u0bbf\u0b9f\u0bb5\u0bc1\u0bae\u0bcd",
               isRequired: true,
-              validate: "RequiredField",
+              validate: "requiredField",
               autocomplete: true,
             },
             {
@@ -6188,6 +6192,7 @@ export const choiceTree = {
               label: "\u0ba4\u0bc7\u0ba4\u0bbf",
               type: "date",
               helperText: "DD/MM/YYYY",
+              validate: "dateValidation",
               isRequired: true,
             },
             {
@@ -6222,6 +6227,7 @@ export const choiceTree = {
               label: "\u0ba4\u0bc7\u0ba4\u0bbf",
               type: "date",
               helperText: "DD/MM/YYYY",
+              validate: "dateValidation",
               isRequired: true,
             },
             {
@@ -6316,21 +6322,21 @@ export const choiceTree = {
                 "\u0ba4\u0bbe\u0bb3\u0bcd (\u0b83\u0baa\u0bcb\u0b95\u0bcd\u0bb2\u0bbf\u0baf\u0bcb)",
               type: "text",
               isRequired: true,
-              validate: "RequiredField",
+              validate: "requiredField",
             },
             {
               id: "particella10",
               label: "\u0ba4\u0bc1\u0b95\u0bb3\u0bcd\u0b95\u0bb3\u0bcd",
               type: "text",
               isRequired: true,
-              validate: "RequiredField",
+              validate: "requiredField",
             },
             {
               id: "sub10",
               label: "\u0ba4\u0bc1\u0ba3\u0bc8",
               type: "text",
               isRequired: true,
-              validate: "RequiredField",
+              validate: "requiredField",
             },
             {
               id: "data",
@@ -6338,7 +6344,7 @@ export const choiceTree = {
                 "\u0b86\u0b95\u0bcd\u0b95\u0bbf\u0bb0\u0bae\u0bbf\u0baa\u0bcd\u0baa\u0bbf\u0ba9\u0bcd \u0ba8\u0b9f\u0bc8\u0bae\u0bc1\u0bb1\u0bc8 \u0ba4\u0bc7\u0ba4\u0bbf",
               type: "date",
               isRequired: true,
-              validate: "RequiredField",
+              validate: "requiredField",
               helperText: "",
             },
             {
@@ -6347,7 +6353,7 @@ export const choiceTree = {
                 "\u0b9a\u0ba4\u0bc1\u0bb0 \u0bae\u0bc0\u0b9f\u0bcd\u0b9f\u0bb0\u0bbf\u0bb2\u0bcd \u0bae\u0bc7\u0bb1\u0bcd\u0baa\u0bb0\u0baa\u0bcd\u0baa\u0bc1",
               type: "number",
               isRequired: true,
-              validate: "RequiredField",
+              validate: "requiredField",
             },
           ],
         },
@@ -6668,7 +6674,7 @@ export const choiceTree = {
               type: "text",
               helperText:
                 "\u0627\u0644\u0633\u0627\u0628\u0642. \u0645\u0648\u0633\u0649",
-              validate: "RequiredField",
+              validate: "requiredField",
               isRequired: true,
             },
             {
@@ -6678,7 +6684,7 @@ export const choiceTree = {
               type: "text",
               helperText:
                 "\u0627\u0644\u0633\u0627\u0628\u0642. \u0633\u064a\u0645\u0628\u0631\u064a\u0646\u064a",
-              validate: "RequiredField",
+              validate: "requiredField",
               isRequired: true,
             },
             {
@@ -6698,6 +6704,7 @@ export const choiceTree = {
               helperText:
                 "\u062d\u062f\u062f \u0645\u062f\u064a\u0646\u0629 \u0645\u064a\u0644\u0627\u062f\u0643",
               autocomplete: true,
+              validate: "requiredField",
               isRequired: true,
             },
             {
@@ -6705,7 +6712,7 @@ export const choiceTree = {
               label: "\u062c\u0646\u0633",
               type: "select",
               options: ["male", "female"],
-              validate: "RequiredField",
+              validate: "requiredField",
               isRequired: true,
               helperText: "\u0627\u062e\u062a\u0631 \u062c\u0646\u0633\u0643",
             },
@@ -6716,7 +6723,7 @@ export const choiceTree = {
               type: "select",
               options: ["unmarried", "married", "divorced", "widower"],
               helperText: "\u062d\u062f\u062f \u062d\u0627\u0644\u062a\u0643",
-              validate: "RequiredField",
+              validate: "requiredField",
             },
             {
               id: "Cittadinanza",
@@ -6724,7 +6731,7 @@ export const choiceTree = {
               type: "text",
               helperText:
                 "\u0627\u0644\u0633\u0627\u0628\u0642. \u0641\u0631\u0646\u0633\u064a",
-              validate: "RequiredField",
+              validate: "requiredField",
               isRequired: true,
             },
             {
@@ -6868,7 +6875,7 @@ export const choiceTree = {
               label: "\u0631\u0642\u0645",
               type: "text",
               helperText: "\u0627\u0644\u0633\u0627\u0628\u0642. 91828930",
-              validate: "RequiredField",
+              validate: "requiredField",
               isRequired: false,
             },
             {
@@ -6886,7 +6893,7 @@ export const choiceTree = {
               type: "Date",
               helperText:
                 "\u062a\u0627\u0631\u064a\u062e \u0627\u0644\u0627\u0641\u0631\u0627\u062c \u0639\u0646\u0647",
-              validate: "RequiredField",
+              validate: "requiredField",
               isRequired: false,
             },
             {
@@ -6895,7 +6902,7 @@ export const choiceTree = {
                 "\u0627\u0644\u062c\u0647\u0629 \u0627\u0644\u0645\u0635\u062f\u0631\u0629",
               type: "text",
               helperText: "Motorizzazione",
-              validate: "RequiredField",
+              validate: "requiredField",
               isRequired: false,
             },
             {
@@ -6903,7 +6910,7 @@ export const choiceTree = {
               label: "\u0645\u0642\u0627\u0637\u0639\u0629",
               type: "text",
               helperText: "\u0628\u0627\u0644\u064a\u0631\u0645\u0648",
-              validate: "RequiredField",
+              validate: "requiredField",
               isRequired: false,
             },
           ],
@@ -6973,7 +6980,7 @@ export const choiceTree = {
               helperText:
                 "\u0627\u0644\u0633\u0627\u0628\u0642. \u0628\u0627\u0644\u064a\u0631\u0645\u0648",
               isRequired: true,
-              validate: "RequiredField",
+              validate: "requiredField",
             },
             {
               id: "Prov",
@@ -6982,7 +6989,7 @@ export const choiceTree = {
               helperText:
                 "\u0627\u0644\u0633\u0627\u0628\u0642. \u0628\u0627\u0644\u064a\u0631\u0645\u0648",
               isRequired: true,
-              validate: "RequiredField",
+              validate: "requiredField",
             },
             {
               id: "ViaPiazza",
@@ -6991,7 +6998,7 @@ export const choiceTree = {
               helperText:
                 "\u0639\u0628\u0631 \u062f\u064a\u0644\u0627 \u0644\u064a\u0628\u0631\u062a\u0627",
               isRequired: true,
-              validate: "RequiredField",
+              validate: "requiredField",
             },
             {
               id: "Numero civico",
@@ -6999,7 +7006,7 @@ export const choiceTree = {
               type: "text",
               helperText: "\u0627\u0644\u0633\u0627\u0628\u0642. 36",
               isRequired: true,
-              validate: "RequiredField",
+              validate: "requiredField",
             },
             {
               id: "Scala",
@@ -7014,7 +7021,7 @@ export const choiceTree = {
               type: "text",
               isRequired: true,
               helperText: "\u0627\u0644\u0633\u0627\u0628\u0642. 2",
-              validate: "RequiredField",
+              validate: "requiredField",
             },
             {
               id: "Interno",
@@ -7078,7 +7085,7 @@ export const choiceTree = {
               helperText:
                 "\u0627\u0644\u0633\u0627\u0628\u0642. \u0645\u0648\u0633\u0649",
               isRequired: true,
-              validate: "RequiredField",
+              validate: "requiredField",
             },
             {
               id: "Cognome_6",
@@ -7088,7 +7095,7 @@ export const choiceTree = {
               helperText:
                 "\u0627\u0644\u0633\u0627\u0628\u0642. \u0633\u064a\u0645\u0628\u0631\u064a\u0646\u064a",
               isRequired: true,
-              validate: "RequiredField",
+              validate: "requiredField",
             },
             {
               id: "Luogo",
@@ -7098,7 +7105,7 @@ export const choiceTree = {
               helperText:
                 "\u0627\u0644\u064a\u0648\u0645 / \u0627\u0644\u0634\u0647\u0631 / \u0627\u0644\u0633\u0646\u0629",
               isRequired: true,
-              validate: "RequiredField",
+              validate: "requiredField",
             },
             {
               id: "Luogo di nascita_6",
@@ -7108,7 +7115,7 @@ export const choiceTree = {
               helperText:
                 "\u062d\u062f\u062f \u0645\u062f\u064a\u0646\u0629 \u0648\u0644\u0627\u062f\u062a\u0647",
               isRequired: true,
-              validate: "RequiredField",
+              validate: "requiredField",
               autocomplete: true,
             },
             {
@@ -7289,6 +7296,7 @@ export const choiceTree = {
               helperText:
                 "\u0627\u0644\u064a\u0648\u0645 / \u0627\u0644\u0634\u0647\u0631 / \u0627\u0644\u0633\u0646\u0629",
               isRequired: true,
+              validate: "dateValidation"
             },
             {
               id: "al n",
@@ -7325,6 +7333,7 @@ export const choiceTree = {
               helperText:
                 "\u0627\u0644\u064a\u0648\u0645 / \u0627\u0644\u0634\u0647\u0631 / \u0627\u0644\u0633\u0646\u0629",
               isRequired: true,
+              validate: "dateValidation"
             },
             {
               id: "al n_2",
@@ -7416,21 +7425,21 @@ export const choiceTree = {
               label: "\u0648\u0631\u0642\u0629 (Foglio)",
               type: "text",
               isRequired: true,
-              validate: "RequiredField",
+              validate: "requiredField",
             },
             {
               id: "particella10",
               label: "\u0627\u0644\u062c\u0633\u064a\u0645\u0627\u062a",
               type: "text",
               isRequired: true,
-              validate: "RequiredField",
+              validate: "requiredField",
             },
             {
               id: "sub10",
               label: "subalterno",
               type: "text",
               isRequired: true,
-              validate: "RequiredField",
+              validate: "requiredField",
             },
             {
               id: "data",
@@ -7438,7 +7447,7 @@ export const choiceTree = {
                 "\u0627\u0644\u062a\u0627\u0631\u064a\u062e \u0627\u0644\u0641\u0639\u0644\u064a \u0644\u0644\u0627\u062d\u062a\u0644\u0627\u0644",
               type: "date",
               isRequired: true,
-              validate: "RequiredField",
+              validate: "requiredField",
               helperText: "",
             },
             {
@@ -7447,7 +7456,7 @@ export const choiceTree = {
                 "\u0627\u0644\u0633\u0637\u062d \u0641\u064a \u0645\u062a\u0631 \u0645\u0631\u0628\u0639",
               type: "number",
               isRequired: true,
-              validate: "RequiredField",
+              validate: "requiredField",
             },
           ],
         },
@@ -7759,7 +7768,7 @@ export const choiceTree = {
                 "\u0986\u09aa\u09a8\u09be\u09b0 \u09a8\u09be\u09ae \u0995\u09bf?",
               type: "text",
               helperText: "\u0989\u09a6\u09be\u0983 \u09ae\u09c1\u09b8\u09be",
-              validate: "RequiredField",
+              validate: "requiredField",
               isRequired: true,
             },
             {
@@ -7769,7 +7778,7 @@ export const choiceTree = {
               type: "text",
               helperText:
                 "\u09af\u09c7\u09ae\u09a8 \u09b8\u09c7\u09ae\u09aa\u09cd\u09b0\u09bf\u09a8\u09bf",
-              validate: "RequiredField",
+              validate: "requiredField",
               isRequired: true,
             },
             {
@@ -7777,7 +7786,7 @@ export const choiceTree = {
               label: "\u099c\u09a8\u09cd\u09ae \u09a4\u09be\u09b0\u09bf\u0996",
               type: "date",
               helperText: "DD/MM/YYYY",
-              validate: "RequiredField",
+              validate: "requiredField",
               isRequired: true,
             },
             {
@@ -7788,6 +7797,7 @@ export const choiceTree = {
               helperText:
                 "\u0986\u09aa\u09a8\u09be\u09b0 \u099c\u09a8\u09cd\u09ae\u09c7\u09b0 \u09b6\u09b9\u09b0 \u09a8\u09bf\u09b0\u09cd\u09a6\u09c7\u09b6 \u0995\u09b0\u09c1\u09a8",
               autocomplete: true,
+              validate: "requiredField",
               isRequired: true,
             },
             {
@@ -7795,7 +7805,7 @@ export const choiceTree = {
               label: "\u099f\u09be\u0987\u09aa",
               type: "select",
               options: ["male", "female"],
-              validate: "RequiredField",
+              validate: "requiredField",
               isRequired: true,
               helperText:
                 "\u0986\u09aa\u09a8\u09be\u09b0 \u09b2\u09bf\u0999\u09cd\u0997 \u09a8\u09bf\u09b0\u09cd\u09ac\u09be\u099a\u09a8",
@@ -7808,7 +7818,7 @@ export const choiceTree = {
               options: ["unmarried", "married", "divorced", "widower"],
               helperText:
                 "\u0986\u09aa\u09a8\u09be\u09b0 \u09b0\u09be\u099c\u09cd\u09af \u09a8\u09bf\u09b0\u09cd\u09ac\u09be\u099a\u09a8 \u0995\u09b0\u09c1\u09a8",
-              validate: "RequiredField",
+              validate: "requiredField",
             },
             {
               id: "Cittadinanza",
@@ -7816,7 +7826,7 @@ export const choiceTree = {
               type: "text",
               helperText:
                 "\u09af\u09c7\u09ae\u09a8 \u0998\u09be\u09a8\u09bf\u09af\u09bc\u09be, \u09ab\u09b0\u09be\u09b8\u09bf, \u09b0\u09be\u09b6\u09bf\u09af\u09bc\u09be\u09a8...",
-              validate: "RequiredField",
+              validate: "requiredField",
               isRequired: true,
             },
             {
@@ -7961,7 +7971,7 @@ export const choiceTree = {
               label: "\u09b8\u0982\u0996\u09cd\u09af\u09be",
               type: "number",
               helperText: "\u0989\u09a6\u09be\u0983 91828930",
-              validate: "RequiredField",
+              validate: "requiredField",
               isRequired: false,
             },
             {
@@ -7979,7 +7989,7 @@ export const choiceTree = {
               type: "Date",
               helperText:
                 "\u09ae\u09c1\u0995\u09cd\u09a4\u09bf\u09b0 \u09a4\u09be\u09b0\u09bf\u0996",
-              validate: "RequiredField",
+              validate: "requiredField",
               isRequired: false,
             },
             {
@@ -7989,7 +7999,7 @@ export const choiceTree = {
               type: "text",
               helperText:
                 "\u09ae\u09cb\u099f\u09b0\u09be\u0987\u099c\u09c7\u09b6\u09a8",
-              validate: "RequiredField",
+              validate: "requiredField",
               isRequired: false,
             },
             {
@@ -7997,7 +8007,7 @@ export const choiceTree = {
               label: "\u09aa\u09cd\u09b0\u09a6\u09c7\u09b6",
               type: "text",
               helperText: "\u09aa\u09be\u09b2\u09c7\u09b0\u09ae\u09cb",
-              validate: "RequiredField",
+              validate: "requiredField",
               isRequired: false,
             },
           ],
@@ -8067,7 +8077,7 @@ export const choiceTree = {
               helperText:
                 "\u09af\u09c7\u09ae\u09a8 \u09aa\u09be\u09b2\u09c7\u09b0\u09ae\u09cb",
               isRequired: true,
-              validate: "RequiredField",
+              validate: "requiredField",
             },
             {
               id: "Prov",
@@ -8076,7 +8086,7 @@ export const choiceTree = {
               helperText:
                 "\u09af\u09c7\u09ae\u09a8 \u09aa\u09be\u09b2\u09c7\u09b0\u09ae\u09cb",
               isRequired: true,
-              validate: "RequiredField",
+              validate: "requiredField",
             },
             {
               id: "ViaPiazza",
@@ -8085,7 +8095,7 @@ export const choiceTree = {
               helperText:
                 "\u09b8\u09cd\u09ac\u09be\u09a7\u09c0\u09a8\u09a4\u09be\u09b0 \u09aa\u09a5",
               isRequired: true,
-              validate: "RequiredField",
+              validate: "requiredField",
             },
             {
               id: "Numero civico",
@@ -8094,7 +8104,7 @@ export const choiceTree = {
               type: "text",
               helperText: "\u0989\u09a6\u09be\u0983 36",
               isRequired: true,
-              validate: "RequiredField",
+              validate: "requiredField",
             },
             {
               id: "Scala",
@@ -8102,7 +8112,7 @@ export const choiceTree = {
               type: "number",
               helperText: "\u0989\u09a6\u09be\u0983 \u09e7\u09ae",
               isRequired: true,
-              validate: "RequiredField",
+              validate: "requiredField",
             },
             {
               id: "Piano",
@@ -8110,7 +8120,7 @@ export const choiceTree = {
               type: "number",
               helperText: "\u0989\u09a6\u09be\u09b9\u09b0\u09a3 2",
               isRequired: true,
-              validate: "RequiredField",
+              validate: "requiredField",
             },
             {
               id: "Interno",
@@ -8118,7 +8128,7 @@ export const choiceTree = {
               type: "number",
               helperText: "\u0989\u0983 \u098f",
               isRequired: false,
-              validate: "RequiredField",
+              validate: "requiredField",
             },
           ],
         },
@@ -8175,7 +8185,7 @@ export const choiceTree = {
               type: "text",
               helperText: "\u0989\u09a6\u09be\u0983 \u09ae\u09c1\u09b8\u09be",
               isRequired: true,
-              validate: "RequiredField",
+              validate: "requiredField",
             },
             {
               id: "Cognome_6",
@@ -8185,7 +8195,7 @@ export const choiceTree = {
               helperText:
                 "\u09af\u09c7\u09ae\u09a8 \u09b8\u09c7\u09ae\u09aa\u09cd\u09b0\u09bf\u09a8\u09bf",
               isRequired: true,
-              validate: "RequiredField",
+              validate: "requiredField",
             },
             {
               id: "Luogo",
@@ -8193,7 +8203,7 @@ export const choiceTree = {
               type: "date",
               helperText: "DD/MM/YYYY",
               isRequired: true,
-              validate: "RequiredField",
+              validate: "requiredField",
             },
             {
               id: "Luogo di nascita_6",
@@ -8202,7 +8212,7 @@ export const choiceTree = {
               helperText:
                 "\u0986\u09aa\u09a8\u09be\u09b0 \u099c\u09a8\u09cd\u09ae\u09c7\u09b0 \u09b6\u09b9\u09b0 \u09a8\u09bf\u09b0\u09cd\u09a6\u09c7\u09b6 \u0995\u09b0\u09c1\u09a8",
               isRequired: true,
-              validate: "RequiredField",
+              validate: "requiredField",
             },
             {
               id: "Sussiste il seguente vincolo rispetto al su indicato  componente della famiglia gi\u00c3\u00a0 residente",
@@ -8212,7 +8222,7 @@ export const choiceTree = {
               helperText:
                 "\u0995\u09cb\u09a8\u09cb \u09b8\u09ae\u09cd\u09aa\u09b0\u09cd\u0995 \u09a5\u09be\u0995\u09b2\u09c7 \u098f\u0987 \u0995\u09cd\u09b7\u09c7\u09a4\u09cd\u09b0\u099f\u09bf \u09ab\u09be\u0981\u0995\u09be \u09b0\u09be\u0996\u09c1\u09a8",
               isRequired: true,
-              validate: "RequiredField",
+              validate: "requiredField",
             },
           ],
         },
@@ -8372,6 +8382,7 @@ export const choiceTree = {
               type: "date",
               helperText: "DD/MM/YYYY",
               isRequired: true,
+              validate: "requiredField"
             },
             {
               id: "al n",
@@ -8406,6 +8417,7 @@ export const choiceTree = {
               label: "\u09a4\u09be\u09b0\u09bf\u0996",
               type: "date",
               helperText: "DD/MM/YYYY",
+              validate: "requiredField",
               isRequired: true,
             },
             {
@@ -8498,7 +8510,7 @@ export const choiceTree = {
               label: "\u09b6\u09c0\u099f (\u09b6\u09c0\u099f)",
               type: "text",
               isRequired: true,
-              validate: "RequiredField",
+              validate: "requiredField",
             },
             {
               id: "particella10",
@@ -8506,7 +8518,7 @@ export const choiceTree = {
               type: "text",
               helperText: "\u0989\u09a6\u09be\u0983 36",
               isRequired: true,
-              validate: "RequiredField",
+              validate: "requiredField",
             },
             {
               id: "sub10",
@@ -8514,7 +8526,7 @@ export const choiceTree = {
               type: "text",
               helperText: "\u0989\u09a6\u09be\u0983 \u09e7\u09ae",
               isRequired: true,
-              validate: "RequiredField",
+              validate: "requiredField",
             },
             {
               id: "data",
@@ -8522,7 +8534,7 @@ export const choiceTree = {
                 "\u0995\u09b0\u09cd\u09ae\u09b8\u0982\u09b8\u09cd\u09a5\u09be\u09a8 \u09a4\u09a5\u09cd\u09af \u09b6\u09c7\u09b7",
               type: "date",
               isRequired: true,
-              validate: "RequiredField",
+              validate: "requiredField",
               helperText:
                 "\u0995\u09b0\u09cd\u09ae\u09b8\u0982\u09b8\u09cd\u09a5\u09be\u09a8 \u09a4\u09a5\u09cd\u09af \u09b6\u09c7\u09b7",
             },
@@ -8532,7 +8544,7 @@ export const choiceTree = {
                 "\u09ac\u09b0\u09cd\u0997 \u09ae\u09bf\u099f\u09be\u09b0\u09c7 \u09aa\u09c3\u09b7\u09cd\u09a0\u09c7\u09b0 \u0995\u09cd\u09b7\u09c7\u09a4\u09cd\u09b0\u09ab\u09b2",
               type: "number",
               isRequired: true,
-              validate: "RequiredField",
+              validate: "requiredField",
             },
           ],
         },

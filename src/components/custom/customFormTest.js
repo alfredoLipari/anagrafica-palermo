@@ -21,7 +21,7 @@ import {
   validateText,
   validateCountry,
   validateFiscalCode,
-  validateDate,
+  validateDate, validateTextTranslated,
 } from "../../lib/validation";
 import "./customDatePicker.css";
 import CustomInputSelect from "./customInput/customInputSelect";
@@ -100,7 +100,7 @@ const CustomFormTest = ({ stateTemp }) => {
   // decide the validation conditionally
   const validateInput = (value) => {
     switch (value) {
-      case "RequiredField":
+      case "requiredField":
         return validateText;
       case "fiscalCodeField":
         return validateFiscalCode;

@@ -10,7 +10,7 @@ import { FormControl, Text, Divider, Box } from "@chakra-ui/react";
 import { Formik, Field, Form } from "formik";
 import { Context } from "../../App";
 import CustomAutosuggest from "./customInput/customAutosuggest";
-import { validateText, validateCountry } from "../../lib/validation";
+import {validateText, validateCountry, validateTextTranslated} from "../../lib/validation";
 import "./customDatePicker.css";
 import ActionsButton from "../button/ActionsButton";
 import { useNavigate } from "react-router-dom";

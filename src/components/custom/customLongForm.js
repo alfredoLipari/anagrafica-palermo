@@ -11,7 +11,7 @@ import CustomAutosuggest from "./customInput/customAutosuggest";
 import {
   validateText,
   validateFiscalCode,
-  validateDate,
+  validateDate, validateTextTranslated,
 } from "../../lib/validation";
 import "./customDatePicker.css";
 import CustomInputSelect from "./customInput/customInputSelect";
@@ -93,7 +93,7 @@ const CustomLongForm = ({ stateQuestions }) => {
   // decide the validation conditionally
   const validateInput = (value) => {
     switch (value) {
-      case "RequiredField":
+      case "requiredField":
         return validateText;
       case "fiscalCodeField":
         return validateFiscalCode;

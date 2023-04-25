@@ -1,4 +1,4 @@
-import React, {createContext, useReducer} from "react";
+import React, {createContext, useEffect, useReducer} from "react";
 import { ChakraProvider } from "@chakra-ui/react";
 import HomePage from "./components/layouts/homepage";
 import Fonts from "./components/fonts";
@@ -9,7 +9,7 @@ import DownloadResult from "./components/layouts/donwloadResult";
 import Footer from "./components/footer";
 
 export const Context = createContext();
-
+export let Language = "";
 const Website = () => {
   const initialState = {
     currentQuestion: 1,
@@ -21,7 +21,10 @@ const Website = () => {
 
   const [state, dispatch] = useReducer(reducer, initialState);
 
-  console.log("state", state)
+  useEffect(() => {
+    Language = state.language
+  }, [state])
+
 
 
   return (

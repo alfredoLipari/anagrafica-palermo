@@ -3,14 +3,46 @@
  */
 
 import CountryAndCity from "./CountryAndCity.json";
+import React from "react";
+import {Language} from "../App";
 
 // write validators
+
+
+//todo make string translated
+
+export const validateTextTranslated = (lang) => {
+
+  console.log("state", lang)
+
+  switch (lang) {
+    case "Italian":
+      return "scrivi qualcosa";
+    case "French":
+      return "écris quelque chose";
+    case "Spanish":
+      return "escribe algo";
+    case "Ukranian":
+      return "щось написати";
+    case "Arab":
+      return "أكتب شيئا";
+    case "Tamil":
+      return "ஏதாவது எழுத";
+    case "Bengali":
+      return "কিছু লিখুন";
+    default:
+      return "please insert something";
+  }
+}
+
+
+
 export const validateText = (value) => {
   let error;
   if (value === "" || value === undefined) {
-    error = "please insert something";
+    error = validateTextTranslated(Language);
   } else if (value !== undefined) {
-    if (value.length > 50) {
+    if (value?.length > 50) {
       error = "I dont think you need all that space";
     }
   }
@@ -20,7 +52,7 @@ export const validateText = (value) => {
 export const validateFiscalCode = (value) => {
   let error;
   var fiscalCodeRegex =
-    /^[a-zA-Z]{6}[0-9]{2}[abcdehlmprstABCDEHLMPRST]{1}[0-9]{2}([a-zA-Z]{1}[0-9]{3})[a-zA-Z]{1}$/;
+      /^[a-zA-Z]{6}[0-9]{2}[abcdehlmprstABCDEHLMPRST]{1}[0-9]{2}([a-zA-Z]{1}[0-9]{3})[a-zA-Z]{1}$/;
   if (!fiscalCodeRegex.test(value)) {
     error = "this fiscal code is not valid";
   }
@@ -33,7 +65,7 @@ export const validateFiscalCode = (value) => {
 export const validatePhoneNumber = (value) => {
   let error;
   var phoneNumberRegex =
-    /^[(]{0,1}[0-9]{3}[)]{0,1}[-\s\.]{0,1}[0-9]{3}[-\s\.]{0,1}[0-9]{4}$/;
+      /^[(]{0,1}[0-9]{3}[)]{0,1}[-\s\.]{0,1}[0-9]{3}[-\s\.]{0,1}[0-9]{4}$/;
   if (!phoneNumberRegex.test(value)) {
     error = "this phone number is not valid";
   }
@@ -72,11 +104,11 @@ export const validateCountry = (values, autosuggestAnsw) => {
   Object.keys(autosuggestAnsw).map((key) => {
     // validate the result
     isValidated = Object.keys(CountryAndCity).find(
-      (country) => country === autosuggestAnsw[key]
+        (country) => country === autosuggestAnsw[key]
     );
     if (isValidated) {
       newObject["Indicare lo Stato estero di provenienza"] =
-        autosuggestAnsw[key];
+          autosuggestAnsw[key];
       return newObject;
     } else {
       error = true;
