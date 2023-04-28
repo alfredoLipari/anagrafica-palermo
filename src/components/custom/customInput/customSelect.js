@@ -63,7 +63,7 @@ const CustomSelect = ({ stateQuestion }) => {
 
       <ActionsButton
         stateQuestionId={stateQuestion.id}
-        goBackButtonHandler={() => dispatch({ type: "GO BACK" })}
+        goBackButtonHandler={() => dispatch({ type: "GO BACK", answer: stateQuestion })}
         continueButtonHandler={() => dispatchAnswer()}
         colorSchemeContinueButton="facebook"
         state={state}

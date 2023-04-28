@@ -85,7 +85,7 @@ const CustomCheckbox = ({ stateQuestion }) => {
       </Box>
 
       <ActionsButton
-          goBackButtonHandler = {() => dispatch({type: "GO BACK"}) }
+          goBackButtonHandler = {() => dispatch({type: "GO BACK", answer: stateQuestion}) }
           continueButtonHandler = {() => submitAnswer()}
           colorSchemeContinueButton = "facebook"
           state = {state}

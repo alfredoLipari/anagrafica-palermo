@@ -12,7 +12,6 @@ import {
 
 // create reducer
 export function reducer(state, action) {
-  console.log("answ", state.answers)
   switch (action.type) {
     case "CHANGE_LANGUAGE":
       return {
@@ -21,6 +20,20 @@ export function reducer(state, action) {
       };
 
     case "GO BACK":
+    console.log("state",state)
+    console.log("action", action) 
+    console.log("state.questionHistory", state.questionHistory[state.questionHistory.length - 1])
+
+    /*
+    * Retrieve the previous question from the questionHistory state
+    */
+        let previousQuestion = choiceTree.language[state.language].questions.find((question) => {
+          return question.id === state.questionHistory[state.questionHistory.length - 2];
+        }
+      );      
+
+      console.log("previousQuestion",previousQuestion)
+
       // take the history, pop the element
       let history = state.questionHistory;
       history.pop();
@@ -28,7 +41,7 @@ export function reducer(state, action) {
       let previousAnswers = [...state.answers];
 
       // also pop out the last answer
-      if (!action.state?.controller) {
+      if (!previousQuestion?.controller) {
         previousAnswers.pop();
       }
 

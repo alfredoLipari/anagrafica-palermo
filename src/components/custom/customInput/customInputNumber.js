@@ -69,7 +69,7 @@ const CustomInputNumber = ({ state }) => {
 
 
         <ActionsButton
-            goBackButtonHandler = {() => dispatch({type: "GO BACK"}) }
+            goBackButtonHandler = {() => dispatch({type: "GO BACK", answer: state}) }
             continueButtonHandler = {() => submitAnswer()}
             colorSchemeContinueButton = "facebook"
             state = {state}

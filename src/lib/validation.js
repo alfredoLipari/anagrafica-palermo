@@ -17,7 +17,7 @@ export const validateTextTranslated = (lang) => {
 
   switch (lang) {
     case "Italian":
-      return "scrivi qualcosa";
+      return "Campo obbligatorio";
     case "French":
       return "écris quelque chose";
     case "Spanish":
@@ -34,6 +34,79 @@ export const validateTextTranslated = (lang) => {
       return "please insert something";
   }
 }
+
+export const validateFiscalCodeTranslated = (lang) => {
+
+
+  switch (lang) {
+    case "Italian":
+      return "Codice fiscale non valido";
+    case "French":
+      return "code fiscal non valide";
+    case "Spanish":
+      return "código fiscal no válido";
+    case "Ukranian":
+      return "неправильний код";
+    case "Arab":
+      return "الرمز الضريبي غير صالح";
+    case "Tamil":
+      return "தவறான வரி குறியீடு";
+    case "Bengali":
+      return "অবৈধ কর কোড";
+    default:
+      return "this fiscal code is not valid";
+  }
+}
+
+export const validateEmailTranslated = (lang) => {
+
+
+  switch (lang) {
+    case "Italian":
+      return "E-mail non valida";
+    case "French":
+
+      return "email non valide";
+    case "Spanish":
+      return "correo electrónico no válido";
+    case "Ukranian":
+      return "неправильна електронна пошта";
+    case "Arab":
+      return "البريد الإلكتروني غير صالح";
+    case "Tamil":
+      return "தவறான மின்னஞ்சல்";
+    case "Bengali":
+      return "অবৈধ ইমেল";
+    default:
+      return "this e-mail is not valid";
+  }
+}
+
+export const validatePhoneNumberTranslated = (lang) => {
+
+
+  switch (lang) {
+    case "Italian":
+      return "Numero di telefono non valido";
+    case "French":
+      return "numéro de téléphone non valide";
+    case "Spanish":
+      return "número de teléfono no válido";
+    case "Ukranian":
+      return "неправильний номер телефону";
+    case "Arab":
+      return "رقم الهاتف غير صالح";
+    case "Tamil":
+      return "தவறான தொலைபேசி எண்";
+    case "Bengali":
+      return "অবৈধ ফোন নম্বর";
+    default:
+      return "this phone number is not valid";
+  }
+}
+
+
+
 
 
 
@@ -54,7 +127,7 @@ export const validateFiscalCode = (value) => {
   var fiscalCodeRegex =
       /^[a-zA-Z]{6}[0-9]{2}[abcdehlmprstABCDEHLMPRST]{1}[0-9]{2}([a-zA-Z]{1}[0-9]{3})[a-zA-Z]{1}$/;
   if (!fiscalCodeRegex.test(value)) {
-    error = "this fiscal code is not valid";
+    error = validateFiscalCodeTranslated(Language);
   }
   if (value === "test") {
     error = "";
@@ -67,7 +140,7 @@ export const validatePhoneNumber = (value) => {
   var phoneNumberRegex =
       /^[(]{0,1}[0-9]{3}[)]{0,1}[-\s\.]{0,1}[0-9]{3}[-\s\.]{0,1}[0-9]{4}$/;
   if (!phoneNumberRegex.test(value)) {
-    error = "this phone number is not valid";
+    error = validatePhoneNumberTranslated(Language);
   }
   return error;
 };
@@ -76,7 +149,7 @@ export const validateEmail = (value) => {
   let error;
   var emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
   if (!emailRegex.test(value)) {
-    error = "this e-mail is not valid";
+    error = validateEmailTranslated(Language);
   }
   return error;
 };

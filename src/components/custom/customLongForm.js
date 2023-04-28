@@ -219,7 +219,7 @@ const CustomLongForm = ({ stateQuestions }) => {
           </Flex>
 
           <ActionsButton
-              goBackButtonHandler = {() => dispatch({type: "GO BACK"}) }
+              goBackButtonHandler = {() => dispatch({type: "GO BACK", answer: stateQuestions }) }
               continueSubmit = {"submit"}
               colorSchemeContinueButton = "facebook"
               state = {state}

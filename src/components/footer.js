@@ -105,7 +105,7 @@ const Footer = () => {
             ml={{ base: "0", md: "1em" }}
           >
             <Text fontSize="small" fontWeight="black" lineHeight="3">
-              © 2021 Comune di Palermo - Tutti i diritti riservati
+              © 2023 Comune di Palermo - Tutti i diritti riservati
             </Text>
             <Flex
               marginTop="1em"
@@ -169,7 +169,7 @@ const Footer = () => {
                   mr="1em"
                   display={{ base: "none", lg: "block" }}
                 >
-                  V. 1.2.2
+                  V. 2.0.0
                 </Text>
               </Flex>
             </Flex>

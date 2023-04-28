@@ -40,7 +40,7 @@ export const choiceTree = {
             {
               id: "I am a non-EU citizen",
               label: "I'm a non-EU Citizen",
-              nextQuestion: 33,
+              nextQuestion: 2,
               documentazione: [],
             },
             {
@@ -361,6 +361,7 @@ export const choiceTree = {
           type: "checkbox",
           title: "Do you have a job?",
           id: 9,
+          controller: true,
           answers: [
             {
               id: "yes",
@@ -386,31 +387,31 @@ export const choiceTree = {
               selected: false,
               id: "C1_2_6",
               label: "Housewife",
-              nextQuestion: 13,
+              nextQuestion: 14,
             },
             {
               selected: false,
               id: "C1_2_7",
               label: "Student",
-              nextQuestion: 13,
+              nextQuestion: 14,
             },
             {
               selected: false,
               id: "C1_2_8",
               label: "Unemployed",
-              nextQuestion: 13,
+              nextQuestion: 14,
             },
             {
               selected: false,
               id: "C1_2_9",
               label: "Retired",
-              nextQuestion: 13,
+              nextQuestion: 14,
             },
             {
               selected: false,
               id: "C1_2_10",
               label: "Other",
-              nextQuestion: 13,
+              nextQuestion: 14,
             },
           ],
 
@@ -466,6 +467,7 @@ export const choiceTree = {
 
         {
           type: "checkbox",
+          controller: true,
           title: "Do you have an Italian Driving License?",
           id: 14,
           answers: [
@@ -652,6 +654,7 @@ export const choiceTree = {
         {
           type: "checkbox",
           title: "Are you moving alone?",
+          controller: true,
           id: 17,
           answers: [
             {
@@ -667,6 +670,7 @@ export const choiceTree = {
         {
           type: "number",
           title: "How many people beside you?",
+          controller: true,
           id: 18,
           nextQuestion: 41,
         },
@@ -676,6 +680,7 @@ export const choiceTree = {
         {
           type: "checkbox",
           title: "Does anyone already reside in the property?",
+          controller: true,
           id: 19,
           answers: [
             {
@@ -976,6 +981,7 @@ export const choiceTree = {
         {
           type: "checkbox",
           title: "Does someone already pay the TARI?",
+          controller: true,
           id: 30,
           answers: [
             {
@@ -1437,6 +1443,7 @@ export const choiceTree = {
         {
           type: "checkbox",
           title: "Vous avez un travail ?",
+          controller: true,
           id: 9,
           answers: [
             {
@@ -1530,6 +1537,7 @@ export const choiceTree = {
         {
           type: "checkbox",
           title: "Avez-vous un permis de conduire italien ?",
+          controller: true,
           id: 14,
           answers: [
             {
@@ -1703,6 +1711,7 @@ export const choiceTree = {
         {
           type: "checkbox",
           title: "Vous d\u00e9m\u00e9nagez seul ?",
+          controller: true,
           id: 17,
           answers: [
             {
@@ -1718,6 +1727,7 @@ export const choiceTree = {
         {
           type: "number",
           title: "Combien de personnes \u00e0 c\u00f4t\u00e9 de vous ?",
+          controller: true,
           id: 18,
           nextQuestion: 51,
         },
@@ -1725,6 +1735,7 @@ export const choiceTree = {
           type: "checkbox",
           title:
             "Quelqu'un r\u00e9side-t-il d\u00e9j\u00e0 dans la propri\u00e9t\u00e9 ?",
+            controller: true,
           id: 19,
           answers: [
             {
@@ -2002,6 +2013,7 @@ export const choiceTree = {
         {
           type: "checkbox",
           title: "Quelqu'un paie-t-il d\u00e9j\u00e0 le TARI ?",
+          controller: true,
           id: 30,
           answers: [
             {
@@ -2102,34 +2114,51 @@ export const choiceTree = {
               selected: false,
               id: "10_1_1",
               label: "Propri\u00e9t\u00e9",
-              nextQuestion: 25,
+              nextQuestion: 34,
             },
             {
               selected: false,
               id: "10_1_2",
               label: "Localisation",
-              nextQuestion: 24,
+              nextQuestion: 34,
             },
             {
               selected: false,
               id: "10_1_3",
               label: "pr\u00eat \u00e0 l'emploi",
-              nextQuestion: 26,
+              nextQuestion: 34,
             },
             {
               selected: false,
               id: "10_1_4",
               label: "usufruit",
-              nextQuestion: 30,
+              nextQuestion: 34,
             },
             {
               selected: false,
               id: "C9_1_6",
               label: "Affectation des logements d'un organisme public",
-              nextQuestion: 27,
+              nextQuestion: 34,
             },
           ],
           parentId: 9,
+        },
+        {
+          type: "form",
+          title: "Notes complémentaires",
+          id: 34,
+          parentId: 33,
+          nextQuestion: 17,
+          answers: [
+            {
+              id: "Note",
+              label: "",
+              type: "textarea",
+              helperText: "Ajoutez ici des notes supplémentaires que vous souhaitez présenter",
+              isRequired: false,
+              autocomplete: false,
+            },
+          ],
         },
       ],
     },
@@ -2166,7 +2195,7 @@ export const choiceTree = {
         },
         {
           type: "select",
-          title: "Qual \u00e8 il suo stato?",
+          title: "Qual \u00e8 il tuo stato da richiedente?",
           label: "Seleziona il tuo stato",
           id: 2,
           controller: true,
@@ -2229,7 +2258,7 @@ export const choiceTree = {
         },
         {
           type: "select",
-          title: "Qual \u00e8 il suo stato?",
+          title: "Qual \u00e8 il tuo stato?",
           label: "Seleziona il tuo stato",
           id: 3,
           controller: true,
@@ -2297,7 +2326,6 @@ export const choiceTree = {
               id: "C1_1_2",
               label: "Paese straniero",
               nextQuestion: 7,
-              documents: "",
             },
             {
               id: "C1_1_3",
@@ -2417,7 +2445,7 @@ export const choiceTree = {
             },
             {
               id: "Stato Civile",
-              label: "il suo stato civile?",
+              label: "il tuo stato civile?",
               type: "select",
               options: ["celibe","nubile", "sposato/a", "divorziato/a", "vedovo/a"],
               helperText: "seleziona il tuo stato",
@@ -2445,6 +2473,7 @@ export const choiceTree = {
           type: "checkbox",
           title: "Hai un lavoro?",
           id: 9,
+          controller: true,
           answers: [
             {
               id: "si",
@@ -2497,7 +2526,7 @@ export const choiceTree = {
         },
         {
           type: "select",
-          title: "Qual \u00e8 il suo status professionale?",
+          title: "Qual \u00e8 il tuo status professionale?",
           label: "Seleziona il tuo stato",
           id: 12,
           answers: [
@@ -2543,6 +2572,7 @@ export const choiceTree = {
         {
           type: "checkbox",
           title: "Hai una patente di guida italiana?",
+          controller: true,
           id: 14,
           answers: [
             {
@@ -2605,7 +2635,7 @@ export const choiceTree = {
         },
         {
           type: "select",
-          title: "Qual \u00e8 il suo livello di istruzione?",
+          title: "Qual \u00e8 il tuo livello di istruzione?",
           label: "Seleziona la tua laurea",
           id: 13,
           answers: [
@@ -2716,6 +2746,7 @@ export const choiceTree = {
         {
           type: "checkbox",
           title: "Ti muovi da solo?",
+          controller: true,
           id: 17,
           answers: [
             {
@@ -2730,13 +2761,15 @@ export const choiceTree = {
         },
         {
           type: "number",
-          title: "In quanti vi spostate?",
+          title: "In quanti si sposteranno oltre a te?",
+          controller: true,
           id: 18,
           nextQuestion: 41,
         },
         {
           type: "checkbox",
           title: "C'\u00e8 gi\u00e0 qualcuno che risiede nella propriet\u00e0?",
+          controller: true,
           id: 19,
           answers: [
             {
@@ -3018,6 +3051,7 @@ export const choiceTree = {
         {
           type: "checkbox",
           title: "Qualcuno paga gi\u00e0 la TARI?",
+          controller: true,
           id: 30,
           answers: [
             {
@@ -3474,6 +3508,7 @@ export const choiceTree = {
         {
           type: "checkbox",
           title: "\u00bfTienes un trabajo?",
+          controller: true,
           id: 9,
           answers: [
             {
@@ -3567,6 +3602,7 @@ export const choiceTree = {
         {
           type: "checkbox",
           title: "\u00bfTiene permiso de conducir italiano?",
+          controller: true,
           id: 14,
           answers: [
             {
@@ -3740,6 +3776,7 @@ export const choiceTree = {
         {
           type: "checkbox",
           title: "\u00bfTe mudas solo?",
+          controller: true,
           id: 17,
           answers: [
             {
@@ -3755,12 +3792,14 @@ export const choiceTree = {
         {
           type: "number",
           title: "\u00bfCu\u00e1ntas personas hay a tu lado?",
+          controller: true,
           id: 18,
           nextQuestion: 41,
         },
         {
           type: "checkbox",
           title: "\u00bfReside ya alguien en el inmueble?",
+          controller: true,
           id: 19,
           answers: [
             {
@@ -4043,6 +4082,7 @@ export const choiceTree = {
         {
           type: "checkbox",
           title: "\u00bfAlguien paga ya la TARI?",
+          controller: true,
           id: 30,
           answers: [
             {
@@ -4143,34 +4183,51 @@ export const choiceTree = {
               selected: false,
               id: "10_1_1",
               label: "Propriedad",
-              nextQuestion: 25,
+              nextQuestion: 34,
             },
             {
               selected: false,
               id: "10_1_2",
               label: "Ubicaci\u00f3n",
-              nextQuestion: 24,
+              nextQuestion: 34,
             },
             {
               selected: false,
               id: "10_1_3",
               label: "pr\u00e9stamo para su uso",
-              nextQuestion: 26,
+              nextQuestion: 34,
             },
             {
               selected: false,
               id: "10_1_4",
               label: "usufructo",
-              nextQuestion: 30,
+              nextQuestion: 34,
             },
             {
               selected: false,
               id: "C9_1_6",
               label: "Cesi\u00f3n de vivienda de un organismo p\u00fablico",
-              nextQuestion: 27,
+              nextQuestion: 34,
             },
           ],
           parentId: 9,
+        },
+        {
+          type: "form",
+          title: "Notas adicionales ",
+          id: 34,
+          parentId: 33,
+          nextQuestion: 17,
+          answers: [
+            {
+              id: "Note",
+              label: "",
+              type: "textarea",
+              helperText: "Agregue aquí las notas adicionales que desea presentar",
+              isRequired: false,
+              autocomplete: false,
+            },
+          ],
         },
       ],
     },
@@ -4526,6 +4583,7 @@ export const choiceTree = {
         },
         {
           type: "checkbox",
+          controller: true,
           title:
             "\u0423 \u0432\u0430\u0441 \u0454 \u0440\u043e\u0431\u043e\u0442\u0430?",
           id: 9,
@@ -4630,6 +4688,7 @@ export const choiceTree = {
         },
         {
           type: "checkbox",
+          controller: true,
           title:
             "\u0423 \u0432\u0430\u0441 \u0454 \u0456\u0442\u0430\u043b\u0456\u0439\u0441\u044c\u043a\u0456 \u0432\u043e\u0434\u0456\u0439\u0441\u044c\u043a\u0456 \u043f\u0440\u0430\u0432\u0430?",
           id: 14,
@@ -4817,6 +4876,7 @@ export const choiceTree = {
         },
         {
           type: "checkbox",
+          controller: true,
           title:
             "\u0422\u0438 \u0440\u0443\u0445\u0430\u0454\u0448\u0441\u044f \u043e\u0434\u0438\u043d?",
           id: 17,
@@ -4840,6 +4900,7 @@ export const choiceTree = {
         },
         {
           type: "checkbox",
+          controller: true,
           title:
             "\u0425\u0442\u043e\u0441\u044c \u0443\u0436\u0435 \u043f\u0440\u043e\u0436\u0438\u0432\u0430\u0454 \u043d\u0430 \u0442\u0435\u0440\u0438\u0442\u043e\u0440\u0456\u0457 \u043f\u043e\u043c\u0435\u0448\u043a\u0430\u043d\u043d\u044f?",
           id: 19,
@@ -5151,6 +5212,7 @@ export const choiceTree = {
         },
         {
           type: "checkbox",
+          controller: true,
           title:
             "\u0425\u0442\u043e\u0441\u044c \u0443\u0436\u0435 \u0441\u043f\u043b\u0430\u0447\u0443\u0454 TARI?",
           id: 30,
@@ -5260,37 +5322,55 @@ export const choiceTree = {
               id: "10_1_1",
               label:
                 "\u041f\u0440\u0438\u0441\u0442\u043e\u0439\u043d\u0456\u0441\u0442\u044c",
-              nextQuestion: 17,
+              nextQuestion: 34,
             },
             {
               selected: false,
               id: "10_1_2",
               label:
                 "\u0420\u043e\u0437\u0442\u0430\u0448\u0443\u0432\u0430\u043d\u043d\u044f",
-              nextQuestion: 17,
+              nextQuestion: 34,
             },
             {
               selected: false,
               id: "10_1_3",
               label:
                 "\u043f\u043e\u0437\u0438\u043a\u0430 \u0432 \u043a\u043e\u0440\u0438\u0441\u0442\u0443\u0432\u0430\u043d\u043d\u044f",
-              nextQuestion: 17,
+              nextQuestion: 34,
             },
             {
               selected: false,
               id: "10_1_4",
               label: "\u0443\u0437\u0443\u0444\u0440\u0443\u043a\u0442",
-              nextQuestion: 17,
+              nextQuestion: 34,
             },
             {
               selected: false,
               id: "C9_1_6",
               label:
                 "\u041f\u0440\u0438\u0437\u043d\u0430\u0447\u0435\u043d\u043d\u044f \u0436\u0438\u0442\u043b\u0430 \u0434\u0435\u0440\u0436\u0430\u0432\u043d\u043e\u0433\u043e \u043e\u0440\u0433\u0430\u043d\u0443",
-              nextQuestion: 17,
+              nextQuestion: 34,
             },
+            
           ],
           parentId: 9,
+        },
+        {
+          type: "form",
+          title: "додаткові нотатки",
+          id: 34,
+          parentId: 33,
+          nextQuestion: 1,
+          answers: [
+            {
+              id: "Note",
+              label: "",
+              type: "textarea",
+              helperText: "Додайте сюди додаткові примітки, які ви хочете представити",
+              isRequired: false,
+              autocomplete: false,
+            },
+          ],
         },
       ],
     },
@@ -5644,6 +5724,7 @@ export const choiceTree = {
         },
         {
           type: "checkbox",
+          controller: true,
           title:
             "\u0b89\u0ba9\u0b95\u0bcd\u0b95\u0bc1 \u0bb5\u0bc7\u0bb2\u0bc8\u0baf\u0bbf\u0bb0\u0bc1\u0b95\u0bcd\u0b95\u0bbf\u0bb1\u0ba4\u0bbe?",
           id: 9,
@@ -5749,6 +5830,7 @@ export const choiceTree = {
         },
         {
           type: "checkbox",
+          controller: true,
           title:
             "\u0b89\u0b99\u0bcd\u0b95\u0bb3\u0bbf\u0b9f\u0bae\u0bcd \u0b87\u0ba4\u0bcd\u0ba4\u0bbe\u0bb2\u0bbf\u0baf \u0b93\u0b9f\u0bcd\u0b9f\u0bc1\u0ba8\u0bb0\u0bcd \u0b89\u0bb0\u0bbf\u0bae\u0bae\u0bcd \u0b89\u0bb3\u0bcd\u0bb3\u0ba4\u0bbe?",
           id: 14,
@@ -5931,6 +6013,7 @@ export const choiceTree = {
         },
         {
           type: "checkbox",
+          controller: true,
           title:
             "\u0ba8\u0bc0\u0b99\u0bcd\u0b95\u0bb3\u0bcd \u0ba4\u0ba9\u0bbf\u0baf\u0bbe\u0b95 \u0ba8\u0b95\u0bb0\u0bcd\u0b95\u0bbf\u0bb1\u0bc0\u0bb0\u0bcd\u0b95\u0bb3\u0bbe?",
           id: 17,
@@ -5947,6 +6030,7 @@ export const choiceTree = {
         },
         {
           type: "number",
+          controller: true,
           title:
             "\u0b89\u0b99\u0bcd\u0b95\u0bb3\u0bcd \u0b85\u0bb0\u0bc1\u0b95\u0bbf\u0bb2\u0bcd \u0b8e\u0ba4\u0bcd\u0ba4\u0ba9\u0bc8 \u0baa\u0bc7\u0bb0\u0bcd?",
           id: 18,
@@ -5954,6 +6038,7 @@ export const choiceTree = {
         },
         {
           type: "checkbox",
+          controller: true,
           title:
             "\u0baf\u0bbe\u0bb0\u0bbe\u0bb5\u0ba4\u0bc1 \u0b8f\u0bb1\u0bcd\u0b95\u0ba9\u0bb5\u0bc7 \u0b85\u0ba8\u0bcd\u0ba4 \u0b9a\u0bca\u0ba4\u0bcd\u0ba4\u0bbf\u0bb2\u0bcd \u0bb5\u0b9a\u0bbf\u0b95\u0bcd\u0b95\u0bbf\u0bb1\u0bbe\u0bb0\u0bcd\u0b95\u0bb3\u0bbe?",
           id: 19,
@@ -6260,6 +6345,7 @@ export const choiceTree = {
         },
         {
           type: "checkbox",
+          controller: true,
           title:
             "\u0baf\u0bbe\u0bb0\u0bbe\u0bb5\u0ba4\u0bc1 \u0b8f\u0bb1\u0bcd\u0b95\u0ba9\u0bb5\u0bc7 TARI \u0b9a\u0bc6\u0bb2\u0bc1\u0ba4\u0bcd\u0ba4\u0bc1\u0b95\u0bbf\u0bb1\u0bbe\u0bb0\u0bcd\u0b95\u0bb3\u0bbe?",
           id: 30,
@@ -6369,37 +6455,54 @@ export const choiceTree = {
               selected: false,
               id: "10_1_1",
               label: "\u0b89\u0bb0\u0bbf\u0bae\u0bc8",
-              nextQuestion: 17,
+              nextQuestion: 34,
             },
             {
               selected: false,
               id: "10_1_2",
               label: "\u0b87\u0b9f\u0bae\u0bcd",
-              nextQuestion: 17,
+              nextQuestion: 34,
             },
             {
               selected: false,
               id: "10_1_3",
               label:
                 "\u0baa\u0baf\u0ba9\u0bcd\u0baa\u0b9f\u0bc1\u0ba4\u0bcd\u0ba4 \u0b95\u0b9f\u0ba9\u0bcd",
-              nextQuestion: 17,
+              nextQuestion: 34,
             },
             {
               selected: false,
               id: "10_1_4",
               label:
                 "\u0baa\u0baf\u0ba9\u0bb3\u0bbf\u0b95\u0bcd\u0b95\u0bc1\u0bae\u0bcd",
-              nextQuestion: 17,
+              nextQuestion: 34,
             },
             {
               selected: false,
               id: "C9_1_6",
               label:
                 "\u0b92\u0bb0\u0bc1 \u0baa\u0bca\u0ba4\u0bc1 \u0b85\u0bae\u0bc8\u0baa\u0bcd\u0baa\u0bbf\u0ba9\u0bcd \u0bb5\u0bc0\u0b9f\u0bcd\u0b9f\u0bc1 \u0b92\u0ba4\u0bc1\u0b95\u0bcd\u0b95\u0bc0\u0b9f\u0bc1",
-              nextQuestion: 17,
+              nextQuestion: 34,
             },
           ],
           parentId: 9,
+        },
+        {
+          type: "form",
+          title: "கூடுதல் குறிப்புகள்",
+          id: 34,
+          parentId: 33,
+          nextQuestion: 1,
+          answers: [
+            {
+              id: "Note",
+              label: "",
+              type: "textarea",
+              helperText: "டோடைடே சிடி டோடட்கோவி பிரிமிட்கி, யாக்கி வி ஹொசெட் ப்ரெட்ஸ்டாவிட்டி",
+              isRequired: false,
+              autocomplete: false,
+            },
+          ],
         },
       ],
     },
@@ -6748,6 +6851,7 @@ export const choiceTree = {
         },
         {
           type: "checkbox",
+          controller: true,
           title:
             "\u0647\u0644 \u0644\u062f\u064a\u0643 \u0648\u0638\u064a\u0641\u0629\u061f",
           id: 9,
@@ -6848,6 +6952,7 @@ export const choiceTree = {
         },
         {
           type: "checkbox",
+          controller: true,
           title:
             "\u0647\u0644 \u0644\u062f\u064a\u0643 \u0631\u062e\u0635\u0629 \u0642\u064a\u0627\u062f\u0629 \u0625\u064a\u0637\u0627\u0644\u064a\u0629\u061f",
           id: 14,
@@ -7033,6 +7138,7 @@ export const choiceTree = {
         },
         {
           type: "checkbox",
+          controller: true,
           title:
             "\u0647\u0644 \u062a\u0646\u062a\u0642\u0644 \u0648\u062d\u062f\u0643\u061f",
           id: 17,
@@ -7049,6 +7155,7 @@ export const choiceTree = {
         },
         {
           type: "number",
+          controller: true,
           title:
             "\u0643\u0645 \u0634\u062e\u0635 \u0628\u062c\u0627\u0646\u0628\u0643\u061f",
           id: 18,
@@ -7056,6 +7163,7 @@ export const choiceTree = {
         },
         {
           type: "checkbox",
+          controller: true,
           title:
             "\u0647\u0644 \u064a\u0648\u062c\u062f \u0623\u064a \u0634\u062e\u0635 \u064a\u0642\u064a\u0645 \u0628\u0627\u0644\u0641\u0639\u0644 \u0641\u064a \u0627\u0644\u0639\u0642\u0627\u0631\u061f",
           id: 19,
@@ -7365,6 +7473,7 @@ export const choiceTree = {
         },
         {
           type: "checkbox",
+          controller: true,
           title:
             "\u0647\u0644 \u0647\u0646\u0627\u0643 \u0645\u0646 \u064a\u062f\u0641\u0639 \u0627\u0644\u062a\u0627\u0631\u064a \u0628\u0627\u0644\u0641\u0639\u0644\u061f",
           id: 30,
@@ -7503,6 +7612,23 @@ export const choiceTree = {
             },
           ],
           parentId: 9,
+        },
+        {
+          type: "form",
+          title: "ملاحظات إضافية",
+          id: 34,
+          parentId: 33,
+          nextQuestion: 1,
+          answers: [
+            {
+              id: "Note",
+              label: "",
+              type: "textarea",
+              helperText: "أضف أي ملاحظات إضافية تريد تقديمها هنا",
+              isRequired: false,
+              autocomplete: false,
+            },
+          ],
         },
       ],
     },
@@ -7842,6 +7968,7 @@ export const choiceTree = {
         },
         {
           type: "checkbox",
+          controller: true,
           title:
             "\u09a4\u09cb\u09ae\u09be\u09b0 \u0995\u09bf \u0995\u09cb\u09a8 \u099a\u09be\u0995\u09b0\u09bf \u0986\u099b\u09c7?",
           id: 9,
@@ -7944,6 +8071,7 @@ export const choiceTree = {
         },
         {
           type: "checkbox",
+          controller: true,
           title:
             "\u0986\u09aa\u09a8\u09be\u09b0 \u0995\u09bf \u0987\u09a4\u09be\u09b2\u09c0\u09af\u09bc \u09a1\u09cd\u09b0\u09be\u0987\u09ad\u09bf\u0982 \u09b2\u09be\u0987\u09b8\u09c7\u09a8\u09cd\u09b8 \u0986\u099b\u09c7?",
           id: 14,
@@ -8134,6 +8262,7 @@ export const choiceTree = {
         },
         {
           type: "checkbox",
+          controller: true,
           title:
             "\u09a4\u09c1\u09ae\u09bf \u0995\u09bf \u098f\u0995\u09be \u099a\u09b2\u09be\u09ab\u09c7\u09b0\u09be \u0995\u09b0?",
           id: 17,
@@ -8150,6 +8279,7 @@ export const choiceTree = {
         },
         {
           type: "number",
+          controller: true,
           title:
             "\u0986\u09aa\u09a8\u09be\u09b0 \u09aa\u09be\u09b6\u09c7 \u0995\u09a4 \u09ae\u09be\u09a8\u09c1\u09b7?",
           id: 18,
@@ -8157,6 +8287,7 @@ export const choiceTree = {
         },
         {
           type: "checkbox",
+          controller: true,
           title:
             "\u0995\u09c7\u0989 \u0995\u09bf \u0987\u09a4\u09bf\u09ae\u09a7\u09cd\u09af\u09c7 \u09b8\u09ae\u09cd\u09aa\u09a4\u09cd\u09a4\u09bf\u09a4\u09c7 \u09ac\u09b8\u09ac\u09be\u09b8 \u0995\u09b0\u099b\u09c7\u09a8?",
           id: 19,
@@ -8450,6 +8581,7 @@ export const choiceTree = {
         },
         {
           type: "checkbox",
+          controller: true,
           title:
             "\u0995\u09c7\u0989 \u0995\u09bf \u0987\u09a4\u09bf\u09ae\u09a7\u09cd\u09af\u09c7\u0987 TARI \u09aa\u09b0\u09bf\u09b6\u09cb\u09a7 \u0995\u09b0\u09c7?",
           id: 30,
@@ -8560,39 +8692,57 @@ export const choiceTree = {
               selected: false,
               id: "10_1_1",
               label: "\u09b8\u09ae\u09cd\u09aa\u09a4\u09cd\u09a4\u09bf",
-              nextQuestion: 25,
+              nextQuestion: 34,
             },
             {
               selected: false,
               id: "10_1_2",
               label: "\u0985\u09ac\u09b8\u09cd\u09a5\u09be\u09a8",
-              nextQuestion: 24,
+              nextQuestion: 34,
             },
             {
               selected: false,
               id: "10_1_3",
               label:
                 "\u09ac\u09cd\u09af\u09ac\u09b9\u09be\u09b0\u09c7\u09b0 \u099c\u09a8\u09cd\u09af \u098b\u09a3",
-              nextQuestion: 26,
+              nextQuestion: 34,
             },
             {
               selected: false,
               id: "10_1_4",
               label: "\u09ab\u09b2",
-              nextQuestion: 30,
+              nextQuestion: 34,
             },
             {
               selected: false,
               id: "C9_1_6",
               label:
                 "\u098f\u0995\u099f\u09bf \u09aa\u09be\u09ac\u09b2\u09bf\u0995 \u09b8\u0982\u09b8\u09cd\u09a5\u09be \u0986\u09ac\u09be\u09b8\u09a8 \u09ac\u09b0\u09be\u09a6\u09cd\u09a6",
-              nextQuestion: 27,
+              nextQuestion: 34,
             },
           ],
           parentId: 9,
         },
+        {
+          type: "form",
+          title: "অতিরিক্ত নোট",
+          id: 34,
+          parentId: 33,
+          nextQuestion: 1,
+          answers: [
+            {
+              id: "Note",
+              label: "",
+              type: "textarea",
+              helperText: "আপনি এখানে উপস্থাপন করতে চান এমন কোনো অতিরিক্ত নোট যোগ করুন",
+              isRequired: false,
+              autocomplete: false,
+            },
+          ],
+        },
       ],
     },
+    
   },
 };
 export default choiceTree;

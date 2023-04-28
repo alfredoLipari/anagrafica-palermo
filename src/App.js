@@ -21,6 +21,8 @@ const Website = () => {
 
   const [state, dispatch] = useReducer(reducer, initialState);
 
+  console.log("answer", state.answers)
+
   useEffect(() => {
     Language = state.language
   }, [state])
