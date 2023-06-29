@@ -2166,8 +2166,8 @@ export const choiceTree = {
       questions: [
         {
           type: "select",
-          title: "Che cittadinanza ha?",
-          label: "Seleziona la tua Cittadinanza",
+          title: "Qual è la tua cittadinanza",
+          label: "Indica la tua provenienza",
           id: 1,
           controller: true,
           answers: [
@@ -2196,7 +2196,7 @@ export const choiceTree = {
         {
           type: "select",
           title: "Qual \u00e8 il tuo stato da richiedente?",
-          label: "Seleziona il tuo stato",
+          label: "Seleziona il tuo status",
           id: 2,
           controller: true,
           answers: [
@@ -2259,13 +2259,13 @@ export const choiceTree = {
         {
           type: "select",
           title: "Qual \u00e8 il tuo stato?",
-          label: "Seleziona il tuo stato",
+          label: "Seleziona il tuo status",
           id: 3,
           controller: true,
           answers: [
             {
               id: "worker",
-              label: "lavoratore",
+              label: "Lavoratore",
               nextQuestion: 4,
               documentazione: [
                 "documento di identit\u00c3\u00a0.*",
@@ -2275,7 +2275,7 @@ export const choiceTree = {
             },
             {
               id: "f.i",
-              label: "Finanziariamente indipendente (no lavoratore)",
+              label: "Finanziariamente indipendente (disoccupato)",
               nextQuestion: 4,
               documentazione: [
                 "copia di un documento di identit\u00c3\u00a0 valido.*",
@@ -2318,8 +2318,8 @@ export const choiceTree = {
         },
         {
           type: "select",
-          title: "Da dove ti stai muovendo?",
-          label: "Seleziona la tua Cittadinanza",
+          title: "Da dove vieni?",
+          label: "Seleziona da dove ti stai muovendo",
           id: 4,
           answers: [
             {
@@ -2352,7 +2352,7 @@ export const choiceTree = {
         },
         {
           type: "form",
-          title: "Quale paese?",
+          title: "Da quale paese provieni?",
           id: 7,
           nextQuestion: 8,
           answers: [
@@ -2367,7 +2367,7 @@ export const choiceTree = {
         },
         {
           type: "form",
-          title: "Quale paese?",
+          title: "Da quale paese provieni?",
           id: 62,
           nextQuestion: 63,
           answers: [
@@ -2382,7 +2382,7 @@ export const choiceTree = {
         },
         {
           type: "form",
-          title: "Quale citt\u00e0?",
+          title: "Da quale comune provieni?",
           id: 63,
           nextQuestion: 8,
           answers: [
@@ -2403,7 +2403,7 @@ export const choiceTree = {
           answers: [
             {
               id: "Nome",
-              label: "Come ti chiami?",
+              label: "Nome",
               type: "text",
               helperText: "Ex. Moussa",
               validate: "requiredField",
@@ -2411,7 +2411,7 @@ export const choiceTree = {
             },
             {
               id: "Cognome",
-              label: "Qual \u00e8 il tuo cognome",
+              label: "Cognome",
               type: "text",
               helperText: "Ex. Semprini",
               validate: "requiredField",
@@ -2421,15 +2421,15 @@ export const choiceTree = {
               id: "Data di nascita",
               label: "Data di nascita",
               type: "date",
-              helperText: "Data di nascita",
+              helperText: "Ex. 15/05/1998",
               validate: "requiredField",
               isRequired: true,
             },
             {
               id: "Luogo di nascita",
-              label: "Dove sei nato?",
+              label: "Luogo di nascita",
               type: "text",
-              helperText: "Indichi la sua citt\u00e0 di nascita",
+              helperText: "Ex. Francia, Italia, Romania",
               autocomplete: true,
               isRequired: true,
               validate: "requiredField",
@@ -2438,17 +2438,17 @@ export const choiceTree = {
               id: "Sesso",
               label: "Genere",
               type: "select",
-              options: ["maschio", "femmina"],
+              options: ["Maschile", "Femminile"],
               validate: "requiredField",
               isRequired: true,
               helperText: "seleziona il tuo sesso",
             },
             {
               id: "Stato Civile",
-              label: "il tuo stato civile?",
+              label: "Stato civile",
               type: "select",
-              options: ["celibe","nubile", "sposato/a", "divorziato/a", "vedovo/a"],
-              helperText: "seleziona il tuo stato",
+              options: ["Celibe","Nubile", "Sposato/a", "Divorziato/a", "Vedovo/a"],
+              helperText: "seleziona il tuo status",
               validate: "requiredField",
             },
             {
@@ -2463,7 +2463,7 @@ export const choiceTree = {
               id: "Codice Fiscale",
               label: "Codice Fiscale",
               type: "text",
-              helperText: "Ex. R5MRI88L73G273E",
+              helperText: "Ex. RSSMRA98E15G273F",
               validate: "fiscalCodeField",
               isRequired: true,
             },
@@ -2488,7 +2488,7 @@ export const choiceTree = {
         {
           type: "select",
           title: "Qual \u00e8 il tuo stato non professionale?",
-          label: "Seleziona il tuo stato",
+          label: "Seleziona il tuo status",
           id: 11,
           answers: [
             {
@@ -2527,7 +2527,7 @@ export const choiceTree = {
         {
           type: "select",
           title: "Qual \u00e8 il tuo status professionale?",
-          label: "Seleziona il tuo stato",
+          label: "Seleziona il tuo status",
           id: 12,
           answers: [
             {
@@ -2545,7 +2545,7 @@ export const choiceTree = {
             {
               selected: false,
               id: "C1_2_5",
-              label: "Lavoratore familiare",
+              label: "Coadiuvante familiare",
               nextQuestion: 14,
             },
             {
@@ -2636,19 +2636,19 @@ export const choiceTree = {
         {
           type: "select",
           title: "Qual \u00e8 il tuo livello di istruzione?",
-          label: "Seleziona la tua laurea",
+          label: "Seleziona il tuo livello di istruzione",
           id: 13,
           answers: [
             {
               selected: false,
               id: "C1_2_11",
-              label: "Nessuno / Scuola elementare",
+              label: "Nessuno / Licenza Elementare",
               nextQuestion: 16,
             },
             {
               selected: false,
               id: "C1_2_12",
-              label: "Certificato di scuola secondaria",
+              label: "Licenza media",
               nextQuestion: 16,
             },
             {
@@ -2666,7 +2666,7 @@ export const choiceTree = {
             {
               selected: false,
               id: "C1_2_15",
-              label: "Laurea magistrale",
+              label: "Laurea Magistrale",
               nextQuestion: 16,
             },
             {
@@ -2719,7 +2719,7 @@ export const choiceTree = {
             },
             {
               id: "Scala",
-              label: "Scale",
+              label: "Scala",
               type: "text",
               helperText: "Ex. 1\u00ba",
               isRequired: true,
@@ -2829,18 +2829,18 @@ export const choiceTree = {
                 "Se non c'\u00e8 qualche rapporto di parentela lasciare questo campo vuoto",
               isRequired: false,
               options: [
-                "nessuno",
-                "madre",
-                "padre",
-                "figlio",
-                "figlia",
-                "fratello",
-                "sorella",
-                "nonno",
-                "nonna",
-                "zio",
-                "zia",
-                "cugino",
+                "Nessuno",
+                "Madre",
+                "Padre",
+                "Figlio",
+                "Figlia",
+                "Fratello",
+                "Sorella",
+                "Nonno",
+                "Nonna",
+                "Zio",
+                "Zia",
+                "Cugino",
               ],
             },
           ],
@@ -2856,7 +2856,7 @@ export const choiceTree = {
               id: "Telefono",
               label: "Numero di telefono",
               type: "number",
-              helperText: "091665442",
+              helperText: "0916654421",
               validate: "requiredField",
               isRequired: true,
               autocomplete: false,
@@ -2888,8 +2888,8 @@ export const choiceTree = {
         },
         {
           type: "select",
-          title: "A quale categoria appartiene la vostra casa?",
-          label: "Seleziona il tuo stato",
+          title: "A quale categoria appartiene l'abitazione?",
+          label: "Seleziona il tuo status",
           id: 23,
           answers: [
             { 
@@ -3100,7 +3100,7 @@ export const choiceTree = {
         },
         {
           type: "longform",
-          title: "Abbonamento TARI",
+          title: "E' necessario attivare l'abbonamento TARI compila i seguenti campi",
           id: 32,
           parentId: 4,
           nextQuestion: 33,

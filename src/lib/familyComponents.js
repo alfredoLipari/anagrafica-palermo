@@ -2468,7 +2468,7 @@ export const calculateComponentItalianTree = (action) => {
           id: "Sesso_" + i,
           label: "Genere",
           type: "select",
-          options: ["male", "female"],
+          options: ["Maschile", "Femminile"],
           validate: "RequiredField",
           isRequired: true,
           helperText: "scegli il genere",
@@ -2478,7 +2478,7 @@ export const calculateComponentItalianTree = (action) => {
           id: "Stato Civile_" + i,
           label: "Stato civile",
           type: "select",
-          options: ["celibe", "sposato/a", "divorziato/a", "vedovo/a"],
+          options: ["Celibe", "Nubile", "Sposato/a", "Divorziato/a", "Vedovo/a"],
           helperText: "scegli stato civile",
           validate: "RequiredField",
           required: true,
@@ -2506,19 +2506,20 @@ export const calculateComponentItalianTree = (action) => {
           label: "Rapporto di parentela con il richiedente",
           type: "select",
           options: [
-            "madre",
-            "padre",
-            "figlio",
-            "figlia",
-            "fratello",
-            "sorella",
-            "nonno",
-            "nonna",
+            "Madre",
+            "Padre",
+            "Figlio",
+            "Figlia",
+            "Fratello",
+            "Sorella",
+            "Nonno",
+            "Nonna",
             "zio",
             "zia",
             "moglie",
             "marito",
             "cugino",
+            "cugina"
           ],
           helperText: "Ex. moglie, figlio",
           validate: "RequiredField",
@@ -2530,7 +2531,7 @@ export const calculateComponentItalianTree = (action) => {
 
     result.push({
       type: "checkbox",
-      title: "Lavora?",
+      title: "La persona con cui ti sposti ha un lavoro?",
       id: 40 + i + currentIndex,
       answers: [
         {
@@ -2547,37 +2548,37 @@ export const calculateComponentItalianTree = (action) => {
     result.push({
       type: "select",
       title: "Qual è il suo stato non professionale?",
-      label: "Select lo stato",
+      label: "Seleziona lo stato",
       id: 41 + i + currentIndex,
       answers: [
         {
           selected: false,
           id: "C" + page + "_" + moduls + "_6",
-          label: "Housewife",
+          label: "Casalingo/a",
           nextQuestion: 43 + i + currentIndex,
         },
         {
           selected: false,
           id: "C" + page + "_" + moduls + "_7",
-          label: "Student",
+          label: "Studente",
           nextQuestion: 43 + i + currentIndex,
         },
         {
           selected: false,
           id: "C" + page + "_" + moduls + "_8",
-          label: "Unemployed",
+          label: "Disoccupato",
           nextQuestion: 43 + i + currentIndex,
         },
         {
           selected: false,
           id: "C" + page + "_" + moduls + "_9",
-          label: "Retired",
+          label: "In pensione",
           nextQuestion: 43 + i + currentIndex,
         },
         {
           selected: false,
           id: "C" + page + "_" + moduls + "_10",
-          label: "Other",
+          label: "Altro",
           nextQuestion: 43 + i + currentIndex,
         },
       ],
@@ -2593,31 +2594,31 @@ export const calculateComponentItalianTree = (action) => {
         {
           selected: false,
           id: "C" + page + "_" + moduls + "_4",
-          label: "Worker",
+          label: "Lavoratore",
           nextQuestion: 43 + i + currentIndex,
         },
         {
           selected: false,
           id: "C" + page + "_" + moduls + "_5",
-          label: "Family Worker",
+          label: "Coadiuvante familiare",
           nextQuestion: 43 + i + currentIndex,
         },
         {
           selected: false,
           id: "C" + page + "_" + moduls + "_3",
-          label: "Freelance / Entrepreneur",
+          label: "Imprenditore",
           nextQuestion: 43 + i + currentIndex,
         },
         {
           selected: false,
           id: "C" + page + "_" + moduls + "_1",
-          label: "Self-Employed",
+          label: "Libero professionista",
           nextQuestion: 43 + i + currentIndex,
         },
         {
           selected: false,
           id: "C" + page + "_" + moduls + "_2",
-          label: "Executive / Employee",
+          label: "Impiegato",
           nextQuestion: 43 + i + currentIndex,
         },
       ],
@@ -2628,7 +2629,7 @@ export const calculateComponentItalianTree = (action) => {
     result.push(
       {
         type: "checkbox",
-        title: "Possiede una licensa di guida italiana?",
+        title: "Possiede una licenza di guida italiana?",
         id: 43 + i + currentIndex,
         answers: [
           {
@@ -2644,7 +2645,7 @@ export const calculateComponentItalianTree = (action) => {
 
       {
         type: "longform",
-        title: "Dettagli della licensa di guida, i campi non sono obbligatori",
+        title: "Dettagli della licenza di guida, i campi non sono obbligatori",
         id: 44 + i + currentIndex,
         parentId: 4,
         nextQuestion: 45 + i + currentIndex,
@@ -2729,7 +2730,7 @@ export const calculateComponentItalianTree = (action) => {
         {
           selected: false,
           id: "C" + page + "_" + moduls + "_15",
-          label: "Laurea lunga/magistrale",
+          label: "Laurea a ciclo unico/magistrale",
           nextQuestion:
             i + 1 <= parseInt(action.answer) + 1 ? 47 + i + currentIndex : 19,
         },
