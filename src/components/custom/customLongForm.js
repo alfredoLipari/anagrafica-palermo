@@ -206,7 +206,7 @@ const CustomLongForm = ({ stateQuestions }) => {
           <Text
             as="h2"
             color="#000"
-            fontSize="xl"
+            fontSize="3xl"
             fontWeight={"bold"}
             marginTop="1em"
             margin="8"

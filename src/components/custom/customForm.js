@@ -87,7 +87,7 @@ const CustomForm = ({ stateTemp }) => {
     let newValues = values;
 
     if (Object.keys(answers).length > 0 && !country.current) {
-      newValues = validateCountry(values, answers);
+      newValues = validateCountry(values, answers, state.language);
     } else if (Object.keys(answers).length > 0 && country.current) {
       newValues["Indicare il comune di provenienza"] =
         answers["Indicare il comune di provenienza"];
@@ -131,16 +131,16 @@ const CustomForm = ({ stateTemp }) => {
           style={{
             display: "flex",
             alignItems: "center",
-
             flexDirection: "column",
           }}
         >
           <Divider mb="5" />
 
           <Text
+            fontWeight="bold"
             as="h2"
             color="#000"
-            fontSize="xl"
+            fontSize="3xl"
             marginTop="2em"
             marginBottom="5"
           >
@@ -163,7 +163,11 @@ const CustomForm = ({ stateTemp }) => {
                 >
                   {({ field }) => (
                     <FormControl>
-                      <CustomInput {...field} state={answ} error={props.errors[answ.id]}/>
+                      <CustomInput
+                        {...field}
+                        state={answ}
+                        error={props.errors[answ.id]}
+                      />
                     </FormControl>
                   )}
                 </Field>
@@ -182,7 +186,9 @@ const CustomForm = ({ stateTemp }) => {
           </Box>
 
           <ActionsButton
-            goBackButtonHandler={() => dispatch({ type: "GO BACK", answer: stateTemp })}
+            goBackButtonHandler={() =>
+              dispatch({ type: "GO BACK", answer: stateTemp })
+            }
             colorSchemeContinueButton="facebook"
             continueSubmit="submit"
             state={state}

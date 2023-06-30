@@ -42,7 +42,7 @@ const CustomInputSelect = (props) => {
       >
         {props.error.errors[props.state.id] !== undefined
           ? props.error.errors[props.state.id]
-          : props.state.helperText}
+          : props.state.helperText + (props.state.isRequired ? " *" : "")}
       </FormHelperText>
     </FormControl>
   );

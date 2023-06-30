@@ -2418,7 +2418,6 @@ export const calculateComponentItalianTree = (action) => {
   let currentIndex = 0;
 
   for (let i = 2; i <= parseInt(action.answer) + 1; i++) {
-    console.log("Iindex: ", i);
     if (page === 3) {
       moduls = 1;
     }
@@ -2503,7 +2502,7 @@ export const calculateComponentItalianTree = (action) => {
         },
         {
           id: "Rapporto di parentela con il richiedente_".concat("", i - 2),
-          label: "Rapporto di parentela con il richiedente",
+          label: "Scegli rapporto",
           type: "select",
           options: [
             "Madre",
@@ -2521,7 +2520,7 @@ export const calculateComponentItalianTree = (action) => {
             "cugino",
             "cugina"
           ],
-          helperText: "Ex. moglie, figlio",
+          helperText: "Rapporto di parentela con il richiedente",
           validate: "RequiredField",
           isRequired: true,
           // add input validate
@@ -2531,11 +2530,11 @@ export const calculateComponentItalianTree = (action) => {
 
     result.push({
       type: "checkbox",
-      title: "La persona con cui ti sposti ha un lavoro?",
+      title: "ha un lavoro?",
       id: 40 + i + currentIndex,
       answers: [
         {
-          id: "yes",
+          id: "sì",
           nextQuestion: 42 + i + currentIndex,
         },
         {
@@ -2547,7 +2546,7 @@ export const calculateComponentItalianTree = (action) => {
 
     result.push({
       type: "select",
-      title: "Qual è il suo stato non professionale?",
+      title: "Cosa fa",
       label: "Seleziona lo stato",
       id: 41 + i + currentIndex,
       answers: [
@@ -2586,7 +2585,7 @@ export const calculateComponentItalianTree = (action) => {
 
     result.push({
       type: "select",
-      title: "Qual è il suo stato professionale?",
+      title: "Cosa fa",
       label: "Seleziona il suo stato",
       id: 42 + i + currentIndex,
 
@@ -2629,7 +2628,7 @@ export const calculateComponentItalianTree = (action) => {
     result.push(
       {
         type: "checkbox",
-        title: "Possiede una licenza di guida italiana?",
+        title: "possiede una licenza di guida italiana?",
         id: 43 + i + currentIndex,
         answers: [
           {
@@ -2694,7 +2693,7 @@ export const calculateComponentItalianTree = (action) => {
 
     result.push({
       type: "select",
-      title: "Qual è il suo livello di educazione?",
+      title: "Qual è il livello di educazione di ",
       label: "Scegli il suo certificato scolastico",
       id: 45 + i + currentIndex,
 

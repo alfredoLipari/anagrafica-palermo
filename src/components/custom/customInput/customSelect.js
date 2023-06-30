@@ -9,6 +9,8 @@ const CustomSelect = ({ stateQuestion }) => {
   const [selectAnswer, setSelectAnswer] = useState({});
   const navigate = useNavigate();
 
+  console.log("familyName", state.familyName)
+
   const dispatchAnswer = () => {
     if (Object.keys(selectAnswer).length === 0) {
       //the user didnt select anything
@@ -39,7 +41,10 @@ const CustomSelect = ({ stateQuestion }) => {
         color="#000"
         padding={{ base: 5, md: 0 }}
       >
-        {stateQuestion.title}
+        {stateQuestion.title}{" "}
+        {state.familyName !== "" &&
+          state.familyName.charAt(0).toUpperCase() + state.familyName.slice(1)} 
+          ?
       </Text>
       <Select
         iconColor="#0E78E2"
@@ -54,7 +59,6 @@ const CustomSelect = ({ stateQuestion }) => {
         marginBottom="12"
       >
         {stateQuestion.answers.map((el) => (
-          
           <option value={el.id} key={el.id}>
             {el.label}
           </option>
@@ -63,7 +67,9 @@ const CustomSelect = ({ stateQuestion }) => {
 
       <ActionsButton
         stateQuestionId={stateQuestion.id}
-        goBackButtonHandler={() => dispatch({ type: "GO BACK", answer: stateQuestion })}
+        goBackButtonHandler={() =>
+          dispatch({ type: "GO BACK", answer: stateQuestion })
+        }
         continueButtonHandler={() => dispatchAnswer()}
         colorSchemeContinueButton="facebook"
         state={state}

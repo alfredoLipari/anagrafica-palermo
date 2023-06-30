@@ -110,6 +110,7 @@ export function reducer(state, action) {
         currentQuestion: parseInt(nextQuestion),
         documents: documents,
         questionHistory: newHistory,
+        familyName: parseInt(nextQuestion) === 19 ? "" : state.familyName,
       };
 
     case "ANSWER_QUESTION_FORM":
@@ -299,14 +300,32 @@ export function reducer(state, action) {
         },
       ];
 
+      let componentName = state.familyName;
+
       let newHistoryComponentForm = state.questionHistory;
       newHistoryComponentForm.push(parseInt(action.state.nextQuestion));
+
+      console.log("action.state in form", action.state);
+
+      // check if the actual answer is a family component form to retrieve the name of the component
+      if (action.state.title.includes("Componente N.") && state.language === 'Italian') {
+        console.log("component");
+        console.log(action.answer);
+
+        // retrieve the name of the component
+        const index = [2, 3, 4, 5, 6].find(
+          (value) => action.answer["Nome_" + value] !== undefined
+          );
+        componentName = action.answer["Nome_" + index];
+        console.log("componentName", componentName);
+        }
 
       return {
         ...state,
         answers: newAnswersFormComponent,
         currentQuestion: parseInt(action.state.nextQuestion),
         history: newHistoryComponentForm,
+        familyName: componentName,
       };
 
     case "RETRIEVE_ANSWERS":

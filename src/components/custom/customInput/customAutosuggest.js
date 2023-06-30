@@ -1,8 +1,9 @@
-import React, { useState } from "react";
+import React, { useState, useContext } from "react";
 import Autosuggest from "react-autosuggest";
 import CountryAndCity from "../../../lib/CountryAndCity.json";
 import { Text, FormHelperText, FormControl } from "@chakra-ui/react";
 import "./customAutosuggest.css";
+import { Context } from "../../../App";
 
 const CustomAutosuggest = ({
   autosuggestHandler,
@@ -47,6 +48,7 @@ const CustomAutosuggest = ({
 
   const [value, setValue] = useState("");
   const [suggestions, setSuggestions] = useState([]);
+  const { state } = useContext(Context);
 
   // When suggestion is clicked, Autosuggest needs to populate the input
   // based on the clicked suggestion. Teach Autosuggest how to calculate the
@@ -74,6 +76,31 @@ const CustomAutosuggest = ({
     setSuggestions([]);
   };
 
+
+  // Tranlate error text helper function
+  const translateError = (language) => {
+    switch (language) {
+      case "Italian":
+        return "Questo paese non esiste";
+      case "French":
+        return "Ce lieu n'existe pas";
+      case "Spanish":
+        return "Este lugar no existe";
+      case "Ukranian":
+        return "Це місце не існує";
+      case "Arab":
+        return "هذا المكان غير موجود";
+      case "Tamil":
+        return "இந்த இடம் இல்லை";
+      case "Bengali":
+        return "এই স্থানটি বিদ্যমান নয়";
+      default:
+        return "This place does not exist";
+    }
+  }
+      
+
+
   // Autosuggest will pass through all these props to the input.
   const inputProps = {
     placeholder: tag.label + " *",
@@ -97,7 +124,7 @@ const CustomAutosuggest = ({
         marginBottom="10"
         color={error !== false ? "#D2072A" : "#718096"}
       >
-        {error !== false ? "this place does not exist" : tag.helperText}
+        {error !== false ? translateError(state.language) : tag.helperText}
       </FormHelperText>
     </FormControl>
   );

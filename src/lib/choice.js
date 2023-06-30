@@ -751,7 +751,7 @@ export const choiceTree = {
                 "Aunt",
                 "Nephew",
                 "Brother",
-                "Sister"
+                "Sister",
               ],
               helperText: "Select none if there is any",
               isRequired: false,
@@ -1735,7 +1735,7 @@ export const choiceTree = {
           type: "checkbox",
           title:
             "Quelqu'un r\u00e9side-t-il d\u00e9j\u00e0 dans la propri\u00e9t\u00e9 ?",
-            controller: true,
+          controller: true,
           id: 19,
           answers: [
             {
@@ -2154,7 +2154,8 @@ export const choiceTree = {
               id: "Note",
               label: "",
               type: "textarea",
-              helperText: "Ajoutez ici des notes supplémentaires que vous souhaitez présenter",
+              helperText:
+                "Ajoutez ici des notes supplémentaires que vous souhaitez présenter",
               isRequired: false,
               autocomplete: false,
             },
@@ -2174,7 +2175,7 @@ export const choiceTree = {
             {
               id: "I am a non-EU citizen",
               label: "Sono un cittadino extracomunitario",
-              nextQuestion: 2,
+              nextQuestion:2,
               documentazione: [],
             },
             {
@@ -2373,7 +2374,7 @@ export const choiceTree = {
           answers: [
             {
               id: "Indicare lo Stato estero di provenienza",
-              label: "Per favore, scrivi prima il tuo paese",
+              label: "Scrivi il tuo paese",
               type: "text",
               helperText: "Ex. Ghana, Francia, Russia",
               autocomplete: true,
@@ -2447,9 +2448,16 @@ export const choiceTree = {
               id: "Stato Civile",
               label: "Stato civile",
               type: "select",
-              options: ["Celibe","Nubile", "Sposato/a", "Divorziato/a", "Vedovo/a"],
+              options: [
+                "Celibe",
+                "Nubile",
+                "Sposato/a",
+                "Divorziato/a",
+                "Vedovo/a",
+              ],
               helperText: "seleziona il tuo status",
               validate: "requiredField",
+              isRequired: true,
             },
             {
               id: "Cittadinanza",
@@ -2495,31 +2503,31 @@ export const choiceTree = {
               selected: false,
               id: "C1_2_6",
               label: "Casalinga",
-              nextQuestion: 13,
+              nextQuestion: 14,
             },
             {
               selected: false,
               id: "C1_2_7",
               label: "Studente",
-              nextQuestion: 13,
+              nextQuestion: 14,
             },
             {
               selected: false,
               id: "C1_2_8",
               label: "Disoccupato",
-              nextQuestion: 13,
+              nextQuestion: 14,
             },
             {
               selected: false,
               id: "C1_2_9",
               label: "In pensione",
-              nextQuestion: 13,
+              nextQuestion: 14,
             },
             {
               selected: false,
               id: "C1_2_10",
               label: "Altro",
-              nextQuestion: 13,
+              nextQuestion: 14,
             },
           ],
           parentId: 9,
@@ -2598,14 +2606,15 @@ export const choiceTree = {
               type: "text",
               helperText: "Ex. 91828930",
               validate: "requiredField",
-              isRequired: false,
+              isRequired: true,
             },
             {
               id: "Patente tipo",
               label: "Tipo di licenza",
               type: "text",
               helperText: "Ex. A,B,C",
-              isRequired: false,
+               validate: "requiredField",
+              isRequired: true,
             },
             {
               id: "Data di rilascio",
@@ -2613,7 +2622,7 @@ export const choiceTree = {
               type: "Date",
               helperText: "Data di rilascio",
               validate: "requiredField",
-              isRequired: false,
+              isRequired: true,
             },
             {
               id: "Organo di rilascio",
@@ -2621,7 +2630,7 @@ export const choiceTree = {
               type: "text",
               helperText: "Motorizzazione",
               validate: "requiredField",
-              isRequired: false,
+              isRequired: true,
             },
             {
               id: "Provincia di",
@@ -2629,7 +2638,7 @@ export const choiceTree = {
               type: "text",
               helperText: "Palermo",
               validate: "requiredField",
-              isRequired: false,
+              isRequired: true,
             },
           ],
         },
@@ -2824,9 +2833,9 @@ export const choiceTree = {
             {
               id: "Sussiste il seguente vincolo rispetto al su indicato  componente della famiglia gi\u00c3\u00a0 residente",
               label: "Specificare il rapporto di parentela",
-              type: "text",
+              type: "select",
               helperText:
-                "Se non c'\u00e8 qualche rapporto di parentela lasciare questo campo vuoto",
+                "Rapporto di parentela",
               isRequired: false,
               options: [
                 "Nessuno",
@@ -2892,7 +2901,7 @@ export const choiceTree = {
           label: "Seleziona il tuo status",
           id: 23,
           answers: [
-            { 
+            {
               selected: false,
               id: "C9_1_5",
               label: "Uso gratuito",
@@ -3078,7 +3087,7 @@ export const choiceTree = {
               validate: "requiredField",
               isRequired: true,
               autocomplete: false,
-              helperText: "Mario Rossi"
+              helperText: "Mario Rossi",
             },
             {
               id: "F",
@@ -3100,7 +3109,8 @@ export const choiceTree = {
         },
         {
           type: "longform",
-          title: "E' necessario attivare l'abbonamento TARI compila i seguenti campi",
+          title:
+            "E' necessario attivare l'abbonamento TARI compila i seguenti campi",
           id: 32,
           parentId: 4,
           nextQuestion: 33,
@@ -4223,7 +4233,8 @@ export const choiceTree = {
               id: "Note",
               label: "",
               type: "textarea",
-              helperText: "Agregue aquí las notas adicionales que desea presentar",
+              helperText:
+                "Agregue aquí las notas adicionales que desea presentar",
               isRequired: false,
               autocomplete: false,
             },
@@ -4539,7 +4550,7 @@ export const choiceTree = {
                 "\u0412\u043a\u0430\u0436\u0456\u0442\u044c \u0441\u0432\u043e\u0454 \u043c\u0456\u0441\u0442\u043e \u043d\u0430\u0440\u043e\u0434\u0436\u0435\u043d\u043d\u044f",
               autocomplete: true,
               isRequired: true,
-              validate: "requiredField"
+              validate: "requiredField",
             },
             {
               id: "Sesso",
@@ -5351,7 +5362,6 @@ export const choiceTree = {
                 "\u041f\u0440\u0438\u0437\u043d\u0430\u0447\u0435\u043d\u043d\u044f \u0436\u0438\u0442\u043b\u0430 \u0434\u0435\u0440\u0436\u0430\u0432\u043d\u043e\u0433\u043e \u043e\u0440\u0433\u0430\u043d\u0443",
               nextQuestion: 34,
             },
-            
           ],
           parentId: 9,
         },
@@ -5366,7 +5376,8 @@ export const choiceTree = {
               id: "Note",
               label: "",
               type: "textarea",
-              helperText: "Додайте сюди додаткові примітки, які ви хочете представити",
+              helperText:
+                "Додайте сюди додаткові примітки, які ви хочете представити",
               isRequired: false,
               autocomplete: false,
             },
@@ -6498,7 +6509,8 @@ export const choiceTree = {
               id: "Note",
               label: "",
               type: "textarea",
-              helperText: "டோடைடே சிடி டோடட்கோவி பிரிமிட்கி, யாக்கி வி ஹொசெட் ப்ரெட்ஸ்டாவிட்டி",
+              helperText:
+                "டோடைடே சிடி டோடட்கோவி பிரிமிட்கி, யாக்கி வி ஹொசெட் ப்ரெட்ஸ்டாவிட்டி",
               isRequired: false,
               autocomplete: false,
             },
@@ -7404,7 +7416,7 @@ export const choiceTree = {
               helperText:
                 "\u0627\u0644\u064a\u0648\u0645 / \u0627\u0644\u0634\u0647\u0631 / \u0627\u0644\u0633\u0646\u0629",
               isRequired: true,
-              validate: "dateValidation"
+              validate: "dateValidation",
             },
             {
               id: "al n",
@@ -7441,7 +7453,7 @@ export const choiceTree = {
               helperText:
                 "\u0627\u0644\u064a\u0648\u0645 / \u0627\u0644\u0634\u0647\u0631 / \u0627\u0644\u0633\u0646\u0629",
               isRequired: true,
-              validate: "dateValidation"
+              validate: "dateValidation",
             },
             {
               id: "al n_2",
@@ -8513,7 +8525,7 @@ export const choiceTree = {
               type: "date",
               helperText: "DD/MM/YYYY",
               isRequired: true,
-              validate: "requiredField"
+              validate: "requiredField",
             },
             {
               id: "al n",
@@ -8734,7 +8746,8 @@ export const choiceTree = {
               id: "Note",
               label: "",
               type: "textarea",
-              helperText: "আপনি এখানে উপস্থাপন করতে চান এমন কোনো অতিরিক্ত নোট যোগ করুন",
+              helperText:
+                "আপনি এখানে উপস্থাপন করতে চান এমন কোনো অতিরিক্ত নোট যোগ করুন",
               isRequired: false,
               autocomplete: false,
             },
@@ -8742,7 +8755,6 @@ export const choiceTree = {
         },
       ],
     },
-    
   },
 };
 export default choiceTree;

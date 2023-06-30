@@ -169,7 +169,7 @@ export const validateDate = (value) => {
 };
 
 // function that validate country for autosuggest component
-export const validateCountry = (values, autosuggestAnsw) => {
+export const validateCountry = (values, autosuggestAnsw, language) => {
   let isValidated = "";
   let error = false;
   let newObject = { ...values };
@@ -179,7 +179,7 @@ export const validateCountry = (values, autosuggestAnsw) => {
     isValidated = Object.keys(CountryAndCity).find(
         (country) => country === autosuggestAnsw[key]
     );
-    if (isValidated) {
+    if (isValidated || language !== 'English') {
       newObject["Indicare lo Stato estero di provenienza"] =
           autosuggestAnsw[key];
       return newObject;

@@ -45,11 +45,15 @@ const CustomCheckbox = ({ stateQuestion }) => {
       <Text
         as="h2"
         color="#000"
-        fontSize="2xl"
+        fontWeight="bold"
+        fontSize="3xl"
         marginBottom="5"
         marginTop={{ base: "3em", md: "5em" }}
         padding={{ base: 5, md: 0 }}
       >
+        {state.familyName !== "" &&
+          state.familyName.charAt(0).toUpperCase() +
+            state.familyName.slice(1)}{" "}
         {stateQuestion.title}
       </Text>
       <Box
@@ -85,12 +89,13 @@ const CustomCheckbox = ({ stateQuestion }) => {
       </Box>
 
       <ActionsButton
-          goBackButtonHandler = {() => dispatch({type: "GO BACK", answer: stateQuestion}) }
-          continueButtonHandler = {() => submitAnswer()}
-          colorSchemeContinueButton = "facebook"
-          state = {state}
+        goBackButtonHandler={() =>
+          dispatch({ type: "GO BACK", answer: stateQuestion })
+        }
+        continueButtonHandler={() => submitAnswer()}
+        colorSchemeContinueButton="facebook"
+        state={state}
       />
-
     </Box>
   );
 };

@@ -16,7 +16,8 @@ const Website = () => {
     answers: [],
     documents: [],
     language: "English",
-    questionHistory: [1]
+    questionHistory: [1],
+    familyName: "",
   };
 
   const [state, dispatch] = useReducer(reducer, initialState);
