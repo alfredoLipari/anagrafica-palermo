@@ -112,6 +112,8 @@ export const validatePhoneNumberTranslated = (lang) => {
 
 export const validateText = (value) => {
   let error;
+
+
   if (value === "" || value === undefined) {
     error = validateTextTranslated(Language);
   } else if (value !== undefined) {

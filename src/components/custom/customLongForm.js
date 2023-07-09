@@ -2,7 +2,7 @@
  *   when a form is bigger than 4 field
  */
 
-import React, { useState, useContext } from "react";
+import React, {useState, useContext, useEffect} from "react";
 import CustomInput from "./customInput/customInput";
 import { FormControl, Text, Divider, Box, Flex } from "@chakra-ui/react";
 import { Formik, Form, Field } from "formik";
@@ -30,7 +30,12 @@ const CustomLongForm = ({ stateQuestions }) => {
   const [answers, setAnswers] = useState({ "Luogo di nascita": "" });
   const [error, setError] = useState(false);
 
+  const[reset, setReset] = useState(false)
+
+
   // initial values of the form, without the autosuggest input
+
+
 
   const autosuggestHandler = (value, tag) => {
     if (!tag) {
@@ -47,13 +52,13 @@ const CustomLongForm = ({ stateQuestions }) => {
     let newAnswers = {};
 
     const isAutosuggestPresent = stateQuestions.answers.some(
-      (question) => question.autocomplete === true
+        (question) => question.autocomplete === true
     );
     if (isAutosuggestPresent) {
       // check if answers is not empty
       if (
-        answers["Luogo di nascita"] === "" &&
-        values["Luogo di nascita"] === ""
+          answers["Luogo di nascita"] === "" &&
+          values["Luogo di nascita"] === ""
       ) {
         setError(true);
         return;
@@ -91,17 +96,21 @@ const CustomLongForm = ({ stateQuestions }) => {
 
   // decide the validation conditionally
   // decide the validation conditionally
-  const validateInput = (value) => {
-    switch (value) {
-      case "requiredField":
-        return validateText;
-      case "fiscalCodeField":
-        return validateFiscalCode;
-      case "dateValidation":
-        return validateDate;
-      default:
-        return undefined;
-    }
+  const validateInput = (value, reset) => {
+
+
+      switch (value) {
+        case "requiredField":
+          return reset ? "": validateText;
+        case "fiscalCodeField":
+          return validateFiscalCode;
+        case "dateValidation":
+          return validateDate;
+        default:
+          return undefined;
+      }
+
+
   };
 
   // function to build the ui form
@@ -114,53 +123,56 @@ const CustomLongForm = ({ stateQuestions }) => {
 
 
 
+
     stateQuestions.answers.forEach((answ, index) => {
+
       switch (answ.type) {
         case "select":
           containerColumn.push(
-            <Field
-              key={answ.id}
-              id={answ.id}
-              name={answ.id}
-              validate={validateInput(answ.validate)}
-            >
-              {({ field }) => (
-                <CustomInputSelect {...field} state={answ} error={props} />
-              )}
-            </Field>
+              <Field
+                  key={answ.id}
+                  id={answ.id}
+                  name={answ.id}
+                  validate={validateInput(answ.validate, reset)}
+
+              >
+                {({ field }) => (
+                    <CustomInputSelect  {...field} state={answ} error={props} onClick={() => setReset(true)} />
+                )}
+              </Field>
           );
           break;
         case "autocomplete":
           containerColumn.push(
-            <CustomAutosuggest
-              keyAuto={answ.id}
-              value={answers}
-              autosuggestHandler={autosuggestHandler}
-              tag={answ}
-              country={country}
-              error={error}
-            />
+              <CustomAutosuggest
+                  keyAuto={answ.id}
+                  value={answers}
+                  autosuggestHandler={autosuggestHandler}
+                  tag={answ}
+                  country={country}
+                  error={error}
+              />
           );
           break;
         default:
           containerColumn.push(
-            <Field
-              name={answ.id}
-              validate={validateInput(answ.validate)}
-              key={answ.id}
-            >
-              {({ field }) => (
-                <FormControl>
-                  <CustomInput
-                    {...field}
-                    state={answ}
-                    error={
-                      props.errors[answ.id] 
-                    }
-                  />
-                </FormControl>
-              )}
-            </Field>
+              <Field
+                  name={answ.id}
+                  validate={validateInput(answ.validate)}
+                  key={answ.id}
+              >
+                {({ field }) => (
+                    <FormControl>
+                      <CustomInput
+                          {...field}
+                          state={answ}
+                          error={
+                            props.errors[answ.id]
+                          }
+                      />
+                    </FormControl>
+                )}
+              </Field>
           );
       }
       i++;
@@ -176,58 +188,58 @@ const CustomLongForm = ({ stateQuestions }) => {
 
     // now return every key return a column
     return  Object.values(formContainer).map((container, index) => (
-      <Box key={index} marginY={{ base: "0", md: "5" }} marginX="20">
-        {container.map((item) => item)}
-      </Box>
+        <Box key={index} marginY={{ base: "0", md: "5" }} marginX="20">
+          {container.map((item) => item)}
+        </Box>
     ));
 
   };
 
   return (
-    
-    <Formik
-      initialValues={questions}
-      onSubmit={(values) => {
-        submitForm(values);
-      }}
-      validateOnChange={false}
-      validateOnBlur={false}
-    >
-      {(props) => (
-        <Form
-          style={{
-            display: "flex",
-            alignItems: "center",
-            flexDirection: "column",
+
+      <Formik
+          initialValues={questions}
+          onSubmit={(values) => {
+            submitForm(values);
           }}
-        >
-          <Divider mb="5" />
+          validateOnChange={false}
+          validateOnBlur={false}
+      >
+        {(props) => (
+            <Form
+                style={{
+                  display: "flex",
+                  alignItems: "center",
+                  flexDirection: "column",
+                }}
+            >
+              <Divider mb="5" />
 
-          <Text
-            as="h2"
-            color="#000"
-            fontSize="3xl"
-            fontWeight={"bold"}
-            marginTop="1em"
-            margin="8"
-          >
-            {stateQuestions.title}
-          </Text>
+              <Text
+                  as="h2"
+                  color="#000"
+                  fontSize="3xl"
+                  fontWeight={"bold"}
+                  marginTop="1em"
+                  margin="8"
+              >
+                {stateQuestions.title}
+              </Text>
 
-          <Flex direction={{ base: "column", md: "row" }}>
-            {renderForm(props)}
-          </Flex>
+              <Flex direction={{ base: "column", md: "row" }}>
+                {renderForm(props)}
+              </Flex>
 
-          <ActionsButton
-              goBackButtonHandler = {() => dispatch({type: "GO BACK", answer: stateQuestions }) }
-              continueSubmit = {"submit"}
-              colorSchemeContinueButton = "facebook"
-              state = {state}
-          />
+              <ActionsButton
+                  goBackButtonHandler = {() => dispatch({type: "GO BACK", answer: stateQuestions }) }
+                  continueSubmit = {"submit"}
+                  colorSchemeContinueButton = "facebook"
+                  state = {state}
+              />
 
-        </Form>
-      )}
-    </Formik>
+            </Form>
+        )}
+      </Formik>
   );
 };
 

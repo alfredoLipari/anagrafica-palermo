@@ -101,7 +101,7 @@ export const choiceTree = {
             },
             {
               id: "I am Waiting for a work permit",
-              label: "I am waiting for a residence permit",
+              label: "I am waiting for a work permit",
               nextQuestion: 4,
               documentazione: [
                 "copy of a valid passport or equivalent document.* ",
@@ -1209,7 +1209,7 @@ export const choiceTree = {
             },
             {
               id: "I am Waiting for a work permit",
-              label: "J'attends un permis de s\u00e9jour",
+              label: "J'attends un permis de travail",
               nextQuestion: 4,
               documentazione: [
                 "Copie du passeport en cours de validité ou document équivalent*",
@@ -2167,7 +2167,7 @@ export const choiceTree = {
       questions: [
         {
           type: "select",
-          title: "Qual è la tua cittadinanza",
+          title: "Qual è la tua cittadinanza?",
           label: "Indica la tua provenienza",
           id: 1,
           controller: true,
@@ -2196,7 +2196,7 @@ export const choiceTree = {
         },
         {
           type: "select",
-          title: "Qual \u00e8 il tuo stato da richiedente?",
+          title: "Qual \u00e8 il tuo status da richiedente?",
           label: "Seleziona il tuo status",
           id: 2,
           controller: true,
@@ -2233,7 +2233,7 @@ export const choiceTree = {
             },
             {
               id: "I am Waiting for a work permit",
-              label: "Sono in attesa di un permesso di soggiorno",
+              label: "Sono in attesa di un permesso per lavoro",
               nextQuestion: 4,
               documentazione: [
                 "copia del passaporto o documento equipollente in corso di validit\u00c3\u00a0.* ",
@@ -2319,13 +2319,13 @@ export const choiceTree = {
         },
         {
           type: "select",
-          title: "Da dove vieni?",
+          title: "Da dove ti trasferisci?",
           label: "Seleziona da dove ti stai muovendo",
           id: 4,
           answers: [
             {
               id: "C1_1_2",
-              label: "Paese straniero",
+              label: "Stato estero",
               nextQuestion: 7,
             },
             {
@@ -2353,7 +2353,7 @@ export const choiceTree = {
         },
         {
           type: "form",
-          title: "Da quale paese provieni?",
+          title: "Da quale Paese provieni?",
           id: 7,
           nextQuestion: 8,
           answers: [
@@ -3286,7 +3286,7 @@ export const choiceTree = {
             },
             {
               id: "I am Waiting for a work permit",
-              label: "Estoy esperando un permiso de residencia",
+              label: "Estoy esperando un permiso de trabajo",
               nextQuestion: 4,
               documentazione: [
                 "copia del pasaporte válido o documento equivalente",

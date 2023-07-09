@@ -44,7 +44,7 @@ const CustomSelect = ({ stateQuestion }) => {
         {stateQuestion.title}{" "}
         {state.familyName !== "" &&
           state.familyName.charAt(0).toUpperCase() + state.familyName.slice(1)} 
-          ?
+
       </Text>
       <Select
         iconColor="#0E78E2"
