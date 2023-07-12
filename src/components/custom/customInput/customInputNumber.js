@@ -17,6 +17,7 @@ import ActionsButton from "../../button/ActionsButton";
 export let howManyPeopleBesideYou = 0
 const CustomInputNumber = ({ state }) => {
 
+  console.log("state: ", state)
 
   const [answer, setAnswer] = useState(1);
   const { dispatch } = useContext(Context);

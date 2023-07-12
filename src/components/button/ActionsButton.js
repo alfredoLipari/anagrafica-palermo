@@ -9,6 +9,7 @@ import {
   Box, Button, useDisclosure,
 } from "@chakra-ui/react";
 import CustomButton from "../custom/customInput/customButton";
+import {Language} from "../../App";
 
 const ActionsButton = (props) => {
   const {
@@ -25,7 +26,10 @@ const ActionsButton = (props) => {
   const { isOpen, onOpen, onClose } = useDisclosure()
 
   const translateContinueButton = () => {
-    switch (props?.state.language) {
+
+    console.log(props?.state.language || Language)
+
+    switch (props?.state.language || Language) {
       case "Italian":
         return "Continua";
       case "French":
@@ -46,7 +50,7 @@ const ActionsButton = (props) => {
   };
 
   const translateButtonBack = () => {
-    switch (props?.state.language) {
+    switch (props?.state.language || Language) {
       case "Italian":
         return "Torna indietro";
       case "French":
@@ -67,7 +71,7 @@ const ActionsButton = (props) => {
   };
 
   const translateCloseButton = () => {
-    switch (props?.state.language) {
+    switch (props?.state.language || Language) {
       case "Italian":
         return "Chiudi";
       case "French":
@@ -88,7 +92,7 @@ const ActionsButton = (props) => {
   };
 
   const translateAlertLabel = () => {
-    switch (props?.state.language) {
+    switch (props?.state.language || Language) {
       case "Italian":
         return "Sei sicuro di voler andare indietro? Perderai i dati di questa pagina";
       case "French":
