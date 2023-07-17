@@ -1017,6 +1017,7 @@ export const choiceTree = {
               type: "text",
               isRequired: true,
               validate: "fiscalCodeField",
+              helperText: "Ex. R5MRI88L73G273E",
             },
             {
               id: "Relazione_di_parentela",
@@ -1027,6 +1028,7 @@ export const choiceTree = {
               isRequired: true,
             },
           ],
+
         },
         // OVVERO CHIEDE LE SEGUENTI ISCRIZIONI TARI
         {
@@ -2047,6 +2049,7 @@ export const choiceTree = {
               type: "text",
               isRequired: true,
               validate: "fiscalCodeField",
+              helperText: "Ex. R5MRI88L73G273E",
             },
             {
               id: "Relazione_di_parentela",
@@ -4131,6 +4134,7 @@ export const choiceTree = {
               type: "text",
               isRequired: true,
               validate: "fiscalCodeField",
+              helperText: "Ex. R5MRI88L73G273ES",
             },
             {
               id: "Relazione_di_parentela",
@@ -5266,6 +5270,8 @@ export const choiceTree = {
               type: "text",
               isRequired: true,
               validate: "fiscalCodeField",
+              helperText: "\u041d\u0430\u043f\u0440. R5MRI88L73G273ES",
+
             },
             {
               id: "Relazione_di_parentela",
@@ -5731,7 +5737,7 @@ export const choiceTree = {
               label:
                 "\u0b95\u0bcb\u0b9f\u0bbf\u0bb8\u0bcd \u0b83\u0baa\u0bbf\u0bb8\u0bcd\u0b95\u0bc7\u0bb2\u0bcd",
               type: "text",
-              helperText: "Ex. R5MRI88L73G273ES",
+              helperText: "முன்னாள். R5MRI88L73G273ES",
               validate: "fiscalCodeField",
               isRequired: true,
             },
@@ -6398,6 +6404,8 @@ export const choiceTree = {
               type: "text",
               isRequired: true,
               validate: "fiscalCodeField",
+              helperText: "முன்னாள். R5MRI88L73G273ES",
+
             },
             {
               id: "Relazione_di_parentela",
@@ -7524,6 +7532,7 @@ export const choiceTree = {
               type: "text",
               isRequired: true,
               validate: "fiscalCodeField",
+              helperText: "\"\u0627\u0644\u0633\u0627\u0628\u0642. R5MRI88L73G273ES\""
             },
             {
               id: "Relazione_di_parentela",
@@ -8632,6 +8641,7 @@ export const choiceTree = {
               type: "text",
               isRequired: true,
               validate: "fiscalCodeField",
+              helperText: "\u09af\u09c7\u09ae\u09a8 R5MRI88L73G273ES",
             },
             {
               id: "Relazione_di_parentela",
