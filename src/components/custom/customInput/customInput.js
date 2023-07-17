@@ -35,6 +35,7 @@ const CustomInput = (props) => {
           name={props.name}
           borderBottomColor={props.error !== undefined ? "#D2072A" : "gray.300"}
           placeholder={props.state.helperText}
+          fontSize={{ base: "md", md: "xs" }}
           _focus={{ borderBottomColor: "#0E78E2" }}
         />
       )}

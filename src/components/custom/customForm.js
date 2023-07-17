@@ -92,6 +92,8 @@ const CustomForm = ({ stateTemp }) => {
       newValues["Indicare il comune di provenienza"] =
         answers["Indicare il comune di provenienza"];
     }
+console.log("newValues1", newValues);
+
     // if the return type is invalid return the errore message
     if (!isValid || !Object.keys(newValues).length > 0) {
       if (!Object.keys(newValues).length > 0 && stateTemp.id !== 34) {
@@ -179,6 +181,7 @@ const CustomForm = ({ stateTemp }) => {
                     tag={answ}
                     country={country.current}
                     error={showError}
+                    questId={answ.id}
                   />
                 </Box>
               )

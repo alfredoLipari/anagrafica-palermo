@@ -51,10 +51,10 @@ const CustomCheckbox = ({ stateQuestion }) => {
         marginTop={{ base: "3em", md: "5em" }}
         padding={{ base: 5, md: 0 }}
       >
-        {state.familyName !== "" &&
-          state.familyName.charAt(0).toUpperCase() +
-            state.familyName.slice(1)}{" "}
-        {stateQuestion.title}
+        {state.familyName !== "" ?
+          stateQuestion.title.replace('X', state.familyName.charAt(0).toUpperCase() +
+            state.familyName.slice(1))  :
+        stateQuestion.title}
       </Text>
       <Box
         marginTop={"8"}

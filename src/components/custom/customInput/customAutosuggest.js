@@ -11,19 +11,27 @@ const CustomAutosuggest = ({
   country,
   error,
   keyAuto,
+  questId
 }) => {
   // Imagine you have a list of languages that you'd like to autosuggest.
   // Teach Autosuggest how to calculate suggestions for any given input value.
   const getSuggestions = (value) => {
     let filter;
-
+    console.log('questId', questId)
     // logic for the filter
-    if (country) {
-      filter =
-        CountryAndCity[
-          country.answer["Indicare lo Stato estero di provenienza"]
-        ];
-    } else {
+    if(questId === 'Indicare il comune di provenienza'){
+        if (country) {
+            filter =
+              CountryAndCity[
+              country.answer["Indicare lo Stato estero di provenienza"]
+              ];
+        } else{
+          filter = [];
+        }
+    }
+
+    
+    else {
       filter = Object.keys(CountryAndCity);
     }
 
