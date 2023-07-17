@@ -63,7 +63,7 @@ export const calculateComponentEnglishTree = (action) => {
           // add input validate
         },
         {
-          id: "Stato Civile_" + i,
+          id: "Stato civile_" + i,
           label: "your marital status?",
           type: "select",
           options: ["unmarried", "married", "divorced", "widower"],
@@ -407,7 +407,7 @@ export const calculateComponentFrenchTree = (action) => {
           // add input validate
         },
         {
-          id: "Stato Civile_" + i,
+          id: "Stato civile_" + i,
           label: "ton statut matrimonial?",
           type: "select",
           options: ["unmarried", "married", "divorced", "widower"],
@@ -753,7 +753,7 @@ export const calculateComponentSpanishTree = (action) => {
           // add input validate
         },
         {
-          id: "Stato Civile_" + i,
+          id: "Stato civile_" + i,
           label: "¿tu estado civil?",
           type: "select",
           options: ["unmarried", "married", "divorced", "widower"],
@@ -1099,7 +1099,7 @@ export const calculateComponentBengaliTree = (action) => {
           // add input validate
         },
         {
-          id: "Stato Civile_" + i,
+          id: "Stato civile_" + i,
           label: "আপনার বৈবাহিক অবস্থা?",
           type: "select",
           options: ["unmarried", "married", "divorced", "widower"],
@@ -1443,7 +1443,7 @@ export const calculateComponentArabTree = (action) => {
           // add input validate
         },
         {
-          id: "Stato Civile_" + i,
+          id: "Stato civile_" + i,
           label: "الحالة الاجتماعية؟",
           type: "select",
           options: ["unmarried", "married", "divorced", "widower"],
@@ -1787,7 +1787,7 @@ export const calculateComponentUkrainianTree = (action) => {
           // add input validate
         },
         {
-          id: "Stato Civile_" + i,
+          id: "Stato civile_" + i,
           label: "твій сімейний стан?",
           type: "select",
           options: ["unmarried", "married", "divorced", "widower"],
@@ -2131,7 +2131,7 @@ export const calculateComponentTamilTree = (action) => {
           // add input validate
         },
         {
-          id: "Stato Civile_" + i,
+          id: "Stato civile_" + i,
           label: "உங்கள் திருமண நிலை?",
           type: "select",
           options: ["unmarried", "married", "divorced", "widower"],
@@ -2474,7 +2474,7 @@ export const calculateComponentItalianTree = (action) => {
           // add input validate
         },
         {
-          id: "Stato Civile_" + i,
+          id: "Stato civile_" + i,
           label: "Stato civile",
           type: "select",
           options: ["Celibe", "Nubile", "Sposato/a", "Divorziato/a", "Vedovo/a"],

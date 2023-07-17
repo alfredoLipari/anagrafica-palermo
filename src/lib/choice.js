@@ -574,7 +574,7 @@ export const choiceTree = {
             },
             {
               selected: false,
-              id: "C1_2_6",
+              id: "C1_2_16",
               label: "Phd",
               nextQuestion: 16,
             },
@@ -630,21 +630,21 @@ export const choiceTree = {
               id: "Scala",
               label: "Stairs",
               type: "text",
-              helperText: "Ex. A",
+              helperText: "Ex. 1st",
               // add input validate
             },
             {
               id: "Piano",
               label: "Floor",
-              type: "number",
+              type: "text",
               isRequired: true,
-              helperText: "Ex. 1",
+              helperText: "Ex. 2",
               validate: "requiredField",
             },
             {
               id: "Interno",
               label: "Unit",
-              type: "number",
+              type: "text",
               helperText: "Ex. 1",
               // add input validate
             },
@@ -659,11 +659,11 @@ export const choiceTree = {
           answers: [
             {
               id: "yes",
-              nextQuestion: 18,
+              nextQuestion: 19,
             },
             {
               id: "no",
-              nextQuestion: 19,
+              nextQuestion: 18,
             },
           ],
         },
@@ -1636,7 +1636,7 @@ export const choiceTree = {
             },
             {
               selected: false,
-              id: "C1_2_6",
+              id: "C1_2_16",
               label: "Phd",
               nextQuestion: 16,
             },
@@ -1685,7 +1685,7 @@ export const choiceTree = {
             {
               id: "Scala",
               label: "Escaliers",
-              type: "text",
+              type: "number",
               helperText: "Ex. 1er",
               isRequired: true,
               validate: "requiredField",
@@ -1710,17 +1710,17 @@ export const choiceTree = {
         },
         {
           type: "checkbox",
-          title: "Vous déménagez avec d'autres membres de votre famille ?",
+          title: "Vous d\u00e9m\u00e9nagez seul ?",
           controller: true,
           id: 17,
           answers: [
             {
-              id: "oui",
-              nextQuestion: 18,
+              id: "yes",
+              nextQuestion: 19,
             },
             {
-              id: "non",
-              nextQuestion: 19,
+              id: "no",
+              nextQuestion: 18,
             },
           ],
         },
@@ -2496,7 +2496,7 @@ export const choiceTree = {
         },
         {
           type: "select",
-          title: "Qual \u00e8 il tuo status?",
+          title: "Qual \u00e8 il tuo stato non professionale?",
           label: "Seleziona il tuo status",
           id: 11,
           answers: [
@@ -2681,7 +2681,7 @@ export const choiceTree = {
             },
             {
               selected: false,
-              id: "C1_2_6",
+              id: "C1_2_16",
               label: "Phd",
               nextQuestion: 16,
             },
@@ -2731,23 +2731,23 @@ export const choiceTree = {
               id: "Scala",
               label: "Scala",
               type: "text",
-              helperText: "Es. A",
+              helperText: "Ex. 1\u00ba",
               isRequired: true,
               validate: "requiredField",
             },
             {
               id: "Piano",
               label: "Piano",
-              type: "number",
-              helperText: "Es. 1",
+              type: "text",
+              helperText: "Es. 2",
               isRequired: true,
               validate: "requiredField",
             },
             {
               id: "Interno",
               label: "Interno",
-              type: "number",
-              helperText: "Es. 1",
+              type: "text",
+              helperText: "Ex. A",
               isRequired: true,
               validate: "requiredField",
             },
@@ -2755,17 +2755,17 @@ export const choiceTree = {
         },
         {
           type: "checkbox",
-          title: "Ti stai trasferendo con altri componenti della famiglia?",
+          title: "Ti muovi da solo?",
           controller: true,
           id: 17,
           answers: [
             {
               id: "sì",
-              nextQuestion: 18,
+              nextQuestion: 19,
             },
             {
               id: "no",
-              nextQuestion: 19,
+              nextQuestion: 18,
             },
           ],
         },
@@ -3716,7 +3716,7 @@ export const choiceTree = {
             },
             {
               selected: false,
-              id: "C1_2_6",
+              id: "C1_2_16",
               label: "Doctorado",
               nextQuestion: 16,
             },
@@ -3765,8 +3765,8 @@ export const choiceTree = {
             {
               id: "Scala",
               label: "Escaleras",
-              type: "text",
-              helperText: "Ex. A",
+              type: "number",
+              helperText: "Ex. 1er.",
               isRequired: true,
               validate: "requiredField",
             },
@@ -3774,15 +3774,15 @@ export const choiceTree = {
               id: "Piano",
               label: "Suelo",
               type: "number",
-              helperText: "Ej. 1",
+              helperText: "Ej. 2",
               isRequired: true,
               validate: "requiredField",
             },
             {
               id: "Interno",
               label: "Unidad",
-              type: "number",
-              helperText: "Ej. 1",
+              type: "text",
+              helperText: "Ex. A",
               isRequired: false,
               validate: "requiredField",
             },
@@ -3790,17 +3790,17 @@ export const choiceTree = {
         },
         {
           type: "checkbox",
-          title: "¿Te mudas con otros miembros de tu familia?",
+          title: "\u00bfTe mudas solo?",
           controller: true,
           id: 17,
           answers: [
             {
               id: "sí",
-              nextQuestion: 18,
+              nextQuestion: 19,
             },
             {
               id: "no",
-              nextQuestion: 19,
+              nextQuestion: 18,
             },
           ],
         },
@@ -4568,7 +4568,7 @@ export const choiceTree = {
                 "\u0432\u0438\u0431\u0435\u0440\u0456\u0442\u044c \u0441\u0432\u043e\u044e \u0441\u0442\u0430\u0442\u044c",
             },
             {
-              id: "Stato Civile",
+              id: "Stato civile",
               label:
                 "\u0442\u0432\u0456\u0439 \u0441\u0456\u043c\u0435\u0439\u043d\u0438\u0439 \u0441\u0442\u0430\u043d?",
               type: "select",
@@ -4815,7 +4815,7 @@ export const choiceTree = {
             },
             {
               selected: false,
-              id: "C1_2_6",
+              id: "C1_2_16",
               label: "\u043a.\u0442.\u043d",
               nextQuestion: 16,
             },
@@ -4868,8 +4868,8 @@ export const choiceTree = {
             {
               id: "Scala",
               label: "\u0421\u0445\u043e\u0434\u0438",
-              type: "text",
-              helperText: "Екс-\"А\".",
+              type: "number",
+              helperText: "\u041d\u0430\u043f\u0440. 1-\u0439",
               isRequired: true,
               validate: "requiredField",
             },
@@ -4877,15 +4877,15 @@ export const choiceTree = {
               id: "Piano",
               label: "\u043f\u0456\u0434\u043b\u043e\u0433\u0430",
               type: "number",
-              helperText: "\u041d\u0430\u043f\u0440. 1",
+              helperText: "\u041d\u0430\u043f\u0440. 2",
               isRequired: true,
               validate: "requiredField",
             },
             {
               id: "Interno",
               label: "\u043e\u0434\u0438\u043d\u0438\u0446\u044f",
-              type: "number",
-              helperText: "\u041d\u0430\u043f\u0440. 1",
+              type: "text",
+              helperText: "\u041d\u0430\u043f\u0440. \u0410",
               isRequired: false,
             },
           ],
@@ -4893,16 +4893,17 @@ export const choiceTree = {
         {
           type: "checkbox",
           controller: true,
-          title: "Ви переїжджаєте з іншими членами вашої родини?",
+          title:
+            "\u0422\u0438 \u0440\u0443\u0445\u0430\u0454\u0448\u0441\u044f \u043e\u0434\u0438\u043d?",
           id: 17,
           answers: [
             {
-              id: "Так",
-              nextQuestion: 18,
+              id: "yes",
+              nextQuestion: 19,
             },
             {
-              id: "немає",
-              nextQuestion: 19,
+              id: "no",
+              nextQuestion: 18,
             },
           ],
         },
@@ -5707,7 +5708,7 @@ export const choiceTree = {
                 "\u0b89\u0b99\u0bcd\u0b95\u0bb3\u0bcd \u0baa\u0bbe\u0bb2\u0bbf\u0ba9\u0ba4\u0bcd\u0ba4\u0bc8 \u0ba4\u0bc7\u0bb0\u0bcd\u0bb5\u0bc1\u0b9a\u0bc6\u0baf\u0bcd\u0baf\u0bb5\u0bc1\u0bae\u0bcd",
             },
             {
-              id: "Stato Civile",
+              id: "Stato civile",
               label:
                 "\u0b89\u0b99\u0bcd\u0b95\u0bb3\u0bcd \u0ba4\u0bbf\u0bb0\u0bc1\u0bae\u0ba3 \u0ba8\u0bbf\u0bb2\u0bc8?",
               type: "select",
@@ -5955,7 +5956,7 @@ export const choiceTree = {
             },
             {
               selected: false,
-              id: "C1_2_6",
+              id: "C1_2_16",
               label: "Phd",
               nextQuestion: 16,
             },
@@ -6005,23 +6006,24 @@ export const choiceTree = {
             },
             {
               id: "Scala",
-              label: "\u0baa\u0b9f\u0bbf\u0b95\u0bcd\u0b95\u0b9f\u0bcd\u0b9f\u0bc1\u0b95\u0bb3\u0bcd",
+              label:
+                "\u0baa\u0b9f\u0bbf\u0b95\u0bcd\u0b95\u0b9f\u0bcd\u0b9f\u0bc1\u0b95\u0bb3\u0bcd",
               type: "text",
-              helperText: "முன்னாள் ஏ",
+              helperText: "Ex. 1\u0bb5\u0ba4\u0bc1",
             },
             {
               id: "Piano",
               label: "\u0ba4\u0bb0\u0bc8",
               type: "text",
               isRequired: true,
-              helperText: "எ.கா. 1",
+              helperText: "Ex. 2",
               validate: "requiredField",
             },
             {
               id: "Interno",
               label: "\u0b85\u0bb2\u0b95\u0bc1",
               type: "text",
-              helperText: "எ.கா. 1",
+              helperText: "Ex. 1",
             },
           ],
         },
@@ -6029,16 +6031,16 @@ export const choiceTree = {
           type: "checkbox",
           controller: true,
           title:
-            "உங்கள் குடும்பத்தின் மற்ற உறுப்பினர்களுடன் நீங்கள் இடம் மாறுகிறீர்களா?",
+            "\u0ba8\u0bc0\u0b99\u0bcd\u0b95\u0bb3\u0bcd \u0ba4\u0ba9\u0bbf\u0baf\u0bbe\u0b95 \u0ba8\u0b95\u0bb0\u0bcd\u0b95\u0bbf\u0bb1\u0bc0\u0bb0\u0bcd\u0b95\u0bb3\u0bbe?",
           id: 17,
           answers: [
             {
-              id: "ஆம்",
-              nextQuestion: 18,
+              id: "yes",
+              nextQuestion: 19,
             },
             {
-              id: "இல்லை",
-              nextQuestion: 19,
+              id: "no",
+              nextQuestion: 18,
             },
           ],
         },
@@ -6835,7 +6837,7 @@ export const choiceTree = {
               helperText: "\u0627\u062e\u062a\u0631 \u062c\u0646\u0633\u0643",
             },
             {
-              id: "Stato Civile",
+              id: "Stato civile",
               label:
                 "\u0627\u0644\u062d\u0627\u0644\u0629 \u0627\u0644\u0627\u062c\u062a\u0645\u0627\u0639\u064a\u0629\u061f",
               type: "select",
@@ -7078,7 +7080,7 @@ export const choiceTree = {
             },
             {
               selected: false,
-              id: "C1_2_6",
+              id: "C1_2_16",
               label: "\u062f\u0643\u062a\u0648\u0631\u0627\u0647",
               nextQuestion: 16,
             },
@@ -7132,37 +7134,39 @@ export const choiceTree = {
               id: "Scala",
               label: "\u0633\u0644\u0627\u0644\u0645",
               type: "text",
-              helperText: "مثال",
+              helperText:
+                "\u0627\u0644\u0633\u0627\u0628\u0642. \u0627\u0644\u0623\u0648\u0644",
             },
             {
               id: "Piano",
               label: "\u0623\u0631\u0636\u064a\u0629",
               type: "text",
               isRequired: true,
-              helperText: "مثال 1",
+              helperText: "\u0627\u0644\u0633\u0627\u0628\u0642. 2",
               validate: "requiredField",
             },
             {
               id: "Interno",
               label: "\u0648\u062d\u062f\u0629",
               type: "text",
-              helperText: "مثال 1",
+              helperText: "\u0627\u0644\u0633\u0627\u0628\u0642. 1",
             },
           ],
         },
         {
           type: "checkbox",
           controller: true,
-          title: "هل تنتقل مع أفراد آخرين من عائلتك؟",
+          title:
+            "\u0647\u0644 \u062a\u0646\u062a\u0642\u0644 \u0648\u062d\u062f\u0643\u061f",
           id: 17,
           answers: [
             {
-              id: "نعم",
-              nextQuestion: 18,
+              id: "yes",
+              nextQuestion: 19,
             },
             {
-              id: "لا",
-              nextQuestion: 19,
+              id: "no",
+              nextQuestion: 18,
             },
           ],
         },
@@ -7950,7 +7954,7 @@ export const choiceTree = {
                 "\u0986\u09aa\u09a8\u09be\u09b0 \u09b2\u09bf\u0999\u09cd\u0997 \u09a8\u09bf\u09b0\u09cd\u09ac\u09be\u099a\u09a8",
             },
             {
-              id: "Stato Civile",
+              id: "Stato civile",
               label:
                 "\u09a4\u09be\u09b0 \u09ac\u09c8\u09ac\u09be\u09b9\u09bf\u0995 \u0985\u09ac\u09b8\u09cd\u09a5\u09be?",
               type: "select",
@@ -8196,7 +8200,7 @@ export const choiceTree = {
             },
             {
               selected: false,
-              id: "C1_2_6",
+              id: "C1_2_16",
               label: "\u09aa\u09bf\u098f\u0987\u099a\u09a1\u09bf",
               nextQuestion: 16,
             },
@@ -8250,24 +8254,24 @@ export const choiceTree = {
             {
               id: "Scala",
               label: "\u09b8\u09bf\u0981\u09a1\u09bc\u09bf",
-              type: "text",
-              helperText: "উঃ এ",
+              type: "number",
+              helperText: "\u0989\u09a6\u09be\u0983 \u09e7\u09ae",
               isRequired: true,
               validate: "requiredField",
             },
             {
               id: "Piano",
               label: "\u09ab\u09cd\u09b2\u09cb\u09b0\u09bf\u0982",
-              type: "text",
-              helperText: "উদাঃ ১",
+              type: "number",
+              helperText: "\u0989\u09a6\u09be\u09b9\u09b0\u09a3 2",
               isRequired: true,
               validate: "requiredField",
             },
             {
               id: "Interno",
               label: "\u0987\u0989\u09a8\u09bf\u099f",
-              type: "text",
-              helperText: "উদাঃ ১",
+              type: "number",
+              helperText: "\u0989\u0983 \u098f",
               isRequired: false,
               validate: "requiredField",
             },
@@ -8277,16 +8281,16 @@ export const choiceTree = {
           type: "checkbox",
           controller: true,
           title:
-            "আপনি কি আপনার পরিবারের অন্যান্য সদস্যদের সাথে চলে যাচ্ছেন?",
+            "\u09a4\u09c1\u09ae\u09bf \u0995\u09bf \u098f\u0995\u09be \u099a\u09b2\u09be\u09ab\u09c7\u09b0\u09be \u0995\u09b0?",
           id: 17,
           answers: [
             {
-              id: "হ্যাঁ",
-              nextQuestion: 18,
+              id: "yes",
+              nextQuestion: 19,
             },
             {
-              id: "না",
-              nextQuestion: 19,
+              id: "no",
+              nextQuestion: 18,
             },
           ],
         },
