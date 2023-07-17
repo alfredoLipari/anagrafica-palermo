@@ -115,7 +115,7 @@ export const calculateComponentEnglishTree = (action) => {
 
     result.push({
       type: "checkbox",
-      title: "Does she/he has a job?",
+      title: "Does X have a job?",
       id: 40 + i + currentIndex,
       answers: [
         {
@@ -131,7 +131,7 @@ export const calculateComponentEnglishTree = (action) => {
 
     result.push({
       type: "select",
-      title: "What's her/his Non-professional status?",
+      title: "What is the professional status of X ?",
       label: "Select her/his Status",
       id: 41 + i + currentIndex,
       answers: [
@@ -170,7 +170,7 @@ export const calculateComponentEnglishTree = (action) => {
 
     result.push({
       type: "select",
-      title: "What's his/her professional status?",
+      title: "What is the status of X ?",
       label: "Select her/his Status",
       id: 42 + i + currentIndex,
 
@@ -213,7 +213,7 @@ export const calculateComponentEnglishTree = (action) => {
     result.push(
       {
         type: "checkbox",
-        title: "Does she/he has an Italian Driving License?",
+        title: "Does X have an Italian driving licence?",
         id: 43 + i + currentIndex,
         answers: [
           {
@@ -459,7 +459,7 @@ export const calculateComponentFrenchTree = (action) => {
 
     result.push({
       type: "checkbox",
-      title: "A-t-il/elle un emploi ?",
+      title: "X a-t-il un travail ?",
       id: 40 + i + currentIndex,
       answers: [
         {
@@ -475,7 +475,7 @@ export const calculateComponentFrenchTree = (action) => {
 
     result.push({
       type: "select",
-      title: "Quel est son statut de non-professionnel ?",
+      title: "Quel est le statut professionnel de X ?",
       label: "Sélectionnez son statut",
       id: 41 + i + currentIndex,
       answers: [
@@ -514,7 +514,7 @@ export const calculateComponentFrenchTree = (action) => {
 
     result.push({
       type: "select",
-      title: "Quel est son statut professionnel ?",
+      title: "Quel est le statut de X ?",
       label: "Sélectionnez son statut",
       id: 42 + i + currentIndex,
 
@@ -557,7 +557,7 @@ export const calculateComponentFrenchTree = (action) => {
     result.push(
       {
         type: "checkbox",
-        title: "A-t-il/elle un permis de conduire italien ?",
+        title: "X a-t-il un permis de conduire italien ?",
         id: 43 + i + currentIndex,
         answers: [
           {
@@ -805,7 +805,7 @@ export const calculateComponentSpanishTree = (action) => {
 
     result.push({
       type: "checkbox",
-      title: "¿Tiene trabajo?",
+      title: "¿ X tiene trabajo?",
       id: 40 + i + currentIndex,
       answers: [
         {
@@ -821,7 +821,7 @@ export const calculateComponentSpanishTree = (action) => {
 
     result.push({
       type: "select",
-      title: "¿Cuál es su estatus de no profesional?",
+      title: "¿Cuál es el estatus profesional de X ?",
       label: "Seleccione su estado",
       id: 41 + i + currentIndex,
       answers: [
@@ -860,7 +860,7 @@ export const calculateComponentSpanishTree = (action) => {
 
     result.push({
       type: "select",
-      title: "¿Cuál es su estatus profesional?",
+      title: "¿Cuál es el estado de X ?",
       label: "Seleccione su estado",
       id: 42 + i + currentIndex,
 
@@ -903,7 +903,7 @@ export const calculateComponentSpanishTree = (action) => {
     result.push(
       {
         type: "checkbox",
-        title: "¿Tiene él/ella un permiso de conducir italiano?",
+        title: "¿Tiene X un permiso de conducir italiano?",
         id: 43 + i + currentIndex,
         answers: [
           {
@@ -1151,7 +1151,7 @@ export const calculateComponentBengaliTree = (action) => {
 
     result.push({
       type: "checkbox",
-      title: "তার/তার কি চাকরি আছে?",
+      title: "क्या X के पास नौकरी है??",
       id: 40 + i + currentIndex,
       answers: [
         {
@@ -1167,7 +1167,7 @@ export const calculateComponentBengaliTree = (action) => {
 
     result.push({
       type: "select",
-      title: "তার/তার অ-পেশাদার অবস্থা কি?",
+      title: "X की व्यावसायिक स्थिति क्या है?",
       label: "তাকে/তার স্থিতি নির্বাচন করুন",
       id: 41 + i + currentIndex,
       answers: [
@@ -1206,7 +1206,7 @@ export const calculateComponentBengaliTree = (action) => {
 
     result.push({
       type: "select",
-      title: "তার পেশাগত অবস্থা কি?",
+      title: "X की स्थिति क्या है?",
       label: "তাকে/তার স্থিতি নির্বাচন করুন",
       id: 42 + i + currentIndex,
 
@@ -1249,7 +1249,7 @@ export const calculateComponentBengaliTree = (action) => {
     result.push(
       {
         type: "checkbox",
-        title: "তার/তার কি ইতালীয় ড্রাইভিং লাইসেন্স আছে?",
+        title: "X இடம் இத்தாலிய ஓட்டுநர் உரிமம் உள்ளதா?",
         id: 43 + i + currentIndex,
         answers: [
           {
@@ -1495,7 +1495,7 @@ export const calculateComponentArabTree = (action) => {
 
     result.push({
       type: "checkbox",
-      title: "هل هو / لديه عمل؟",
+      title: "هل لدى X وظيفة؟",
       id: 40 + i + currentIndex,
       answers: [
         {
@@ -1511,7 +1511,7 @@ export const calculateComponentArabTree = (action) => {
 
     result.push({
       type: "select",
-      title: "ما هي حالتها غير المهنية؟",
+      title: "ما هي المكانة المهنية لـ X؟",
       label: "حدد حالته / وضعه",
       id: 41 + i + currentIndex,
       answers: [
@@ -1550,7 +1550,7 @@ export const calculateComponentArabTree = (action) => {
 
     result.push({
       type: "select",
-      title: "ما هو وضعه المهني؟",
+      title: "ما هي حالة X ؟",
       label: "حدد حالته / وضعه",
       id: 42 + i + currentIndex,
 
@@ -1593,7 +1593,7 @@ export const calculateComponentArabTree = (action) => {
     result.push(
       {
         type: "checkbox",
-        title: "هل لديه / لديها رخصة قيادة إيطالية؟",
+        title: "هل يمتلك X رخصة قيادة إيطالية؟",
         id: 43 + i + currentIndex,
         answers: [
           {
@@ -1839,7 +1839,7 @@ export const calculateComponentUkrainianTree = (action) => {
 
     result.push({
       type: "checkbox",
-      title: "Чи є у неї/він робота?",
+      title: "у X є робота?",
       id: 40 + i + currentIndex,
       answers: [
         {
@@ -1855,7 +1855,7 @@ export const calculateComponentUkrainianTree = (action) => {
 
     result.push({
       type: "select",
-      title: "Який її/його непрофесійний статус?",
+      title: "Який професійний статус X ?",
       label: "Виберіть її/його статус",
       id: 41 + i + currentIndex,
       answers: [
@@ -1894,7 +1894,7 @@ export const calculateComponentUkrainianTree = (action) => {
 
     result.push({
       type: "select",
-      title: "Який його/її професійний статус?",
+      title: "Який статус X ?",
       label: "Виберіть її/його статус",
       id: 42 + i + currentIndex,
 
@@ -1937,7 +1937,7 @@ export const calculateComponentUkrainianTree = (action) => {
     result.push(
       {
         type: "checkbox",
-        title: "Чи має вона/він італійське водійське посвідчення?",
+        title: "Чи має X італійське водійське посвідчення??",
         id: 43 + i + currentIndex,
         answers: [
           {
@@ -2183,7 +2183,7 @@ export const calculateComponentTamilTree = (action) => {
 
     result.push({
       type: "checkbox",
-      title: "அவளுக்கு/அவருக்கு வேலை இருக்கிறதா?",
+      title: "X க்கு வேலை இருக்கிறதா?",
       id: 40 + i + currentIndex,
       answers: [
         {
@@ -2199,7 +2199,7 @@ export const calculateComponentTamilTree = (action) => {
 
     result.push({
       type: "select",
-      title: "அவள்/அவன் தொழில் அல்லாத நிலை என்ன?",
+      title: "X இன் தொழில்முறை நிலை என்ன?",
       label: "அவள்/அவரது நிலையைத் தேர்ந்தெடுக்கவும்",
       id: 41 + i + currentIndex,
       answers: [
@@ -2238,7 +2238,7 @@ export const calculateComponentTamilTree = (action) => {
 
     result.push({
       type: "select",
-      title: "அவருடைய/அவளுடைய தொழில் நிலை என்ன?",
+      title: "X இன் நிலை என்ன?",
       label: "அவள்/அவரது நிலையைத் தேர்ந்தெடுக்கவும்",
       id: 42 + i + currentIndex,
 
@@ -2281,7 +2281,7 @@ export const calculateComponentTamilTree = (action) => {
     result.push(
       {
         type: "checkbox",
-        title: "அவளிடம் இத்தாலிய ஓட்டுநர் உரிமம் உள்ளதா?",
+        title: "X இடம் இத்தாலிய ஓட்டுநர் உரிமம் உள்ளதா?",
         id: 43 + i + currentIndex,
         answers: [
           {
@@ -2534,11 +2534,11 @@ export const calculateComponentItalianTree = (action) => {
       id: 40 + i + currentIndex,
       answers: [
         {
-          id: "sì",
+          id: "Sì",
           nextQuestion: 42 + i + currentIndex,
         },
         {
-          id: "no",
+          id: "No",
           nextQuestion: 41 + i + currentIndex,
         },
       ],

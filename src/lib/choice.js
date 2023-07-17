@@ -1419,7 +1419,7 @@ export const choiceTree = {
               label: "votre statut marital ?",
               type: "select",
               options: ["unmarried", "married", "divorced", "widower"],
-              helperText: "s\u00e9lectionnez votre statut",
+              helperText: "s\u00e9lectionnez votre état civil",
               validate: "requiredField",
             },
             {
@@ -2175,7 +2175,7 @@ export const choiceTree = {
             {
               id: "I am a non-EU citizen",
               label: "Sono un cittadino extracomunitario",
-              nextQuestion: 33,
+              nextQuestion: 2,
               documentazione: [],
             },
             {
