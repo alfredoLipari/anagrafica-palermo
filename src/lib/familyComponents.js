@@ -2434,7 +2434,7 @@ export const calculateComponentItalianTree = (action) => {
           label: "Nome",
           type: "text",
           helperText: "Ex. Moussa",
-          validate: "RequiredField",
+          validate: "requiredField",
           isRequired: true,
           // add input validate
         },
@@ -2443,7 +2443,7 @@ export const calculateComponentItalianTree = (action) => {
           label: "Cognome",
           type: "text",
           helperText: "Ex. Semprini",
-          validate: "RequiredField",
+          validate: "requiredField",
           isRequired: true,
         },
         {
@@ -2452,7 +2452,7 @@ export const calculateComponentItalianTree = (action) => {
           type: "date",
           helperText: "Data di nascita",
           isRequired: true,
-          validate: "RequiredField",
+          validate: "requiredField",
           // add input validate
         },
         {
@@ -2460,7 +2460,7 @@ export const calculateComponentItalianTree = (action) => {
           label: "Luogo di nascita",
           type: "text",
           helperText: "Luogo di nascita",
-          validate: "RequiredField",
+          validate: "requiredField",
           isRequired: true,
         },
         {
@@ -2468,7 +2468,7 @@ export const calculateComponentItalianTree = (action) => {
           label: "Genere",
           type: "select",
           options: ["Maschile", "Femminile"],
-          validate: "RequiredField",
+          validate: "requiredField",
           isRequired: true,
           helperText: "scegli il genere",
           // add input validate
@@ -2479,7 +2479,7 @@ export const calculateComponentItalianTree = (action) => {
           type: "select",
           options: ["Celibe", "Nubile", "Sposato/a", "Divorziato/a", "Vedovo/a"],
           helperText: "scegli stato civile",
-          validate: "RequiredField",
+          validate: "requiredField",
           required: true,
         },
         {
@@ -2487,7 +2487,7 @@ export const calculateComponentItalianTree = (action) => {
           label: "Cittadinanza",
           type: "text",
           helperText: "Ex. Francese, Italiana, Egiziana...",
-          validate: "RequiredField",
+          validate: "requiredField",
           isRequired: true,
           // add input validate
         },
@@ -2495,8 +2495,8 @@ export const calculateComponentItalianTree = (action) => {
           id: "Codice Fiscale_" + i,
           label: "Codice Fiscale",
           type: "text",
-          helperText: "Ex. R5MRI88L73G273E",
-          validate: "RequiredField",
+          helperText: "Ex. R5MRI88L73G273EE",
+          validate: "requiredField",
           isRequired: true,
           // add input validate
         },
@@ -2521,7 +2521,7 @@ export const calculateComponentItalianTree = (action) => {
             "cugina"
           ],
           helperText: "Rapporto di parentela con il richiedente",
-          validate: "RequiredField",
+          validate: "requiredField",
           isRequired: true,
           // add input validate
         },
@@ -2530,7 +2530,7 @@ export const calculateComponentItalianTree = (action) => {
 
     result.push({
       type: "checkbox",
-      title: "ha un lavoro?",
+      title: "X ha un lavoro?",
       id: 40 + i + currentIndex,
       answers: [
         {
@@ -2546,7 +2546,7 @@ export const calculateComponentItalianTree = (action) => {
 
     result.push({
       type: "select",
-      title: "Cosa fa",
+      title: "Qual è lo status professionale di X ?",
       label: "Seleziona lo stato",
       id: 41 + i + currentIndex,
       answers: [
@@ -2585,7 +2585,7 @@ export const calculateComponentItalianTree = (action) => {
 
     result.push({
       type: "select",
-      title: "Cosa fa",
+      title: "Qual è lo status di X ?",
       label: "Seleziona il suo stato",
       id: 42 + i + currentIndex,
 
@@ -2628,15 +2628,15 @@ export const calculateComponentItalianTree = (action) => {
     result.push(
       {
         type: "checkbox",
-        title: "possiede una licenza di guida italiana?",
+        title: "X possiede una licenza di guida italiana?",
         id: 43 + i + currentIndex,
         answers: [
           {
-            id: "yes",
+            id: "Si",
             nextQuestion: 44 + i + currentIndex,
           },
           {
-            id: "no",
+            id: "No",
             nextQuestion: 45 + i + currentIndex,
           },
         ],
@@ -2693,7 +2693,7 @@ export const calculateComponentItalianTree = (action) => {
 
     result.push({
       type: "select",
-      title: "Qual è il livello di educazione di ",
+      title: "Qual è il livello di educazione di X ?",
       label: "Scegli il suo certificato scolastico",
       id: 45 + i + currentIndex,
 

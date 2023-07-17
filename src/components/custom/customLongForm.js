@@ -97,7 +97,7 @@ const CustomLongForm = ({ stateQuestions }) => {
   // decide the validation conditionally
   // decide the validation conditionally
   const validateInput = (value, reset) => {
-
+    console.log('value', value)
 
       switch (value) {
         case "requiredField":
@@ -125,7 +125,7 @@ const CustomLongForm = ({ stateQuestions }) => {
 
 
     stateQuestions.answers.forEach((answ, index) => {
-
+        console.log("answ.type")
       switch (answ.type) {
         case "select":
           containerColumn.push(
@@ -144,21 +144,22 @@ const CustomLongForm = ({ stateQuestions }) => {
           break;
         case "autocomplete":
           containerColumn.push(
-              <CustomAutosuggest
-                  keyAuto={answ.id}
-                  value={answers}
-                  autosuggestHandler={autosuggestHandler}
-                  tag={answ}
-                  country={country}
-                  error={error}
-              />
+            <CustomAutosuggest
+              keyAuto={answ.id}
+              value={answers}
+              autosuggestHandler={autosuggestHandler}
+              tag={answ}
+              country={country}
+              error={error}
+              questId={answ.id}
+            />
           );
           break;
         default:
           containerColumn.push(
               <Field
                   name={answ.id}
-                  validate={validateInput(answ.validate)}
+                  validate={validateInput(answ.validate, false)}
                   key={answ.id}
               >
                 {({ field }) => (

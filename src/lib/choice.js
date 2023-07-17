@@ -328,7 +328,7 @@ export const choiceTree = {
               // add input validate
             },
             {
-              id: "Stato Civile",
+              id: "Stato civile",
               label: "your marital status?",
               type: "select",
               options: ["unmarried", "married", "divorced", "widower"],
@@ -1415,7 +1415,7 @@ export const choiceTree = {
               helperText: "s\u00e9lectionnez votre sexe",
             },
             {
-              id: "Stato Civile",
+              id: "Stato civile",
               label: "votre statut marital ?",
               type: "select",
               options: ["unmarried", "married", "divorced", "widower"],
@@ -2175,7 +2175,7 @@ export const choiceTree = {
             {
               id: "I am a non-EU citizen",
               label: "Sono un cittadino extracomunitario",
-              nextQuestion:2,
+              nextQuestion: 33,
               documentazione: [],
             },
             {
@@ -2334,14 +2334,14 @@ export const choiceTree = {
               nextQuestion: 62,
             },
             {
-              id: "C1_1_4",
+              id: "C1_1_1",
               label: "Comune diverso Italiano",
-              nextQuestion: 8,
+              nextQuestion: 63,
             },
             {
-              id: "C1_1_1",
+              id: "C1_1_4",
               label: "Stesso comune interessato",
-              nextQuestion: 63,
+              nextQuestion: 8,
             },
             {
               id: "C_1_5",
@@ -2425,12 +2425,13 @@ export const choiceTree = {
               helperText: "Ex. 15/05/1998",
               validate: "requiredField",
               isRequired: true,
+              max: "2100-01-01",
             },
             {
               id: "Luogo di nascita",
               label: "Luogo di nascita",
               type: "text",
-              helperText: "Ex. Francia, Italia, Romania",
+              helperText: "Ex. Roma, Berlino, Parigi",
               autocomplete: true,
               isRequired: true,
               validate: "requiredField",
@@ -2442,10 +2443,10 @@ export const choiceTree = {
               options: ["Maschile", "Femminile"],
               validate: "requiredField",
               isRequired: true,
-              helperText: "seleziona il tuo sesso",
+              helperText: "seleziona il tuo genere",
             },
             {
-              id: "Stato Civile",
+              id: "Stato civile",
               label: "Stato civile",
               type: "select",
               options: [
@@ -2455,7 +2456,7 @@ export const choiceTree = {
                 "Divorziato/a",
                 "Vedovo/a",
               ],
-              helperText: "seleziona il tuo status",
+              helperText: "seleziona il tuo stato civile",
               validate: "requiredField",
               isRequired: true,
             },
@@ -2541,12 +2542,12 @@ export const choiceTree = {
             {
               selected: false,
               id: "C1_2_4",
-              label: "Lavoratore",
+              label: "Operaio e assimilati",
               nextQuestion: 14,
             },
             {
               selected: false,
-              id: "C1_2_6",
+              id: "C1_2_4",
               label: "Studente Lavoratore",
               nextQuestion: 14,
             },
@@ -2571,7 +2572,7 @@ export const choiceTree = {
             {
               selected: false,
               id: "C1_2_2",
-              label: "Dirigente / Impiegato",
+              label: "Dirigente Impiegato",
               nextQuestion: 14,
             },
           ],
@@ -2613,7 +2614,7 @@ export const choiceTree = {
               label: "Tipo di licenza",
               type: "text",
               helperText: "Ex. A,B,C",
-               validate: "requiredField",
+              validate: "requiredField",
               isRequired: true,
             },
             {
@@ -2834,8 +2835,8 @@ export const choiceTree = {
               id: "Sussiste il seguente vincolo rispetto al su indicato  componente della famiglia gi\u00c3\u00a0 residente",
               label: "Specificare il rapporto di parentela",
               type: "select",
-              helperText:
-                "Rapporto di parentela",
+              helperText: "Rapporto di parentela",
+              validate: "requiredField",
               isRequired: false,
               options: [
                 "Nessuno",
@@ -2850,6 +2851,7 @@ export const choiceTree = {
                 "Zio",
                 "Zia",
                 "Cugino",
+                "Cugina",
               ],
             },
           ],
@@ -2947,13 +2949,14 @@ export const choiceTree = {
               type: "text",
               validate: "requiredField",
               isRequired: true,
+              helperText: "Ex. F205",
               autocomplete: false,
             },
             {
               id: "foglio",
               label: "Foglio",
               type: "tel",
-              helperText: "3332423421",
+              helperText: "Ex. 1234",
               validate: "",
               isRequired: false,
             },
@@ -2963,12 +2966,14 @@ export const choiceTree = {
               type: "text",
               validate: "requiredField",
               isRequired: true,
+              helperText: "Ex. 1234",
             },
             {
               id: "subalterno",
               label: "Subalterno",
               type: "text",
               validate: "requiredField",
+              helperText: "Ex. 1234",
               isRequired: true,
             },
           ],
@@ -3049,7 +3054,7 @@ export const choiceTree = {
           answers: [
             {
               id: "dati utili 1",
-              label: "Scrivere i dettagli",
+              label: "Indicare gli estremi dell'atto e riferimenti catastali",
               type: "text",
               validate: "requiredField",
               isRequired: true,
@@ -3099,7 +3104,7 @@ export const choiceTree = {
             },
             {
               id: "Relazione_di_parentela",
-              label: "Relativo",
+              label: "Relazione di parentela",
               type: "select",
               validate: "requiredField",
               isRequired: true,
@@ -3165,25 +3170,25 @@ export const choiceTree = {
           answers: [
             {
               selected: false,
-              id: "10_1_1",
+              id: "C10_1_1",
               label: "Propriet\u00e0",
               nextQuestion: 34,
             },
             {
               selected: false,
-              id: "10_1_2",
+              id: "C10_1_2",
               label: "Locazione",
               nextQuestion: 34,
             },
             {
               selected: false,
-              id: "10_1_3",
+              id: "C10_1_3",
               label: "Comodato d'uso",
               nextQuestion: 34,
             },
             {
               selected: false,
-              id: "10_1_4",
+              id: "C10_1_4",
               label: "Usufrutto",
               nextQuestion: 34,
             },
@@ -3490,7 +3495,7 @@ export const choiceTree = {
               helperText: "seleccione su g\u00e9nero",
             },
             {
-              id: "Stato Civile",
+              id: "Stato civile",
               label: "\u00bfSu estado civil?",
               type: "select",
               options: ["unmarried", "married", "divorced", "widower"],
@@ -3509,7 +3514,7 @@ export const choiceTree = {
               id: "Codice Fiscale",
               label: "C\u00f3digo fiscal",
               type: "text",
-              helperText: "Ex. R5MRI88L73G273E",
+              helperText: "Ex. R5MRI88L73G273ES",
               validate: "fiscalCodeField",
               isRequired: true,
             },
@@ -4586,7 +4591,7 @@ export const choiceTree = {
               id: "Codice Fiscale",
               label: "\u041a\u043e\u0434\u0435\u043a\u0441 Fiscale",
               type: "text",
-              helperText: "\u041d\u0430\u043f\u0440. R5MRI88L73G273E",
+              helperText: "\u041d\u0430\u043f\u0440. R5MRI88L73G273ES",
               validate: "fiscalCodeField",
               isRequired: true,
             },
@@ -5726,7 +5731,7 @@ export const choiceTree = {
               label:
                 "\u0b95\u0bcb\u0b9f\u0bbf\u0bb8\u0bcd \u0b83\u0baa\u0bbf\u0bb8\u0bcd\u0b95\u0bc7\u0bb2\u0bcd",
               type: "text",
-              helperText: "Ex. R5MRI88L73G273E",
+              helperText: "Ex. R5MRI88L73G273ES",
               validate: "fiscalCodeField",
               isRequired: true,
             },
@@ -6853,7 +6858,7 @@ export const choiceTree = {
                 "\u0643\u0648\u062f\u0633 \u0641\u064a\u0633\u0643\u0627\u0644\u064a",
               type: "text",
               helperText:
-                "\u0627\u0644\u0633\u0627\u0628\u0642. R5MRI88L73G273E",
+                "\u0627\u0644\u0633\u0627\u0628\u0642. R5MRI88L73G273ES",
               validate: "fiscalCodeField",
               isRequired: true,
             },
@@ -7968,7 +7973,7 @@ export const choiceTree = {
               label:
                 "\u099f\u09cd\u09af\u09be\u0995\u09cd\u09b8 \u0986\u0987\u09a1\u09bf \u0995\u09cb\u09a1",
               type: "text",
-              helperText: "\u09af\u09c7\u09ae\u09a8 R5MRI88L73G273E",
+              helperText: "\u09af\u09c7\u09ae\u09a8 R5MRI88L73G273ES",
               validate: "fiscalCodeField",
               isRequired: true,
             },

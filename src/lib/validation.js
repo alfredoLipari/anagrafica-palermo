@@ -175,13 +175,19 @@ export const validateCountry = (values, autosuggestAnsw, language) => {
   let isValidated = "";
   let error = false;
   let newObject = { ...values };
+  console.log(autosuggestAnsw)
+
+  // check if the language is different from english
+  if(language !== 'English'){
+    return autosuggestAnsw;
+  }
   // dispatch also this answers
   Object.keys(autosuggestAnsw).map((key) => {
     // validate the result
     isValidated = Object.keys(CountryAndCity).find(
         (country) => country === autosuggestAnsw[key]
     );
-    if (isValidated || language !== 'English') {
+    if (isValidated) {
       newObject["Indicare lo Stato estero di provenienza"] =
           autosuggestAnsw[key];
       return newObject;

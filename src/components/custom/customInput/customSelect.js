@@ -41,10 +41,13 @@ const CustomSelect = ({ stateQuestion }) => {
         color="#000"
         padding={{ base: 5, md: 0 }}
       >
-        {stateQuestion.title}{" "}
-        {state.familyName !== "" &&
-          state.familyName.charAt(0).toUpperCase() + state.familyName.slice(1)} 
-
+        {state.familyName !== ""
+          ? stateQuestion.title.replace(
+              "X",
+              state.familyName.charAt(0).toUpperCase() +
+                state.familyName.slice(1)
+            )
+          : stateQuestion.title}
       </Text>
       <Select
         iconColor="#0E78E2"
@@ -52,7 +55,7 @@ const CustomSelect = ({ stateQuestion }) => {
         color="#000"
         placeholder={stateQuestion.label}
         width={{ base: "75%", md: "25%" }}
-        fontSize="xl"
+        fontSize="md"
         marginTop="10"
         onChange={(something) => setSelectAnswer(something.target.value)}
         bg="white"
