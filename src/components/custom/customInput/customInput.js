@@ -26,6 +26,7 @@ const CustomInput = (props) => {
         <Input
           {...props}
           type={props.state.type}
+          max={props.state.type ? "2999-12-31" : ""}
           textColor={"#404B57"}
           border="none"
           borderBottom="1px"
