@@ -169,7 +169,7 @@ const Footer = () => {
                   mr="1em"
                   display={{ base: "none", lg: "block" }}
                 >
-                  V. 2.1.0
+                  V. 2.1.1
                 </Text>
               </Flex>
             </Flex>
