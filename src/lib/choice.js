@@ -149,7 +149,7 @@ export const choiceTree = {
             },
             {
               id: "f.i",
-              label: "Financially independent (no worker)",
+              label: "Unemployed",
               nextQuestion: 4,
               documentazione: [
                 "copy of a valid ID.*",
@@ -1255,8 +1255,7 @@ export const choiceTree = {
             },
             {
               id: "f.i",
-              label:
-                "Ind\u00e9pendant financi\u00e8rement (pas de travailleur)",
+              label: "Sans emploi",
               nextQuestion: 4,
               documentazione: [
                 "copie d'une pièce d'identité valide.*",
@@ -2279,7 +2278,7 @@ export const choiceTree = {
             },
             {
               id: "f.i",
-              label: "Finanziariamente indipendente (disoccupato)",
+              label: "Disoccupato",
               nextQuestion: 4,
               documentazione: [
                 "copia di un documento di identit\u00c3\u00a0 valido.*",
@@ -3337,7 +3336,7 @@ export const choiceTree = {
             },
             {
               id: "f.i",
-              label: "Independiente econ\u00f3micamente (sin trabajador)",
+              label: "Desempleados",
               nextQuestion: 4,
               documentazione: [
                 "copia de un documento de identidad válido",
@@ -4385,8 +4384,7 @@ export const choiceTree = {
             },
             {
               id: "f.i",
-              label:
-                "\u0424\u0456\u043d\u0430\u043d\u0441\u043e\u0432\u043e \u043d\u0435\u0437\u0430\u043b\u0435\u0436\u043d\u0438\u0439 (\u0431\u0435\u0437 \u043f\u0440\u0430\u0446\u0456\u0432\u043d\u0438\u043a\u0430)",
+              label: "Безробітний",
               nextQuestion: 4,
               documentazione: [
                 "копія дійсного посвідчення особи.*",
@@ -5530,8 +5528,7 @@ export const choiceTree = {
             },
             {
               id: "f.i",
-              label:
-                "\u0ba8\u0bbf\u0ba4\u0bbf \u0bb0\u0bc0\u0ba4\u0bbf\u0baf\u0bbe\u0b95 \u0b9a\u0bc1\u0ba4\u0ba8\u0bcd\u0ba4\u0bbf\u0bb0\u0bae\u0bbe\u0ba9\u0bb5\u0bb0\u0bcd (\u0ba4\u0bca\u0bb4\u0bbf\u0bb2\u0bbe\u0bb3\u0bb0\u0bcd \u0b87\u0bb2\u0bcd\u0bb2\u0bc8)",
+              label: "வேலையில்லாதவர்",
               nextQuestion: 4,
               documentazione: [
                 "சரியான ஐடியின் நகல்.*",
@@ -6662,8 +6659,7 @@ export const choiceTree = {
             },
             {
               id: "f.i",
-              label:
-                "\u0645\u0633\u062a\u0642\u0644 \u0645\u0627\u0644\u064a\u0627 (\u0644\u0627 \u0639\u0627\u0645\u0644)",
+              label: "غير موظف",
               nextQuestion: 4,
               documentazione: [
                 "نسخة من هوية صالحة. *",
@@ -7783,8 +7779,7 @@ export const choiceTree = {
             },
             {
               id: "f.i",
-              label:
-                "\u0986\u09b0\u09cd\u09a5\u09bf\u0995\u09ad\u09be\u09ac\u09c7 \u09b8\u09cd\u09ac\u09be\u09a7\u09c0\u09a8 (\u0995\u09cb\u09a8 \u0995\u09b0\u09cd\u09ae\u09c0 \u09a8\u09af\u09bc)",
+              label: "বেকার",
               nextQuestion: 4,
               documentazione: [
                 "একটি বৈধ আইডি নথির অনুলিপি।*",
