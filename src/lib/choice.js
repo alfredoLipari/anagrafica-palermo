@@ -312,10 +312,11 @@ export const choiceTree = {
             {
               id: "Luogo di nascita",
               label: "Where were you born?",
-              type: "autocomplete",
+              type: "text",
               helperText: "Indicate your city of birth",
               autocomplete: true,
               isRequired: true,
+              validate: "requiredField",
             },
             {
               id: "Sesso",

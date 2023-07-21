@@ -1,6 +1,28 @@
+import React, {useState, useEffect} from "react";
 import { Select, FormHelperText, FormControl } from "@chakra-ui/react";
 
+export let selected = false;
+export const resetSelectedSelect = () => selected = false;
+
 const CustomInputSelect = (props) => {
+
+  const [selectedScreen, setSelectedScreen] = useState(selected);
+
+  const onFocusHanlder = () => {  
+    selected = true;
+    setSelectedScreen(selected)
+  }
+
+  useEffect(() => {
+    console.log('called!', selected)
+    if(!selected){
+      setSelectedScreen(selected)
+    }
+  }, [selected])
+
+  console.log(props.error.errors[props.state.id])
+  console.log('errrr',props.error)
+
   return (
     <FormControl>
       <Select
@@ -23,6 +45,7 @@ const CustomInputSelect = (props) => {
         id={props.state.id}
         marginTop="8px"
         name={props.state.id}
+        onFocus={onFocusHanlder}
       >
         {props.state.options.map((option) => {
           return (
@@ -35,12 +58,12 @@ const CustomInputSelect = (props) => {
       <FormHelperText
         marginBottom="10"
         color={
-          props.error.errors[props.state.id] !== undefined
+          props.error.errors[props.state.id] !== undefined && !selectedScreen
             ? "#D2072A"
             : "#718096"
         }
       >
-        {props.error.errors[props.state.id] !== undefined
+        {props.error.errors[props.state.id] !== undefined && !selectedScreen
           ? props.error.errors[props.state.id]
           : props.state.helperText + (props.state.isRequired ? " *" : "")}
       </FormHelperText>

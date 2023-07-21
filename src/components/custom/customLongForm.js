@@ -97,7 +97,6 @@ const CustomLongForm = ({ stateQuestions }) => {
   // decide the validation conditionally
   // decide the validation conditionally
   const validateInput = (value, reset) => {
-    console.log('value', value)
 
       switch (value) {
         case "requiredField":
@@ -125,7 +124,6 @@ const CustomLongForm = ({ stateQuestions }) => {
 
 
     stateQuestions.answers.forEach((answ, index) => {
-        console.log("answ.type")
       switch (answ.type) {
         case "select":
           containerColumn.push(
@@ -133,7 +131,7 @@ const CustomLongForm = ({ stateQuestions }) => {
                   key={answ.id}
                   id={answ.id}
                   name={answ.id}
-                  validate={validateInput(answ.validate, reset)}
+                  validate={validateInput(answ.validate, false)}
 
               >
                 {({ field }) => (

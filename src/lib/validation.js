@@ -5,6 +5,8 @@
 import CountryAndCity from "./CountryAndCity.json";
 import React from "react";
 import {Language} from "../App";
+import { resetSelected } from "../components/custom/customInput/customInput";
+import { resetSelectedSelect } from "../components/custom/customInput/customInputSelect";
 
 // write validators
 
@@ -12,8 +14,6 @@ import {Language} from "../App";
 //todo make string translated
 
 export const validateTextTranslated = (lang) => {
-
-  console.log("state", lang)
 
   switch (lang) {
     case "Italian":
@@ -112,7 +112,9 @@ export const validatePhoneNumberTranslated = (lang) => {
 
 export const validateText = (value) => {
   let error;
-
+  resetSelected();
+  resetSelectedSelect();
+  console.log('value', value  )
 
   if (value === "" || value === undefined) {
     error = validateTextTranslated(Language);
@@ -175,7 +177,6 @@ export const validateCountry = (values, autosuggestAnsw, language) => {
   let isValidated = "";
   let error = false;
   let newObject = { ...values };
-  console.log(autosuggestAnsw)
 
   // check if the language is different from english
   if(language !== 'English'){

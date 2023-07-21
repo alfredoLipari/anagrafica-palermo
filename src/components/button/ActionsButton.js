@@ -27,8 +27,6 @@ const ActionsButton = (props) => {
 
   const translateContinueButton = () => {
 
-    console.log(props?.state.language || Language)
-
     switch (props?.state.language || Language) {
       case "Italian":
         return "Continua";
