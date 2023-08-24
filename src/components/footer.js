@@ -52,7 +52,7 @@ const Footer = () => {
               fontWeight="bold"
               marginY={{ base: "1em", md: "0em" }}
             >
-              Next Integration
+              Devra
             </Text>
           </Flex>
 
@@ -120,6 +120,8 @@ const Footer = () => {
                   fontWeight="bold"
                   marginY={{ base: "2", md: 0 }}
                   mr="1em"
+                  href="https://comune.palermo.it/credits.php"
+                  isExternal
                 >
                   Credits
                 </Link>
@@ -129,6 +131,8 @@ const Footer = () => {
                   fontWeight="bold"
                   marginY={{ base: "2", md: 0 }}
                   mr="1em"
+                  href="https://comune.palermo.it/note-legali.php"
+                  isExternal
                 >
                   Note legali
                 </Link>
@@ -138,6 +142,8 @@ const Footer = () => {
                   fontWeight="black"
                   marginY={{ base: "2", md: 0 }}
                   mr="1em"
+                  href="https://comune.palermo.it/cookie-policy.php"
+                  isExternal
                 >
                   Cookie policy
                 </Link>
@@ -149,6 +155,8 @@ const Footer = () => {
                   fontWeight="bold"
                   marginY={{ base: "2", md: 0 }}
                   mr="1em"
+                  href="https://comune.palermo.it/mappa-sito.php"
+                  isExternal
                 >
                   Mappa del sito
                 </Link>
@@ -158,6 +166,8 @@ const Footer = () => {
                   fontWeight="bold"
                   marginY={{ base: "2", md: 0 }}
                   mr="1em"
+                  href="https://comune.palermo.it/accessibilita.php"
+                  isExternal
                 >
                   Dichiarazione di accessibilità
                 </Link>
@@ -169,7 +179,7 @@ const Footer = () => {
                   mr="1em"
                   display={{ base: "none", lg: "block" }}
                 >
-                  V. 2.1.2
+                  V. 2.1.3
                 </Text>
               </Flex>
             </Flex>
