@@ -720,7 +720,7 @@ export const choiceTree = {
               validate: "requiredField",
             },
             {
-              id: "Luogo",
+              id: "Data_Nascita_6x",
               label: "Date of birth",
               type: "date",
               helperText: "DD/MM/YYYY",
@@ -729,7 +729,7 @@ export const choiceTree = {
               // add input validate
             },
             {
-              id: "Luogo di nascita_6",
+              id: "Luogo_6x",
               label: "Place of Birth",
               type: "text",
               helperText: "Indicate his/her city of birth",
@@ -742,6 +742,7 @@ export const choiceTree = {
               label: "Specify the family relationship",
               type: "select",
               options: [
+                "None",
                 "Mother",
                 "Father",
                 "Son",
@@ -1774,7 +1775,7 @@ export const choiceTree = {
               validate: "requiredField",
             },
             {
-              id: "Luogo",
+              id: "Data_Nascita_6x",
               label: "Date de naissance",
               type: "date",
               helperText: "DD/MM/YYYY",
@@ -1782,7 +1783,7 @@ export const choiceTree = {
               validate: "requiredField",
             },
             {
-              id: "Luogo di nascita_6",
+              id: "Luogo_6x",
               label: "Lieu de naissance",
               type: "text",
               helperText: "Indiquez votre ville de naissance",
@@ -2545,13 +2546,7 @@ export const choiceTree = {
             {
               selected: false,
               id: "C1_2_4",
-              label: "Operaio e assimilati",
-              nextQuestion: 14,
-            },
-            {
-              selected: false,
-              id: "C1_2_4",
-              label: "Studente Lavoratore",
+              label: "Operaio / Studente Lavoratore",
               nextQuestion: 14,
             },
             {
@@ -2819,7 +2814,15 @@ export const choiceTree = {
               validate: "requiredField",
             },
             {
-              id: "Luogo",
+              id: "Luogo_6x",
+              label: "Luogo",
+              type: "text",
+              helperText: "Indichi la sua citt\u00e0 di nascita",
+              isRequired: true,
+              validate: "requiredField",
+            },
+            {
+              id: "Data_Nascita_6x",
               label: "Data di nascita",
               type: "date",
               helperText: "GG/MM/AAAA",
@@ -2827,15 +2830,7 @@ export const choiceTree = {
               validate: "requiredField",
             },
             {
-              id: "Luogo di nascita_6",
-              label: "Luogo di nascita",
-              type: "text",
-              helperText: "Indichi la sua citt\u00e0 di nascita",
-              isRequired: true,
-              validate: "requiredField",
-            },
-            {
-              id: "Sussiste il seguente vincolo rispetto al su indicato  componente della famiglia gi\u00c3\u00a0 residente",
+              id: "Sussiste il seguente vincolo rispetto al su indicato  componente della famiglia già residente",
               label: "Specificare il rapporto di parentela",
               type: "select",
               helperText: "Rapporto di parentela",
@@ -3854,7 +3849,7 @@ export const choiceTree = {
               validate: "requiredField",
             },
             {
-              id: "Luogo",
+              id: "Data_Nascita_6x",
               label: "Fecha de nacimiento",
               type: "date",
               helperText: "DD/MM/AAAA",
@@ -3862,7 +3857,7 @@ export const choiceTree = {
               validate: "requiredField",
             },
             {
-              id: "Luogo di nascita_6",
+              id: "Luogo_6x",
               label: "Lugar de nacimiento",
               type: "text",
               helperText: "Indique su ciudad de nacimiento",
@@ -4962,7 +4957,7 @@ export const choiceTree = {
               validate: "requiredField",
             },
             {
-              id: "Luogo",
+              id: "Data_Nacita_6x",
               label:
                 "\u0414\u0430\u0442\u0430 \u043d\u0430\u0440\u043e\u0434\u0436\u0435\u043d\u043d\u044f",
               type: "date",
@@ -4971,7 +4966,7 @@ export const choiceTree = {
               validate: "requiredField",
             },
             {
-              id: "Luogo di nascita_6",
+              id: "Luogo_6x",
               label:
                 "\u041c\u0456\u0441\u0446\u0435 \u043d\u0430\u0440\u043e\u0434\u0436\u0435\u043d\u043d\u044f",
               type: "text",
@@ -6101,7 +6096,7 @@ export const choiceTree = {
               validate: "requiredField",
             },
             {
-              id: "Luogo",
+              id: "Data_Nascita_6x",
               label:
                 "\u0baa\u0bbf\u0bb1\u0ba8\u0bcd\u0ba4 \u0ba4\u0bc7\u0ba4\u0bbf",
               type: "date",
@@ -6110,7 +6105,7 @@ export const choiceTree = {
               validate: "requiredField",
             },
             {
-              id: "Luogo di nascita_6",
+              id: "Luogo_6x",
               label:
                 "\u0baa\u0bbf\u0bb1\u0ba8\u0bcd\u0ba4 \u0b87\u0b9f\u0bae\u0bcd",
               type: "text",
@@ -7228,7 +7223,7 @@ export const choiceTree = {
               validate: "requiredField",
             },
             {
-              id: "Luogo",
+              id: "Data_Nascita_6x",
               label:
                 "\u062a\u0627\u0631\u064a\u062e \u0627\u0644\u0645\u064a\u0644\u0627\u062f",
               type: "date",
@@ -7238,7 +7233,7 @@ export const choiceTree = {
               validate: "requiredField",
             },
             {
-              id: "Luogo di nascita_6",
+              id: "Luogo_6x",
               label:
                 "\u0645\u0643\u0627\u0646 \u0627\u0644\u0645\u064a\u0644\u0627\u062f",
               type: "text",
@@ -8351,7 +8346,7 @@ export const choiceTree = {
               validate: "requiredField",
             },
             {
-              id: "Luogo",
+              id: "Data_Nascita_6x",
               label: "\u099c\u09a8\u09cd\u09ae \u09a4\u09be\u09b0\u09bf\u0996",
               type: "date",
               helperText: "DD/MM/YYYY",
@@ -8359,7 +8354,7 @@ export const choiceTree = {
               validate: "requiredField",
             },
             {
-              id: "Luogo di nascita_6",
+              id: "Luogo_6x",
               label: "\u099c\u09a8\u09cd\u09ae\u09b8\u09cd\u09a5\u09be\u09a8",
               type: "text",
               helperText:
