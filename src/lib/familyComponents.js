@@ -7,7 +7,6 @@ export const calculateComponentEnglishTree = (action) => {
   let currentIndex = 0;
 
   for (let i = 2; i <= parseInt(action.answer) + 1; i++) {
-    console.log("Iindex: ", i);
     if (page === 3) {
       moduls = 1;
     }
@@ -17,6 +16,7 @@ export const calculateComponentEnglishTree = (action) => {
       title: "Component N." + (i - 1),
       id: 39 + i + currentIndex,
       parentId: 4,
+      firstQuestion: true,
       nextQuestion: 40 + i + currentIndex,
       answers: [
         {
@@ -235,14 +235,14 @@ export const calculateComponentEnglishTree = (action) => {
         nextQuestion: 45 + i + currentIndex,
         answers: [
           {
-            id: "Numero",
+            id: "Numero_" + i,
             label: "Number",
             type: "text",
             helperText: "Ex. 91828930",
             isRequired: false,
           },
           {
-            id: "Patente tipo",
+            id: "Patente tipo_" + i,
             label: "License Type",
             type: "text",
             helperText: "Ex. A,B,C",
@@ -250,14 +250,14 @@ export const calculateComponentEnglishTree = (action) => {
             // add input validate
           },
           {
-            id: "Data di rilascio",
+            id: "Data di rilascio_" + i,
             label: "Release Date",
             type: "Date",
             helperText: "Release Date",
             isRequired: false,
           },
           {
-            id: "Organo di rilascio",
+            id: "Organo di rilascio_" + i,
             label: "Issuing body",
             type: "text",
             helperText: "Motorizzazione",
@@ -265,7 +265,7 @@ export const calculateComponentEnglishTree = (action) => {
             isRequired: false,
           },
           {
-            id: "Provincia di",
+            id: "Provincia di_" + i,
             label: "Province",
             type: "text",
             helperText: "Palermo",
@@ -358,6 +358,7 @@ export const calculateComponentFrenchTree = (action) => {
     result.push({
       type: "longform",
       title: "Component N." + (i - 1),
+      firstQuestion: true,
       id: 39 + i + currentIndex,
       parentId: 4,
       nextQuestion: 40 + i + currentIndex,
@@ -580,14 +581,14 @@ export const calculateComponentFrenchTree = (action) => {
         nextQuestion: 45 + i + currentIndex,
         answers: [
           {
-            id: "Numero",
+            id: "Numero_" + i,
             label: "Nombre",
             type: "text",
             helperText: "Ex. 91828930",
             isRequired: false,
           },
           {
-            id: "Patente tipo",
+            id: "Patente tipo_" + i,
             label: "Type de licence",
             type: "text",
             helperText: "Ex. ABC",
@@ -595,7 +596,7 @@ export const calculateComponentFrenchTree = (action) => {
             // add input validate
           },
           {
-            id: "Data di rilascio",
+            id: "Data di rilascio_" + i,
             label: "Date de sortie",
             type: "Date",
             helperText: "Date de sortie",
@@ -603,7 +604,7 @@ export const calculateComponentFrenchTree = (action) => {
             isRequired: false,
           },
           {
-            id: "Organo di rilascio",
+            id: "Organo di rilascio_" + i,
             label: "Organisme émetteur",
             type: "text",
             helperText: "Motorisation",
@@ -611,7 +612,7 @@ export const calculateComponentFrenchTree = (action) => {
             isRequired: false,
           },
           {
-            id: "Provincia di",
+            id: "Provincia di_" + i,
             label: "Province",
             type: "text",
             helperText: "Palerme",
@@ -703,6 +704,7 @@ export const calculateComponentSpanishTree = (action) => {
 
     result.push({
       type: "longform",
+      firstQuestion: true,
       title: "Component N." + (i - 1),
       id: 39 + i + currentIndex,
       parentId: 4,
@@ -926,14 +928,14 @@ export const calculateComponentSpanishTree = (action) => {
         nextQuestion: 45 + i + currentIndex,
         answers: [
           {
-            id: "Numero",
+            id: "Numero_" + i,
             label: "Número",
             type: "text",
             helperText: "Ex. 91828930",
             isRequired: false,
           },
           {
-            id: "Patente tipo",
+            id: "Patente tipo_" + i,
             label: "Tipo de licencia",
             type: "text",
             helperText: "Ex. A B C",
@@ -941,7 +943,7 @@ export const calculateComponentSpanishTree = (action) => {
             // add input validate
           },
           {
-            id: "Data di rilascio",
+            id: "Data di rilascio_" + i,
             label: "Fecha de lanzamiento",
             type: "Date",
             helperText: "Fecha de lanzamiento",
@@ -949,7 +951,7 @@ export const calculateComponentSpanishTree = (action) => {
             isRequired: false,
           },
           {
-            id: "Organo di rilascio",
+            id: "Organo di rilascio_" + i,
             label: "Organismo emisor",
             type: "text",
             helperText: "Motorizzazione",
@@ -957,7 +959,7 @@ export const calculateComponentSpanishTree = (action) => {
             isRequired: false,
           },
           {
-            id: "Provincia di",
+            id: "Provincia di_" + i,
             label: "Provincia",
             type: "text",
             helperText: "palermo",
@@ -1049,6 +1051,7 @@ export const calculateComponentBengaliTree = (action) => {
 
     result.push({
       type: "longform",
+      firstQuestion: true,
       title: "উপাদান সংখ্যা: " + (i - 1),
       id: 39 + i + currentIndex,
       parentId: 4,
@@ -1271,14 +1274,14 @@ export const calculateComponentBengaliTree = (action) => {
         nextQuestion: 45 + i + currentIndex,
         answers: [
           {
-            id: "Numero",
+            id: "Numero_" + i,
             label: "সংখ্যা",
             type: "text",
             helperText: "যেমন 91828930",
             isRequired: false,
           },
           {
-            id: "Patente tipo",
+            id: "Patente tipo_" + i,
             label: "লাইসেন্সের ধরন",
             type: "text",
             helperText: "যেমন A, B, C",
@@ -1286,7 +1289,7 @@ export const calculateComponentBengaliTree = (action) => {
             // add input validate
           },
           {
-            id: "Data di rilascio",
+            id: "Data di rilascio_" + i,
             label: "মুক্তির তারিখ",
             type: "Date",
             helperText: "মুক্তির তারিখ",
@@ -1294,7 +1297,7 @@ export const calculateComponentBengaliTree = (action) => {
             isRequired: false,
           },
           {
-            id: "Organo di rilascio",
+            id: "Organo di rilascio_" + i,
             label: "শরীর দেখানো",
             type: "text",
             helperText: "মোটরাইজেশন",
@@ -1302,7 +1305,7 @@ export const calculateComponentBengaliTree = (action) => {
             isRequired: false,
           },
           {
-            id: "Provincia di",
+            id: "Provincia di_" + i,
             label: "প্রদেশ",
             type: "text",
             helperText: "পালেরমো",
@@ -1394,6 +1397,7 @@ export const calculateComponentArabTree = (action) => {
 
     result.push({
       type: "longform",
+      firstQuestion: true,
       title: "رقم المكون " + (i - 1),
       id: 39 + i + currentIndex,
       parentId: 4,
@@ -1615,14 +1619,14 @@ export const calculateComponentArabTree = (action) => {
         nextQuestion: 45 + i + currentIndex,
         answers: [
           {
-            id: "Numero",
+            id: "Numero_" + i,
             label: "رقم",
             type: "text",
             helperText: "السابق. 91828930",
             isRequired: false,
           },
           {
-            id: "Patente tipo",
+            id: "Patente tipo_" + i,
             label: "نوع الرخصة",
             type: "text",
             helperText: "السابق. أ ، ب ، ج",
@@ -1630,14 +1634,14 @@ export const calculateComponentArabTree = (action) => {
             // add input validate
           },
           {
-            id: "Data di rilascio",
+            id: "Data di rilascio_" + i,
             label: "تاريخ الافراج عنه",
             type: "Date",
             helperText: "تاريخ الافراج عنه",
             isRequired: false,
           },
           {
-            id: "Organo di rilascio",
+            id: "Organo di rilascio_" + i,
             label: "الجهة المصدرة",
             type: "text",
             helperText: "Motorizzazione",
@@ -1645,7 +1649,7 @@ export const calculateComponentArabTree = (action) => {
             isRequired: false,
           },
           {
-            id: "Provincia di",
+            id: "Provincia di_" + i,
             label: "مقاطعة",
             type: "text",
             helperText: "باليرمو",
@@ -1737,6 +1741,7 @@ export const calculateComponentUkrainianTree = (action) => {
 
     result.push({
       type: "longform",
+      firstQuestion: true,
       title: "Component N." + (i - 1),
       id: 39 + i + currentIndex,
       parentId: 4,
@@ -1959,14 +1964,14 @@ export const calculateComponentUkrainianTree = (action) => {
         nextQuestion: 45 + i + currentIndex,
         answers: [
           {
-            id: "Numero",
+            id: "Numero_" + i,
             label: "Номер",
             type: "text",
             helperText: "Пр. 91828930",
             isRequired: false,
           },
           {
-            id: "Patente tipo",
+            id: "Patente tipo_" + i,
             label: "Тип ліцензії",
             type: "text",
             helperText: "Пр. A,B,C",
@@ -1974,7 +1979,7 @@ export const calculateComponentUkrainianTree = (action) => {
             // add input validate
           },
           {
-            id: "Data di rilascio",
+            id: "Data di rilascio_" + i,
             label: "Дата випуску",
             type: "Date",
             helperText: "Дата випуску",
@@ -1982,7 +1987,7 @@ export const calculateComponentUkrainianTree = (action) => {
             isRequired: false,
           },
           {
-            id: "Organo di rilascio",
+            id: "Organo di rilascio_" + i,
             label: "Орган видачі",
             type: "text",
             helperText: "Motorizzazione",
@@ -1990,7 +1995,7 @@ export const calculateComponentUkrainianTree = (action) => {
             isRequired: false,
           },
           {
-            id: "Provincia di",
+            id: "Provincia di_" + i,
             label: "Провінція",
             type: "text",
             helperText: "Палермо",
@@ -2082,6 +2087,7 @@ export const calculateComponentTamilTree = (action) => {
 
     result.push({
       type: "longform",
+      firstQuestion: true,
       title: "கூறு எண் " + (i - 1),
       id: 39 + i + currentIndex,
       parentId: 4,
@@ -2303,14 +2309,14 @@ export const calculateComponentTamilTree = (action) => {
         nextQuestion: 45 + i + currentIndex,
         answers: [
           {
-            id: "Numero",
+            id: "Numero_" + i,
             label: "எண்",
             type: "text",
             helperText: "Ex. 91828930",
             isRequired: false,
           },
           {
-            id: "Patente tipo",
+            id: "Patente tipo_" + i,
             label: "உரிமம் வகை",
             type: "text",
             helperText: "Ex. A,B,C",
@@ -2318,14 +2324,14 @@ export const calculateComponentTamilTree = (action) => {
             // add input validate
           },
           {
-            id: "Data di rilascio",
+            id: "Data di rilascio_" + i,
             label: "வெளிவரும் தேதி",
             type: "Date",
             helperText: "வெளிவரும் தேதி",
             isRequired: false,
           },
           {
-            id: "Organo di rilascio",
+            id: "Organo di rilascio_" + i,
             label: "உடல் வழங்குதல்",
             type: "text",
             helperText: "Motorizazione",
@@ -2333,7 +2339,7 @@ export const calculateComponentTamilTree = (action) => {
             isRequired: false,
           },
           {
-            id: "Provincia di",
+            id: "Provincia di_" + i,
             label: "மாகாணம்",
             type: "text",
             helperText: "பலேர்மோ",
@@ -2424,6 +2430,7 @@ export const calculateComponentItalianTree = (action) => {
 
     result.push({
       type: "longform",
+      firstQuestion: true,
       title: "Componente N." + (i - 1),
       id: 39 + i + currentIndex,
       parentId: 4,
@@ -2650,14 +2657,14 @@ export const calculateComponentItalianTree = (action) => {
         nextQuestion: 45 + i + currentIndex,
         answers: [
           {
-            id: "Numero",
+            id: "Numero_" + i,
             label: "Number",
             type: "text",
             helperText: "Ex. 91828930",
             isRequired: false,
           },
           {
-            id: "Patente tipo",
+            id: "Patente tipo_" + i,
             label: "License Type",
             type: "text",
             helperText: "Ex. A,B,C",
@@ -2665,14 +2672,14 @@ export const calculateComponentItalianTree = (action) => {
             // add input validate
           },
           {
-            id: "Data di rilascio",
+            id: "Data di rilascio_" + i,
             label: "Release Date",
             type: "Date",
             helperText: "Release Date",
             isRequired: false,
           },
           {
-            id: "Organo di rilascio",
+            id: "Organo di rilascio_" + i,
             label: "Issuing body",
             type: "text",
             helperText: "Motorizzazione",
@@ -2680,7 +2687,7 @@ export const calculateComponentItalianTree = (action) => {
             isRequired: false,
           },
           {
-            id: "Provincia di",
+            id: "Provincia di_" + i,
             label: "Province",
             type: "text",
             helperText: "Palermo",

@@ -308,7 +308,7 @@ export function reducer(state, action) {
       console.log("action.state in form", action.state);
 
       // check if the actual answer is a family component form to retrieve the name of the component
-      if (action.state.title.includes("Componente N.") && state.language === 'Italian') {
+      if (action.state.firstQuestion === true) {
         console.log("component");
         console.log(action.answer);
 
@@ -318,7 +318,8 @@ export function reducer(state, action) {
           );
         componentName = action.answer["Nome_" + index];
         console.log("componentName", componentName);
-        }
+      }
+      
 
       return {
         ...state,
